@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.closure-view",
+  "generatedAt": "2026-11-17T15:47:35.549Z",
+  "authority": "derived view; the canonical disposition recorded by prometheus kbd phase close is authoritative",
+  "phaseId": "phase39-fixture",
+  "contractVersion": "2",
+  "contractDigest": "a78fc4a0fa02d8f02fab81caca5d558b85983995ee72ad85a911146f6b10bba9",
+  "evidenceDigest": "21561623ef9e804b27982dc70c09fef351fab92279ce19e27569e6777d91d153",
+  "disposition": "CLOSED",
+  "reason": "pass",
+  "states": {
+    "implementationComplete": true,
+    "behaviorAccepted": true,
+    "releaseEligible": true,
+    "releaseAuthorized": false
+  },
+  "method": {
+    "name": "VLBV",
+    "source": "contract",
+    "deviation": null
+  },
+  "executedBy": {
+    "harness": "Phase39 real-process BDD fixture",
+    "version": "0.23.0",
+    "model": "none (deterministic fixture producer)"
+  },
+  "preAuthorizationArtifacts": {
+    "status": "no-globs",
+    "authorizedAt": null,
+    "globs": [],
+    "scanned": 0,
+    "artifacts": []
+  },
+  "scenarios": [
+    {
+      "id": "VLBV-1",
+      "name": "Real operation",
+      "actor": "operator",
+      "usefulOutcome": "accept only actual evidence",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "fixture demonstrates adapter admission, not arbitrary producer honesty"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "real Rust callback"
+      ]
+    }
+  ]
+}

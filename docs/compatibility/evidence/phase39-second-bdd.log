@@ -1,0 +1,187 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.76s
+     Running tests/vlbv_adapter.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/vlbv_adapter-7c80a493dfd3910b)
+Feature: Project real Cucumber evidence into the existing VLBV boundary result contract
+  Scenario: Complete real-path receipts support scoped acceptance
+   ✔  Given a real Cucumber run with frozen v2 contract and complete assertion control and cleanup receipts
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:5:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: A green runner is insufficient without an exercised oracle
+   ✔  Given boundary evidence for "green without assertion"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:11:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: An exercised product mismatch remains a failure
+   ✔  Given boundary evidence for "product mismatch"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:16:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong candidate"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:22:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "stale production source"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:22:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong contract binding"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:22:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong canonical run"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:22:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "skipped step"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:33:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "dry run"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:33:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "undefined step"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:33:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: The adopted denominator includes scenarios absent from the runner
+   ✔  Given boundary evidence for "missing adopted scenario"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:43:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "missing control"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:48:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "non-sensitive control"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:48:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: Unknown restoration blocks acceptance
+   ✔  Given boundary evidence for "unknown cleanup"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:57:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "process exit two"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:62:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "truncated stream"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:62:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: A successful retry retains the earlier failed oracle
+   ✔  Given boundary evidence for "failed then successful retry"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:71:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "unauthorized repair"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:77:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "bound authorized repair"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:77:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: An unsupported acceptance profile fails closed
+   ✔  Given boundary evidence for "stochastic profile"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:87:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario: Projection never writes canonical state or launches the boundary packet
+   ✔  Given boundary evidence for "read-only projection"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:92:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "nonzero green process"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:98:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "failed global completion"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:98:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unknown step status"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:98:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unmapped failing attempt"
+   ✘  When the read-only Messages converter projects the boundary
+      Step failed:
+      Defined: tests/features/vlbv_adapter/boundary.feature:98:5
+      Matched: tests/vlbv_adapter.rs:22:1
+      Step panicked. Captured output: called `Result::unwrap()` on an `Err` value: Error("EOF while parsing an object", line: 29, column: 0)
+[Summary]
+1 feature
+25 scenarios (25 failed)
+50 steps (25 passed, 25 failed)
+
+thread 'main' (105940329) panicked at src/cucumber.rs:1537:13:
+25 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test vlbv_adapter`

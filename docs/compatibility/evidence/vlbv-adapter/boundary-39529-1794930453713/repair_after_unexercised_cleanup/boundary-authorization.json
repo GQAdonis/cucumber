@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.boundary-authorization",
+  "phaseId": "phase39-fixture",
+  "events": [
+    {
+      "boundary": "B4",
+      "authorizedAt": "2026-11-17T15:48:11.901Z",
+      "authorizer": "isolated fixture owner",
+      "contractDigest": "a13999675ed0a0bce38fc4104a0e03c195d8d727c511704618e4ca8ae278b07c"
+    },
+    {
+      "boundary": "B5",
+      "authorizedAt": "2026-11-17T15:48:12.392Z",
+      "authorizer": "isolated fixture owner",
+      "contractDigest": "a13999675ed0a0bce38fc4104a0e03c195d8d727c511704618e4ca8ae278b07c",
+      "reason": "bounded repair of VLBV-1"
+    }
+  ]
+}

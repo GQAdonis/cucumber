@@ -1,0 +1,66 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.58s
+     Running tests/scheduling.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/scheduling-2f43731f99eea454)
+Feature: Async scenario scheduling preserves application isolation
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 1
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "3"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 3
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "unlimited"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 6
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "scenario" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "rule" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "feature" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario: Fail fast leaves queued scenarios unstarted at concurrency one
+   ✔  Given 3 scenarios whose first step fails
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed with fail fast
+   ✔  Then exactly one scenario fails and the other scenarios never start
+   ✔  And no scenarios remain active
+[Summary]
+1 feature
+8 scenarios (8 passed)
+50 steps (50 passed)

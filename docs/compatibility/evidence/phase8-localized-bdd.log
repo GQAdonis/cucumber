@@ -1,0 +1,47 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.43s
+     Running tests/messages_source.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_source-294873859c4d20d4)
+Feature: Localized source graphs use the parser's selected vocabulary
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_fr"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_emoji"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: The captured fallback dialect applies without a language directive
+   ✔  Given a legacy French feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "fr" with step keywords "Soit ,Quand ,Alors "
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: A newly registered dialect retains no-space step keywords
+   ✔  Given a Gherkin 43 Malayalam feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "ml" with step keywords "നൽകിയത്,എപ്പോൾ,പിന്നെ"
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Latest-only Rule keywords retain localized structure and Unicode columns
+   ✔  Given a Gherkin 43 Chinese feature with a latest-only Rule keyword and Unicode table cells
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "zh-CN" with a Rule keyword "规则"
+   ✔  And its Unicode table cell columns are 9 and 14
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Multiply classified localized keywords remain Unknown
+   ✔  Given a Gherkin 43 French feature with wildcard and conjunction steps
+   ✔  When its captured source is converted to Messages
+   ✔  Then the pickle step types are localized as "Context,Unknown,Unknown"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Legacy vocabulary does not acquire a latest-only structural keyword
+   ✔  Given a legacy Chinese feature containing the latest-only Rule spelling
+   ✔  When its captured source is converted to Messages
+   ✔  Then the legacy graph retains that spelling as feature description
+   ✔  And every graph envelope validates against Messages 34.2.1
+[Summary]
+1 feature
+7 scenarios (7 passed)
+31 steps (31 passed)

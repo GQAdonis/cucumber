@@ -1,0 +1,159 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: fields `body` and `media_type` are never read
+   --> src/attachment.rs:12:16
+    |
+ 11 | pub struct Attachment {
+    |            ---------- fields in this struct
+ 12 |     pub(crate) body: Body,
+    |                ^^^^
+ 13 |     pub(crate) media_type: String,
+    |                ^^^^^^^^^^
+    |
+    = note: `Attachment` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+note: the lint level is defined here
+   --> src/lib.rs:161:5
+    |
+161 |     unused,
+    |     ^^^^^^
+    = note: `#[warn(dead_code)]` implied by `#[warn(unused)]`
+
+warning: field `0` is never read
+  --> src/attachment.rs:17:29
+   |
+17 | pub(crate) enum Body { Text(String), Bytes(Vec<u8>) }
+   |                        ---- ^^^^^^
+   |                        |
+   |                        field in this variant
+   |
+   = note: `Body` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+   |
+17 - pub(crate) enum Body { Text(String), Bytes(Vec<u8>) }
+17 + pub(crate) enum Body { Text(()), Bytes(Vec<u8>) }
+   |
+
+warning: field `0` is never read
+  --> src/attachment.rs:17:44
+   |
+17 | pub(crate) enum Body { Text(String), Bytes(Vec<u8>) }
+   |                                      ----- ^^^^^^^
+   |                                      |
+   |                                      field in this variant
+   |
+   = note: `Body` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+   |
+17 - pub(crate) enum Body { Text(String), Bytes(Vec<u8>) }
+17 + pub(crate) enum Body { Text(String), Bytes(()) }
+   |
+
+warning: fields `target`, `attachment`, and `at` are never read
+  --> src/attachment.rs:63:9
+   |
+62 | pub(crate) struct Record {
+   |                   ------ fields in this struct
+63 |     pub target:Target,
+   |         ^^^^^^
+64 |     pub attachment:Attachment,
+   |         ^^^^^^^^^^
+65 |     pub at:SystemTime,
+   |         ^^
+   |
+   = note: `Record` has derived impls for the traits `Debug` and `Clone`, but these are intentionally ignored during dead code analysis
+
+warning: methods `is_empty` and `take` are never used
+  --> src/attachment.rs:79:19
+   |
+75 | impl AttachmentStore {
+   | -------------------- methods in this implementation
+...
+79 |     pub(crate) fn is_empty(&self)->bool {self.0.lock().expect("attachment store poisoned").is_empty()}
+   |                   ^^^^^^^^
+...
+86 |     pub(crate) fn take(&self,path:&str,rule:Option<&gherkin::Rule>,scenario:&gherkin::Scenario,attempt:usize)->Vec<Record> {
+   |                   ^^^^
+
+warning: `cucumber` (lib) generated 5 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.09s
+     Running tests/run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/run_hooks-3bf539892f2e6298)
+Feature: Complete native run setup and cleanup with honest failure outcomes
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "passing"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before both"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 2 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "all fail"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 4 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "body fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: Global callbacks run for an empty feature
+   ✔  Given a run lifecycle configured for "empty"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Retries do not repeat global callbacks
+   ✔  Given a run lifecycle configured for "retry"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: A setup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: A cleanup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: Concurrent scenarios share one global setup and cleanup
+   ✔  Given a run lifecycle configured for "parallel"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Sequential reuse does not change a completed run's failure count
+   ✔  Given a reusable run-hook registry and observation store
+   ✔  When one failing run and one passing run execute sequentially
+   ✔  Then their completed statistics and callback records remain separate
+[Summary]
+1 feature
+14 scenarios (14 passed)
+62 steps (62 passed)

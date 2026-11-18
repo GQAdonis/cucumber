@@ -1,0 +1,53 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.46s
+     Running tests/messages_logs.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_logs-2593984e0bfb7348)
+Feature: Native tracing logs remain faithful in Messages reports
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "plain" mode
+   ✔  When the application reports through Messages
+   ✘  Then every observed native log has one exact case-attempt attachment
+      Step failed:
+      Defined: tests/features/messages_logs/logs.feature:9:5
+      Matched: tests/messages_logs.rs:144:1
+      Step panicked. Captured output: each attachment matches one actual event exactly
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "hooks" mode
+   ✔  When the application reports through Messages
+   ✘  Then every observed native log has one exact case-attempt attachment
+      Step failed:
+      Defined: tests/features/messages_logs/logs.feature:9:5
+      Matched: tests/messages_logs.rs:144:1
+      Step panicked. Captured output: each attachment matches one actual event exactly
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "retry" mode
+   ✔  When the application reports through Messages
+   ✘  Then every observed native log has one exact case-attempt attachment
+      Step failed:
+      Defined: tests/features/messages_logs/logs.feature:9:5
+      Matched: tests/messages_logs.rs:144:1
+      Step panicked. Captured output: each attachment matches one actual event exactly
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "concurrent" mode
+   ✔  When the application reports through Messages
+   ✘  Then every observed native log has one exact case-attempt attachment
+      Step failed:
+      Defined: tests/features/messages_logs/logs.feature:9:5
+      Matched: tests/messages_logs.rs:144:1
+      Step panicked. Captured output: each attachment matches one actual event exactly
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "fanout" mode
+   ✔  When the application reports through Messages
+   ✘  Then every observed native log has one exact case-attempt attachment
+      Step failed:
+      Defined: tests/features/messages_logs/logs.feature:9:5
+      Matched: tests/messages_logs.rs:144:1
+      Step panicked. Captured output: each attachment matches one actual event exactly
+[Summary]
+1 feature
+5 scenarios (5 failed)
+15 steps (10 passed, 5 failed)
+
+thread 'main' (102590170) panicked at src/cucumber.rs:1350:13:
+5 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test messages_logs`

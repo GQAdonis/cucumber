@@ -1,0 +1,470 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.83s
+     Running tests/messages_corpus.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_corpus-5732c61819d2f2fa)
+Feature: Adopt the complete official Gherkin 43 plaintext fixture corpus
+  Scenario Outline: Accepted source background.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "background.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source complex_background.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "complex_background.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source conjunctions.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "conjunctions.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source datatables.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "datatables.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source datatables_with_new_lines.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "datatables_with_new_lines.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions_with_comments.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions_with_comments.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source docstrings.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "docstrings.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source docstrings.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "docstrings.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source empty.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "empty.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source escaped_pipes.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "escaped_pipes.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source example_token_multiple.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "example_token_multiple.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source example_tokens_everywhere.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "example_tokens_everywhere.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source extra_table_content.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "extra_table_content.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_emoji.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_emoji.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_fr.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_fr.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_no.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_no.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_background_1.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_background_1.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_background_2.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_background_2.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_1.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_1.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_2.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_2.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_3.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_3.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_scenario.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_scenario.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source language.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal-example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal-example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source padded_example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "padded_example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source prefixed-keywords.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "prefixed-keywords.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source readme_example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "readme_example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule_with_tag.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule_with_tag.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule_without_name_and_description.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule_without_name_and_description.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_no_newline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_no_newline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_docstring.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_value_with_dollar_sign.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_value_with_dollar_sign.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_value_with_trailing_backslash.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_value_with_trailing_backslash.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outlines_with_tags.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outlines_with_tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source several_examples.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "several_examples.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source spaces_in_language.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "spaces_in_language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source star-keywords.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "star-keywords.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source step_with_datatable_and_docstring.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "step_with_datatable_and_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source tagged_feature_with_scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "tagged_feature_with_scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source tags.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source trim_space.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "trim_space.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source trim_tab.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "trim_tab.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source very_long.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "very_long.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Invalid source backslash_at_end_of_line_in_datatable.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "backslash_at_end_of_line_in_datatable.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source file_ends_with_open_docstring.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "file_ends_with_open_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source inconsistent_cell_count.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "inconsistent_cell_count.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source invalid_language.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "invalid_language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source multiple_parser_errors.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "multiple_parser_errors.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source not_gherkin.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "not_gherkin.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source repeated_step_docstring.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "repeated_step_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source single_parser_error.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "single_parser_error.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unexpected_end_of_file.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unexpected_end_of_file.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unexpected_eof.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unexpected_eof.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unfinished_datatable.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unfinished_datatable.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source whitespace_in_tags.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "whitespace_in_tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+[Summary]
+1 feature
+62 scenarios (62 passed)
+236 steps (236 passed)
+     Running tests/messages_documents.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_documents-23ca514a626fe4bd)
+Feature: Explicit latest mode processes complete Gherkin documents
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "blank" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "whitespace" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "comments without newline" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "CRLF comments" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario: Featureless documents coexist with ordinary executed features
+   ✔  Given a directory containing blank commented and ordinary feature files
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then every source has exactly one document and only the ordinary feature executes
+   ✔  And all document envelopes satisfy the pinned schema
+  Scenario Outline: Invalid documents cannot become successful empty reports
+   ✔  Given a "arbitrary text" invalid source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then the pinned official parser and native runtime both reject the document
+   ✔  And it has no empty document record and no successful run
+  Scenario Outline: Invalid documents cannot become successful empty reports
+   ✔  Given a "language directive" invalid source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then the pinned official parser and native runtime both reject the document
+   ✔  And it has no empty document record and no successful run
+  Scenario: Existing default parsing still requires a Feature
+   ✔  Given a "blank" featureless source
+   ✔  When it runs with default parser policies and source-backed Messages
+   ✔  Then the legacy report contains a parse error and no empty document
+  Scenario: Empty-document snapshots preserve the selected fallback dialect
+   ✔  Given a "comments without newline" featureless source
+   ✔  When a latest parser with French fallback captures the document
+   ✔  Then its immutable empty record preserves exact bytes path and French fallback
+   ✔  And Feature snapshots stay absent while input bytes remain available
+  Scenario: Latest convenience validates the currently configured dialect
+   ✔  Given a Basic parser configured with the legacy formal dialect
+   ✔  When latest document semantics are requested
+   ✔  Then the unsupported fallback is reported without silent replacement
+  Scenario: Retained empty generations survive replacement invalid input and failed reads
+   ✔  Given a "comments without newline" featureless source
+   ✔  When successive captures replace it with a comment feature invalid text and missing file
+   ✔  Then each current generation has the correct record type and retained empty bytes stay unchanged
+[Summary]
+1 feature
+11 scenarios (11 passed)
+41 steps (41 passed)
+     Running tests/messages_source.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_source-2e71fe00a66fa874)
+Feature: Localized source graphs use the parser's selected vocabulary
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_fr"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_emoji"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: The captured fallback dialect applies without a language directive
+   ✔  Given a legacy French feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "fr" with step keywords "Soit ,Quand ,Alors "
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: A newly registered dialect retains no-space step keywords
+   ✔  Given a Gherkin 43 Malayalam feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "ml" with step keywords "നൽകിയത്,എപ്പോൾ,പിന്നെ"
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Latest-only Rule keywords retain localized structure and Unicode columns
+   ✔  Given a Gherkin 43 Chinese feature with a latest-only Rule keyword and Unicode table cells
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "zh-CN" with a Rule keyword "规则"
+   ✔  And its Unicode table cell columns are 9 and 14
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Multiply classified localized keywords remain Unknown
+   ✔  Given a Gherkin 43 French feature with wildcard and conjunction steps
+   ✔  When its captured source is converted to Messages
+   ✔  Then the pickle step types are localized as "Context,Unknown,Unknown"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Legacy vocabulary does not acquire a latest-only structural keyword
+   ✔  Given a legacy Chinese feature containing the latest-only Rule spelling
+   ✔  When its captured source is converted to Messages
+   ✔  Then the legacy graph retains that spelling as feature description
+   ✔  And every graph envelope validates against Messages 34.2.1
+Feature: Source-faithful portable Gherkin reports
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "rule_with_tag"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "complex_background"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "descriptions"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "several_examples"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "escaped_pipes"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "docstrings"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "step_with_datatable_and_docstring"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "example_tokens_everywhere"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Selected outline rows retain original source and example identities
+   ✔  Given a tagged outline inside a rule with comments between example rows
+   ✔  When only the selected expanded scenario runs with captured-source reporting
+   ✔  Then the report contains the complete original unexpanded AST
+   ✔  And the executed test case references the selected real example row
+   ✔  And both argument values are normalized and ordered in its pickle
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Captured source survives deletion after parsing
+   ✔  Given a feature captured before its file is deleted
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting succeeds using the captured bytes without a final newline
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Missing captured source fails visibly
+   ✔  Given an executed feature absent from the shared source store
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting rejects the missing snapshot without a successful completion
+  Scenario: Literal language directives in content retain their source meaning
+   ✔  Given an English feature with a language directive inside a doc string and a later comment
+   ✔  When its captured source is converted to Messages
+   ✔  Then the document remains English and retains both literal directive lines
+   ✔  And every graph envelope validates against Messages 34.2.1
+[Summary]
+2 features
+19 scenarios (19 passed)
+80 steps (80 passed)

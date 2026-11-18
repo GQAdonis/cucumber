@@ -1,0 +1,15 @@
+{
+  "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-4kcMGY/input-1.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-4kcMGY/input-1.feature#node-2-3-case-attempt-0",
+  "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-4kcMGY/input-1.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-4kcMGY/input-1.feature#node-2-3-case-step-0",
+  "testStepResult": {
+    "duration": {
+      "nanos": 95000,
+      "seconds": 0
+    },
+    "status": "PASSED"
+  },
+  "timestamp": {
+    "nanos": 123145000,
+    "seconds": 1794930469
+  }
+}

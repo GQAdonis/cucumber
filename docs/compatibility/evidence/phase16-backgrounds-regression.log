@@ -1,0 +1,352 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.78s
+     Running tests/hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/hooks-73c82887473196eb)
+Feature: Reusable ordered scenario lifecycle hooks
+  Scenario: Setup follows registration order and teardown unwinds in reverse order
+   ✔  Given the lifecycle configuration "ordered"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: A setup failure stops later setup and steps but still runs teardown
+   ✔  Given the lifecycle configuration "before-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "before-one"
+  Scenario: Teardown continues after asynchronous failures and reports every failure
+   ✔  Given the lifecycle configuration "after-failures"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-two"
+   ✔  And the hook diagnostic contains "after-one"
+  Scenario: Teardown continues when a callback panics before returning its future
+   ✔  Given the lifecycle configuration "sync-after-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-sync,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-sync"
+  Scenario: Teardown sees the failed scenario and still releases resources
+   ✔  Given the lifecycle configuration "step-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 1 failed steps and 0 hook errors
+   ✔  And teardown observes a failed step
+  Scenario: Conditional hooks use inherited feature rule and scenario tags
+   ✔  Given the lifecycle configuration "tagged"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "tagged-before,background,step,tagged-after"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Each retry gets fresh scenario state and repeats its hooks
+   ✔  Given the lifecycle configuration "retry"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one,before-one,before-two,background,step,after-two,after-one"
+   ✔  And both attempts start with fresh world state
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Legacy replacement hooks retain last-registration behavior
+   ✔  Given the lifecycle configuration "legacy"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-two,background,step,after-two"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: After-only hooks can observe a scenario with no initialized world
+   ✔  Given the lifecycle configuration "after-only"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "after-without-world"
+   ✔  And the run has 0 failed steps and 0 hook errors
+[Summary]
+1 feature
+9 scenarios (9 passed)
+42 steps (42 passed)
+     Running tests/messages.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages-76d14bce877697dc)
+Feature: Portable Cucumber execution reports
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "passing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "failing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "FAILED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "undefined" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "UNDEFINED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "ambiguous" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "AMBIGUOUS,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "parallel" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "empty" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are ""
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "initial conjunction" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "wildcard" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Context,Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "inherited background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Action,Action"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "outline" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "scenario outlines"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "table" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "docstring" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "rule" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "rules"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "tags" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "tags"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "description" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "descriptions"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "language" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "English"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "missing source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "source unavailable"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "changed source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "differs from runner AST"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "empty with background" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "empty scenarios with backgrounds"
+   ✔  And no successful completed run is emitted
+[Summary]
+1 feature
+20 scenarios (20 passed)
+97 steps (97 passed)
+     Running tests/messages_source.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_source-294873859c4d20d4)
+Feature: Localized source graphs use the parser's selected vocabulary
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_fr"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_emoji"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: The captured fallback dialect applies without a language directive
+   ✔  Given a legacy French feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "fr" with step keywords "Soit ,Quand ,Alors "
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: A newly registered dialect retains no-space step keywords
+   ✔  Given a Gherkin 43 Malayalam feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "ml" with step keywords "നൽകിയത്,എപ്പോൾ,പിന്നെ"
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Latest-only Rule keywords retain localized structure and Unicode columns
+   ✔  Given a Gherkin 43 Chinese feature with a latest-only Rule keyword and Unicode table cells
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "zh-CN" with a Rule keyword "规则"
+   ✔  And its Unicode table cell columns are 9 and 14
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Multiply classified localized keywords remain Unknown
+   ✔  Given a Gherkin 43 French feature with wildcard and conjunction steps
+   ✔  When its captured source is converted to Messages
+   ✔  Then the pickle step types are localized as "Context,Unknown,Unknown"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Legacy vocabulary does not acquire a latest-only structural keyword
+   ✔  Given a legacy Chinese feature containing the latest-only Rule spelling
+   ✔  When its captured source is converted to Messages
+   ✔  Then the legacy graph retains that spelling as feature description
+   ✔  And every graph envelope validates against Messages 34.2.1
+Feature: Source-faithful portable Gherkin reports
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "rule_with_tag"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "complex_background"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "descriptions"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "several_examples"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "escaped_pipes"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "docstrings"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "step_with_datatable_and_docstring"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "example_tokens_everywhere"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Selected outline rows retain original source and example identities
+   ✔  Given a tagged outline inside a rule with comments between example rows
+   ✔  When only the selected expanded scenario runs with captured-source reporting
+   ✔  Then the report contains the complete original unexpanded AST
+   ✔  And the executed test case references the selected real example row
+   ✔  And both argument values are normalized and ordered in its pickle
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Captured source survives deletion after parsing
+   ✔  Given a feature captured before its file is deleted
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting succeeds using the captured bytes without a final newline
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Missing captured source fails visibly
+   ✔  Given an executed feature absent from the shared source store
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting rejects the missing snapshot without a successful completion
+  Scenario: Literal language directives in content retain their source meaning
+   ✔  Given an English feature with a language directive inside a doc string and a later comment
+   ✔  When its captured source is converted to Messages
+   ✔  Then the document remains English and retains both literal directive lines
+   ✔  And every graph envelope validates against Messages 34.2.1
+[Summary]
+2 features
+19 scenarios (19 passed)
+80 steps (80 passed)
+     Running tests/scheduling.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/scheduling-507cbbe8a6bf3a8e)
+Feature: Async scenario scheduling preserves application isolation
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 1
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "3"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 3
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "unlimited"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 6
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "scenario" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "rule" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "feature" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario: Fail fast leaves queued scenarios unstarted at concurrency one
+   ✔  Given 3 scenarios whose first step fails
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed with fail fast
+   ✔  Then exactly one scenario fails and the other scenarios never start
+   ✔  And no scenarios remain active
+[Summary]
+1 feature
+8 scenarios (8 passed)
+50 steps (50 passed)

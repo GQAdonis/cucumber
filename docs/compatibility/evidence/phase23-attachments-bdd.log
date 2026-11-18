@@ -1,0 +1,91 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: missing documentation for an associated function
+   --> src/attachment.rs:20:5
+    |
+ 20 |     pub fn text(body:impl Into<String>,media_type:impl Into<String>)->Self {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:153:5
+    |
+153 |     missing_docs,
+    |     ^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> src/attachment.rs:24:5
+   |
+24 |     pub fn bytes(body:impl Into<Vec<u8>>,media_type:impl Into<String>)->Self {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+  --> src/attachment.rs:28:5
+   |
+28 |     pub fn with_file_name(mut self,name:impl Into<String>)->Self {self.file_name=Some(name.into());self}
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated function
+  --> src/attachment.rs:74:5
+   |
+74 |     pub fn new()->Self {Self::default()}
+   |     ^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a method
+   --> src/attachment.rs:137:5
+    |
+137 |     pub fn attach(&self,attachment:Attachment)->Result<(),AttachmentError> {
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `cucumber` (lib) generated 5 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 12.66s
+     Running tests/messages_attachments.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_attachments-4679cb25caa27021)
+Feature: Applications attach typed evidence to actual execution scopes
+  Scenario: Text and binary evidence preserve caller content and metadata
+   ✔  Given an attachment-aware application in "payloads" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves exact text and binary evidence with their media types and file names
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Scenario and step hooks attach within their actual execution scopes
+   ✔  Given an attachment-aware application in "hooks" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves evidence under the actual scenario hook or step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Concurrent scenarios retain independent attachment scopes
+   ✔  Given an attachment-aware application in "concurrent" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each concurrent scenario retrieves only its own evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Retried scenarios retain evidence from each distinct attempt
+   ✔  Given an attachment-aware application in "retry" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each attempt retrieves its own evidence and the final attempt passes
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across step boundaries cannot target a later step
+   ✔  Given an attachment-aware application in "late step" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old step handle rejects the write while the current scope accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across retries cannot target a later attempt
+   ✔  Given an attachment-aware application in "late attempt" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old attempt handle rejects the write while the retry accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Completed applications cannot append evidence through retained handles
+   ✔  Given an attachment-aware application in "completed" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then all retained scope handles reject writes after completion
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Existing World implementations run without an attachment override
+   ✔  Given an existing application with no attachment-aware constructor
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then its original World constructor and steps still run successfully
+   ✔  And the report contains no invented attachments
+  Scenario: Lazy World construction can attach within its first actual step
+   ✔  Given an attachment-aware application in "lazy" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves constructor and body evidence under the first step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+[Summary]
+1 feature
+9 scenarios (9 passed)
+36 steps (36 passed)

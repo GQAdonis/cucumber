@@ -1,0 +1,96 @@
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0282]: type annotations needed
+  --> tests/source_paths.rs:60:31
+   |
+60 |     if w.mode=="cli override"{cli.parser.features=Some(root.join("bgroup/c.feature").to_str().unwrap().parse().unwrap());}
+   |                               ^^^^^^^^^^ cannot infer type
+
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `cucumber` (test "source_paths") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error[E0308]: mismatched types
+    --> tests/timeout_preparation.rs:105:71
+     |
+ 105 | ...e scenario" {app=app.before(legacy_before as cucumber::runner::basic::BeforeHookFn<Application>);}
+     |                         ------ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Box<dyn Fn(&_, Option<_>, _, _) -> _>`, found fn pointer
+     |                         |
+     |                         arguments to this method are incorrect
+     |
+     = note:  expected struct `Box<dyn Fn(&Feature, Option<&Rule>, &Scenario, &mut Application) -> _>`
+             found fn pointer `fn(&Feature, Option<&Rule>, &Scenario, &mut Application) -> Pin<_>`
+     = note: for more on the distinction between the stack and the heap, read https://doc.rust-lang.org/book/ch15-01-box.html, https://doc.rust-lang.org/rust-by-example/std/box.html, and https://doc.rust-lang.org/std/boxed/index.html
+help: the return type of this call is `for<'a> fn(&'a cucumber::gherkin::Feature, Option<&'a cucumber::gherkin::Rule>, &'a cucumber::gherkin::Scenario, &'a mut Application) -> Pin<Box<(dyn futures::Future<Output = ()> + 'a)>>` due to the type of the argument passed
+    --> tests/timeout_preparation.rs:105:60
+     |
+ 105 | ...ore scenario" {app=app.before(legacy_before as cucumber::runner::basic::BeforeHookFn<Application>);}
+     |                       ^^^^^^^^^^^-------------------------------------------------------------------^
+     |                                  |
+     |                                  this argument influences the return type of `before`
+note: method defined here
+    --> src/cucumber.rs:1207:12
+     |
+1207 |     pub fn before<Before>(
+     |            ^^^^^^
+     = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/timeout_preparation-8f3eeece7c1c4d7c.long-type-17235461907948176657.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+help: store this in the heap by calling `Box::new`
+     |
+ 105 |     if w.mode=="hook" && w.fixture=="before scenario" {app=app.before(Box::new(legacy_before as cucumber::runner::basic::BeforeHookFn<Application>));}
+     |                                                                       +++++++++                                                                   +
+
+error[E0308]: mismatched types
+    --> tests/timeout_preparation.rs:106:69
+     |
+ 106 | ... {app=app.after(legacy_after as cucumber::runner::basic::AfterHookFn<Application>);}
+     |              ----- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `Box<_>`, found fn pointer
+     |              |
+     |              arguments to this method are incorrect
+     |
+     = note:  expected struct `Box<dyn Fn(&Feature, Option<&Rule>, &Scenario, &_, Option<_>) -> _>`
+             found fn pointer `fn(&Feature, Option<&Rule>, &Scenario, &_, Option<_>) -> _`
+     = note: for more on the distinction between the stack and the heap, read https://doc.rust-lang.org/book/ch15-01-box.html, https://doc.rust-lang.org/rust-by-example/std/box.html, and https://doc.rust-lang.org/std/boxed/index.html
+help: the return type of this call is `for<'a> fn(&'a cucumber::gherkin::Feature, Option<&'a cucumber::gherkin::Rule>, &'a cucumber::gherkin::Scenario, &'a ScenarioFinished, Option<&'a mut Application>) -> Pin<Box<(dyn futures::Future<Output = ()> + 'a)>>` due to the type of the argument passed
+    --> tests/timeout_preparation.rs:106:59
+     |
+ 106 | ...after scenario" {app=app.after(legacy_after as cucumber::runner::basic::AfterHookFn<Application>);}
+     |                         ^^^^^^^^^^-----------------------------------------------------------------^
+     |                                   |
+     |                                   this argument influences the return type of `after`
+note: method defined here
+    --> src/cucumber.rs:1248:12
+     |
+1248 |     pub fn after<After>(
+     |            ^^^^^
+     = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/timeout_preparation-8f3eeece7c1c4d7c.long-type-13493850221566326946.txt'
+     = note: consider using `--verbose` to print the full type name to the console
+help: store this in the heap by calling `Box::new`
+     |
+ 106 |     if w.mode=="hook" && w.fixture=="after scenario" {app=app.after(Box::new(legacy_after as cucumber::runner::basic::AfterHookFn<Application>));}
+     |                                                                     +++++++++                                                                 +
+
+error[E0599]: the method `with_default_cli` exists for struct `Cucumber<Application, Basic, _, Basic<Application, _, _, _>, _>`, but its trait bounds were not satisfied
+   --> tests/timeout_preparation.rs:108:65
+    |
+108 | ...Duration::from_secs(10),app.with_default_cli().run(&path)).await.expect("preparation acceptance deadlock");
+    |                                ^^^^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/basic.rs:109:1
+    |
+109 | pub struct Basic<Out: io::Write = io::Stdout> {
+    | --------------------------------------------- doesn't satisfy `cucumber::writer::Basic<Buffer>: Normalized`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: Normalized`
+    |
+    = note: the following trait bounds were not satisfied:
+            `cucumber::writer::Basic<Buffer>: Normalized`
+            which is required by `cucumber::writer::RunHooks<Summarize<cucumber::writer::Basic<Buffer>>>: Normalized`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/timeout_preparation-8f3eeece7c1c4d7c.long-type-18372490742623133975.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `cucumber` (test "timeout_preparation") due to 3 previous errors

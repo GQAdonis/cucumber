@@ -1,0 +1,31 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.82s
+     Running tests/portability.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/portability-144619df2c2aac51)
+Feature: A portable Rust BDD foundation includes its compatible parser
+  Scenario: An unrelated application consumes a relocated checkout
+   ✔  Given a relocated Cucumber source checkout with its vendored parser
+   ✔  And an application depending only on that relocated Cucumber checkout
+   ✘  When the application parses a step with a table followed by a doc string
+      Step failed:
+      Defined: tests/features/portability/parser.feature:9:5
+      Matched: tests/portability.rs:82:1
+      Step panicked. Captured output: external consumer failed:
+      
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `compatibility` test at `tests/compatibility.rs` or `tests/compatibility/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `json` test at `tests/json.rs` or `tests/json/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `junit` test at `tests/junit.rs` or `tests/junit/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `libtest` test at `tests/libtest.rs` or `tests/libtest/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `portability` test at `tests/portability.rs` or `tests/portability/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `tracing` test at `tests/tracing.rs` or `tests/tracing/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/.tmpHUaeD4/foundation/Cargo.toml: can't find `wait` test at `tests/wait.rs` or `tests/wait/main.rs`. Please specify test.path if you want to use a non-default path.
+      error: could not parse `cucumber` (manifest) due to 7 previous errors
+[Summary]
+1 feature
+1 scenario (1 failed)
+3 steps (2 passed, 1 failed)
+
+thread 'main' (102002318) panicked at src/cucumber.rs:1255:13:
+1 step failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test portability`

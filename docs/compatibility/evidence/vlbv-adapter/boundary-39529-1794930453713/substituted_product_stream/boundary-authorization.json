@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.boundary-authorization",
+  "phaseId": "phase39-fixture",
+  "events": [
+    {
+      "boundary": "B4",
+      "authorizedAt": "2026-11-17T15:48:04.173Z",
+      "authorizer": "isolated fixture owner",
+      "contractDigest": "4ec1209e6d542b850d2103b07b4839f5860ab4c7532f7c2c122bcc7a9b5fa56d"
+    }
+  ]
+}

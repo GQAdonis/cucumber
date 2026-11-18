@@ -1,0 +1,129 @@
+{
+  "schema": "cucumber.vlbv-receipts/v1",
+  "contract": {
+    "path": "contract.snapshot.json",
+    "sha256": "0fb26daea79984a214d03579ad02c79a6116f8598c147cdf7a16b455e81d351b"
+  },
+  "canonicalStatus": {
+    "path": "canonical-status.json",
+    "sha256": "61f5fcb4eb00e533048510e0de492d76e68bd387926e975c02193fa3d7602573"
+  },
+  "canonicalDisposition": {
+    "path": "canonical-disposition.json",
+    "sha256": "23e9f3393b7ea31000cbaaa864a1166087267c5644d42aa04dfa3f67d2d02d19"
+  },
+  "authorization": {
+    "path": "boundary-authorization.json",
+    "sha256": "7a347514a14b40d96a6f0fbf82abaebbeb051d9bacf0ad5b0138b102e0a9907c"
+  },
+  "candidate": {
+    "path": "candidate.json",
+    "sha256": "de5c41b70168cd626a48347076b159c8de2419d501d80cd5af0d9fc24044f3e7"
+  },
+  "executedBy": {
+    "harness": "Phase39 real-process BDD fixture",
+    "version": "0.23.0",
+    "model": "none (deterministic fixture producer)"
+  },
+  "budgetConsumption": {
+    "source": "isolated receipt producer: elapsed wall time and observed child calls; fixture repair count",
+    "values": {
+      "timeMinutes": {
+        "value": 0.009216666666666666,
+        "class": "measured"
+      },
+      "toolCalls": {
+        "value": 4,
+        "class": "measured"
+      },
+      "repairAttempts": {
+        "value": 1,
+        "class": "measured"
+      },
+      "noProgress": {
+        "value": 0,
+        "class": "measured"
+      }
+    }
+  },
+  "runs": [
+    {
+      "id": "stream-0",
+      "messages": {
+        "path": "run-0.ndjson",
+        "sha256": "5cac745f060b9417ae04a85e93f1b4eff5d547ad32aca96affb4c0bd961f41e1"
+      },
+      "process": {
+        "path": "run-0.process.json",
+        "sha256": "8152c5babee803ad8894682adda4c1c0cc0d711865abf776337506eb209c1c08"
+      },
+      "candidate": {
+        "path": "candidate.json",
+        "sha256": "de5c41b70168cd626a48347076b159c8de2419d501d80cd5af0d9fc24044f3e7"
+      },
+      "authorizationIndex": 0
+    },
+    {
+      "id": "stream-1",
+      "messages": {
+        "path": "run-1.ndjson",
+        "sha256": "a8a414d5238104414658723ba9e5b468450c8b61652c9eac680e2fd065eaba8d"
+      },
+      "process": {
+        "path": "run-1.process.json",
+        "sha256": "abc88f21a6a9616e647579bf3b8e1fc020fd8b3408a6d2df6526e9e762ad92bb"
+      },
+      "candidate": {
+        "path": "candidate.json",
+        "sha256": "de5c41b70168cd626a48347076b159c8de2419d501d80cd5af0d9fc24044f3e7"
+      },
+      "authorizationIndex": 1,
+      "predecessor": "stream-1"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "VLBV-1",
+      "bindings": [
+        {
+          "runId": "stream-0",
+          "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-6uilH5/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-6uilH5/input-0.feature#node-2-3"
+        },
+        {
+          "runId": "stream-1",
+          "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-6uilH5/input-1.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-6uilH5/input-1.feature#node-2-3"
+        }
+      ],
+      "assertions": [
+        {
+          "path": "assertion-0-0-VLBV-1.json",
+          "sha256": "09c7cb6527f4753f6e2e25911423a716c971f20664aad1486574a165aaaa52ad"
+        },
+        {
+          "path": "assertion-1-0-VLBV-1.json",
+          "sha256": "8ee21db5ac97fe6240ceb2f6cb0a2f33eb0d19e5c677da39513ea772f9a2dd55"
+        }
+      ],
+      "negativeControls": [
+        {
+          "path": "control-0.json",
+          "sha256": "183a9c4294166a6fe314df0b60d13c0bc3cb282e04dffa4533380880d6e68e7c"
+        },
+        {
+          "path": "control-1.json",
+          "sha256": "b096e47447d51905baf9db4b154b9edf4c8ba39788e75460a92ef15ccd792bff"
+        }
+      ],
+      "cleanup": [
+        {
+          "path": "cleanup-0.json",
+          "sha256": "5bfcadb4a8ff3589ff7b38154dbc73786c3fbd1e81befc09dd3799fe2572bd80"
+        },
+        {
+          "path": "cleanup-1.json",
+          "sha256": "e336a7a7023f07ae8f709f4a19bec68250a558297d2f09fd391421c18b207c16"
+        }
+      ]
+    }
+  ]
+}

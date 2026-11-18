@@ -1,0 +1,28 @@
+{
+  "sourceDigests": {
+    "production.mjs": "56530498f21d301003e5677b16bd8ba0bdc7c305a2e3eb95bf370a9c4f779ac7"
+  },
+  "build": [
+    {
+      "path": "application",
+      "sha256": "2514b583842a1851aea9e7c2b0f6d1a93c44c49dc25320b8021e3969db34f9cc"
+    }
+  ],
+  "configuration": [],
+  "fixtures": [
+    {
+      "path": "input-0.feature",
+      "sha256": "1c636c4547c82bdd50322ec595de402549ec39dc41fb6c27c0aa7cfbd9dd6c71"
+    },
+    {
+      "path": "negative.feature",
+      "sha256": "604fab11e2990abd46d1dbfec0baac0a32e11254ef81b6c7a8faffb1b04a7478"
+    }
+  ],
+  "references": [
+    {
+      "path": "independent-truth.txt",
+      "sha256": "1ea7a9b77da8c725742658e48d686d50bdaaf7f8b0289b1061adec3d249e5071"
+    }
+  ]
+}

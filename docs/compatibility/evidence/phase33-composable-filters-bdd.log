@@ -1,0 +1,118 @@
+warning: methods `rule` and `scenario` are never used
+   --> src/writer/basic.rs:284:19
+    |
+193 | impl<Out: io::Write> Basic<Out> {
+    | ------------------------------- methods in this implementation
+...
+284 |     pub(crate) fn rule<W: Debug>(
+    |                   ^^^^
+...
+337 |     pub(crate) fn scenario<W: Debug>(
+    |                   ^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:161:5
+    |
+161 |     unused,
+    |     ^^^^^^
+    = note: `#[warn(dead_code)]` implied by `#[warn(unused)]`
+
+warning: unreachable `pub` item
+   --> src/runner/outcomes.rs:31:5
+    |
+ 31 |     pub fn merge(&mut self, other: Self) {
+    |     ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     |
+    |     help: consider restricting its visibility: `pub(crate)`
+    |
+note: the lint level is defined here
+   --> src/lib.rs:159:5
+    |
+159 |     unreachable_pub,
+    |     ^^^^^^^^^^^^^^^
+
+warning: unreachable `pub` item
+  --> src/runner/outcomes.rs:35:5
+   |
+35 |     pub fn diagnostic(&self, stage: &str) -> String {
+   |     ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     |
+   |     help: consider restricting its visibility: `pub(crate)`
+
+warning: `cucumber` (lib) generated 3 warnings (run `cargo fix --lib -p cucumber` to apply 2 suggestions)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.60s
+     Running tests/composable_filters.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/composable_filters-06df8e508d7d647f)
+Feature: Explicit composable selection preserves legacy CLI precedence
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "names OR tags AND predicate"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty tag expression"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "missing repeated tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  And CLI filter configuration "name alternative"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "name and tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "none"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario: Explicit policy survives clone and type-changing builders
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the executor is cloned and its parser runner writer CLI and hook adapters are replaced
+   ✔  Then exactly "invoice green" execute through real handlers
+[Summary]
+1 feature
+12 scenarios (12 passed)
+56 steps (56 passed)

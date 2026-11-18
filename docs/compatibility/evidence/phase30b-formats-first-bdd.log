@@ -1,0 +1,142 @@
+warning: methods `rule` and `scenario` are never used
+   --> src/writer/basic.rs:284:19
+    |
+193 | impl<Out: io::Write> Basic<Out> {
+    | ------------------------------- methods in this implementation
+...
+284 |     pub(crate) fn rule<W: Debug>(
+    |                   ^^^^
+...
+337 |     pub(crate) fn scenario<W: Debug>(
+    |                   ^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:161:5
+    |
+161 |     unused,
+    |     ^^^^^^
+    = note: `#[warn(dead_code)]` implied by `#[warn(unused)]`
+
+warning: `cucumber` (lib) generated 1 warning
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0277]: the trait bound `Repeat<Application, Summarize<_>>: NonTransforming` is not satisfied
+  --> tests/execution_control_formats.rs:84:31
+   |
+84 |             "Repeat"=>execute(basic().repeat_failed().repeat_skipped(),sources,strict,world.recovery).await,
+   |                       ------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `NonTransforming` is not implemented for `Repeat<Application, Summarize<Normalize<Application, Basic<Buffer>>>>`
+   |                       |
+   |                       required by a bound introduced by this call
+   |
+   = help: the following other types implement trait `NonTransforming`:
+             AssertNormalized<Wr>
+             JUnit<W, O>
+             Libtest<W, O>
+             Messages<O>
+             Normalize<W, Wr>
+             Summarize<Wr>
+             Tee<L, R>
+             cucumber::writer::Basic<O>
+           and 5 others
+   = note: required for `Repeat<Application, Repeat<Application, Summarize<_>>>` to implement `Writer<Application>`
+note: required by a bound in `execute`
+  --> tests/execution_control_formats.rs:42:10
+   |
+41 | async fn execute<Wr>(writer:Wr,sources:cucumber::parser::SourceStore,strict:bool,recovery:bool)->ResultView
+   |          ------- required by a bound in this function
+42 | where Wr:cucumber::Writer<Application>+writer::Stats<Application>+writer::Normalized,
+   |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `execute`
+   = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/execution_control_formats-dd5f3f22ef0bc713.long-type-2476495053223762245.txt'
+   = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `Repeat<Application, Summarize<_>>: NonTransforming` is not satisfied
+  --> tests/execution_control_formats.rs:84:23
+   |
+84 |             "Repeat"=>execute(basic().repeat_failed().repeat_skipped(),sources,strict,world.recovery).await,
+   |                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `NonTransforming` is not implemented for `Repeat<Application, Summarize<Normalize<Application, Basic<Buffer>>>>`
+   |
+   = help: the following other types implement trait `NonTransforming`:
+             AssertNormalized<Wr>
+             JUnit<W, O>
+             Libtest<W, O>
+             Messages<O>
+             Normalize<W, Wr>
+             Summarize<Wr>
+             Tee<L, R>
+             cucumber::writer::Basic<O>
+           and 5 others
+   = note: required for `Repeat<Application, Repeat<Application, Summarize<_>>>` to implement `Writer<Application>`
+   = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/execution_control_formats-dd5f3f22ef0bc713.long-type-2476495053223762245.txt'
+   = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `cucumber::writer::junit::Cli: cucumber::cli::Colored` is not satisfied
+   --> tests/execution_control_formats.rs:96:30
+    |
+ 96 | ...        "JUnit"=>execute(writer::JUnit::new(output.clone(),0).discard_arbitrary_writes().summarized(),sources,strict,world.recov...
+    |                     ------- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `cucumber::cli::Colored` is not implemented for `cucumber::writer::junit::Cli`
+    |                     |
+    |                     required by a bound introduced by this call
+    |
+help: the following other types implement trait `cucumber::cli::Colored`
+   --> src/writer/basic.rs:60:1
+    |
+ 60 |   impl Colored for Cli {
+    |   ^^^^^^^^^^^^^^^^^^^^ `cucumber::writer::basic::Cli`
+    |
+   ::: src/cli.rs:176:1
+    |
+176 |   impl Colored for Empty {}
+    |   ^^^^^^^^^^^^^^^^^^^^^^ `cucumber::cli::Empty`
+...
+287 | / impl<L, R> Colored for Compose<L, R>
+288 | | where
+289 | |     L: Args + Colored,
+290 | |     R: Args + Colored,
+    | |______________________^ `Compose<L, R>`
+    = note: required for `Summarize<Arbitrary<Normalize<Application, JUnit<_, Buffer>>>>` to implement `Writer<Application>`
+note: required by a bound in `execute`
+   --> tests/execution_control_formats.rs:42:10
+    |
+ 41 | async fn execute<Wr>(writer:Wr,sources:cucumber::parser::SourceStore,strict:bool,recovery:bool)->ResultView
+    |          ------- required by a bound in this function
+ 42 | where Wr:cucumber::Writer<Application>+writer::Stats<Application>+writer::Normalized,
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ required by this bound in `execute`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/execution_control_formats-dd5f3f22ef0bc713.long-type-10001460047212163539.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0277]: the trait bound `cucumber::writer::junit::Cli: cucumber::cli::Colored` is not satisfied
+   --> tests/execution_control_formats.rs:96:22
+    |
+ 96 | ...it"=>execute(writer::JUnit::new(output.clone(),0).discard_arbitrary_writes().summarized(),sources,strict,world.recovery).await,
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `cucumber::cli::Colored` is not implemented for `cucumber::writer::junit::Cli`
+    |
+help: the following other types implement trait `cucumber::cli::Colored`
+   --> src/writer/basic.rs:60:1
+    |
+ 60 |   impl Colored for Cli {
+    |   ^^^^^^^^^^^^^^^^^^^^ `cucumber::writer::basic::Cli`
+    |
+   ::: src/cli.rs:176:1
+    |
+176 |   impl Colored for Empty {}
+    |   ^^^^^^^^^^^^^^^^^^^^^^ `cucumber::cli::Empty`
+...
+287 | / impl<L, R> Colored for Compose<L, R>
+288 | | where
+289 | |     L: Args + Colored,
+290 | |     R: Args + Colored,
+    | |______________________^ `Compose<L, R>`
+    = note: required for `Summarize<Arbitrary<Normalize<Application, JUnit<_, Buffer>>>>` to implement `Writer<Application>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/execution_control_formats-dd5f3f22ef0bc713.long-type-10001460047212163539.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+warning: unused import: `StatsWriter`
+ --> tests/execution_control_formats.rs:3:58
+  |
+3 | use cucumber::{given,when,then,World as _,WriterExt as _,StatsWriter as _,
+  |                                                          ^^^^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+For more information about this error, try `rustc --explain E0277`.
+warning: `cucumber` (test "execution_control_formats") generated 1 warning
+error: could not compile `cucumber` (test "execution_control_formats") due to 4 previous errors; 1 warning emitted

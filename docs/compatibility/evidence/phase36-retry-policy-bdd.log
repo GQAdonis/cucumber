@@ -1,0 +1,80 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.61s
+     Running tests/retry_policy.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/retry_policy-622094e1a956d501)
+Feature: Validate an explicit retry budget and official inherited tag gate
+  Scenario: A typed tag gate requires a positive budget before execution
+   ✔  Given retry budget 0 and an explicitly supplied official tag gate
+   ✔  When the application validates its retry policy
+   ✔  Then validation rejects the configuration before parsing or constructing a World
+  Scenario: Zero without a gate explicitly disables retry
+   ✔  Given an application with retry policy "disabled"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "feature tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Rule tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "scenario tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Examples tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario: A native retry tag cannot bypass an unmatched official gate
+   ✔  Given an application with retry policy "unmatched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario: A native retry tag cannot enlarge the explicit budget
+   ✔  Given an application with retry policy "matched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: Explicit typed policy is authoritative over legacy CLI retry configuration
+   ✔  Given an application with retry policy "conflicting legacy CLI"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: A later custom retry-options callback replaces the policy callback
+   ✔  Given an application with retry policy "custom override"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "pending"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "PENDING"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "ambiguous"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "AMBIGUOUS"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "undefined"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "UNDEFINED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "skipped"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "SKIPPED"
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "recovered"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And schema-valid Messages and official Query retain the final success "true"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "exhausted"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 3 attempts are reported and its final status is "FAILED"
+   ✔  And schema-valid Messages and official Query retain the final success "false"
+   ✔  And each attempt owns a fresh World and cleanup completes
+[Summary]
+1 feature
+16 scenarios (16 passed)
+56 steps (56 passed)

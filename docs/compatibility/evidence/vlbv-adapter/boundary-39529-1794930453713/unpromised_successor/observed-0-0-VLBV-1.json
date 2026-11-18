@@ -1,0 +1,16 @@
+{
+  "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-B2861k/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-B2861k/input-0.feature#node-2-3-case-attempt-0",
+  "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-B2861k/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-B2861k/input-0.feature#node-2-3-case-step-0",
+  "testStepResult": {
+    "duration": {
+      "nanos": 668000,
+      "seconds": 0
+    },
+    "message": "Step panicked. Captured output: assertion `left == right` failed: independent fixed truth comparison\n  left: \"wrong\"\n right: \"expected\"",
+    "status": "FAILED"
+  },
+  "timestamp": {
+    "nanos": 912256000,
+    "seconds": 1794930480
+  }
+}

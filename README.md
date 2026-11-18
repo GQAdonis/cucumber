@@ -15,6 +15,27 @@ An implementation of the [Cucumber] testing framework for Rust. Fully native, no
 
 
 
+## Fork interoperability work
+
+This fork adds opt-in keyword-independent step matching, a portable snapshot of
+its compatible Gherkin parser, ordered scenario hooks, and a bounded standard
+Messages NDJSON writer. See the [current status and acceptance evidence](docs/compatibility/STATUS.md)
+and [capability matrix](docs/compatibility/CAPABILITIES.md) for supported behavior
+and remaining gaps. Full Cucumber.js parity and Gherkin 43 conformance are still
+in progress; the existing matching default remains unchanged.
+
+The [portable integration guide](docs/compatibility/REUSE.md) shows how to reuse
+this checkout, select compatibility policies, and wire source-backed reports.
+
+For programmatic VLBV integration, the [read-only Messages receipt adapter](docs/compatibility/PHASE39-VLBV-ADAPTER.md)
+produces boundary-results JSON for the existing canonical reader. It preserves
+failed attempts and checks explicit oracle, negative-control, cleanup and candidate
+receipts, including the exact process-to-Messages binding. The
+[producer recipe](docs/compatibility/VLBV-PRODUCER.md) explains attempt/step mapping.
+The [native rerun API](docs/compatibility/PHASE44-RERUN.md) selects original failed
+scenario or Examples-row locations while retaining every attempt. These tools do
+not close phases or authorize releases.
+
 ## Usage
 
 Describe testing scenarios in `.feature` files:
@@ -87,6 +108,7 @@ For more examples check out the Book ([current][1] | [edge][2]).
 
 - `macros` (default): Enables step attributes and auto-wiring.
 - `timestamps`: Enables timestamps collecting for all [Cucumber] events.
+- `output-messages` (implies `timestamps`): Emits [Messages 34.2.1 NDJSON for an explicit supported subset](docs/compatibility/messages.md); unsupported shapes fail visibly.
 - `output-json` (implies `timestamps`): Enables support for outputting in [Cucumber JSON format].
 - `output-junit` (implies `timestamps`): Enables support for outputting [JUnit XML report].
 - `libtest` (implies `timestamps`): Enables compatibility with [Rust `libtest`][4]'s JSON output format. Useful for [IntelliJ Rust plugin integration][3].

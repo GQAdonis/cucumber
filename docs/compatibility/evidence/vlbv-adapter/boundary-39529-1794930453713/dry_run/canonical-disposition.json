@@ -1,0 +1,21 @@
+{
+  "schema": "kbd.phase-disposition/v1",
+  "projectId": "00000000-0000-4000-8000-000000000039",
+  "runId": "phase39-run",
+  "phaseId": "phase39-fixture",
+  "phaseStatus": "in_progress",
+  "contractBound": true,
+  "disposition": "OPEN",
+  "dispatchAllowed": true,
+  "successorAllowed": false,
+  "awaitingSuccessor": false,
+  "consumptionHighWater": {},
+  "binding": {
+    "contractPath": "contract.snapshot.json",
+    "contractDigest": "6147c70d0fdd467fe58ff21898493778602933f2c0886dc0f5e209d75f169f9d",
+    "scenarioDigests": {},
+    "planRevision": 0,
+    "adoptionDecisionId": "fixture-adoption",
+    "bindingRevision": 1
+  }
+}

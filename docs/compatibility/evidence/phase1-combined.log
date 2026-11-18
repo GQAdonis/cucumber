@@ -1,0 +1,386 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.78s
+     Running tests/compatibility.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/compatibility-cccef67dde846e53)
+Feature: Portable feature steps carry a document and table together
+  Scenario: A document precedes a table
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A table precedes a document
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: Outline values expand in both arguments
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A second document is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+  Scenario: A table document table sequence is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+Feature: Reuse a step vocabulary across Gherkin keywords
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario: Legacy consumers keep keyword specific lookup by default
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+   ✔  And the observed balances are ""
+  Scenario: Legacy consumers can retain equal patterns in different keyword groups
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 2 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,42"
+  Scenario: Ambiguous cross keyword definitions fail without invoking either body
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 1 steps fail and 0 steps are skipped
+   ✔  And the output reports an ambiguous match
+   ✔  And the observed balances are ""
+  Scenario: Undefined phrases remain skipped
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+  Scenario: Inherited and wildcard keywords reuse the same definition
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 4 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,43,44,45"
+  Scenario: Localized keywords share the same matching policy
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+[Summary]
+2 features
+20 scenarios (20 passed)
+115 steps (115 passed)
+    Updating crates.io index
+     Locking 152 packages to highest compatible versions
+      Adding cucumber v0.22.1 (available: v0.23.0)
+      Adding juniper v0.17.2 (available: v0.18.0)
+      Adding peg v0.6.3 (available: v0.8.6)
+      Adding syn v2.0.119 (available: v3.0.10)
+ Downloading crates ...
+  Downloaded cucumber-codegen v0.22.1
+  Downloaded gherkin v0.15.0
+  Downloaded cucumber v0.22.1
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling memchr v2.8.3
+   Compiling stable_deref_trait v1.2.1
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling writeable v0.6.4
+   Compiling serde_json v1.0.154
+   Compiling serde v1.0.229
+   Compiling libc v0.2.191
+   Compiling heck v0.5.0
+   Compiling icu_locale_fallback_data v2.4.0
+   Compiling litemap v0.8.3
+   Compiling itoa v1.0.19
+   Compiling unicode-segmentation v1.13.3
+   Compiling aho-corasick v1.1.5
+   Compiling convert_case v0.10.0
+   Compiling regex-syntax v0.8.11
+   Compiling utf_types v1.0.0
+   Compiling crossbeam-utils v0.8.23
+   Compiling unicode-xid v0.2.6
+   Compiling icu_segmenter_data v2.4.0
+   Compiling utf8_iter v1.1.0
+   Compiling rustix v1.1.6
+   Compiling bitflags v2.13.2
+   Compiling regex-automata v0.4.18
+   Compiling crossbeam-epoch v0.9.21
+   Compiling peg-runtime v0.6.3
+   Compiling smallvec v1.16.5
+   Compiling futures-core v0.3.34
+   Compiling unicode-width v0.2.3
+   Compiling crossbeam-deque v0.8.8
+   Compiling futures-sink v0.3.34
+   Compiling syn v3.0.10
+   Compiling syn v2.0.119
+   Compiling utf8parse v0.2.2
+   Compiling thiserror v2.0.21
+   Compiling anstyle-parse v1.0.0
+   Compiling futures-channel v0.3.34
+   Compiling errno v0.3.15
+   Compiling peg-macros v0.6.3
+   Compiling nom v8.0.0
+   Compiling bstr v1.13.1
+   Compiling slab v0.4.12
+   Compiling futures-io v0.3.34
+   Compiling colorchoice v1.0.5
+   Compiling anstyle v1.0.14
+   Compiling smawk v0.3.3
+   Compiling same-file v1.0.6
+   Compiling derive_more-impl v2.1.1
+   Compiling synstructure v0.14.0
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling sealed v0.6.0
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling futures-macro v0.3.34
+   Compiling thiserror-impl v2.0.21
+   Compiling synthez-core v0.4.0
+   Compiling typed-builder-macro v0.23.2
+   Compiling log v0.4.35
+   Compiling bytecount v0.6.9
+   Compiling pin-project-lite v0.2.17
+   Compiling futures-task v0.3.34
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling anstyle-query v1.1.5
+   Compiling either v1.19.0
+   Compiling anstream v1.0.0
+   Compiling nom_locate v5.0.0
+   Compiling globset v0.4.21
+   Compiling regex v1.13.1
+   Compiling peg v0.6.3
+   Compiling futures-util v0.3.34
+   Compiling synthez-codegen v0.4.0
+   Compiling walkdir v2.5.0
+   Compiling terminal_size v0.4.4
+   Compiling strsim v0.11.1
+   Compiling ref-cast v1.0.27
+   Compiling clap_lex v1.1.2
+   Compiling anyhow v1.0.104
+   Compiling clap_builder v4.6.7
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.4
+   Compiling ignore v0.4.34
+   Compiling itertools v0.14.0
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling synthez v0.4.0
+   Compiling futures-executor v0.3.34
+   Compiling clap_derive v4.6.8
+   Compiling ref-cast-impl v1.0.27
+   Compiling pin-project-internal v1.1.13
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.4.0
+   Compiling icu_locale_core v2.4.0
+   Compiling inflections v1.1.1
+   Compiling futures v0.3.34
+   Compiling globwalk v0.9.1
+   Compiling gherkin v0.15.0
+   Compiling typed-builder v0.23.2
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/gherkin)
+   Compiling smart-default v0.7.1
+   Compiling console v0.16.6
+   Compiling humantime v2.4.0
+   Compiling linked-hash-map v0.5.6
+   Compiling inventory v0.3.25
+   Compiling icu_provider v2.4.0
+   Compiling derive_more v2.1.1
+   Compiling pin-project v1.1.13
+   Compiling cucumber-expressions v0.5.0
+   Compiling icu_locale_fallback v2.4.0
+   Compiling clap v4.6.8
+   Compiling icu_segmenter v2.4.0
+   Compiling textwrap v0.16.4
+   Compiling cucumber-codegen v0.22.1
+   Compiling cucumber v0.22.1
+warning: panic message contains an unused formatting placeholder
+  --> tests/step_arguments.rs:18:49
+   |
+18 |             _ => panic!("Unknown argument kind: {argument}"),
+   |                                                 ^^^^^^^^^^
+   |
+   = note: this message is not used as a format string when given without arguments, but will be in Rust 2021
+   = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2021/panic-macro-consistency.html>
+   = note: `#[warn(non_fmt_panics)]` (part of `#[warn(rust_2021_compatibility)]`) on by default
+help: add the missing argument
+   |
+18 |             _ => panic!("Unknown argument kind: {argument}", ...),
+   |                                                            +++++
+help: or add a "{}" format string to use the message literally
+   |
+18 |             _ => panic!("{}", "Unknown argument kind: {argument}"),
+   |                         +++++
+
+warning: `gherkin` (test "step_arguments") generated 1 warning (run `cargo fix --test "step_arguments" -p gherkin` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 46.08s
+     Running tests/step_arguments.rs (/Volumes/T7/rust/cargo-build/25/2da20e6603c55c/debug/deps/step_arguments-c51336bd5cf79963)
+Feature: Portable step arguments
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "Given" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "When" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "Then" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "And" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "But" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "*" step has "table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "Given" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "When" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "Then" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "And" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "But" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve both arguments in either order for every step keyword
+   ✔  Given a feature whose "*" step has "doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with both argument values on the same step
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve existing features with fewer arguments
+   ✔  Given a feature whose "Given" step has "none" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with "none" arguments
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve existing features with fewer arguments
+   ✔  Given a feature whose "Given" step has "doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with "doc" arguments
+   ✔  And the following step remains separate
+  Scenario Outline: Preserve existing features with fewer arguments
+   ✔  Given a feature whose "Given" step has "table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing succeeds with "table" arguments
+   ✔  And the following step remains separate
+  Scenario Outline: Reject repeated argument kinds on one step
+   ✔  Given a feature whose "Given" step has "doc-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing fails
+  Scenario Outline: Reject repeated argument kinds on one step
+   ✔  Given a feature whose "Given" step has "doc-table-doc" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing fails
+  Scenario Outline: Reject repeated argument kinds on one step
+   ✔  Given a feature whose "Given" step has "table-doc-table" arguments
+   ✔  When the feature is parsed
+   ✔  Then parsing fails
+[Summary]
+1 feature
+18 scenarios (18 passed)
+69 steps (69 passed)

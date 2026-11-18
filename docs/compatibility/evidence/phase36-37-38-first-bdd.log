@@ -1,0 +1,146 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: calls to `std::mem::drop` with a value that implements `Copy` does nothing
+    --> src/runner/basic.rs:1085:27
+     |
+1085 |         ).map(move |()| { drop(parsed_sender.send(())); });
+     |                           ^^^^^----------------------^
+     |                                |
+     |                                argument has type `std::result::Result<(), ()>`
+     |
+     = note: `#[warn(dropping_copy_types)]` on by default
+help: use `let _ = ...` to ignore the expression or result
+     |
+1085 -         ).map(move |()| { drop(parsed_sender.send(())); });
+1085 +         ).map(move |()| { let _ = parsed_sender.send(()); });
+     |
+
+warning: `cucumber` (lib) generated 1 warning
+error[E0282]: type annotations needed for `&mut _`
+  --> tests/ordered_scheduling.rs:90:77
+   |
+90 |         let hooks=Hooks::new().before("observe admission",move|_,_,scenario,world|{
+   |                                                                             ^^^^^
+...
+93 |                 world.name=name.clone();world.mode=mode.clone();world.observed=Some(state.clone());world.controls=Some(gates);
+   |                 ---------- type must be known at this point
+   |
+help: consider giving this closure parameter an explicit type, where the type for type parameter `W` is specified
+   |
+90 |         let hooks=Hooks::new().before("observe admission",move|_,_,scenario,world: &mut W|{
+   |                                                                                  ++++++++
+
+error[E0599]: the method `passed_steps` exists for struct `RunHooks<Normalize<Application, Tee<Summarize<Basic<Sink>>, _>>>`, but its trait bounds were not satisfied
+   --> tests/ordered_scheduling.rs:125:30
+    |
+125 | ...   Report{passed:result.passed_steps(),failed:result.failed_steps(),retried:result.retried_steps(),errors:result.parsing_errors(...
+    |                            ^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/normalize.rs:44:1
+    |
+ 44 | pub struct Normalize<World, Writer> {
+    | ----------------------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>: StatsWriter<_>`
+            which is required by `cucumber::writer::RunHooks<Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>>: StatsWriter<_>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a.long-type-7831043573294522307.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `failed_steps` exists for struct `RunHooks<Normalize<Application, Tee<Summarize<Basic<Sink>>, _>>>`, but its trait bounds were not satisfied
+   --> tests/ordered_scheduling.rs:125:59
+    |
+125 | ...   Report{passed:result.passed_steps(),failed:result.failed_steps(),retried:result.retried_steps(),errors:result.parsing_errors(...
+    |                                                         ^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/normalize.rs:44:1
+    |
+ 44 | pub struct Normalize<World, Writer> {
+    | ----------------------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>: StatsWriter<_>`
+            which is required by `cucumber::writer::RunHooks<Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>>: StatsWriter<_>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a.long-type-7831043573294522307.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `retried_steps` exists for struct `RunHooks<Normalize<Application, Tee<Summarize<Basic<Sink>>, _>>>`, but its trait bounds were not satisfied
+   --> tests/ordered_scheduling.rs:125:89
+    |
+125 | ...ailed_steps(),retried:result.retried_steps(),errors:result.parsing_errors(),failed_run:result.execution_has_failed()}
+    |                                 ^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/normalize.rs:44:1
+    |
+ 44 | pub struct Normalize<World, Writer> {
+    | ----------------------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>: StatsWriter<_>`
+            which is required by `cucumber::writer::RunHooks<Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>>: StatsWriter<_>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a.long-type-7831043573294522307.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `parsing_errors` exists for struct `RunHooks<Normalize<Application, Tee<Summarize<Basic<Sink>>, _>>>`, but its trait bounds were not satisfied
+   --> tests/ordered_scheduling.rs:125:119
+    |
+125 | ...etried_steps(),errors:result.parsing_errors(),failed_run:result.execution_has_failed()}
+    |                                 ^^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/normalize.rs:44:1
+    |
+ 44 | pub struct Normalize<World, Writer> {
+    | ----------------------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>: StatsWriter<_>`
+            which is required by `cucumber::writer::RunHooks<Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>>: StatsWriter<_>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a.long-type-7831043573294522307.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `execution_has_failed` exists for struct `RunHooks<Normalize<Application, Tee<Summarize<Basic<Sink>>, _>>>`, but its trait bounds were not satisfied
+   --> tests/ordered_scheduling.rs:125:154
+    |
+125 | ...rrors(),failed_run:result.execution_has_failed()}
+    |                              ^^^^^^^^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    |
+   ::: src/writer/normalize.rs:44:1
+    |
+ 44 | pub struct Normalize<World, Writer> {
+    | ----------------------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+   ::: src/writer/run_hooks.rs:11:1
+    |
+ 11 | pub struct RunHooks<Wr> {
+    | ----------------------- doesn't satisfy `_: StatsWriter<_>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>: StatsWriter<_>`
+            which is required by `cucumber::writer::RunHooks<Normalize<Application, Tee<Summarize<cucumber::writer::Basic<std::io::Sink>>, Recorder>>>: StatsWriter<_>`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a.long-type-7831043573294522307.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+Some errors have detailed explanations: E0282, E0599.
+For more information about an error, try `rustc --explain E0282`.
+error: could not compile `cucumber` (test "ordered_scheduling") due to 6 previous errors
+warning: build failed, waiting for other jobs to finish...

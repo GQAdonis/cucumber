@@ -1,0 +1,19 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0521]: borrowed data escapes outside of function
+  --> tests/sources.rs:43:18
+   |
+42 |   async fn capture(world: &mut Sources, language: &str) {
+   |                                         --------  - let's call the lifetime of this reference `'1`
+   |                                         |
+   |                                         `language` is a reference that is only valid in the function body
+43 |       let result = Basic::new().with_source_store(world.store.clone())
+   |  __________________^
+44 | |         .language(language).unwrap()
+   | |                           ^
+   | |                           |
+   | |___________________________`language` escapes the function body here
+   |                             argument requires that `'1` must outlive `'static`
+
+For more information about this error, try `rustc --explain E0521`.
+error: could not compile `cucumber` (test "sources") due to 1 previous error

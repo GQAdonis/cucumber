@@ -1,0 +1,14 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0618]: expected function, found `std::string::String`
+  --> tests/messages_retries.rs:20:4
+   |
+19 | #[given(expr = "a retrying feature with outcome {string}")]
+   | ----------------------------------------------------------- call expression requires function
+20 | fn outcome(report: &mut Report, outcome: String) { report.outcome = outcome; }
+   | ---^^^^^^^--------------------------------------
+   | |                               |
+   | |                               `outcome` has type `std::string::String`
+   | this function of the same name is available here, but it's shadowed by the local binding
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `cucumber` (test "messages_retries") due to 1 previous error

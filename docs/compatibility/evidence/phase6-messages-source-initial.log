@@ -1,0 +1,33 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0283]: type annotations needed
+   --> tests/messages_source.rs:254:9
+    |
+254 |         ExecutionWorld::cucumber().with_parser(RecordedParser(world.recorded.clone()))
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type of the type parameter `I` declared on the associated function `cucumber`
+    |
+    = note: the type must implement `AsRef<Path>`
+note: required by a bound in `cucumber`
+   --> src/lib.rs:269:20
+    |
+269 |     fn cucumber<I: AsRef<Path>>() -> DefaultCucumber<Self, I>
+    |                    ^^^^^^^^^^^ required by this bound in `World::cucumber`
+help: consider specifying a concrete type for the type parameter `I`
+    |
+254 |         ExecutionWorld::cucumber::</* Type */>().with_parser(RecordedParser(world.recorded.clone()))
+    |                                 ++++++++++++++
+
+error[E0618]: expected function, found `std::string::String`
+  --> tests/messages_source.rs:48:4
+   |
+47 | #[given(expr = "the official Gherkin 43 fixture {string}")]
+   | ----------------------------------------------------------- call expression requires function
+48 | fn fixture(world: &mut GraphWorld, fixture: String) {
+   | ---^^^^^^^-----------------------------------------
+   | |                                  |
+   | |                                  `fixture` has type `std::string::String`
+   | this function of the same name is available here, but it's shadowed by the local binding
+
+Some errors have detailed explanations: E0283, E0618.
+For more information about an error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "messages_source") due to 2 previous errors

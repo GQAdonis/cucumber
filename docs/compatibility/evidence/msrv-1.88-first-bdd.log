@@ -1,0 +1,1116 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling memchr v2.8.3
+   Compiling libc v0.2.191
+   Compiling stable_deref_trait v1.2.1
+   Compiling serde_core v1.0.229
+   Compiling writeable v0.6.4
+   Compiling cfg-if v1.0.5
+   Compiling smallvec v1.16.5
+   Compiling litemap v0.8.3
+   Compiling serde v1.0.229
+   Compiling zmij v1.0.23
+   Compiling utf_types v1.0.0
+   Compiling autocfg v1.5.1
+   Compiling once_cell v1.21.4
+   Compiling aho-corasick v1.1.5
+   Compiling utf8_iter v1.1.0
+   Compiling serde_json v1.0.154
+   Compiling regex-syntax v0.8.11
+   Compiling unicode-segmentation v1.13.3
+   Compiling num-traits v0.2.19
+   Compiling crossbeam-utils v0.8.23
+   Compiling icu_locale_fallback_data v2.4.0
+   Compiling rustix v1.1.6
+   Compiling convert_case v0.10.0
+   Compiling unicode-xid v0.2.6
+   Compiling log v0.4.35
+   Compiling pin-project-lite v0.2.17
+   Compiling bitflags v2.13.2
+   Compiling strsim v0.11.1
+   Compiling futures-sink v0.3.34
+   Compiling heck v0.5.0
+   Compiling icu_properties_data v2.4.0
+   Compiling crossbeam-epoch v0.9.21
+   Compiling futures-core v0.3.34
+   Compiling icu_normalizer_data v2.4.0
+   Compiling icu_segmenter_data v2.4.0
+   Compiling num-integer v0.1.47
+   Compiling ident_case v1.0.1
+   Compiling errno v0.3.15
+   Compiling parking_lot_core v0.9.12
+   Compiling ref-cast v1.0.27
+   Compiling futures-channel v0.3.34
+   Compiling syn v3.0.10
+   Compiling syn v2.0.119
+   Compiling zerocopy v0.8.63
+   Compiling crossbeam-deque v0.8.8
+   Compiling scopeguard v1.2.0
+   Compiling futures-task v0.3.34
+   Compiling lazy_static v1.5.1
+   Compiling utf8parse v0.2.2
+   Compiling version_check v0.9.5
+   Compiling regex-automata v0.4.18
+   Compiling itoa v1.0.19
+   Compiling slab v0.4.12
+   Compiling futures-io v0.3.34
+   Compiling getrandom v0.3.4
+   Compiling ahash v0.8.12
+   Compiling anstyle-parse v1.0.0
+   Compiling lock_api v0.4.14
+   Compiling num-bigint v0.4.8
+   Compiling tracing-core v0.1.36
+   Compiling nom v8.0.0
+   Compiling bstr v1.13.1
+   Compiling peg-runtime v0.6.3
+   Compiling num-conv v0.2.2
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling colorchoice v1.0.5
+   Compiling bytecount v0.6.9
+   Compiling anstyle v1.0.14
+   Compiling anstyle-query v1.1.5
+   Compiling either v1.19.0
+   Compiling getrandom v0.4.3
+   Compiling thiserror v2.0.21
+   Compiling unicode-width v0.2.3
+   Compiling time-core v0.1.9
+   Compiling same-file v1.0.6
+   Compiling rand_core v0.10.1
+   Compiling nom_locate v5.0.0
+   Compiling anstream v1.0.0
+   Compiling regex v1.13.1
+   Compiling time-macros v0.2.32
+   Compiling walkdir v2.5.0
+   Compiling globset v0.4.21
+   Compiling num-rational v0.4.2
+   Compiling derive_more-impl v2.1.1
+   Compiling sealed v0.6.0
+   Compiling typed-builder-macro v0.23.2
+   Compiling synthez-core v0.4.0
+   Compiling synstructure v0.14.0
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling ref-cast-impl v1.0.27
+   Compiling futures-macro v0.3.34
+   Compiling darling_core v0.24.1
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling derive_more v2.1.1
+   Compiling synthez-codegen v0.4.0
+   Compiling thiserror-impl v2.0.21
+   Compiling peg-macros v0.6.3
+   Compiling parking_lot v0.12.5
+   Compiling futures-util v0.3.34
+   Compiling terminal_size v0.4.4
+   Compiling darling_macro v0.24.1
+   Compiling num-iter v0.1.46
+   Compiling num-complex v0.4.6
+   Compiling futures-executor v0.3.34
+   Compiling deranged v0.5.9
+   Compiling smawk v0.3.3
+   Compiling bit-vec v0.8.0
+   Compiling powerfmt v0.2.1
+   Compiling clap_lex v1.1.2
+   Compiling borrow-or-share v0.2.4
+   Compiling anyhow v1.0.104
+   Compiling darling v0.24.1
+   Compiling time v0.3.55
+   Compiling serde_with_macros v3.24.0
+   Compiling zerofrom v0.1.8
+   Compiling peg v0.6.3
+   Compiling yoke v0.8.4
+   Compiling bit-set v0.8.0
+   Compiling synthez v0.4.0
+   Compiling num v0.4.3
+   Compiling clap_builder v4.6.7
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling ignore v0.4.34
+   Compiling cucumber-expressions v0.5.0
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling fluent-uri v0.3.2
+   Compiling typed-builder v0.23.2
+   Compiling clap_derive v4.6.8
+   Compiling tracing-attributes v0.1.31
+   Compiling derive-getters v0.5.0
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling pin-project-internal v1.1.13
+   Compiling icu_collections v2.4.0
+   Compiling icu_locale_core v2.4.0
+   Compiling itertools v0.15.0
+   Compiling tracing-log v0.2.0
+   Compiling sharded-slab v0.1.7
+   Compiling quick-xml v0.41.0
+   Compiling thread_local v1.1.10
+   Compiling vsimd v0.8.0
+   Compiling base64 v0.22.1
+   Compiling inflections v1.1.1
+   Compiling icu_provider v2.4.0
+   Compiling uuid v1.26.1
+   Compiling nu-ansi-term v0.50.3
+   Compiling outref v0.5.2
+   Compiling percent-encoding v2.3.2
+   Compiling tracing v0.1.44
+   Compiling pin-project v1.1.13
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling junit-report v0.9.1
+   Compiling globwalk v0.9.1
+   Compiling clap v4.6.8
+   Compiling referencing v0.33.0
+   Compiling serde_with v3.24.0
+   Compiling tracing-subscriber v0.3.23
+   Compiling uuid-simd v0.8.0
+   Compiling email_address v0.2.10
+   Compiling icu_locale_fallback v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling fancy-regex v0.16.2
+   Compiling fraction v0.15.4
+   Compiling icu_segmenter v2.4.0
+   Compiling futures v0.3.34
+   Compiling tokio-macros v2.7.2
+   Compiling smart-default v0.7.1
+   Compiling serial_test_derive v3.5.0
+   Compiling chacha20 v0.10.2
+   Compiling idna_adapter v1.2.2
+   Compiling textwrap v0.16.4
+   Compiling console v0.16.6
+   Compiling mime v0.3.18
+   Compiling Inflector v0.11.4
+   Compiling idna v1.1.0
+   Compiling inventory v0.3.25
+   Compiling fastrand v2.5.0
+   Compiling linked-hash-map v0.5.6
+   Compiling num-cmp v0.1.0
+   Compiling futures-timer v3.0.4
+   Compiling humantime v2.4.0
+   Compiling tokio v1.54.1
+   Compiling serial_test v3.5.0
+   Compiling rand v0.10.4
+   Compiling tempfile v3.27.0
+   Compiling jsonschema v0.33.0
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3m 12s
+     Running tests/dry_run_formats.rs (target/debug/deps/dry_run_formats-aec2994e69a6eb71)
+Feature: Report inspection classifications without inventing execution failure
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JSON" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JUnit" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "libtest" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+[Summary]
+1 feature
+9 scenarios (9 passed)
+30 steps (30 passed)
+     Running tests/dynamic_assignment.rs (target/debug/deps/dynamic_assignment-0664e425a0959275)
+Feature: Assign logical cases using the resources held by active cases
+  Scenario: Cases sharing a browser resource cannot overlap
+   ✔  Given ordered cases configured for "shared browser"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then cases sharing a browser resource execute exclusively
+   ✔  And observed decisions refer to actual logical cases rather than worker identities
+  Scenario: Independent browser and workspace resources can overlap
+   ✔  Given ordered cases configured for "independent resources"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then independent cases overlap within the configured capacity
+   ✔  And assignment callbacks see the previously admitted logical reservations
+  Scenario: The first eligible queued case can bypass an ineligible concurrent case
+   ✔  Given ordered cases configured for "first eligible"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the first eligible candidate is admitted in queue order
+   ✔  And an earlier rejected case remains queued for later consideration
+  Scenario: No eligible candidate waits for actual progress
+   ✔  Given ordered cases configured for "wait for release"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then blocked cases remain unassigned until the active case releases its reservation
+   ✔  And the dispatcher waits without repeated idle decisions or unbounded record growth
+  Scenario: A delayed retry retains its resource reservation
+   ✔  Given ordered cases configured for "retry delay"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the retrying logical case remains assigned throughout its delay
+   ✔  And its fresh retry World does not create a second logical admission
+   ✔  And independent resources can proceed while conflicting resources remain blocked
+  Scenario: Assignment cannot bypass a queued Serial barrier
+   ✔  Given ordered cases configured for "queued Serial barrier"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then no candidate after the first Serial barrier is evaluated or admitted early
+   ✔  And the Serial case starts only after all preceding assigned cases complete
+  Scenario: An active Serial case remains exclusive even if the predicate accepts everything
+   ✔  Given ordered cases configured for "active Serial"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the Serial case never overlaps another logical reservation
+  Scenario: Idle fallback does not bypass a rejected Serial front
+   ✔  Given ordered cases configured for "rejected Serial"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then idle fallback chooses the Serial front and preserves its exclusivity
+  Scenario: An always-rejecting policy progresses with a visible aggregate warning
+   ✔  Given ordered cases configured for "idle fallback"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then each idle fallback admits the queue head without claiming predicate eligibility
+   ✔  And a single aggregate warning reports the actual idle intervention count on stderr
+   ✔  And skipped predicate choices are not fabricated callback or worker execution records
+  Scenario: An application receives fallback warnings through its configured sink
+   ✔  Given ordered cases configured for "custom warning sink"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the configured sink receives one typed aggregate warning
+   ✔  And the same warning is retained in the assignment decision store
+   ✔  And the default stderr warning is suppressed
+  Scenario: Expanded outline cases retain their actual source and tag context
+   ✔  Given ordered cases configured for "outline resource tags"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the predicate observes expanded native source identities and inherited resource tags
+   ✔  And decision snapshots preserve their fixed ordered-plan positions
+  Scenario: Configuration survives cloning and type-changing builders
+   ✔  Given ordered cases configured for "builder preservation"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the installed policy and shared decision store remain active
+  Scenario: Native scheduling remains unchanged without explicit assignment
+   ✔  Given ordered cases configured for "default native"
+   ✔  When the application runs without dynamic assignment
+   ✔  Then ordinary native scheduling executes without assignment callbacks or warnings
+  Scenario: A predicate programming error is not converted into idle fallback
+   ✔  Given ordered cases configured for "predicate panic"
+   ✔  When the application catches its configured predicate failure
+   ✔  Then the original panic propagates and no candidate is admitted by fallback
+   ✔  And no completed run or successful callback is invented
+[Summary]
+1 feature
+14 scenarios (14 passed)
+55 steps (55 passed)
+     Running tests/execution_control_formats.rs (target/debug/deps/execution_control_formats-de01640240f0b17c)
+Feature: Built-in consumers preserve explicit execution outcomes
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Basic"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Summarize"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "FailOnSkipped"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Repeat"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Normalize Tee"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Messages Query"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "JSON"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "JUnit"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "libtest"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Basic"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Summarize"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "FailOnSkipped"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Repeat"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Normalize Tee"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Messages Query"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "JSON"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "JUnit"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "libtest"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+[Summary]
+1 feature
+18 scenarios (18 passed)
+54 steps (54 passed)
+     Running tests/expression_names.rs (target/debug/deps/expression_names-018587e30a90ca51)
+Feature: Explicit JavaScript expression definitions reject names the pinned registry forbids
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "closing)"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "square[name]"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "dotted.name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "dollar$name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "pipe|name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "maybe?"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "many*"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "plus+"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "customer-id"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "account name"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "項目"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario: Legacy custom names retain their existing behavior
+   ✔  Given a Rust custom parameter named "dotted.name"
+   ✔  When its existing derive and legacy expr step definition compile and execute at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+[Summary]
+1 feature
+12 scenarios (12 passed)
+47 steps (47 passed)
+     Running tests/generated_ordering.rs (target/debug/deps/generated_ordering-f15f031720b11c0e)
+Feature: Replay a generated random case order from its observed seed
+  Scenario: Generated ordering exposes one actual decimal seed
+   ✔  Given an application with explicit generated random ordering
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then one ordering record contains a decimal seed between 0 and 999999
+   ✔  And the record describes the actual selected plan and permutation
+   ✔  And the generated seed is reported exactly once before the first case starts
+  Scenario: The realized seed replays the pinned JavaScript permutation
+   ✔  Given an application with explicit generated random ordering
+   ✔  When the complete selected plan is permuted and executed
+   ✔  And its observed seed is replayed as an explicit seed
+   ✔  Then both executions match the pinned JavaScript shuffle oracle for that seed
+   ✔  And every selected case executes exactly once in each run
+  Scenario: Replay applies to the globally filtered expanded plan
+   ✔  Given generated ordering over filtered features and expanded outline rows
+   ✔  When the complete selected plan is permuted and executed
+   ✔  And its observed seed is replayed as an explicit seed
+   ✔  Then only selected expanded cases appear in the replayed permutation
+   ✔  And both executions match the pinned JavaScript shuffle oracle for that selected plan
+  Scenario: A configured report sink receives the actual seed
+   ✔  Given generated ordering with an application-owned seed report sink
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then the sink receives exactly one report matching the stored realization
+   ✔  And the default generated-seed stderr report is suppressed
+  Scenario: Reusing cloned options realizes once for each actual run
+   ✔  Given cloned generated-order options sharing an ordering store
+   ✔  When two separate selected plans are executed with those options
+   ✔  Then there is one distinct run record for each actual permutation
+   ✔  And each run reports exactly its own recorded decimal seed
+   ✔  And replay is verified without requiring the two random seeds to differ
+  Scenario: Explicit empty-string seeds retain their existing meaning
+   ✔  Given an application with an explicit empty-string random seed
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then its order matches the pinned JavaScript empty-seed shuffle
+   ✔  And no generated-seed report is emitted
+  Scenario Outline: Non-generated orders do not acquire generated seed behavior
+   ✔  Given an application with explicit "defined" ordering
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then the selected plan follows its existing "defined" ordering contract
+   ✔  And no generated-seed report is emitted
+  Scenario Outline: Non-generated orders do not acquire generated seed behavior
+   ✔  Given an application with explicit "reverse" ordering
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then the selected plan follows its existing "reverse" ordering contract
+   ✔  And no generated-seed report is emitted
+  Scenario: Native scheduling does not realize an ordering seed
+   ✔  Given an application without explicit scheduling options
+   ✔  When its selected cases are executed
+   ✔  Then the unused ordering store remains empty
+   ✔  And no generated-seed report is emitted
+  Scenario: An empty selected plan still realizes one reported seed
+   ✔  Given generated ordering whose selection excludes every case
+   ✔  When the complete selected plan is permuted and executed
+   ✔  Then no application World or case callback is constructed or invoked
+   ✔  And one generated ordering record describes zero selected cases
+   ✔  And the empty plan reports its recorded seed exactly once
+[Summary]
+1 feature
+10 scenarios (10 passed)
+45 steps (45 passed)
+     Running tests/messages_logs.rs (target/debug/deps/messages_logs-5ccaf0060457de63)
+Feature: Native tracing logs remain faithful in Messages reports
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "plain" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "plain" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "hooks" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "hooks" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "retry" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "retry" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "concurrent" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "concurrent" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "fanout" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "fanout" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retries" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retries" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 0 delays
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retry delay" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retry delay" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 2 delays
+[Summary]
+1 feature
+7 scenarios (7 passed)
+46 steps (46 passed)
+     Running tests/messages_table_columns.rs (target/debug/deps/messages_table_columns-04aeab94e54e6ce0)
+Feature: Plain Gherkin table cell locations match official UTF16 column counting
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "emoji before a following cell"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "multiple astral cells"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "escaped pipe beside emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "escaped backslash before emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "unknown escape before emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "combining characters beside emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "NBSP cell padding and emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "EM SPACE preserved inside a cell"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario: Examples header and body cells retain official columns
+   ✔  Given an outline with astral Examples headers and values
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real expanded handlers receive the official names and cell values
+   ✔  And selecting an actual Examples row still references that original row
+  Scenario: Unicode token indentation remains scalar while cell content uses UTF16
+   ✔  Given a table with NBSP indentation and astral content before its second cell
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And source bytes and row locations remain unchanged
+  Scenario: Markdown cell locations retain their existing typed representation
+   ✔  Given a Markdown table with astral content before its second cell
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+[Summary]
+1 feature
+11 scenarios (11 passed)
+53 steps (53 passed)
+     Running tests/ordered_scheduling.rs (target/debug/deps/ordered_scheduling-4cfcb5fb91b8eee4)
+Feature: Schedule a complete selected application in a reproducible global order
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "defined" order with one active case
+   ✔  Then actual case starts follow the "defined" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "reverse" order with one active case
+   ✔  Then actual case starts follow the "reverse" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "0"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "reproducible"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "café-🦀"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario: Filtering precedes the global permutation
+   ✔  Given an application with selected and excluded cases in several sources
+   ✔  When the selected application runs in random order with string seed "selected"
+   ✔  Then its actual starts match shuffling only the selected cases
+   ✔  And excluded cases construct no World and invoke no callbacks
+  Scenario: A delayed source producer can finish before any application callbacks
+   ✔  Given a source stream whose second feature and completion wait on controlled gates
+   ✔  When the application requests explicit reverse scheduling
+   ✔  Then the producer reaches both gates without executor starvation
+   ✔  And no World or application hook starts before source completion
+   ✔  When the remaining source and completion gates are released
+   ✔  Then actual case starts follow the complete reverse sequence
+  Scenario: Source errors survive buffered plan collection
+   ✔  Given a source stream containing valid cases and a parse error
+   ✔  When the complete application runs in defined order without fail fast
+   ✔  Then the parse error remains visible and makes the run unsuccessful
+   ✔  And all valid selected cases execute in defined order
+  Scenario: Concurrent cases overlap without exceeding configured capacity
+   ✔  Given three ordered concurrent cases coordinated by entry and release gates
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the first two cases enter before either is released
+   ✔  And the third case enters only after capacity is released
+   ✔  And observed active case count never exceeds two
+  Scenario: A serial case is an exclusive barrier in the selected global order
+   ✔  Given the ordered cases concurrent A, concurrent B, serial C and concurrent D
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then A and B may overlap but C waits until both have finished
+   ✔  And D waits until C has finished
+   ✔  And C never overlaps another case
+  Scenario: A retry retains its logical case slot and fresh attempt identity
+   ✔  Given a first case that fails once and succeeds on its second attempt
+   ✔  And a following case waiting for the only execution slot
+   ✔  When the complete application runs in defined order with one active case
+   ✔  Then both attempts of the first case finish before the following case starts
+   ✔  And retry attempts have distinct ScenarioIds and Worlds with unchanged source identity
+   ✔  And terminal counters report two passed cases and one recovered failed attempt
+  Scenario: A delayed retry retains its slot while unrelated capacity remains useful
+   ✔  Given a retrying case with a controlled retry delay and two following cases
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the retrying case retains one slot while another case can progress
+   ✔  And the delayed retry starts only after its delay gate is released
+   ✔  And no more than two logical cases are active
+  Scenario: A serial case retains exclusivity across retries and retry delay
+   ✔  Given a serial case that retries after a controlled delay before another case
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the following case cannot enter during either serial attempt or its delay
+   ✔  And it enters after the serial case reaches its terminal result
+  Scenario: Fail fast observes terminal failure after retry exhaustion
+   ✔  Given a first case that fails every permitted attempt and a following case
+   ✔  When the complete application runs in defined order with one active case and fail fast
+   ✔  Then all permitted attempts of the first case run
+   ✔  And the following case never constructs a World or invokes callbacks
+   ✔  And the run reports the terminal failure without duplicate feature finishes
+  Scenario: JavaScript parallel zero explicitly selects serial execution
+   ✔  Given three selected cases and explicit JavaScript parallel value zero
+   ✔  When the complete application runs in defined order
+   ✔  Then all three cases execute with an active case limit of one
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "CLI"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "builder"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario: Empty buffered input completes without application cases
+   ✔  Given a source stream that completes without selected cases
+   ✔  When the complete application runs in defined order
+   ✔  Then the run completes without constructing a World or dispatching a case
+  Scenario: Legacy callers keep their existing scheduling policy
+   ✔  Given the existing legacy serial-priority fixture with positive concurrency
+   ✔  When the application runs without explicit scheduling options
+   ✔  Then the established legacy fixture dispatch and retry behavior is preserved
+[Summary]
+1 feature
+19 scenarios (19 passed)
+81 steps (81 passed)
+     Running tests/portability.rs (target/debug/deps/portability-012f6bba4db35b83)
+Feature: A portable Rust BDD foundation includes its compatible parser
+  Scenario: An unrelated application consumes a relocated checkout
+   ✔  Given a relocated Cucumber source checkout with its vendored parser
+   ✔  And an application depending only on that relocated Cucumber checkout
+   ✔  When the application parses a step with a table followed by a doc string
+   ✔  Then the application observes both step arguments unchanged
+   ✔  And the application uses no sibling parser checkout or Cargo patch
+[Summary]
+1 feature
+1 scenario (1 passed)
+5 steps (5 passed)
+     Running tests/retry_policy.rs (target/debug/deps/retry_policy-772d896ac9b0a57b)
+Feature: Validate an explicit retry budget and official inherited tag gate
+  Scenario: A typed tag gate requires a positive budget before execution
+   ✔  Given retry budget 0 and an explicitly supplied official tag gate
+   ✔  When the application validates its retry policy
+   ✔  Then validation rejects the configuration before parsing or constructing a World
+  Scenario: Zero without a gate explicitly disables retry
+   ✔  Given an application with retry policy "disabled"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "feature tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Rule tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "scenario tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Examples tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario: A native retry tag cannot bypass an unmatched official gate
+   ✔  Given an application with retry policy "unmatched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario: A native retry tag cannot enlarge the explicit budget
+   ✔  Given an application with retry policy "matched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: Explicit typed policy is authoritative over legacy CLI retry configuration
+   ✔  Given an application with retry policy "conflicting legacy CLI"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: A later custom retry-options callback replaces the policy callback
+   ✔  Given an application with retry policy "custom override"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "pending"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "PENDING"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "ambiguous"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "AMBIGUOUS"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "undefined"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "UNDEFINED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "skipped"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "SKIPPED"
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "recovered"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And schema-valid Messages and official Query retain the final success "true"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "exhausted"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 3 attempts are reported and its final status is "FAILED"
+   ✔  And schema-valid Messages and official Query retain the final success "false"
+   ✔  And each attempt owns a fresh World and cleanup completes
+[Summary]
+1 feature
+16 scenarios (16 passed)
+56 steps (56 passed)
+     Running tests/source_paths.rs (target/debug/deps/source_paths-40a4401c458097e4)
+Feature: Discover an ordered selection of reusable feature sources
+  Scenario: Preserve the supplied file sequence
+   ✔  Given a source selection "files"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Sort each directory expansion without sorting the full selection
+   ✔  Given a source selection "directories"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: Deduplicate overlapping selections at first occurrence
+   ✔  Given a source selection "overlap"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A,C"
+   ✔  And each selected source constructs one World
+  Scenario: Preserve sequence across explicit globs
+   ✔  Given a source selection "globs"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: An empty explicit selection executes no sources
+   ✔  Given a source selection "empty"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are ""
+  Scenario: A missing literal file remains an observable parse error
+   ✔  Given a source selection "missing"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: An unmatched glob contributes no source
+   ✔  Given a source selection "unmatched"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+  Scenario: Syntax errors do not hide valid selected sources
+   ✔  Given a source selection "invalid"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: Source format still governs directory discovery
+   ✔  Given a source selection "mixed formats"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "M,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Source line selectors compose with the ordered selection
+   ✔  Given a source selection "lines"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B"
+  Scenario: The explicit source plan takes precedence over the legacy CLI glob
+   ✔  Given a source selection "cli override"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+  Scenario: The default parser retains sorted directory discovery
+   ✔  Given a source selection "legacy"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A,B,C"
+  Scenario: Sort valid Unicode filenames using the official string order
+   ✔  Given a source selection "unicode paths"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "U,V"
+[Summary]
+1 feature
+13 scenarios (13 passed)
+44 steps (44 passed)
+     Running tests/timeout_preparation.rs (target/debug/deps/timeout_preparation-667a2b446e7dc5c2)
+Feature: Explicit preparation boundaries preserve existing native callback timing
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "regex" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "expr" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "expr_js" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "custom scalar conversion" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "JavaScript quoted string" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "slice and borrowed step" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario: Preparation failure keeps normal cleanup without installing a body timer
+   ✔  Given an opted-in definition whose argument conversion fails
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the existing step failure identifies argument conversion
+   ✔  And no body timer or handler body starts
+   ✔  And normal cleanup still runs
+  Scenario Outline: Raw callback construction follows the explicitly selected boundary
+   ✔  Given a raw callback with "WithinDeadline" timeout construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the callback factory and timer occur in "timer factory" order
+   ✔  And expiry still cancels its pending future and runs cleanup
+  Scenario Outline: Raw callback construction follows the explicitly selected boundary
+   ✔  Given a raw callback with "BeforeDeadline" timeout construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the callback factory and timer occur in "factory timer" order
+   ✔  And expiry still cancels its pending future and runs cleanup
+  Scenario: Before-deadline factory panic remains an ordinary caught failure
+   ✔  Given a raw callback whose before-deadline factory panics
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the existing step failure identifies the factory panic
+   ✔  And no body timer or handler body starts
+   ✔  And normal cleanup still runs
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before scenario" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after scenario" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before step" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after step" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before run" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after run" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario: Disabled limits preserve invocation without a timer
+   ✔  Given an opted-in definition with a disabled timeout
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then argument preparation and the handler run normally without any timer
+[Summary]
+1 feature
+17 scenarios (17 passed)
+69 steps (69 passed)
+     Running tests/vlbv_adapter.rs (target/debug/deps/vlbv_adapter-a35efba2bffc3ecf)
+Feature: Project real Cucumber evidence into the existing VLBV boundary result contract
+  Scenario: Complete real-path receipts support scoped acceptance
+   ✔  Given a real Cucumber run with frozen v2 contract and complete assertion control and cleanup receipts
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And the canonical result fields and all original evidence references are retained
+  Scenario: A green runner is insufficient without an exercised oracle
+   ✔  Given boundary evidence for "green without assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: An exercised product mismatch remains a failure
+   ✔  Given boundary evidence for "product mismatch"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And the actual failed observation remains in the attempt ledger
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong candidate"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "stale production source"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong contract binding"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong canonical run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "skipped step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "dry run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "undefined step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: The adopted denominator includes scenarios absent from the runner
+   ✔  Given boundary evidence for "missing adopted scenario"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the exercised scenario passes and the absent adopted scenario is NOT_EXERCISED
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "missing control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "non-sensitive control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: Unknown restoration blocks acceptance
+   ✔  Given boundary evidence for "unknown cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "process exit two"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "truncated stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: A successful retry retains the earlier failed oracle
+   ✔  Given boundary evidence for "failed then successful retry"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "unauthorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "bound authorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every failed and successful attempt is retained
+  Scenario: An unsupported acceptance profile fails closed
+   ✔  Given boundary evidence for "stochastic profile"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: Projection never writes canonical state or launches the boundary packet
+   ✔  Given boundary evidence for "read-only projection"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every canonical input and sentinel remains unchanged
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "nonzero green process"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "nonzero product process"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "failed global completion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unsuccessful run"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unknown step status"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unknown step status"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unmapped failing attempt"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unmapped failing attempt"
+[Summary]
+1 feature
+25 scenarios (25 passed)
+85 steps (85 passed)

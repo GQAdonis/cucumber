@@ -1,0 +1,56 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.54s
+     Running tests/sources.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/sources-2f3d43d9f101671e)
+Feature: Applications explicitly reject inconsistent table sizes
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "step" table with a "shorter" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "Examples" table with a "shorter" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Valid strict table values reach real handlers
+   ✔  Given an application "step" table with a "matching" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then the "step" table values reach the handler exactly
+   ✔  And the source snapshot records "Gherkin 43" table sizing
+  Scenario Outline: Valid strict table values reach real handlers
+   ✔  Given an application "Examples" table with a "matching" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then the "Examples" table values reach the handler exactly
+   ✔  And the source snapshot records "Gherkin 43" table sizing
+  Scenario Outline: Existing applications preserve excess-cell truncation
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When the table application runs with "default" sizing
+   ✔  Then the "step" table values reach the handler exactly
+   ✔  And the source snapshot records "Legacy" table sizing
+  Scenario Outline: Existing applications preserve excess-cell truncation
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When the table application runs with "default" sizing
+   ✔  Then the "Examples" table values reach the handler exactly
+   ✔  And the source snapshot records "Legacy" table sizing
+  Scenario Outline: Basic parser exposes a typed strict-table failure
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When Basic parses the table with strict sizing
+   ✔  Then Basic reports the inconsistent-cell-count diagnostic
+  Scenario Outline: Basic parser exposes a typed strict-table failure
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When Basic parses the table with strict sizing
+   ✔  Then Basic reports the inconsistent-cell-count diagnostic
+[Summary]
+1 feature
+10 scenarios (10 passed)
+38 steps (38 passed)

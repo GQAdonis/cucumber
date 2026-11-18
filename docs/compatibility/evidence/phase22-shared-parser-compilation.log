@@ -1,0 +1,22 @@
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+error[E0308]: mismatched types
+   --> vendor/gherkin/src/parser.rs:293:28
+    |
+261 | / peg::parser! { pub(crate) grammar gherkin_parser(env: &GherkinEnv) for str {
+262 | |
+263 | | rule _() = quiet!{[' ' | '\t']*}
+264 | | rule __() = quiet!{([' ' | '\t'] / nl())*}
+...   |
+293 | |                     return Err("longer step keyword has another kind");
+    | |                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ expected `RuleResult<&str>`, found `Result<_, &str>`
+...   |
+751 | | }}
+    | |__- expected `RuleResult<&'input str>` because of return type
+    |
+    = note: expected enum `RuleResult<&'input str>`
+               found enum `Result<_, &str>`
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `gherkin` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

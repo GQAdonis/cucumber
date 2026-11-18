@@ -1,0 +1,5 @@
+Completed-phase affected BDD boundary, after Phase30a 14/50 and Phase32a 19/85 passed.
+
+cargo test --features output-messages --test compatibility --test hooks --test step_hooks --test run_hooks --test scenario_hook_records --test messages_scenario_hooks --test messages_attachments --test messages_retries --test scheduling --test messages_support_code --test expression_compat
+
+Full stdout/stderr: phase30a-32a-affected-bdd.log

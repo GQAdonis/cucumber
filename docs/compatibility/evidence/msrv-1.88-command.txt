@@ -1,0 +1,8 @@
+set -eo pipefail
+RUSTUP_TOOLCHAIN=1.88.0 rustc --version > docs/compatibility/evidence/msrv-toolchain.txt
+RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --features output-messages,output-json,output-junit,libtest,tracing --test timeout_preparation --test ordered_scheduling --test dynamic_assignment --test retry_policy --test source_paths --test messages_table_columns --test expression_names --test execution_control_formats --test dry_run_formats --test messages_logs --test generated_ordering --test portability --test vlbv_adapter 2>&1 | tee docs/compatibility/evidence/msrv-1.88-first-bdd.log
+
+Result: exit0;13 named targets;172 scenarios/670 steps passed.
+Compiler: rustc 1.88.0 (6b00bc388 2025-06-23).
+No dependency, lockfile, production or build-configuration correction was needed.
+Nested consumer commands were pinned by the inherited RUSTUP_TOOLCHAIN.

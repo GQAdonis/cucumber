@@ -1,0 +1,52 @@
+{
+  "createdAtUtc": "2026-11-17T15:26:17.144991+00:00",
+  "scope": "Final local snapshot after completed phase-end BDD; hashes establish bytes, not independent execution truth.",
+  "cucumber": {
+    "path": "/Volumes/T7/Projects/references/cucumber",
+    "head": "d95872541ee2a43d71089c64bd3fa8848e24c922",
+    "sourceFiles": 781,
+    "inventory": "current-source-sha256.txt",
+    "inventorySha256": "a621bd6690a11a8e6bba51d64c04f3bf413d50925c0dab67269b4ecbf4049998"
+  },
+  "gherkin": {
+    "path": "/Users/gqadonis/Projects/references/gherkin",
+    "head": "4c30e3a48a0226bf907053a0a9e738e91cf06727",
+    "sourceFiles": 284,
+    "inventory": "gherkin-source-sha256.txt",
+    "inventorySha256": "cbfd47bba45966ebf16e8f6fca2c7dd9e269fe2e1045897b406d89520365a062",
+    "vendorSourceAndBuildMatches": [
+      "src/LICENSE-GHERKIN",
+      "src/keywords.rs",
+      "src/languages-43.json",
+      "src/languages.json",
+      "src/lib.rs",
+      "src/markdown.rs",
+      "src/parser.rs",
+      "src/tagexpr.rs",
+      "build.rs"
+    ],
+    "vendorSourceAndBuildDifferences": []
+  },
+  "compiler": "rustc 1.88.0 (6b00bc388 2025-06-23)",
+  "finalMsrvBoundary": {
+    "targets": 13,
+    "passedScenarios": 172,
+    "passedSteps": 670,
+    "exitCode": 0,
+    "log": "msrv-1.88-first-bdd.log",
+    "logSha256": "f64ed6502de263686485c5ce116acaa5ad660a10daeee94efd6352719e121a12"
+  },
+  "sourceInventoryExcludes": [
+    "docs/compatibility/evidence/**",
+    "docs/evidence/**",
+    "Git-ignored caches/artifacts; Cargo.lock is explicitly included"
+  ],
+  "gitStatus": "Implementation remains local and uncommitted/unpushed; no merge, deployment, workflow or security change.",
+  "ciSkill": {
+    "original": "/Users/gqadonis/.claude/skills/ci-cd-and-automation/SKILL.md",
+    "originalSha256": "a6ed8ed56456b01ff8314c44eefc69897d9905ae4e06bb2b7036286efb79b5f0",
+    "project": ".agents/skills/ci-cd-and-automation/SKILL.md",
+    "projectSha256": "5bccb04a78ca9bb13fd75f4ea403279c73d30f36d6310958e81aa024093d9390",
+    "difference": "Only the task-specific Cucumber scope section was inserted; original source content retained."
+  }
+}

@@ -1,0 +1,35 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0432]: unresolved import `super::ScenarioId`
+ --> src/runner/scenario_hooks.rs:2:5
+  |
+2 | use super::ScenarioId;
+  |     ^^^^^^^----------
+  |            |
+  |            no `ScenarioId` in `runner`
+  |
+help: consider importing this struct instead
+  |
+2 - use super::ScenarioId;
+2 + use crate::runner::basic::ScenarioId;
+  |
+
+error[E0425]: cannot find type `ScenarioId` in module `super`
+   --> src/runner/hooks.rs:494:52
+    |
+494 |     pub(crate) fn finish_attempt(&self, id: super::ScenarioId) {
+    |                                                    ^^^^^^^^^^ not found in `super`
+    |
+help: consider importing this struct
+    |
+  5 + use crate::runner::basic::ScenarioId;
+    |
+help: if you import `ScenarioId`, refer to it directly
+    |
+494 -     pub(crate) fn finish_attempt(&self, id: super::ScenarioId) {
+494 +     pub(crate) fn finish_attempt(&self, id: ScenarioId) {
+    |
+
+Some errors have detailed explanations: E0425, E0432.
+For more information about an error, try `rustc --explain E0425`.
+error: could not compile `cucumber` (lib) due to 2 previous errors

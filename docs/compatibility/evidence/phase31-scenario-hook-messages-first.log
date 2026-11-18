@@ -1,0 +1,29 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0277]: the trait bound `Application: WorldInventory` is not satisfied
+   --> tests/messages_scenario_hooks.rs:66:16
+    |
+ 66 |     let runner=Application::cucumber().with_gherkin43().unwrap().steps(Collection::new().given(None,Regex::new("^action(?: .*)?$")....
+    |                ^^^^^^^^^^^ unsatisfied trait bound
+    |
+help: the trait `WorldInventory` is not implemented for `Application`
+   --> tests/messages_scenario_hooks.rs:11:1
+    |
+ 11 | struct Application{context:AttachmentContext,mode:String,name:String,attempt:usize,previous:Option<AttachmentHandle>}
+    | ^^^^^^^^^^^^^^^^^^
+help: the trait `WorldInventory` is implemented for `Acceptance`
+   --> tests/messages_scenario_hooks.rs:24:24
+    |
+ 24 | #[derive(Debug,Default,cucumber::World)]
+    |                        ^^^^^^^^^^^^^^^
+note: required by a bound in `cucumber`
+   --> src/lib.rs:283:23
+    |
+281 |     fn cucumber<I: AsRef<Path>>() -> DefaultCucumber<Self, I>
+    |        -------- required by a bound in this associated function
+282 |     where
+283 |         Self: Debug + WorldInventory,
+    |                       ^^^^^^^^^^^^^^ required by this bound in `World::cucumber`
+    = note: this error originates in the derive macro `cucumber::World` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `cucumber` (test "messages_scenario_hooks") due to 1 previous error

@@ -1,0 +1,18 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.90s
+     Running tests/messages_consumer.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_consumer-544125b7eb947daf)
+Feature: Exchange native reports with official Cucumber.js consumers
+  Scenario: Render a tagged Rule outline with both step arguments
+   ✔  Given a rich native execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query resolves both example rows and their arguments
+   ✔  And the official JUnit formatter reports two passing examples
+  Scenario: Report final outcomes after recovery and exhausted retries
+   ✔  Given a mixed retry execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query retains two final outcomes from four attempts
+   ✔  And the official JUnit formatter reports one passing and one failing case
+[Summary]
+1 feature
+2 scenarios (2 passed)
+8 steps (8 passed)

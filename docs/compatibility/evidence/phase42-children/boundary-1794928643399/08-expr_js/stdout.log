@@ -1,0 +1,9 @@
+PHASE42_ACTUAL_HANDLER_VALUE=value
+Feature: Native registration
+  Scenario: Invoke the registered handler
+   ✔  Given value value
+   ✔  Then the actual handler executed
+[Summary]
+1 feature
+1 scenario (1 passed)
+2 steps (2 passed)

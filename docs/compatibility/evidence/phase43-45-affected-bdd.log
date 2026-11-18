@@ -1,0 +1,616 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 29.55s
+     Running tests/line_selection.rs (target/debug/deps/line_selection-aa0523ec6b3a1f73)
+Feature: Source-aware line selection uses original declarations and Examples rows
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "scenario"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first and last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "feature"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "rule"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "background"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "step"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "examples"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "table header"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "comment"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "scenario"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first and last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "feature"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "rule"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "background"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "step"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "examples"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "table header"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "separator"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario: Source lines compose with typed names tags and the application predicate
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  And typed names tags and the caller predicate select only the eligible green invoice
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green"
+  Scenario: Repeated source selections are a union without duplicate execution
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And the first row is selected repeatedly by absolute relative and symlink paths
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+  Scenario: An unrestricted file selection supersedes its restricted lines
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And the source is selected by its first row and as a whole file
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Multiple discovered files are selected independently
+   ✔  Given two discoverable sources and a selector for an absent third source
+   ✔  When each discovered source is selected by its scenario declaration
+   ✔  Then both selected files execute once and the absent selector causes no error
+  Scenario: A selector outside discovery does not add new inputs
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And only a path outside parser discovery is selected
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+  Scenario: Empty selectors impose no additional restriction
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And an empty explicit source selection
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Invalid selector values are rejected before execution
+   ✔  Given an unconfigured source selector
+   ✔  When a zero line and an empty path are requested
+   ✔  Then both invalid values are rejected with meaningful errors
+  Scenario: Captured origin generations survive changes and deletion
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  When a source snapshot is retained then its file is changed reparsed and deleted
+   ✔  Then retained origins still refer to their original source generation
+  Scenario: Default parsing retains legacy expansion without source selection
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  When the source executes without line selectors
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Selecting a duplicate row preserves the complete source graph
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with source-backed Messages and line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And the report retains all Pickles but references only the selected original row
+  Scenario: Line-only convenience also composes a configured CLI name and caller predicate
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  And the CLI selects red while the caller selects green
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+  Scenario: Line selection captures its own metadata without a reporting store
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  And no external source store is configured
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+[Summary]
+1 feature
+38 scenarios (38 passed)
+178 steps (178 passed)
+     Running tests/messages_consumer.rs (target/debug/deps/messages_consumer-c6e1b13be4359332)
+Feature: Exchange native reports with official Cucumber.js consumers
+  Scenario: Render a tagged Rule outline with both step arguments
+   ✔  Given a rich native execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query resolves both example rows and their arguments
+   ✔  And the official JUnit formatter reports two passing examples
+  Scenario: Report final outcomes after recovery and exhausted retries
+   ✔  Given a mixed retry execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query retains two final outcomes from four attempts
+   ✔  And the official JUnit formatter reports one passing and one failing case
+[Summary]
+1 feature
+2 scenarios (2 passed)
+8 steps (8 passed)
+     Running tests/messages_markdown.rs (target/debug/deps/messages_markdown-45b2392f1d9d52d3)
+Feature: Native Markdown parsing retains official source semantics
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "misc.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "datatables.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "docstrings.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "tags.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "French fallback"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "language-looking prose"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "bullets and Unicode columns"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "indentation and separator rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "variable fences and media"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "table then docstring"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "docstring then table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "rule backgrounds and examples"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "blank first line"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "empty source"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "duplicate docstrings"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "table docstring table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "inconsistent rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "unterminated fence"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "dangling tags"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario: Markdown remains independently available from Messages output
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then the parser API returns an owned native feature without a reporting dependency
+[Summary]
+1 feature
+21 scenarios (21 passed)
+78 steps (78 passed)
+     Running tests/messages_markdown_runtime.rs (target/debug/deps/messages_markdown_runtime-872829f0ba07bdeb)
+Feature: Explicit Markdown execution preserves exact captured source
+  Scenario Outline: Official Markdown sources execute and report their exact graphs
+   ✔  Given the runtime Markdown fixture "minimal.feature.md"
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And its exact Markdown source and full official graph are reported
+   ✔  And its completed run succeeds with valid execution references
+  Scenario Outline: Official Markdown sources execute and report their exact graphs
+   ✔  Given the runtime Markdown fixture "misc.feature.md"
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And its exact Markdown source and full official graph are reported
+   ✔  And its completed run succeeds with valid execution references
+  Scenario Outline: Official Markdown sources execute and report their exact graphs
+   ✔  Given the runtime Markdown fixture "datatables.feature.md"
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And its exact Markdown source and full official graph are reported
+   ✔  And its completed run succeeds with valid execution references
+  Scenario Outline: Official Markdown sources execute and report their exact graphs
+   ✔  Given the runtime Markdown fixture "docstrings.feature.md"
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And its exact Markdown source and full official graph are reported
+   ✔  And its completed run succeeds with valid execution references
+  Scenario Outline: Official Markdown sources execute and report their exact graphs
+   ✔  Given the runtime Markdown fixture "tags.feature.md"
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And its exact Markdown source and full official graph are reported
+   ✔  And its completed run succeeds with valid execution references
+  Scenario: Auto discovers ordinary and Markdown features without consuming unrelated documents
+   ✔  Given a directory containing plain Markdown and unrelated sources
+   ✔  When it runs with Auto source format
+   ✔  Then exactly the plain and Markdown cases execute with their respective media types
+  Scenario: Plain remains the default for custom source paths
+   ✔  Given a classic feature at a custom extension
+   ✔  When it runs with default source format
+   ✔  Then its classic step executes and its source media type stays plain
+  Scenario: Explicit Markdown accepts a caller-selected custom source path
+   ✔  Given Markdown at a custom extension
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then its Markdown step executes and its source media type stays Markdown
+  Scenario: Auto rejects an unrecognized source extension visibly
+   ✔  Given Markdown at a custom extension
+   ✔  When it runs with Auto source format
+   ✔  Then a format failure prevents successful completion
+  Scenario: Invalid Markdown retains original source and correct error media
+   ✔  Given an invalid Markdown source without a final newline
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then its parse error reports the captured Markdown bytes and original location
+  Scenario: Captured Markdown survives deletion before execution
+   ✔  Given a captured Markdown outline deleted after parsing
+   ✔  When its recorded native cases execute with captured Messages
+   ✔  Then all native handlers receive their Pickle text and arguments
+   ✔  And the original Markdown graph and source remain available without rereading
+   ✔  And its completed run succeeds with valid execution references
+  Scenario: Empty Markdown documents report no synthetic Feature or cases
+   ✔  Given an empty Markdown source
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then an exact empty Markdown source document completes successfully
+  Scenario: A globally selected dialect controls Markdown runtime interpretation
+   ✔  Given a French Markdown source with English-looking language prose
+   ✔  When it runs with explicit Markdown parsing and captured Messages
+   ✔  Then French steps execute and the reported graph remains French
+  Scenario: Typed Markdown snapshots preserve earlier generations
+   ✔  Given the runtime Markdown fixture "docstrings.feature.md"
+   ✔  When snapshots capture Markdown then plain then invalid Markdown at the same path
+   ✔  Then retained typed Markdown metadata and bytes remain unchanged
+[Summary]
+1 feature
+14 scenarios (14 passed)
+54 steps (54 passed)
+     Running tests/messages_retries.rs (target/debug/deps/messages_retries-3ed3e850629a2bc0)
+Feature: Report native retry attempts to portable consumers
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "recovered"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 2 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,false"
+   ✔  And attempt first-step statuses are "FAILED,PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 3 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,true,false"
+   ✔  And attempt first-step statuses are "FAILED,FAILED,FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "passing"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "undefined"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "UNDEFINED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 0 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario: Keep retry outcomes separate across concurrent scenarios
+   ✔  Given concurrent recovering and exhausted scenarios
+   ✔  When they run through the Messages writer
+   ✔  Then each scenario has its own contiguous attempt sequence
+   ✔  And the recovered scenario does not hide the exhausted failure
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+[Summary]
+1 feature
+6 scenarios (6 passed)
+40 steps (40 passed)
+     Running tests/messages_table_columns.rs (target/debug/deps/messages_table_columns-62112f2fafc562da)
+Feature: Plain Gherkin table cell locations match official UTF16 column counting
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "emoji before a following cell"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "multiple astral cells"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "escaped pipe beside emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "escaped backslash before emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "unknown escape before emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "combining characters beside emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "NBSP cell padding and emoji"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario Outline: Astral content changes following cell columns without changing values
+   ✔  Given a plain step table containing "EM SPACE preserved inside a cell"
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+   ✔  And source bytes and row locations remain unchanged
+  Scenario: Examples header and body cells retain official columns
+   ✔  Given an outline with astral Examples headers and values
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real expanded handlers receive the official names and cell values
+   ✔  And selecting an actual Examples row still references that original row
+  Scenario: Unicode token indentation remains scalar while cell content uses UTF16
+   ✔  Given a table with NBSP indentation and astral content before its second cell
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And source bytes and row locations remain unchanged
+  Scenario: Markdown cell locations retain their existing typed representation
+   ✔  Given a Markdown table with astral content before its second cell
+   ✔  When the source is compiled and executed with captured Messages
+   ✔  Then the full AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And the real native handler receives every unchanged table cell
+[Summary]
+1 feature
+11 scenarios (11 passed)
+53 steps (53 passed)
+     Running tests/portability.rs (target/debug/deps/portability-c90a578b83d2e2f7)
+Feature: A portable Rust BDD foundation includes its compatible parser
+  Scenario: An unrelated application consumes a relocated checkout
+   ✔  Given a relocated Cucumber source checkout with its vendored parser
+   ✔  And an application depending only on that relocated Cucumber checkout
+   ✔  When the application parses a step with a table followed by a doc string
+   ✔  Then the application observes both step arguments unchanged
+   ✔  And the application uses no sibling parser checkout or Cargo patch
+[Summary]
+1 feature
+1 scenario (1 passed)
+5 steps (5 passed)
+     Running tests/source_paths.rs (target/debug/deps/source_paths-5e081f834b9a916e)
+Feature: Discover an ordered selection of reusable feature sources
+  Scenario: Preserve the supplied file sequence
+   ✔  Given a source selection "files"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Sort each directory expansion without sorting the full selection
+   ✔  Given a source selection "directories"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: Deduplicate overlapping selections at first occurrence
+   ✔  Given a source selection "overlap"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A,C"
+   ✔  And each selected source constructs one World
+  Scenario: Preserve sequence across explicit globs
+   ✔  Given a source selection "globs"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: An empty explicit selection executes no sources
+   ✔  Given a source selection "empty"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are ""
+  Scenario: A missing literal file remains an observable parse error
+   ✔  Given a source selection "missing"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: An unmatched glob contributes no source
+   ✔  Given a source selection "unmatched"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+  Scenario: Syntax errors do not hide valid selected sources
+   ✔  Given a source selection "invalid"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: Source format still governs directory discovery
+   ✔  Given a source selection "mixed formats"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "M,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Source line selectors compose with the ordered selection
+   ✔  Given a source selection "lines"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B"
+  Scenario: The explicit source plan takes precedence over the legacy CLI glob
+   ✔  Given a source selection "cli override"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+  Scenario: The default parser retains sorted directory discovery
+   ✔  Given a source selection "legacy"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A,B,C"
+  Scenario: Sort valid Unicode filenames using the official string order
+   ✔  Given a source selection "unicode paths"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "U,V"
+[Summary]
+1 feature
+13 scenarios (13 passed)
+44 steps (44 passed)

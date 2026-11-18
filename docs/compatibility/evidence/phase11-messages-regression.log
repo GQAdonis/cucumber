@@ -1,0 +1,288 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.41s
+     Running tests/messages.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages-76d14bce877697dc)
+Feature: Portable Cucumber execution reports
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "passing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "failing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "FAILED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "undefined" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "UNDEFINED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "ambiguous" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "AMBIGUOUS,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "parallel" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "empty" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are ""
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "initial conjunction" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "wildcard" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Context,Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "inherited background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Action,Action"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "outline" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "scenario outlines"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "table" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "docstring" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "parse error" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "parser errors"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "rule" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "rules"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "tags" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "tags"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "description" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "descriptions"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "language" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "English"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "missing source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "source unavailable"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "changed source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "differs from runner AST"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "empty with background" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "empty scenarios with backgrounds"
+   ✔  And no successful completed run is emitted
+[Summary]
+1 feature
+21 scenarios (21 passed)
+101 steps (101 passed)
+     Running tests/messages_retries.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_retries-d531406e09f2befb)
+Feature: Report native retry attempts to portable consumers
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "recovered"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 2 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,false"
+   ✔  And attempt first-step statuses are "FAILED,PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 3 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,true,false"
+   ✔  And attempt first-step statuses are "FAILED,FAILED,FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "passing"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "undefined"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "UNDEFINED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 0 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario: Keep retry outcomes separate across concurrent scenarios
+   ✔  Given concurrent recovering and exhausted scenarios
+   ✔  When they run through the Messages writer
+   ✔  Then each scenario has its own contiguous attempt sequence
+   ✔  And the recovered scenario does not hide the exhausted failure
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+[Summary]
+1 feature
+6 scenarios (6 passed)
+40 steps (40 passed)
+     Running tests/messages_source.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_source-294873859c4d20d4)
+Feature: Localized source graphs use the parser's selected vocabulary
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_fr"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_emoji"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: The captured fallback dialect applies without a language directive
+   ✔  Given a legacy French feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "fr" with step keywords "Soit ,Quand ,Alors "
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: A newly registered dialect retains no-space step keywords
+   ✔  Given a Gherkin 43 Malayalam feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "ml" with step keywords "നൽകിയത്,എപ്പോൾ,പിന്നെ"
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Latest-only Rule keywords retain localized structure and Unicode columns
+   ✔  Given a Gherkin 43 Chinese feature with a latest-only Rule keyword and Unicode table cells
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "zh-CN" with a Rule keyword "规则"
+   ✔  And its Unicode table cell columns are 9 and 14
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Multiply classified localized keywords remain Unknown
+   ✔  Given a Gherkin 43 French feature with wildcard and conjunction steps
+   ✔  When its captured source is converted to Messages
+   ✔  Then the pickle step types are localized as "Context,Unknown,Unknown"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Legacy vocabulary does not acquire a latest-only structural keyword
+   ✔  Given a legacy Chinese feature containing the latest-only Rule spelling
+   ✔  When its captured source is converted to Messages
+   ✔  Then the legacy graph retains that spelling as feature description
+   ✔  And every graph envelope validates against Messages 34.2.1
+Feature: Source-faithful portable Gherkin reports
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "rule_with_tag"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "complex_background"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "descriptions"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "several_examples"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "escaped_pipes"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "docstrings"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "step_with_datatable_and_docstring"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "example_tokens_everywhere"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Selected outline rows retain original source and example identities
+   ✔  Given a tagged outline inside a rule with comments between example rows
+   ✔  When only the selected expanded scenario runs with captured-source reporting
+   ✔  Then the report contains the complete original unexpanded AST
+   ✔  And the executed test case references the selected real example row
+   ✔  And both argument values are normalized and ordered in its pickle
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Captured source survives deletion after parsing
+   ✔  Given a feature captured before its file is deleted
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting succeeds using the captured bytes without a final newline
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Missing captured source fails visibly
+   ✔  Given an executed feature absent from the shared source store
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting rejects the missing snapshot without a successful completion
+  Scenario: Literal language directives in content retain their source meaning
+   ✔  Given an English feature with a language directive inside a doc string and a later comment
+   ✔  When its captured source is converted to Messages
+   ✔  Then the document remains English and retains both literal directive lines
+   ✔  And every graph envelope validates against Messages 34.2.1
+[Summary]
+2 features
+19 scenarios (19 passed)
+80 steps (80 passed)

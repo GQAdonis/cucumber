@@ -1,0 +1,14 @@
+Completed phase boundary; Rust1.88 explicitly selected.
+First invocation (full retained evidence: phase43-45-first-bdd.log):
+set -eo pipefail
+RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --features output-messages --test vlbv_adapter --test messages_rerun --test messages_markdown_precedence 2>&1 | tee docs/compatibility/evidence/phase43-45-first-bdd.log
+
+Targets are harness=false behavior harnesses. All production and feature-first harnesses were declared complete before this invocation. No unit suite, general Cargo test or premature compilation was run.
+
+Affected root boundary (exit0,106 scenarios/460 steps):
+RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --features output-messages --test messages_markdown --test messages_markdown_runtime --test messages_table_columns --test line_selection --test source_paths --test messages_retries --test messages_consumer --test portability 2>&1 | tee docs/compatibility/evidence/phase43-45-affected-bdd.log
+
+Sibling parser boundary (cwd /Users/gqadonis/Projects/references/gherkin):
+RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --test step_arguments 2>&1 | tee /Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/phase45-parser-affected-bdd.log
+
+Recorded results: primary87 scenarios/348 steps, affected root106/460, sibling73/241. All exited0 on their first invocation using Rust1.88; no compiler warnings or production corrections occurred. Counts describe separate runs, not a sum of unique coverage.

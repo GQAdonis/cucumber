@@ -1,0 +1,135 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.33s
+     Running tests/messages.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages-76d14bce877697dc)
+Feature: Portable Cucumber execution reports
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "passing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "failing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "FAILED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "undefined" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "UNDEFINED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "ambiguous" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "AMBIGUOUS,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "parallel" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "empty" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are ""
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "initial conjunction" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "wildcard" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Context,Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "inherited background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Action,Action"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "outline" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "scenario outlines"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "table" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "docstring" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "hooks" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "hooks"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "parse error" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "parser errors"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "rule" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "rules"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "tags" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "tags"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "description" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "descriptions"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "language" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "English"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "missing source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "source unavailable"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "changed source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "differs from runner AST"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "empty with background" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "empty scenarios with backgrounds"
+   ✔  And no successful completed run is emitted
+[Summary]
+1 feature
+22 scenarios (22 passed)
+105 steps (105 passed)

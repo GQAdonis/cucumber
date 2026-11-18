@@ -1,0 +1,16 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0282]: type annotations needed for `&mut _`
+  --> tests/messages_backgrounds.rs:19:47
+   |
+19 |     Hooks::new().before("setup",|_,_,scenario,world|Box::pin(async move {
+   |                                               ^^^^^
+20 |         world.name=scenario.name.clone(); TRACE.lock().unwrap().push((scenario.name.clone(),"before".into()));
+   |         ---------- type must be known at this point
+   |
+help: consider giving this closure parameter an explicit type, where the type for type parameter `World` is specified
+   |
+19 |     Hooks::new().before("setup",|_,_,scenario,world: &mut World|Box::pin(async move {
+   |                                                    ++++++++++++
+
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `cucumber` (test "messages_backgrounds") due to 1 previous error

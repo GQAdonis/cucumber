@@ -1,0 +1,21 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0107]: struct takes at least 5 generic arguments but 1 generic argument was supplied
+   --> tests/scenario_hook_records.rs:808:28
+    |
+808 |     let report = cucumber::Cucumber::<Broken>::new()
+    |                            ^^^^^^^^   ------ supplied 1 generic argument
+    |                            |
+    |                            expected at least 5 generic arguments
+    |
+note: struct defined here, with at least 5 generic parameters: `W`, `P`, `I`, `R`, `Wr`
+   --> src/cucumber.rs:48:12
+    |
+ 48 | pub struct Cucumber<W, P, I, R, Wr, Cli = cli::Empty>
+    |            ^^^^^^^^ -  -  -  -  --
+help: add missing generic arguments
+    |
+808 |     let report = cucumber::Cucumber::<Broken, P, I, R, Wr>::new()
+    |                                             +++++++++++++
+
+For more information about this error, try `rustc --explain E0107`.
+error: could not compile `cucumber` (test "scenario_hook_records") due to 1 previous error
