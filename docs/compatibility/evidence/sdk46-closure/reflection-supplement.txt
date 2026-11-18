@@ -1,0 +1,420 @@
+2026-11-18T11:41:30.019995Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode: Diagnosing EncodedBlock:
+2026-11-18T11:41:30.020355Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   header 27 bytes
+2026-11-18T11:41:30.020380Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   change_meta 5 bytes
+2026-11-18T11:41:30.020385Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   cids: 6 bytes
+2026-11-18T11:41:30.020390Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   keys: 44 bytes
+2026-11-18T11:41:30.020394Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   positions: 0 bytes
+2026-11-18T11:41:30.020405Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   ops: 14 bytes
+2026-11-18T11:41:30.020413Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   delete_id_starts: 0 bytes
+2026-11-18T11:41:30.020419Z  INFO export{mode=Snapshot}: loro_internal::oplog::change_store::block_encode:   values: 1532 bytes
+{
+  "state": {
+    "schemaVersion": "2",
+    "projectId": "39208255-8a57-4101-8014-7952fe9993e7",
+    "runId": "project-20261118T062840Z",
+    "revision": 39,
+    "frontier": {
+      "f34cb6a4-a7d1-4e01-80f5-b00acc122e5e": 39
+    },
+    "replicaHeads": {
+      "f34cb6a4-a7d1-4e01-80f5-b00acc122e5e": {
+        "eventId": "b9b3ad9b-13bc-495d-b80e-171b6611d541",
+        "integrityHash": "67883829daaa0f83914a3743481a2de70ef4ea6a77340dca5bdf96eb3040f7a8",
+        "lamport": 39
+      }
+    },
+    "lastEventId": "b9b3ad9b-13bc-495d-b80e-171b6611d541",
+    "lastEventHash": "67883829daaa0f83914a3743481a2de70ef4ea6a77340dca5bdf96eb3040f7a8",
+    "lastEventAt": "2026-11-18T11:41:30.008101Z",
+    "phaseDefinitionOrder": [
+      "phase-46-native-sdk"
+    ],
+    "lifecycle": "ready",
+    "planRevision": 1,
+    "checkpoint": null,
+    "exactNextWork": "Assess finite source/compiler and Messages-rerun SDK value, propose calibrated acceptance before generation",
+    "activePath": {
+      "phasePath": [
+        "phase-46-native-sdk"
+      ],
+      "phaseId": "phase-46-native-sdk",
+      "stageId": "execute",
+      "changeId": null,
+      "taskId": null,
+      "commit": "6e4753fc0783038bb388de1b4d76055edc697b8f"
+    },
+    "phases": {
+      "phase-46-native-sdk": {
+        "id": "phase-46-native-sdk",
+        "slug": "phase-46-native-sdk",
+        "title": "Native SDK source and evidence interoperability",
+        "parentPhaseId": null,
+        "status": "complete",
+        "stages": {
+          "assess": {
+            "id": "assess",
+            "title": "Assess native language SDK boundary",
+            "sequence": 1,
+            "status": "complete"
+          },
+          "execute": {
+            "id": "execute",
+            "title": "Implement adopted native SDK and package boundary",
+            "sequence": 5,
+            "status": "complete"
+          }
+        },
+        "changes": {
+          "native-source-sdk": {
+            "id": "native-source-sdk",
+            "title": "Shared native SDK and packaged language adapters",
+            "sequence": 1,
+            "status": "complete",
+            "implementationStatus": "complete",
+            "tasks": {
+              "T1": {
+                "id": "T1",
+                "title": "Implement safe shared Rust SDK",
+                "sequence": 1,
+                "status": "complete",
+                "summary": "Implementation source complete; no generated code executed. Whole-phase packaging and BDD remain pending."
+              },
+              "T2": {
+                "id": "T2",
+                "title": "Implement native TypeScript adapter",
+                "sequence": 2,
+                "status": "complete",
+                "summary": "Implementation source complete; no generated code executed. Whole-phase packaging and BDD remain pending."
+              },
+              "T3": {
+                "id": "T3",
+                "title": "Implement native Python adapter",
+                "sequence": 3,
+                "status": "complete",
+                "summary": "Implementation source complete; no generated code executed. Whole-phase packaging and BDD remain pending."
+              },
+              "T4": {
+                "id": "T4",
+                "title": "Author and complete package-based BDD boundary",
+                "sequence": 4,
+                "status": "complete",
+                "summary": "All package preparation, consumers, eleven behavior cases and controls source-authored; no generated-code execution. B4 packet, acceptance and independent review remain pending."
+              }
+            }
+          }
+        },
+        "legacyReadOnly": false
+      }
+    },
+    "completion": {
+      "implementation": {
+        "completed": 1,
+        "total": 1,
+        "status": "complete",
+        "summary": null,
+        "blockers": []
+      },
+      "evidence": {
+        "completed": 0,
+        "total": 0,
+        "status": "pending",
+        "summary": null,
+        "blockers": []
+      },
+      "certification": {
+        "completed": 0,
+        "total": 0,
+        "status": "pending",
+        "summary": null,
+        "blockers": []
+      },
+      "publication": {
+        "completed": 0,
+        "total": 0,
+        "status": "pending",
+        "summary": null,
+        "blockers": []
+      }
+    },
+    "decisions": {
+      "contract-adoption-phase-46-native-sdk-00384afc": {
+        "id": "contract-adoption-phase-46-native-sdk-00384afc",
+        "summary": "ADOPTED-CONTRACT path=.kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json sha256=00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785 planRevision=1 adoptionSource=Trusted parent delegation 6afa890d-2338-8191-9915-c61bb8e630da: Travis answered Yes adopt that as the first SDK phase and proceed; exact question/answer in owner-adoption.json and canonical decision sdk46-travis-explicit-adoption. owner=Travis scenarios=SDK-001,SDK-002,SDK-003,SDK-004,SDK-005,SDK-006,SDK-007,SDK-008,SDK-009,SDK-010,SDK-011",
+        "planRevision": 1,
+        "supersedes": null
+      },
+      "contract-adoption-phase-46-native-sdk-a48388a6": {
+        "id": "contract-adoption-phase-46-native-sdk-a48388a6",
+        "summary": "ADOPTED-CONTRACT path=.kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json sha256=a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0 planRevision=1 adoptionSource=Trusted parent delegation 6afa890d-2338-8191-9915-c61bb8e630da: Travis answered Yes adopt that as the first SDK phase and proceed; exact question/answer in owner-adoption.json and canonical decision sdk46-travis-explicit-adoption. owner=Travis scenarios=SDK-001,SDK-002,SDK-003,SDK-004,SDK-005,SDK-006,SDK-007,SDK-008,SDK-009,SDK-010,SDK-011",
+        "planRevision": 1,
+        "supersedes": "contract-adoption-phase-46-native-sdk-00384afc"
+      },
+      "docs-sites-review-repair-complete": {
+        "id": "docs-sites-review-repair-complete",
+        "summary": "Independent authorized documentation change completed: both Docusaurus sites build; focused BDD10 scenarios64steps passed after docs-only internal review corrections. Original failures and9-case passing evidence retained. Existing workflows preserved; no deployment or registry publication. Exact reviewer model unknown; no cross-model/full-repo audit/canonical KBD certification. SDK owner calibration/adoption remains pending.",
+        "planRevision": 1,
+        "supersedes": null
+      },
+      "sdk-20261118-user-scope": {
+        "id": "sdk-20261118-user-scope",
+        "summary": "{\"kind\": \"USER-DIRECTION\", \"date\": \"2026-11-18\", \"source\": \"Explicit Travis delegation in this conversation\", \"requested\": [\"Extensible Rust SDK\", \"Real TypeScript/Python FFI reusing core behavior\", \"Confirm Python ecosystem parity target\", \"Prepare package names/ownership/publication requirements\", \"Full KBD orchestration\", \"Commit/push Cucumber and Gherkin at earliest sensible checkpoint\", \"Additive Docusaurus sites and README/docs for both\", \"Independent audit after implementation and BDD before upstream contributions\", \"Matching upstream issues/PRs at completion, respecting contribution rules\"], \"constraints\": [\"No generated-code execution until adopted whole-phase boundary\", \"BDD only; no generic or unit suites\", \"Preserve existing build/release workflows\", \"No registry registration/publication until names/ownership/scope confirmed\", \"No documentation deployment without hosting decision\", \"No premature upstream issues/PRs\"], \"preserved\": {\"branch\": \"foundation/rust-bdd-sdk\", \"cucumber\": \"6e4753fc0783038bb388de1b4d76055edc697b8f\", \"gherkin\": \"efb91e8bb5a7d59a717f88c05d1c06ec5d06a819\", \"pushes\": \"both succeeded\"}}",
+        "planRevision": 1,
+        "supersedes": null
+      },
+      "sdk46-internal-review-dual-python-docs": {
+        "id": "sdk46-internal-review-dual-python-docs",
+        "summary": "Continue independent authorized additive Docusaurus documentation work; acceptance scenarios recorded before implementation. Shared SDK contract/calibration remains unadopted. External review transmission prohibited; do not retry denied dispatch. Use internal review with exact deployment unknown and no cross-model certification. Investigate both Behave and pytest-bdd.",
+        "planRevision": 1,
+        "supersedes": null
+      },
+      "sdk46-reflection-supplement": {
+        "id": "sdk46-reflection-supplement",
+        "summary": "Phase46 remains CLOSED/PASS. Authored reflection and evidence are retained at .kbd-orchestrator/phases/phase-46-native-sdk/reflection.md and docs/compatibility/evidence/sdk46-closure/. Canonical Reflect registration is unavailable after closure. This run-global supplement does not create or certify a Reflect stage, amend closure, or authorize a successor.",
+        "planRevision": 1,
+        "supersedes": null
+      },
+      "sdk46-travis-explicit-adoption": {
+        "id": "sdk46-travis-explicit-adoption",
+        "summary": "{\"source\": \"Trusted parent delegation from 6afa890d-2338-8191-9915-c61bb8e630da\", \"question\": \"Approve the first SDK phase: shared Rust compilation and rerun planning exposed through native TypeScript/Python bindings, safe Rust extensions, and verified installable local packages, with foreign step execution and Behave/pytest-bdd adapters following?\", \"answer\": \"Yes adopt that as the first SDK phase and proceed\", \"scope\": \"Adopted eleven-case boundary and concrete reviewed contract; implement, verify only at complete phase end, internal review and material corrections.\", \"individualCalibrationVerdicts\": \"Not separately supplied; preserve null fields rather than fabricate answers.\", \"prohibitions\": [\"external review transmission\", \"registry publication\", \"site deployment\", \"premature upstream contributions\"]}",
+        "planRevision": 1,
+        "supersedes": null
+      }
+    },
+    "blockers": {
+      "sdk46-adoption-review": {
+        "id": "sdk46-adoption-review",
+        "summary": "Phase46 generation awaits owner review of eleven proposed SDK scenarios/calibration. Python ecosystem unresolved. Isolated assessment review dispatch denied by automatic approval review: nonpublic packet disclosure to external provider lacked explicit destination/payload authorization. No dispatch executed, no new relevant user authorization found, not retried. Package names/ownership block publication only; hosting blocks deployment only.",
+        "resolved": true,
+        "resolution": "External dispatch is now prohibited and abandoned; internal planning review completed with limitations. Shared-core work no longer depends on choosing one Python framework. Remaining owner calibration/adoption is recorded separately, not resolved."
+      },
+      "sdk46-b4-completion-signature": {
+        "id": "sdk46-b4-completion-signature",
+        "summary": "Phase46 source implementation is complete (canonical 1/1), owner scope adoption resolved. B4 has not run: installed KBD requires an operator-signed amend-contract manifest for implementationComplete status. Concrete unsigned implementation-complete-amendment.json changes no scenarios; active contract preserved, signature not fabricated. See B4-RESUME.md. Builds/imports/tests/review remain unexecuted; continue preservation only.",
+        "resolved": true,
+        "resolution": "Travis explicitly authorized signing the exact prepared amendment with his existing key. Signature generated and verified against registered signer; amendment bound at revision2, no scenario changes."
+      },
+      "sdk46-owner-calibration": {
+        "id": "sdk46-owner-calibration",
+        "summary": "Eleven SDK candidate behaviors, calibration examples, concrete request/result schema and oracle identity proposal are prepared and internally reviewed. Owner-reviewed calibration and explicit contract adoption remain absent. No SDK implementation generated. Both Python frameworks are researched; registry names only block publication. Independent authorized documentation sites completed their separate9-scenario/56-step BDD boundary; no canonical certification claimed.",
+        "resolved": true,
+        "resolution": "Travis explicitly answered: Yes adopt that as the first SDK phase and proceed. Exact question/answer retained in owner-adoption.json; individual calibration verdicts remain honestly unspecified. Proceed with adopted eleven-case phase."
+      }
+    },
+    "claims": {},
+    "submodulePins": {},
+    "replicaView": {
+      "replicaId": "f34cb6a4-a7d1-4e01-80f5-b00acc122e5e",
+      "localHead": "598f43356e1feeb0f7af975f69af341eab1e6809",
+      "activePathStatus": "current",
+      "submodules": {}
+    },
+    "conflicts": {},
+    "devices": {
+      "ed25519:2c27c749aebaedf4ffa5dfe5b5021f360eb1356153f34a2f490883cfa7c32349": {
+        "deviceId": "unknown-device",
+        "keyId": "ed25519:2c27c749aebaedf4ffa5dfe5b5021f360eb1356153f34a2f490883cfa7c32349",
+        "publicKey": "871iU0Bs/8a3DP+tqTdJ4mW+QH5tyT7Qu8BA7zzadzc=",
+        "status": "active",
+        "enrolledAtRevision": 1,
+        "revokedAtRevision": null
+      }
+    },
+    "operatorKeyIds": [
+      "ed25519:2c27c749aebaedf4ffa5dfe5b5021f360eb1356153f34a2f490883cfa7c32349"
+    ],
+    "commandRevisions": {
+      "9f37ce07-e4e8-4996-a3cc-f2c72263281b": 1,
+      "docs-sites-review-repair-complete": 11,
+      "phase-bind:phase-46-native-sdk:00384afc672a235f": 21,
+      "phase-bind:phase-46-native-sdk:a48388a624c00318": 33,
+      "phase-close:phase-46-native-sdk:fdb27acd46e66605": 37,
+      "sdk-20261118-phase46-activate": 3,
+      "sdk-20261118-phase46-create": 2,
+      "sdk-20261118-user-scope-record": 4,
+      "sdk46-assess-calibration-blocked": 10,
+      "sdk46-assess-complete-adopted": 15,
+      "sdk46-assess-enter": 5,
+      "sdk46-assess-resume-adopted": 14,
+      "sdk46-b4-signature-gate": 32,
+      "sdk46-bind-implementation-complete": 34,
+      "sdk46-bind-owner-adopted-contract": 22,
+      "sdk46-calibration-only-block": 9,
+      "sdk46-completion-signature-resolved": 35,
+      "sdk46-execute-complete": 38,
+      "sdk46-execute-enter": 23,
+      "sdk46-implemented-T1": 28,
+      "sdk46-implemented-T2": 29,
+      "sdk46-implemented-T3": 30,
+      "sdk46-implemented-T4": 31,
+      "sdk46-internal-review-dual-python-docs-direction": 7,
+      "sdk46-owner-calibration-resolved": 13,
+      "sdk46-owner-review-and-provider-block": 6,
+      "sdk46-phase-status-reconcile": 36,
+      "sdk46-reflection-supplement": 39,
+      "sdk46-register-T1": 17,
+      "sdk46-register-T2": 18,
+      "sdk46-register-T3": 19,
+      "sdk46-register-T4": 20,
+      "sdk46-register-native-source-sdk": 16,
+      "sdk46-start-T1": 24,
+      "sdk46-start-T2": 25,
+      "sdk46-start-T3": 26,
+      "sdk46-start-T4": 27,
+      "sdk46-supersede-combined-review-block": 8,
+      "sdk46-travis-explicit-adoption": 12
+    },
+    "phaseClosure": {
+      "phases": {
+        "phase-46-native-sdk": {
+          "binding": {
+            "contractPath": ".kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json",
+            "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+            "scenarioDigests": {
+              "SDK-001": "7724c723584bf341635cf36b5c1ad2939611a432a205be9aa37ce9a873966b28",
+              "SDK-002": "dbc389f83be0a972be5a32d4fd7fcc94f138b95dcedb53e4d3348fba2f75b839",
+              "SDK-003": "e458bb004b9df609c97cc9c2e847c80bb6d825dd8839ab3efd21e1807759a0bc",
+              "SDK-004": "2af46c8d02db737489821034d91c5b4a4db0f920693f6480958dac1261c8a96e",
+              "SDK-005": "1bedec62de78a76612e40b196da6ddf891164c663b7d1b47b3318d54fec898f7",
+              "SDK-006": "7c76208b64cd7e177ef22437bf7fc26c791cc887012f28179284c2ae476a68a4",
+              "SDK-007": "4f43dbec6cc699d73c4c475985350871151cccdf2a0214afaebff358102d11ea",
+              "SDK-008": "5f307607630b000c8798641333bb3e1065abada1003083dcf7ee064bed32ee8c",
+              "SDK-009": "2eb61e4e4a9e6e2afce6c48c2fefd35384e65646f67c0b925c4ecbfde37fd45e",
+              "SDK-010": "cbd1fd8d2f407fc952dade14ccab813e79048d2bfa1237c8f866ac3b1c41f193",
+              "SDK-011": "c233866cd16a24b9e625f346ea0c5bced96a2964ef1bbdf308e84e613b619311"
+            },
+            "planRevision": 1,
+            "adoptionDecisionId": "contract-adoption-phase-46-native-sdk-a48388a6",
+            "bindingRevision": 2,
+            "authority": {
+              "manifestRaw": "{\"action\":\"amend-contract\",\"approver\":\"travis@tribehealthsolutions.com\",\"contractPath\":\".kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json\",\"kind\":\"kbd.scope-authority\",\"namespace\":\"prometheus-kbd-scope-amendment\",\"newContractDigest\":\"a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0\",\"nonce\":\"8f3a4ce5d7cdcc33824e8230dfc3e0c6\",\"phaseId\":\"phase-46-native-sdk\",\"previousContractDigest\":\"00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785\",\"projectId\":\"39208255-8a57-4101-8014-7952fe9993e7\",\"reason\":\"Record completion of the owner-adopted implementation; all eleven scenarios, oracles and commands remain unchanged. No behavior acceptance is claimed.\",\"runId\":\"project-20261118T062840Z\",\"scenarioChanges\":{\"added\":[],\"modified\":[],\"removed\":[]},\"schemaVersion\":\"1\",\"timestamp\":\"2026-11-18T07:42:30Z\"}",
+              "manifestSha256": "c4c77ba2a6c2302c519d56792e0a5e604ec23810058c93824403e7dae0e4dd5e",
+              "signature": "-----BEGIN SSH SIGNATURE-----\nU1NIU0lHAAAAAQAAADMAAAALc3NoLWVkMjU1MTkAAAAgsgqOvzJMpDfEY0CKRyfxixLl97\nUxT+bg/r6Jl4BBHFcAAAAecHJvbWV0aGV1cy1rYmQtc2NvcGUtYW1lbmRtZW50AAAAAAAA\nAAZzaGE1MTIAAABTAAAAC3NzaC1lZDI1NTE5AAAAQE/Vriu5/0sbl3wV95oFIDNiBD6THX\nzoinhGtUAjb/59Ft8FU9d6us+SSoTl8ViFQVvROXesHLX5V5c7MdlcpwM=\n-----END SSH SIGNATURE-----\n",
+              "approver": "travis@tribehealthsolutions.com",
+              "namespace": "prometheus-kbd-scope-amendment",
+              "allowedSignersSha256": "4c32adefb70e281e6c78f3ecb562088ef82209c54a9a01b1ed630ba3ed78a573"
+            }
+          },
+          "boundAtRevision": 33,
+          "bindingHistory": [
+            "00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785"
+          ],
+          "terminal": {
+            "runId": "project-20261118T062840Z",
+            "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+            "evidenceDigest": "10ac7bcb79f97d6622d1600f65cad332cf83649da4d062f63116ff28a9751be8",
+            "disposition": "pass",
+            "reasonCode": "budget-exhausted",
+            "scenarios": [
+              {
+                "id": "SDK-001-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-001-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-002-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-002-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-003-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-003-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-004-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-004-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-005-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-005-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-006-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-006-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-007-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-007-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-008-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-008-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-009-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-009-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-010-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-010-control",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-011-positive",
+                "status": "PASS"
+              },
+              {
+                "id": "SDK-011-control",
+                "status": "PASS"
+              }
+            ],
+            "budgetConsumption": {
+              "noProgress": 0,
+              "repairAttempts": 2,
+              "toolCalls": 180
+            },
+            "closureKey": "fdb27acd46e66605ba0a3d209ba7e4cf53bc7ba79c394e213739d8390f1de8e5",
+            "recordedAtRevision": 37
+          },
+          "consumptionHighWater": {
+            "noProgress": 0,
+            "repairAttempts": 2,
+            "toolCalls": 180
+          }
+        }
+      },
+      "consumedManifests": [
+        "c4c77ba2a6c2302c519d56792e0a5e604ec23810058c93824403e7dae0e4dd5e"
+      ],
+      "awaitingSuccessor": "phase-46-native-sdk"
+    }
+  },
+  "committedLocally": true,
+  "controlPlane": "disabled"
+}

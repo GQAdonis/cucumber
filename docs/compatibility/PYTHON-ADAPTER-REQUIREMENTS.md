@@ -89,5 +89,4 @@ by these requirements alone.
 - Decide plugin combinations only when a concrete consumer needs them. No
   universal Python Cucumber parity claim follows from shared source compilation.
 
-The pending phase46 operator signature remains the sole SDK verification gate;
-this research neither changes nor bypasses it.
+Phase46 signature and installed-native boundary are complete; final proof passed22 cases/66 steps. These framework adapter requirements remain future, unadopted scope. See [SDK46](PHASE46-SDK.md).

@@ -182,7 +182,7 @@ packet dispatch remains prohibited and the denied dispatch will not be retried.
 Then inspect current upstream policies and existing issues, separate parser
 changes from runner/protocol and SDK contributions, and preserve parser-first
 dependency order. Create matching issues/PRs only after completion and review.
-No completion issues/PRs are claimed. Recheck these unverified overlap leads:
+The owner has now authorized draft contribution issues/PRs. The contribution reflection records current overlap and limits; recheck these leads before each submission:
 https://github.com/cucumber-rs/cucumber/pull/391 (step hooks/reporting) and
 https://github.com/cucumber-rs/cucumber/pull/405 (scenario sharding).
 These leads do not block authorized preservation pushes to the forks.
