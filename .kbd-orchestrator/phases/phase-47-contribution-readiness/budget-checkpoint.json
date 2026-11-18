@@ -1,7 +1,7 @@
 {
-  "recordedAt": "2026-11-18T13:24:13.311436+00:00",
+  "recordedAt": "2026-11-18T13:26:19.642838+00:00",
   "elapsedMinutes": 31.1,
-  "toolCallsCharged": 150,
+  "toolCallsCharged": 160,
   "toolCallLimit": 200,
   "repairAttempts": 0,
   "repairLimit": 2,
@@ -12,5 +12,6 @@
     "dependency": 14,
     "acceptanceIncludingHelper": 32
   },
-  "remaining": "At most50 calls before further accounting; elapsed300min budget continues during authority wait."
+  "remaining": "At most40 tool calls before further accounting; total300min elapsed budget continues through authority wait. Conservative charge includes preservation/handoff overhead, not exact machine telemetry.",
+  "previousSourceCompletionCharge": 150
 }
