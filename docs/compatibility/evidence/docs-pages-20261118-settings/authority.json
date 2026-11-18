@@ -1,0 +1,6 @@
+{
+  "source": "Travis explicit latest parent delegation",
+  "scope": "Create GitHub Pages for both existing Docusaurus forks via documentation-only CI/CD and set repository About website",
+  "observedAt": "2026-11-18T11:11:35.042261+00:00",
+  "existingSettings": "Both PagesGET404, environments empty; Actions already enabled, no Actions/security settings changed"
+}

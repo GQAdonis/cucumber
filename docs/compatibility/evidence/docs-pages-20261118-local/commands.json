@@ -1,0 +1,163 @@
+[
+  {
+    "cwd": "/Volumes/T7/Projects/references/cucumber/docs-site",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "cucumber-production-build",
+    "startedAt": "2026-11-18T11:07:39.575Z",
+    "finishedAt": "2026-11-18T11:08:03.480Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "c491913323a34ea63094773b95109af3b593419cee110070140440b08cc72551",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "cwd": "/Volumes/T7/Projects/references/gherkin/docs-site",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/gherkin/"
+    },
+    "label": "gherkin-production-build",
+    "startedAt": "2026-11-18T11:08:03.486Z",
+    "finishedAt": "2026-11-18T11:08:19.118Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "0dcc9722b755431d8988b5f9399c55f4ada89f61f9ec2f4740e508ccb4a2ee21",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/cucumber-broken-link-u36HoV",
+    "argv": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "env": {},
+    "label": "08-isolated-install",
+    "startedAt": "2026-11-18T11:08:57.380Z",
+    "finishedAt": "2026-11-18T11:09:19.221Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "a8f7cd19be0de3131afab75ade569a5f7e7225416ec3ace74035c6b490f0e073",
+    "stderrSha256": "d902246ec0dad033d1fadd1823edc19f4f09e45459d866589a0cba799532e57f"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/cucumber-broken-link-u36HoV",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "08-isolated-baseline",
+    "startedAt": "2026-11-18T11:09:19.221Z",
+    "finishedAt": "2026-11-18T11:09:36.114Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "f6550b4e0b0670c2ef86addbb481137bf3b8825b399ce558dd9b4464cbe58557",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/cucumber-broken-link-u36HoV",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "08-broken-link-control",
+    "startedAt": "2026-11-18T11:09:36.116Z",
+    "finishedAt": "2026-11-18T11:09:41.175Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "a3fe9c1288f7fec864a6f2cb638b7fdcf3ee57dfb60763429d93d576d2db87a3",
+    "stderrSha256": "518d87a322d2f2d4163f644d2002028aca7158c81dbb2ebc4a2d117c7b3fd94e"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/gherkin-broken-link-h783LO",
+    "argv": [
+      "npm",
+      "ci",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund"
+    ],
+    "env": {},
+    "label": "09-isolated-install",
+    "startedAt": "2026-11-18T11:09:45.755Z",
+    "finishedAt": "2026-11-18T11:09:55.768Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "3e1cb0107ea8dda9422bec99e768f6c5a3d5bb31e94203f0bb0eb5a3f17b214f",
+    "stderrSha256": "d902246ec0dad033d1fadd1823edc19f4f09e45459d866589a0cba799532e57f"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/gherkin-broken-link-h783LO",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/gherkin/"
+    },
+    "label": "09-isolated-baseline",
+    "startedAt": "2026-11-18T11:09:55.769Z",
+    "finishedAt": "2026-11-18T11:10:09.727Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "07c603c94aec2a5e99726990fbe41822d1fdecd7a837bef2f8487bdfe7f7c250",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/gherkin-broken-link-h783LO",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/gherkin/"
+    },
+    "label": "09-broken-link-control",
+    "startedAt": "2026-11-18T11:10:09.728Z",
+    "finishedAt": "2026-11-18T11:10:13.727Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "5d1c149eae91e3ae15f522273c2a1be77a7a8ec7989cfb116113d173ea547c95",
+    "stderrSha256": "c7d1f5da8c7715d45fddb64bde71a17d6a0d1c2de4bc2eebcc9b90eab0755de2"
+  },
+  {
+    "cwd": "/Volumes/T7/Projects/references/cucumber/docs-site",
+    "argv": [
+      "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+      "acceptance/run.mjs"
+    ],
+    "env": {
+      "DOCS_EVIDENCE": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/retained-artifacts-GzvrT4"
+    },
+    "label": "10-reuse-refusal",
+    "startedAt": "2026-11-18T11:10:18.215Z",
+    "finishedAt": "2026-11-18T11:10:18.259Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderrSha256": "70415e39b847ea462c3f8c0649d1663921c828a2bf05d28938b8218a924b35af"
+  }
+]

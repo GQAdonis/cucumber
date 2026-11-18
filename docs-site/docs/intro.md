@@ -16,4 +16,4 @@ The foundation provides native Gherkin compilation, standard Messages NDJSON, or
 
 The [SDK roadmap](./sdk.md) covers the requested extensible Rust surface and TypeScript/Python native bindings. Those additions remain proposed, not available packages.
 
-This additive Docusaurus site keeps the existing Rust book and build/release workflows intact. Hosting is undecided; no site deployment is claimed. See the [preserved delivery record](https://github.com/GQAdonis/cucumber/blob/82c86632d63b323d4c3abdce24c404d0029158d0/docs/compatibility/DELIVERY.md).
+This additive Docusaurus site keeps the existing Rust book and build/release workflows intact. The additive Pages workflow targets https://gqadonis.github.io/cucumber/; public availability requires its successful delivery and public behavior receipt. See the [preserved delivery record](https://github.com/GQAdonis/cucumber/blob/82c86632d63b323d4c3abdce24c404d0029158d0/docs/compatibility/DELIVERY.md).

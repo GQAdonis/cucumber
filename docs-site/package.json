@@ -2,7 +2,7 @@
   "name": "gqadonis-cucumber-docs",
   "version": "0.0.0",
   "private": true,
-  "description": "Local documentation for the GQAdonis cucumber fork; no hosting configured",
+  "description": "Documentation for the independent GQAdonis cucumber fork",
   "license": "MIT OR Apache-2.0",
   "engines": {
     "node": ">=22.20.0"

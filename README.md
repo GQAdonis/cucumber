@@ -30,8 +30,8 @@ step execution and Behave/pytest-bdd adapters are not implemented. Start with
 The additive [Docusaurus site](docs-site/README.md) passed its earlier paired-site
 boundary: 10 scenarios / 64 steps. That proof covers the prior documentation
 source, not these SDK additions or subsequent page edits. See [retained
-documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md). Hosting remains
-undecided and the sites are not deployed.
+documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md). The additive Pages workflow targets [public fork documentation](https://gqadonis.github.io/cucumber/);
+see [deployment status and verification](docs-site/README.md#pages-delivery).
 
 This fork adds opt-in keyword-independent step matching, a portable snapshot of
 its compatible Gherkin parser, ordered scenario hooks, and a bounded standard

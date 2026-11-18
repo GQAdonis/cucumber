@@ -1,0 +1,9 @@
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: MDX compilation failed for file "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/docs-pages-20261118-local/gherkin-broken-link-h783LO/docs/intro.md"
+Cause: Markdown link with URL `./missing-documentation-target.md` in source file "docs/intro.md" (19:1) couldn't be resolved.
+Make sure it references a local Markdown file that exists within the current plugin.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownLinks` option, or apply the `pathname://` protocol to the broken link URLs.
+Details:
+Error: Markdown link with URL `./missing-documentation-target.md` in source file "docs/intro.md" (19:1) couldn't be resolved.
+Make sure it references a local Markdown file that exists within the current plugin.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownLinks` option, or apply the `pathname://` protocol to the broken link URLs.
