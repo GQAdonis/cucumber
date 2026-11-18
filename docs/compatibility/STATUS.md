@@ -1,5 +1,7 @@
 # Current Rust BDD interoperability status
 
+Current contribution milestone: the owner explicitly authorized draft submissions after reflection. Both fork-main drafts and upstream proposal issues/matching drafts are now open; see [verified routes and remaining review gates](CONTRIBUTION-DELIVERY.md). Earlier submission holds below describe the previous checkpoint and are superseded only for draft creation, not merges or release.
+
 Foundation checkpoint 2026-11-17; SDK/docs continuation 2026-11-18. All bounded phases through45 have primary and affected root BDD evidence.
 Latest Rust1.88 boundary passed87/348; eight affected targets passed106/460.
 The earlier13-target Rust1.88 checkpoint passed172/670 and remains historical evidence.

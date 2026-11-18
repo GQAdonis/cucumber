@@ -1,5 +1,7 @@
 # Remaining parity work
 
+Current contribution milestone: the owner explicitly authorized draft submissions after reflection. Both fork-main drafts and upstream proposal issues/matching drafts are now open; see [verified routes and remaining review gates](CONTRIBUTION-DELIVERY.md). Earlier submission holds below describe the previous checkpoint and are superseded only for draft creation, not merges or release.
+
 ## Current continuation — 2026-11-18
 
 The preserved through45 implementation is on origin foundation/rust-bdd-sdk.

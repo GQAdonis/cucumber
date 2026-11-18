@@ -1,5 +1,7 @@
 # Upstream contribution overlap preparation
 
+Current contribution milestone: the owner explicitly authorized draft submissions after reflection. Both fork-main drafts and upstream proposal issues/matching drafts are now open; see [verified routes and remaining review gates](CONTRIBUTION-DELIVERY.md). Earlier submission holds below describe the previous checkpoint and are superseded only for draft creation, not merges or release.
+
 Observed 2026-11-18 via read-only GitHub API metadata, changed-file patches and
 public discussion. This is contribution planning and source comparison, not the
 final code audit or an upstream submission. Recheck all states and contribution
