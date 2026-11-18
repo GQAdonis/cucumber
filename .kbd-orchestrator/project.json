@@ -1,0 +1,52 @@
+{
+  "name": "cucumber",
+  "description": "Reusable native Rust BDD foundation, extensible SDK, TypeScript/Python FFI and coordinated Gherkin documentation/contribution work.",
+  "activePhase": null,
+  "verificationMethod": "VLBV",
+  "specBackend": "openspec",
+  "spec_paths": [
+    "openspec/specs/*.md",
+    "openspec/changes/*/specs/**/*.md",
+    "docs/compatibility/CAPABILITIES.md"
+  ],
+  "openspec_available": true,
+  "constraint_file": ".kbd-orchestrator/constraints.md",
+  "build_health_command": null,
+  "test_command": null,
+  "lint_command": null,
+  "dev_command": null,
+  "preferred_planning_agent": "codex",
+  "preferred_execution_agents": [
+    "codex"
+  ],
+  "focus_project_path": "/Volumes/T7/Projects/references/cucumber",
+  "workspace": {
+    "workspace_file": null,
+    "folders": [
+      {
+        "path": "/Volumes/T7/Projects/references/cucumber",
+        "role": "focus",
+        "write_access": true,
+        "purpose": "Core, SDK, bindings and Cucumber documentation"
+      },
+      {
+        "path": "/Volumes/T7/Projects/references/gherkin",
+        "role": "focus",
+        "write_access": true,
+        "purpose": "Maintained parser fork, Gherkin documentation and ordered upstream contribution"
+      }
+    ]
+  },
+  "commandPolicy": {
+    "verification": "Only the adopted finite BDD packet after complete production at B4; affected repair packet at authorized B5.",
+    "toolchain": "Preserve installed Cargo config; Rust1.88 is the declared core minimum. No generic check/test/lint defaults.",
+    "release": "No registry registration/publication or documentation deployment pending names/ownership/hosting decisions.",
+    "repositoryPreservation": "Commit and push authorized to verified GQAdonis origins; preserve established main/v-tag workflows and avoid their release/deploy triggers."
+  },
+  "historicalCheckpoint": {
+    "scope": "through45 historical BDD, not retroactively KBD-certified",
+    "cucumberCommit": "6e4753fc0783038bb388de1b4d76055edc697b8f",
+    "gherkinCommit": "efb91e8bb5a7d59a717f88c05d1c06ec5d06a819",
+    "branch": "foundation/rust-bdd-sdk"
+  }
+}

@@ -60,13 +60,18 @@ Its production snapshot is bundled in cucumber. No expression, regex, browser or
 application fork was needed. The existing cucumber fork is
 [GQAdonis/cucumber](https://github.com/GQAdonis/cucumber).
 
-All implementation remains local and uncommitted/unpushed. The cucumber base HEAD
-is `d95872541ee2a43d71089c64bd3fa8848e24c922`; the parser base HEAD is
-`4c30e3a48a0226bf907053a0a9e738e91cf06727`. Those base revisions alone do not identify
-the modified checkout; retain [the final source inventory](evidence/current-source-sha256.txt)
-and [provenance](evidence/final-provenance.json) with it. Registry or
-remote delivery is not claimed. Cargo registry publication removes path dependency
-resolution and needs separately authorized compatible package publication.
+The verified through45 foundation was committed and pushed on 2026-11-18 to
+the nonrelease branch foundation/rust-bdd-sdk in both verified origins:
+Cucumber 6e4753fc0783038bb388de1b4d76055edc697b8f, Gherkin
+efb91e8bb5a7d59a717f88c05d1c06ec5d06a819. No main branch, release tag,
+deployment or registry publication changed. Inventories/provenance retain the
+historical implementation record; their earlier local-only status is superseded
+by these commits, not silently rewritten.
+
+The requested SDK/FFI, documentation sites, package preparation and review
+programme is described in [SDK-ROADMAP.md](SDK-ROADMAP.md). Those new capabilities
+are not yet implemented or verified. Registry publication requires confirmed
+owned names and full dependency/artifact closure.
 
 The CI/CD skill was copied from
 `~/.claude/skills/ci-cd-and-automation/SKILL.md` (resolving to `~/.agents`) into
@@ -102,4 +107,4 @@ verified within its documented contract.
 Latest sibling parser verification also passed73 scenarios/241 steps on Rust1.88
 ([evidence](evidence/phase45-parser-affected-bdd.log)). Through42 inventories are
 preserved in `evidence/through42-checkpoint/`; current inventories identify the
-through45 snapshot. Both repositories remain uncommitted and unpublished.
+through45 snapshot. The implementation is preserved on both origins; package artifacts remain unpublished.

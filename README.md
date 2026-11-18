@@ -17,6 +17,11 @@ An implementation of the [Cucumber] testing framework for Rust. Fully native, no
 
 ## Fork interoperability work
 
+This is the GQAdonis fork. The verified foundation is preserved on
+foundation/rust-bdd-sdk; see [delivery and retained BDD evidence](docs/compatibility/DELIVERY.md).
+The [SDK and documentation programme](docs/compatibility/SDK-ROADMAP.md) is in
+planning: TypeScript/Python native packages and Docusaurus sites are not yet available.
+
 This fork adds opt-in keyword-independent step matching, a portable snapshot of
 its compatible Gherkin parser, ordered scenario hooks, and a bounded standard
 Messages NDJSON writer. See the [current status and acceptance evidence](docs/compatibility/STATUS.md)
