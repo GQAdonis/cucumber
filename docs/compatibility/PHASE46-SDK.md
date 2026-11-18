@@ -88,3 +88,7 @@ GQAdonis/gherkin remains the sole required dependency fork; portable integration
 uses the existing vendored parser snapshot. Full upstream contribution planning,
 package publication ownership/license inventory and optional framework execution
 remain separate gates. Do not present these bounded results as universal parity.
+
+## Closure bookkeeping limitation
+
+Canonical behavioral closure is CLOSED/PASS; OpenSpec static validation, archive and task reconciliation succeeded. The authored reflection is retained, but canonical Reflect registration was refused because the already-closed phase is immutable and that stage was not previously registered. A success-shaped best-effort hook line is not canonical completion; its generated handoff was retained as unaccepted evidence and removed from active handoffs. See [the exact runtime limitation](evidence/sdk46-closure/reflection-runtime-limitation.md). No unsafe reopening or direct canonical-state edits were attempted. This metadata gap does not change the retained behavior verdict.
