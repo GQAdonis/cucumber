@@ -1,0 +1,181 @@
+{
+  "observedAt": "2026-11-18T07:52:02.923774+00:00",
+  "kind": "read-only-source-research",
+  "forkCommit": "9e1690f0278ae101e3cf9cd4d91ce817c5b9c5ba",
+  "pullRequests": [
+    {
+      "number": 391,
+      "url": "https://github.com/cucumber-rs/cucumber/pull/391",
+      "title": "feat: before_step and after_step hooks",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updatedAt": "2026-03-13T10:14:10Z",
+      "head": "5feb75d89e5eba488ee95ce63d0ab4d2d38d3832",
+      "base": "4af7e34c50f2190fad4215b7e6803eb9e17c4ada",
+      "reviewCount": 0,
+      "discussionLinks": [
+        "https://github.com/cucumber-rs/cucumber/pull/391#issuecomment-3870704784",
+        "https://github.com/cucumber-rs/cucumber/pull/391#issuecomment-3871530178",
+        "https://github.com/cucumber-rs/cucumber/pull/391#issuecomment-3877432978",
+        "https://github.com/cucumber-rs/cucumber/pull/391#issuecomment-3893526531",
+        "https://github.com/cucumber-rs/cucumber/pull/391#issuecomment-4054052586"
+      ],
+      "changedFiles": [
+        {
+          "path": "src/cucumber.rs",
+          "sha": "835800724f36e0943d0fb31e0d6edfd4e7963cfc",
+          "changes": 108,
+          "patchSha256": "0d09236ec3ef61de5b0e4d7bc56628d7507bcd7a16664ad4518ff7c9e58a88b3"
+        },
+        {
+          "path": "src/event.rs",
+          "sha": "b504f5f82a3784106c596aff6d12e3e5d72b43a8",
+          "changes": 1,
+          "patchSha256": "4519416d6e2fa2d1c25bc559b7f3e68f9556b6ab953cd5a5ef19ef1fff0208c3"
+        },
+        {
+          "path": "src/runner/basic.rs",
+          "sha": "01ddbd9b1255040a0d153d151c4725f58b7e9d37",
+          "changes": 333,
+          "patchSha256": "c002932234087e95e4c6722a62d19128bbe721e967bd858d15f6020fbeab5112"
+        }
+      ],
+      "readOnlyEndpoints": [
+        "/repos/cucumber-rs/cucumber/pulls/391",
+        "/repos/cucumber-rs/cucumber/pulls/391/files?per_page=100",
+        "/repos/cucumber-rs/cucumber/pulls/391/reviews",
+        "/repos/cucumber-rs/cucumber/issues/391/comments?per_page=100"
+      ]
+    },
+    {
+      "number": 405,
+      "url": "https://github.com/cucumber-rs/cucumber/pull/405",
+      "title": "Add independent shards support",
+      "state": "open",
+      "draft": false,
+      "merged": false,
+      "updatedAt": "2026-08-25T21:05:53Z",
+      "head": "d1f60a83914331c93773d14285ce8efc7d141571",
+      "base": "d95872541ee2a43d71089c64bd3fa8848e24c922",
+      "reviewCount": 0,
+      "discussionLinks": [],
+      "changedFiles": [
+        {
+          "path": "CHANGELOG.md",
+          "sha": "e2020c362ee18ecfedc02852502a33507e04968a",
+          "changes": 13,
+          "patchSha256": "1403ec49b6ba5a5d415f3a8e8dddd4441bd36b4c541188f42f20aeeb9053eeed"
+        },
+        {
+          "path": "book/src/SUMMARY.md",
+          "sha": "4ad2003ea3ada9cc4e76076262da61acba74ecce",
+          "changes": 1,
+          "patchSha256": "eca7b4e29cbf28574d2f367b5cea987e25ce977500e2b099050ee92f3c9ee08d"
+        },
+        {
+          "path": "book/src/cli.md",
+          "sha": "1683a0d17cf7b275a5427986e1bbd5c95a57eb6b",
+          "changes": 3,
+          "patchSha256": "d53fd478aad10b6d3f14ead0b22bf0ac14eba079352a02af755b30013622cec7"
+        },
+        {
+          "path": "book/src/output/multiple.md",
+          "sha": "f93f3dc3f8dee76d9e03ba8a1da53c4fdc084b22",
+          "changes": 1,
+          "patchSha256": "88e734875c92fcd33035f02c923c052c2c5db68cc67f944388ccd3edc1e0dedf"
+        },
+        {
+          "path": "book/src/sharding.md",
+          "sha": "826aa5d671a20c1c2344d62450b349baf7ab06bf",
+          "changes": 68,
+          "patchSha256": "795780f6fca37de81f94417b74e77cabc8eeacfc859d00f1d14114656a934073"
+        },
+        {
+          "path": "src/cli.rs",
+          "sha": "6aed3fddc7dbefc936048bf1d083b06655a13970",
+          "changes": 69,
+          "patchSha256": "cca06748d6caa3ad4364ae8de4ca729636d4101386da0831aaead8558cf2c10d"
+        },
+        {
+          "path": "src/cucumber.rs",
+          "sha": "eac57009cf45e90e96adb7eb807a4018745b0449",
+          "changes": 57,
+          "patchSha256": "156e641978125c5898ba322d16528d780adc6d87557f9cb40a3862853713d4cb"
+        },
+        {
+          "path": "tests/cli.rs",
+          "sha": "41ce0d5d02a5f81d5d5bef02c5a1c9dc3b1d5f74",
+          "changes": 25,
+          "patchSha256": "0118344a72e061d15b2c68f8981b2e0dcdee357947fb2243ca59b721005f8a35"
+        },
+        {
+          "path": "tests/features/filter/sharding.feature",
+          "sha": "887ac561fb8bd23f3ddb987316bbe40a4908834e",
+          "changes": 28,
+          "patchSha256": "5011b065d9e6ee36c0d7e5eaeed5bf0243917002da91cca74a61a69333820cb4"
+        },
+        {
+          "path": "tests/filter.rs",
+          "sha": "ac2b560d2dff41fcff794d4c549570f08e5b79eb",
+          "changes": 88,
+          "patchSha256": "5ac4462dc07e491b953ecd202eea426ea3fbfde5fd993da549566c7bb204e894"
+        }
+      ],
+      "readOnlyEndpoints": [
+        "/repos/cucumber-rs/cucumber/pulls/405",
+        "/repos/cucumber-rs/cucumber/pulls/405/files?per_page=100",
+        "/repos/cucumber-rs/cucumber/pulls/405/reviews",
+        "/repos/cucumber-rs/cucumber/issues/405/comments?per_page=100"
+      ]
+    }
+  ],
+  "pythonTaggedSources": [
+    {
+      "url": "https://github.com/behave/behave/blob/v1.3.3/behave/runner.py",
+      "sha256": "2e953f3f62c71366604b5fd26548c828a9cd8478d709b26cfce6d6098afdbd99",
+      "bytes": 43636
+    },
+    {
+      "url": "https://github.com/behave/behave/blob/v1.3.3/behave/model.py",
+      "sha256": "73f5cfee00e7f91a9a920a8af1b3d2558ea748d41caf5e58ea49ae255af472fb",
+      "bytes": 88355
+    },
+    {
+      "url": "https://github.com/behave/behave/blob/v1.3.3/behave/async_step.py",
+      "sha256": "5332297d417dd3fbeaf57aa7c20f1e3a5dcf283f16dfc47ab68ab2d6c98f9ddb",
+      "bytes": 12547
+    },
+    {
+      "url": "https://github.com/behave/behave/blob/v1.3.3/behave/step_registry.py",
+      "sha256": "7eb336c0ff1081b9b6988e1836713b6738e7f0e30dfabe8c94db9f04394e7ebc",
+      "bytes": 9025
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest-bdd/blob/9.0.1/src/pytest_bdd/scenario.py",
+      "sha256": "84a5ef21e4f6c426b89c8503ed92f26479b7530ca90e58c36b13383b9c945c06",
+      "bytes": 18675
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest-bdd/blob/9.0.1/src/pytest_bdd/hooks.py",
+      "sha256": "0cab78311d8420674e44814ae467b5e206614d734b1f645265488e95d6a4a8c0",
+      "bytes": 2145
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest-bdd/blob/9.0.1/src/pytest_bdd/reporting.py",
+      "sha256": "72739c8fe14f44b46a1b4282cfe03a9ec192c90260817b52f31323e8d6db5fda",
+      "bytes": 6998
+    },
+    {
+      "url": "https://github.com/pytest-dev/pytest-bdd/blob/9.0.1/src/pytest_bdd/plugin.py",
+      "sha256": "4a7a582c45d02ccdf6de5fab29e756251068272a4b8fffbbb3c089fb78c0453b",
+      "bytes": 3858
+    }
+  ],
+  "method": "GitHub REST API via gh; Context7 documentation discovery; local source comparison. No framework/code execution, final audit, external review dispatch or submissions.",
+  "limits": [
+    "PR state is temporal; refresh before contribution",
+    "Source requirements are unadopted future adapter candidates",
+    "No change to the eleven-case SDK boundary or signature gate"
+  ]
+}

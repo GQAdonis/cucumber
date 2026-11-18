@@ -23,6 +23,10 @@ certification. Package names/ownership block public registration/publishing only
 hosting remains unresolved. After complete implementation and BDD, independently
 audit both codebases, correct material findings, then recheck upstream policies
 and overlapping PRs391/405 before matching issues/PRs. No premature submissions.
+Read-only [upstream overlap preparation](UPSTREAM-OVERLAP.md) now records both
+PRs open/unmerged at the 2026-11-18 check, and distinguishes process sharding
+from our local scheduler. [Python adapter requirements](PYTHON-ADAPTER-REQUIREMENTS.md)
+remain future adoption inputs, not additions to phase46.
 
 
 Updated 2026-11-17. The old source gaps listed here are resolved by Phases13–25:
@@ -88,6 +92,9 @@ defect or access blocker remains from this bounded review.
 - Explicit native expression APIs cover the verified builtins, descriptors and
   name policy. JS transformer/automatic raw-registry/snippet APIs and arbitrary
   JavaScript regex/numeric equivalence remain outside those implementations.
+- Cross-process scenario sharding is not implemented by the local resource
+  scheduler. Upstream PR405 is open at the recorded check; coordinate with its
+  design before a separately adopted integration phase. See [overlap notes](UPSTREAM-OVERLAP.md).
 - Scheduling beyond the verified native async limit/overlap/World-isolation/serial/
   fail-fast/retry contracts: further CLI combinations, fairness/cancellation and
   JS worker-thread isolation. Zero limits, global buffering and typed dispatch

@@ -113,3 +113,11 @@ results or adopted designs:
 
 No adapter implementation, Python behavioral verification, package publication,
 or certification is established by this document.
+
+## Detailed adapter preparation
+
+The [adapter requirements](PYTHON-ADAPTER-REQUIREMENTS.md) expand the distinct
+Context/fixture, hook exception, nested-step, async, outline identity and report
+boundaries from tagged source. They remain unadopted future-phase candidates.
+The [upstream overlap record](UPSTREAM-OVERLAP.md) separately tracks active
+Cucumber hooks/sharding proposals without premature submissions.
