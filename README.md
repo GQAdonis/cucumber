@@ -20,7 +20,10 @@ An implementation of the [Cucumber] testing framework for Rust. Fully native, no
 This is the GQAdonis fork. The verified foundation is preserved on
 foundation/rust-bdd-sdk; see [delivery and retained BDD evidence](docs/compatibility/DELIVERY.md).
 The [SDK and documentation programme](docs/compatibility/SDK-ROADMAP.md) is in
-planning: TypeScript/Python native packages and Docusaurus sites are not yet available.
+planning for TypeScript/Python native packages. The additive [Docusaurus site](docs-site/README.md)
+now builds locally and passed the paired-site boundary: 10 scenarios / 64 steps.
+See [the retained documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md).
+It is not deployed.
 
 This fork adds opt-in keyword-independent step matching, a portable snapshot of
 its compatible Gherkin parser, ordered scenario hooks, and a bounded standard

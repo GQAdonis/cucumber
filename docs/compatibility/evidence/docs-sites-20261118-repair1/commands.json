@@ -1,0 +1,20 @@
+[
+  {
+    "cwd": "/Volumes/T7/Projects/references/cucumber/docs-site",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "cucumber-production-build",
+    "startedAt": "2026-11-18T06:58:34.664Z",
+    "finishedAt": "2026-11-18T06:59:31.530Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "96e0bcf0b00502470ca19e4cf0698a6854c7ee5d15926698cbe8052f8ce93569",
+    "stderrSha256": "7e981aa9873ca0b88366a9dfb6f299c36895f0f770f32c59c96bbdb219bd99f1"
+  }
+]

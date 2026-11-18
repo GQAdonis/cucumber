@@ -31,7 +31,7 @@ No case is adopted. All likelihoods are UNKNOWN. Actor: application or verificat
 
 ## SDK-004: Recover after malformed input in the same host
 
-- Useful outcome: Typed error and URI are visible; a following valid request succeeds.
+- Useful outcome: Typed SOURCE_ERROR retains the exact original URI; a following valid request succeeds.
 - Observation: installed SDK entry point (external Rust consumer for SDK-009), captured results and artifact hashes.
 - Truth source: Invalid official fixtures paired with a valid fixture.
 - False-positive control: Invalid input cannot produce successful empty output.
@@ -49,16 +49,16 @@ No case is adopted. All likelihoods are UNKNOWN. Actor: application or verificat
 
 ## SDK-006: Derive a lossless rerun plan from real Messages
 
-- Useful outcome: Retain every attempt and original failed scenario/Examples-row selectors.
+- Useful outcome: Retain every attempt and original non-PASSED scenario/Examples-row selectors; keep run_success independent, including failed runs with no selected cases.
 - Observation: installed SDK entry point (external Rust consumer for SDK-009), captured results and artifact hashes.
-- Truth source: Actual pinned Cucumber.js13.3 rerun formatter plus original source graph.
+- Truth source: Actual pinned Cucumber.js13.3 rerun formatter for selection; original Messages and pinned EventDataCollector for full attempt history.
 - False-positive control: Drop a failed attempt or replace original row with a synthetic line and reject.
 - Alternative: selected for proposal; host-side semantics and mocked FFI rejected because they do not establish shared-core behavior.
 - Next decision: accept boundary only if this case and control pass at complete phase end.
 
 ## SDK-007: Reject incomplete or inconsistent run evidence
 
-- Useful outcome: Missing references and unfinished streams remain visible errors.
+- Useful outcome: Missing references or missing TestRunFinished remain visible errors; a finished run may retain interrupted attempts with completed=false and UNKNOWN.
 - Observation: installed SDK entry point (external Rust consumer for SDK-009), captured results and artifact hashes.
 - Truth source: Native Collector state contract and retained phase44 fixtures.
 - False-positive control: Truncate a genuine stream; no empty passing plan.
@@ -85,10 +85,10 @@ No case is adopted. All likelihoods are UNKNOWN. Actor: application or verificat
 
 ## SDK-010: Consume actual native package artifacts outside the checkout
 
-- Useful outcome: Local npm archive and Python wheel execute their native entry points from fresh directories.
+- Useful outcome: Local npm archive and Python wheel execute native entry points from fresh directories; a real external TypeScript consumer imports the public declarations, compiles and executes inside this same phase-end BDD scenario.
 - Observation: installed SDK entry point (external Rust consumer for SDK-009), captured results and artifact hashes.
-- Truth source: Captured archive identities, install commands and real native results.
-- False-positive control: Remove native artifact from a disposable install; explicit load failure, no parser/subprocess fallback.
+- Truth source: Archive/binary hashes, fresh-process isolated installs, resolved facade/native paths and real results; Rust consumer records dependency provenance.
+- False-positive control: Remove native artifact from a disposable install, launch another fresh host process; explicit load failure with no module cache, checkout injection, parser or subprocess fallback.
 - Alternative: selected for proposal; host-side semantics and mocked FFI rejected because they do not establish shared-core behavior.
 - Next decision: accept boundary only if this case and control pass at complete phase end.
 
@@ -104,3 +104,25 @@ No case is adopted. All likelihoods are UNKNOWN. Actor: application or verificat
 ## Boundaries and restoration
 
 Real native core, actual extension loading, local artifact installation, original Messages and official fixtures. Registry publication, multi-platform certification and foreign callbacks/framework adapters remain later programme work. No simulated host parser. Disposable package installs and mutated controls are isolated under phase evidence and cleaned with retained receipts; originals remain unchanged. Stop at this finite frontier.
+
+## Required before SDK contract adoption
+
+Freeze a versioned shared request/result/error schema, including URI, dialect,
+media type, IDs, attempt completion and independent run success. Define malformed
+request and unsupported-version results across both native wrappers. Bind exact
+retained fixture hashes and generator versions. Use deterministic IDs or a
+bijective ID mapping, preserving all graph references; never normalize away URI,
+source location, argument order or AST/Pickle relationships. Mutate captured
+relationships as controls, not only deliberately wrong expected strings.
+These acceptance-critical details remain prerequisites, not implementation.
+
+## Review follow-up cases within the same frontier
+
+SDK-006 also carries an original NDJSON attempt number 9007199254740993 through
+both wrappers as the exact decimal string. Compare against the original literal,
+not JavaScript JSON.parse or the formatter's precision-limited number. This is a
+protocol-preservation boundary, not fabricated agreement with a rounded oracle.
+SDK-010 records public declaration resolution and actual compiled TypeScript
+consumer execution at phase end; plain JavaScript alone cannot prove TS usability.
+SDK-005 follows the concrete validation-precedence examples in the contract
+proposal; returning any error is insufficient. SDK-004 requires SOURCE_ERROR.uri.

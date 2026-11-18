@@ -1,0 +1,3 @@
+npm install --ignore-scripts --no-audit --no-fund in each docs-site
+DOCS_EVIDENCE=<this fresh evidence directory> npm run acceptance in cucumber/docs-site
+No unit suites or generic Cargo test; production builds are inside the completed docs BDD boundary.

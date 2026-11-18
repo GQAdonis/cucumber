@@ -8,9 +8,10 @@ checkout is simplest. Record its revision and your application lockfile. The
 manifest declares Rust1.88; the final selected BDD acceptance passed172 scenarios/
 670 steps on that compiler, including a relocated external consumer.
 See [the exact verification](MSRV-ACCEPTANCE-PLAN.md).
-These task changes are currently uncommitted, so the base Git revision alone does
-not identify the modified snapshot. Retain the delivered source-digest inventory
-with the checkout until a separately authorized version is published.
+The verified through45 implementation is preserved at commit
+6e4753fc0783038bb388de1b4d76055edc697b8f on the origin branch
+foundation/rust-bdd-sdk. Pin that commit for the implementation described here;
+retain the source-digest inventory and application lockfile alongside it.
 
 ```toml
 [dev-dependencies]
@@ -24,8 +25,8 @@ harness = false
 The default `macros` feature supplies Rust World/step registration macros.
 Your application supplies its own async entry point, World, and step callbacks.
 [Relocation acceptance](../../tests/portability.rs) exercises a separate consumer
-with this layout. This is a local-checkout integration, not a claim that these
-unpublished changes are available from crates.io or the remote fork.
+with this layout. This is a pinned-checkout integration. These changes are present on the remote
+fork, but are not a published crates.io release.
 
 ## Select behavior explicitly
 

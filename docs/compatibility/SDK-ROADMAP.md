@@ -17,15 +17,16 @@ and [implementation proposal](../../.kbd-orchestrator/phases/phase-46-native-sdk
 
 Later work: captured registration and World factories, real Promise/Python
 callback execution, framework compatibility, both additive Docusaurus sites,
-package preparation and independent review. Python target is unresolved:
-Behave1.3.3 and pytest-bdd9.0.1 have different Context/fixture/plugin contracts.
-Neither is already supported by a new SDK.
+package preparation and independent review. Both Behave1.3.3 and pytest-bdd9.0.1 are separate optional adapter research
+tracks with different Context/fixture/plugin contracts. See [the dual-target
+matrix](PYTHON-TARGETS.md). Neither is already supported by a new SDK.
 
 ## Documentation and distribution
 
-Neither repository currently has Docusaurus. Plan independent private docs-site
-packages using pinned Docusaurus3.10.2; retain mdBook and mature build/release
-workflows. Clearly label GQAdonis forks and use the researched official green
+Independent private docs-site packages now build in both repositories
+using pinned Docusaurus3.10.2; mdBook and mature build/release workflows remain
+intact. The [documentation boundary](DOCS-SITE-ACCEPTANCE.md) passed 10 scenarios /
+64 steps, including isolated broken-link controls. No site deployment occurred. Clearly label GQAdonis forks and use the researched official green
 palette; logo trademark permission is not assumed. Hosting is undecided.
 
 Public npm scope/names, Python name, ownership, publication scope and supported
@@ -55,7 +56,9 @@ These leads do not block preservation pushes.
 ## Current blockers
 
 Owner calibration/adoption is pending for the new finite scenario frontier.
-Isolated assessment review was denied before sending: external disclosure of
-nonpublic packet content lacks explicit authorization. Prepared packet and exact
-denied command are retained in the phase review directory; no findings exist.
-This planning review is separate from the final code audit.
+External assessment dispatch was denied before sending and is now explicitly
+prohibited; it will not be retried. Internal isolated review identified acceptance
+risks; [findings and dispositions](../../.kbd-orchestrator/phases/phase-46-native-sdk/review/internal-review.md)
+are retained. Exact model identity is unknown; no cross-model certification is
+claimed. A concrete shared schema and fixture identity rules remain prerequisites
+before SDK contract adoption. This review is separate from the final code audit.

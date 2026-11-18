@@ -1,0 +1,74 @@
+[
+  {
+    "cwd": "/Volumes/T7/Projects/references/cucumber/docs-site",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "cucumber-production-build",
+    "startedAt": "2026-11-18T07:02:21.943Z",
+    "finishedAt": "2026-11-18T07:02:36.118Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "e8c4b6d73d22c835965e132291eb507361dbd24d4098d1ea5ed053d6dd74db1f",
+    "stderrSha256": "ef296c8d406d18136155cfa420e588687a858240a6386d6d79381ba176c67f70"
+  },
+  {
+    "cwd": "/Volumes/T7/Projects/references/gherkin/docs-site",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/gherkin/"
+    },
+    "label": "gherkin-production-build",
+    "startedAt": "2026-11-18T07:02:36.128Z",
+    "finishedAt": "2026-11-18T07:02:51.999Z",
+    "code": 0,
+    "signal": null,
+    "stdoutSha256": "4b99483ef062cd73de708b1d846d26101ddcfe397f5606293b1b1e315f9e0008",
+    "stderrSha256": "75caf7d3131b6288d675c926ff66c47c881e37b063f73d5e97d294b730e25766"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-sites-20261118-repair3/cucumber-broken-link-ffJdRw",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/cucumber/"
+    },
+    "label": "08-broken-link-control",
+    "startedAt": "2026-11-18T07:04:10.073Z",
+    "finishedAt": "2026-11-18T07:04:18.663Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "2cb26ccd6cbb34413db3ae397451f4cfcb3a08826c0e3145aec53adcec9a0c3e",
+    "stderrSha256": "3516e7982fdbf07a9dc5b5fecfcf3fca1e47ac10d5203c5411a5b01cc8d19965"
+  },
+  {
+    "cwd": "/Users/gqadonis/Projects/references/cucumber/docs/compatibility/evidence/docs-sites-20261118-repair3/gherkin-broken-link-3lfYMZ",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "env": {
+      "DOCS_BASE_URL": "/preview/gherkin/"
+    },
+    "label": "09-broken-link-control",
+    "startedAt": "2026-11-18T07:04:19.072Z",
+    "finishedAt": "2026-11-18T07:04:28.619Z",
+    "code": 1,
+    "signal": null,
+    "stdoutSha256": "56dc0d185c59f1505b102908b670c354539286e3cbac5665549917358b11d91c",
+    "stderrSha256": "c7ea4eacc39a1b7c43735b7a70bbdefc4af0af104a4ad742bc51f749d166f28b"
+  }
+]

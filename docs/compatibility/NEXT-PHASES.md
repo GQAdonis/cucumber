@@ -1,5 +1,28 @@
 # Remaining parity work
 
+## Current continuation — 2026-11-18
+
+The preserved through45 implementation is on origin foundation/rust-bdd-sdk.
+New SDK scope is governed by [SDK roadmap](SDK-ROADMAP.md), [both Python
+targets](PYTHON-TARGETS.md) and the phase46 planning packet. Both additive sites
+now build; their separate acceptance and failures are in [the docs boundary](DOCS-SITE-ACCEPTANCE.md).
+
+Read scenario-candidates.md, calibration-proposal.json, SDK-CONTRACT-PROPOSAL.md,
+sdk-contract.schema.json, oracle-identities.json and review/internal-review.md
+under .kbd-orchestrator/phases/phase-46-native-sdk. Owner-reviewed calibration
+and contract adoption remain the precise prerequisite before SDK generation.
+Shared compiler/rerun and Rust extensions come first; foreign callbacks and
+framework integration follow. Both Behave and pytest-bdd are researched optional
+adapters; no exclusive choice blocks the shared core.
+
+External review transmission is prohibited and the denied dispatch must not be
+retried. Internal review records exact model uncertainty, not cross-model
+certification. Package names/ownership block public registration/publishing only;
+hosting remains unresolved. After complete implementation and BDD, independently
+audit both codebases, correct material findings, then recheck upstream policies
+and overlapping PRs391/405 before matching issues/PRs. No premature submissions.
+
+
 Updated 2026-11-17. The old source gaps listed here are resolved by Phases13–25:
 docstring whitespace/escaping, sequential literal outline interpolation, strict
 tables, empty-scenario backgrounds, parse errors, logs, typed attachments,

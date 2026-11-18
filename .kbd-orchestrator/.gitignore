@@ -9,3 +9,4 @@
 /phases/*/progress.json
 /phases/*/review/*
 !/phases/*/review/pending-review.md
+!/phases/*/review/internal-review.md

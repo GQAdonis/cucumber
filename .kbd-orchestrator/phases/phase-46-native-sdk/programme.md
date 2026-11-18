@@ -12,9 +12,10 @@ transitions. Current phase46 is unbound.
    independent-run coordination. Preserve legacy APIs and native scheduling.
 4. Foreign runtime/framework adaptation: actual JS Promises and Python callbacks,
    fresh Worlds, failures/hooks/attachments/retries and cancellation/late-result
-   semantics. Python ecosystem selection required. No catch-all registration,
+   semantics. Both Behave and pytest-bdd are researched as separate optional adapters. No catch-all registration,
    duplicated host parser/scheduler or subprocess labelled FFI.
-5. Documentation: independent Docusaurus3.10.2 docs-site packages in both repos,
+5. Documentation implemented locally: independent Docusaurus3.10.2 docs-site packages in both repos,
+   with ten scenarios/64 steps passed in the completed separate docs boundary;
    README and curated guides; preserve mdBook and existing workflows. Clearly
    label GQAdonis forks; use researched official greens/Lato as visual reference
    with applicable attribution. No assumed logo trademark permission/endorsement.
@@ -34,7 +35,7 @@ transitions. Current phase46 is unbound.
 
 ## Owner decisions still open
 
-Python baseline; phase46 calibration/adoption; public npm/Python names/owners and
+Phase46 calibration/adoption; public npm/Python names/owners and
 publication scope; initial supported runtimes/platforms; documentation hosting.
 Local-preparation defaults proposed: private unpublished names, observed Darwin
 arm64 only, no automatic downloads, no deployment. No public name is reserved.

@@ -1,0 +1,9 @@
+
+> gqadonis-cucumber-docs@0.0.0 acceptance
+> cucumber-js --config acceptance/cucumber.mjs
+
+
+
+0 scenarios
+0 steps
+0m 0.001s (0m 0.000s executing your code)

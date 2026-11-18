@@ -69,8 +69,10 @@ historical implementation record; their earlier local-only status is superseded
 by these commits, not silently rewritten.
 
 The requested SDK/FFI, documentation sites, package preparation and review
-programme is described in [SDK-ROADMAP.md](SDK-ROADMAP.md). Those new capabilities
-are not yet implemented or verified. Registry publication requires confirmed
+programme is described in [SDK-ROADMAP.md](SDK-ROADMAP.md). The SDK/native bindings remain proposed. Both additive documentation sites now
+build locally and passed their separate10-scenario/64-step browser/build boundary;
+see [documentation evidence](DOCS-SITE-ACCEPTANCE.md) and [review](DOCS-SITE-REVIEW.md).
+No site deployment occurred. Registry publication requires confirmed
 owned names and full dependency/artifact closure.
 
 The CI/CD skill was copied from

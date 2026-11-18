@@ -1,7 +1,8 @@
 # Proposed implementation order — not an adopted contract
 
-Prerequisite: owner review of calibration and finite frontier. Python framework
-selection blocks its adapter, not framework-neutral compiler/rerun APIs. Public
+Prerequisite: owner review of calibration and finite frontier. Investigate both
+Behave and pytest-bdd as separate optional adapters; neither blocks the shared
+compiler/rerun APIs. They require different later framework contracts. Public
 names/ownership block publication, not private local packaging. Hosting blocks
 deployment, not documentation authoring.
 
@@ -22,7 +23,12 @@ Proposed commands (not authorized before complete adopted phase boundary):
     env RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --manifest-path sdk/Cargo.toml --test language_sdk -- --tags @sdk46
     env RUSTUP_TOOLCHAIN=1.88.0 cargo test --locked --manifest-path sdk/Cargo.toml --test language_sdk -- --tags @sdk46_negative
 
-The target must be harness=false and exercise real package consumers. Build,
+The target must be harness=false and exercise real package consumers. Use fresh
+host processes, an isolated Python environment and scrub checkout-injecting
+module-path variables. Record resolved facade/native paths and archive/binary
+hashes. Compile and execute a real external TypeScript consumer of the packaged
+public API inside SDK-010 at phase end, retaining declaration-resolution evidence. Run the missing-binary control in another fresh process, never after
+loading a cached native module. Pin Rust external-consumer dependency provenance. Build,
 packaging and installation occur as user actions at that boundary. Initial
 dependency resolution must be an explicit packet action before --locked commands;
 do not assume lockfiles already exist. Final adopted commands are fixed before

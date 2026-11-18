@@ -1,0 +1,8 @@
+{
+  "name": "Recover from a missing documentation page",
+  "status": "PASSED",
+  "url": "http://127.0.0.1:52708/preview/gherkin/",
+  "errors": [
+    "404 http://127.0.0.1:52708/preview/gherkin/missing-documentation-page/"
+  ]
+}

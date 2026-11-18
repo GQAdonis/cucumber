@@ -1,0 +1,337 @@
+
+> gqadonis-cucumber-docs@0.0.0 acceptance
+> node acceptance/run.mjs
+
+....F--....F--.....F-.....F-....................F-....F-..
+
+Failed scenarios:
+  1) Read the fork identity and current implementation status # acceptance/features/documentation.feature:14
+       Then the page identifies the GQAdonis fork without upstream endorsement # acceptance/steps/documentation.mjs:141
+           locator.innerText: Error: strict mode violation: locator('footer') resolved to 2 elements:
+               1) <footer class="theme-doc-footer docusaurus-mt-lg">…</footer> aka locator('footer').filter({ hasText: 'Edit this page' })
+               2) <footer class="theme-layout-footer footer">…</footer> aka getByRole('contentinfo')
+           
+           Call log:
+           [2m  - waiting for locator('footer')[22m
+           
+               at World.<anonymous> (/Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:144:50)
+  2) Read the fork identity and current implementation status # acceptance/features/documentation.feature:15
+       Then the page identifies the GQAdonis fork without upstream endorsement # acceptance/steps/documentation.mjs:141
+           locator.innerText: Error: strict mode violation: locator('footer') resolved to 2 elements:
+               1) <footer class="theme-doc-footer docusaurus-mt-lg">…</footer> aka locator('footer').filter({ hasText: 'Edit this page' })
+               2) <footer class="theme-layout-footer footer">…</footer> aka getByRole('contentinfo')
+           
+           Call log:
+           [2m  - waiting for locator('footer')[22m
+           
+               at World.<anonymous> (/Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:144:50)
+  3) Follow a permanent getting-started link on a phone # acceptance/features/documentation.feature:25
+       And the navigation is usable with the keyboard # acceptance/steps/documentation.mjs:171
+           locator.waitFor: Timeout 30000ms exceeded.
+           Call log:
+           [2m  - waiting for getByRole('heading', { name: 'Compatibility', exact: true, level: 1 }) to be visible[22m
+           
+               at World.<anonymous> (/Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:179:90)
+  4) Follow a permanent getting-started link on a phone # acceptance/features/documentation.feature:26
+       And the navigation is usable with the keyboard # acceptance/steps/documentation.mjs:171
+           locator.waitFor: Timeout 30000ms exceeded.
+           Call log:
+           [2m  - waiting for getByRole('heading', { name: 'Compatibility', exact: true, level: 1 }) to be visible[22m
+           
+               at World.<anonymous> (/Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:179:90)
+  5) Refuse a broken internal link before hosting # acceptance/features/documentation.feature:51
+       Then the same production build fails and identifies the missing route # acceptance/steps/documentation.mjs:226
+           AssertionError [ERR_ASSERTION]: The input did not match the regular expression /missing-documentation-target/. Input:
+           
+           '\n' +
+             '> gqadonis-cucumber-docs@0.0.0 build\n' +
+             '> docusaurus build\n' +
+             '\n' +
+             '[INFO] [en] Creating an optimized production build...\n' +
+             '[webpackbar] ℹ Compiling Client\n' +
+             '[webpackbar] ℹ Compiling Server\n' +
+             '[webpackbar] ✔ Server: Compiled successfully in 604.93ms\n' +
+             '[webpackbar] ✔ Client: Compiled successfully in 2.94s\n' +
+             '\n' +
+             '[INFO] Docusaurus version: 3.10.2\n' +
+             'Node version: v26.5.0\n' +
+             '(node:28288) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n' +
+             '(Use `node --trace-warnings ...` to show where the warning was created)\n' +
+             '[ERROR] Error: Unable to build website for locale en.\n' +
+             '    at tryToBuildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:76:15)\n' +
+             '    at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9\n' +
+             '    ... 4 lines matching cause stack trace ...\n' +
+             '    at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '  [cause]: Error: Docusaurus static site generation failed for 7 paths:\n' +
+             '  - "/preview/cucumber/compatibility/"\n' +
+             '  - "/preview/cucumber/contributing/"\n' +
+             '  - "/preview/cucumber/evidence/"\n' +
+             '  - "/preview/cucumber/getting-started/"\n' +
+             '  - "/preview/cucumber/sdk/"\n' +
+             '  - "/preview/cucumber/vlbv/"\n' +
+             '  - "/preview/cucumber/"\n' +
+             '      at throwSSGError (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:56:11)\n' +
+             '      at createGlobalSSGResult (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)\n' +
+             '      ... 11 lines matching cause stack trace ...\n' +
+             '      at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '    [cause]: AggregateError\n' +
+             '        at throwSSGError (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:57:16)\n' +
+             '        at createGlobalSSGResult (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)\n' +
+             '        at /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:30:68\n' +
+             '        at async executeSSG (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:143:20)\n' +
+             '        at async buildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/buildLocale.js:88:31)\n' +
+             '        at async runBuildLocaleTask (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:91:5)\n' +
+             '        at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:72:13\n' +
+             '        at async tryToBuildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:68:9)\n' +
+             '        at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9\n' +
+             '        at async mapAsyncSequential (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/utils/lib/jsUtils.js:21:24)\n' +
+             '        at async Command.build (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:33:5)\n' +
+             '        at async Promise.all (index 0)\n' +
+             '        at async runCLI (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/cli.js:56:5)\n' +
+             '        at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '      [errors]: [\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/compatibility/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/contributing/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/evidence/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/getting-started/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/sdk/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/vlbv/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3576:89)\n' +
+             '              at renderWithHooks (server.bundle.js:22343:18)\n' +
+             '              at renderElement (server.bundle.js:22481:14)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at renderElement (server.bundle.js:22926:11)\n' +
+             '              at retryNode (server.bundle.js:23199:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22993:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22384:9)\n' +
+             '              at renderElement (server.bundle.js:22483:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/cucumber/"\n` +
+             '            at generateStaticFile (/Volumes/T7/'... 918 more characters
+           
+               at World.<anonymous> (file:///Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:230:10)
+  6) Refuse a broken internal link before hosting # acceptance/features/documentation.feature:52
+       Then the same production build fails and identifies the missing route # acceptance/steps/documentation.mjs:226
+           AssertionError [ERR_ASSERTION]: The input did not match the regular expression /missing-documentation-target/. Input:
+           
+           '\n' +
+             '> gqadonis-gherkin-docs@0.0.0 build\n' +
+             '> docusaurus build\n' +
+             '\n' +
+             '[INFO] [en] Creating an optimized production build...\n' +
+             '[webpackbar] ℹ Compiling Client\n' +
+             '[webpackbar] ℹ Compiling Server\n' +
+             '[webpackbar] ✔ Server: Compiled successfully in 717.38ms\n' +
+             '[webpackbar] ✔ Client: Compiled successfully in 5.27s\n' +
+             '\n' +
+             '[INFO] Docusaurus version: 3.10.2\n' +
+             'Node version: v26.5.0\n' +
+             '(node:28911) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.\n' +
+             '(Use `node --trace-warnings ...` to show where the warning was created)\n' +
+             '[ERROR] Error: Unable to build website for locale en.\n' +
+             '    at tryToBuildLocale (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:76:15)\n' +
+             '    at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9\n' +
+             '    ... 4 lines matching cause stack trace ...\n' +
+             '    at async file:///Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '  [cause]: Error: Docusaurus static site generation failed for 5 paths:\n' +
+             '  - "/preview/gherkin/compatibility/"\n' +
+             '  - "/preview/gherkin/contributing/"\n' +
+             '  - "/preview/gherkin/evidence/"\n' +
+             '  - "/preview/gherkin/getting-started/"\n' +
+             '  - "/preview/gherkin/"\n' +
+             '      at throwSSGError (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:56:11)\n' +
+             '      at createGlobalSSGResult (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)\n' +
+             '      ... 11 lines matching cause stack trace ...\n' +
+             '      at async file:///Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '    [cause]: AggregateError\n' +
+             '        at throwSSGError (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:57:16)\n' +
+             '        at createGlobalSSGResult (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)\n' +
+             '        at /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:30:68\n' +
+             '        at async executeSSG (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:143:20)\n' +
+             '        at async buildLocale (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/buildLocale.js:88:31)\n' +
+             '        at async runBuildLocaleTask (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:91:5)\n' +
+             '        at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:72:13\n' +
+             '        at async tryToBuildLocale (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:68:9)\n' +
+             '        at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9\n' +
+             '        at async mapAsyncSequential (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/utils/lib/jsUtils.js:21:24)\n' +
+             '        at async Command.build (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:33:5)\n' +
+             '        at async Promise.all (index 0)\n' +
+             '        at async runCLI (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/commands/cli.js:56:5)\n' +
+             '        at async file:///Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {\n' +
+             '      [errors]: [\n' +
+             `        Error: Can't render static file for pathname "/preview/gherkin/compatibility/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3229:89)\n' +
+             '              at renderWithHooks (server.bundle.js:21996:18)\n' +
+             '              at renderElement (server.bundle.js:22134:14)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at renderElement (server.bundle.js:22579:11)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22037:9)\n' +
+             '              at renderElement (server.bundle.js:22136:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/gherkin/contributing/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3229:89)\n' +
+             '              at renderWithHooks (server.bundle.js:21996:18)\n' +
+             '              at renderElement (server.bundle.js:22134:14)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at renderElement (server.bundle.js:22579:11)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22037:9)\n' +
+             '              at renderElement (server.bundle.js:22136:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/gherkin/evidence/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3229:89)\n' +
+             '              at renderWithHooks (server.bundle.js:21996:18)\n' +
+             '              at renderElement (server.bundle.js:22134:14)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at renderElement (server.bundle.js:22579:11)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22037:9)\n' +
+             '              at renderElement (server.bundle.js:22136:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/gherkin/getting-started/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3229:89)\n' +
+             '              at renderWithHooks (server.bundle.js:21996:18)\n' +
+             '              at renderElement (server.bundle.js:22134:14)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at renderElement (server.bundle.js:22579:11)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22037:9)\n' +
+             '              at renderElement (server.bundle.js:22136:7)\n' +
+             '        },\n' +
+             `        Error: Can't render static file for pathname "/preview/gherkin/"\n` +
+             '            at generateStaticFile (/Volumes/T7/Projects/references/gherkin/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)\n' +
+             '            at async /Volumes/T7/Projects/references/gherkin/docs-site/node_modules/p-map/index.js:57:22 {\n' +
+             "          [cause]: TypeError: Cannot read properties of undefined (reading 'id')\n" +
+             '              at DocItem (server.bundle.js:3229:89)\n' +
+             '              at renderWithHooks (server.bundle.js:21996:18)\n' +
+             '              at renderElement (server.bundle.js:22134:14)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at renderElement (server.bundle.js:22579:11)\n' +
+             '              at retryNode (server.bundle.js:22852:16)\n' +
+             '              at renderNodeDestructive (server.bundle.js:22646:7)\n' +
+             '              at finishFunctionComponent (server.bundle.js:22037:9)\n' +
+             '              at renderElement (server.bundle.js:22136:7)\n' +
+             '        }\n' +
+             '      ]\n' +
+             '    }\n' +
+             '  }\n' +
+             '}\n'
+           
+               at World.<anonymous> (file:///Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:230:10)
+
+2 hooks (2 passed)
+9 scenarios (3 passed, 6 failed)
+56 steps (42 passed, 8 skipped, 6 failed)
+2m 7.643s (2m 7.609s executing your code)
+Documentation BDD boundary failed: {
+  argv: [
+    '/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node',
+    'node_modules/@cucumber/cucumber/bin/cucumber.js',
+    '--config',
+    'acceptance/cucumber.mjs'
+  ],
+  cwd: '/Volumes/T7/Projects/references/cucumber/docs-site',
+  code: 1,
+  expectedScenarios: 9,
+  started: 9,
+  finished: 9,
+  runSuccess: false,
+  messageError: undefined,
+  passed: false
+}

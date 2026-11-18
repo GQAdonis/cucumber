@@ -33,13 +33,14 @@ mdBook and a gh-pages deployer that must not be overwritten.
 
 Shared safe Rust SDK + NAPI-RS/PyO3 wrappers expose compiler/AST/Pickle and rerun,
 proved through packages installed outside checkout. This scope does not depend
-on which Python framework is selected. Dynamic registration/factory and actual
+on either framework adapter. Both Behave and pytest-bdd are research targets. Dynamic registration/factory and actual
 foreign callbacks follow, retaining the complete requested programme.
 This ordering is proposed for calibration, not adopted or a parity claim.
 
 ## Decisions and limitations
 
-Python baseline remains Behave1.3.3 vs pytest-bdd9.0.1 vs named alternative.
+Python baselines are separate Behave1.3.3 and pytest-bdd9.0.1 research tracks.
+Neither has runtime parity evidence; see docs/compatibility/PYTHON-TARGETS.md.
 Public names/scopes/owners/publication scope and docs hosting remain unresolved.
 Observed host: Darwin arm64, Node26.5.0, Python3.11.3; no other platform is certified.
 Rust1.88 remains core minimum. Candidate dependencies are source-verified only.
@@ -58,6 +59,7 @@ only new calibration and unresolved publication decisions need new decisions.
 Prior-context Knowledge gaps: none recorded. New task-specific questions above
 are not resolved by recalled agent lessons.
 
-Planning-artifact review is pending. Final independent code audit occurs after
+Internal isolated planning review is recorded in review/internal-review.md.
+It is not external/cross-model certification; owner contract adoption is pending. Final independent code audit occurs after
 implementation/behavior proof and before upstream issues/PRs. Neither codebase
 is claimed clean or fully parity-certified.

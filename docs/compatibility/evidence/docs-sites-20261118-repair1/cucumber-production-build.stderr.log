@@ -1,0 +1,20 @@
+[ERROR] Error: Unable to build website for locale en.
+    at tryToBuildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:76:15)
+    at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9
+    at async mapAsyncSequential (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/utils/lib/jsUtils.js:21:24)
+    at async Command.build (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:33:5)
+    at async Promise.all (index 0)
+    at async runCLI (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/cli.js:56:5)
+    at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: TypeError: require.resolveWeak is not a function
+      at 699 (server.bundle.js:23425:458)
+      at __webpack_require__ (server.bundle.js:23975:41)
+      at 2067 (server.bundle.js:290:77)
+      at __webpack_require__ (server.bundle.js:23975:41)
+      at 4378 (server.bundle.js:23441:86)
+      at __webpack_require__ (server.bundle.js:23975:41)
+      at 6877 (server.bundle.js:790:75)
+      at __webpack_require__ (server.bundle.js:23975:41)
+      at 4905 (server.bundle.js:866:66)
+      at __webpack_require__ (server.bundle.js:23975:41)
+}

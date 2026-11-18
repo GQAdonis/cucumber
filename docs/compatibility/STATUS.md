@@ -1,6 +1,6 @@
 # Current Rust BDD interoperability status
 
-Checkpoint 2026-11-17. All bounded phases through45 have primary and affected root BDD evidence.
+Foundation checkpoint 2026-11-17; SDK/docs continuation 2026-11-18. All bounded phases through45 have primary and affected root BDD evidence.
 Latest Rust1.88 boundary passed87/348; eight affected targets passed106/460.
 The earlier13-target Rust1.88 checkpoint passed172/670 and remains historical evidence.
 See [the delivery record](DELIVERY.md) for practical reuse, source provenance and
@@ -11,6 +11,11 @@ separate verified phases from remaining interoperability boundaries.
 
 Baselines: Cucumber.js 13.3.0, its Gherkin 42.0.1 and Messages 34.2.1, alongside
 latest official Gherkin 43.0.0 (Messages 35). [Pinned matrix](CAPABILITIES.md).
+
+The foundation is preserved on both origin branches. Additive local Docusaurus
+sites have a separate [behavior boundary](DOCS-SITE-ACCEPTANCE.md).
+[SDK/FFI work](SDK-ROADMAP.md) remains proposed pending calibration/adoption;
+[Behave and pytest-bdd](PYTHON-TARGETS.md) are researched, not verified adapters.
 
 ## Available locally
 

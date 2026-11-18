@@ -9,7 +9,7 @@ including external relocated and macro consumers. [Evidence](evidence/msrv-1.88-
 
 ## Pinned references
 
-- Local cucumber 0.23.0 at `d95872541ee2a43d71089c64bd3fa8848e24c922`, Rust minimum 1.88.
+- Cucumber0.23 fork: historical upstream base d95872541ee2a43d71089c64bd3fa8848e24c922; verified through45 implementation preserved at 6e4753fc0783038bb388de1b4d76055edc697b8f, Rust minimum1.88.
 - [Cucumber.js v13.3.0](https://github.com/cucumber/cucumber-js/releases/tag/v13.3.0), release commit `4f21233`.
 - [Official Gherkin v43.0.0](https://github.com/cucumber/gherkin/releases/tag/v43.0.0), release commit `3d70e2b`.
 - [JS pinned dependencies](https://github.com/cucumber/cucumber-js/blob/v13.3.0/package.json): Gherkin 42.0.1, Messages 34.2.1, expressions 20.1.0, tag expressions 11.0.1. Latest Gherkin and the JS bundled parser are separate baselines. Gherkin 43 moves to Messages 35.

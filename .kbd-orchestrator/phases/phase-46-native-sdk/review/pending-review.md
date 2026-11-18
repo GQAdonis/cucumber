@@ -17,3 +17,10 @@ contained no materially new authorization, so no retry occurred.
 Exact producer deployment identity is unavailable. Packet records unknown;
 cross-model identity cannot be claimed verified. The final post-implementation
 independent code audit is a separate pending gate.
+
+## Superseding instruction
+
+The follow-up explicitly prohibits external transmission and retry of this
+command. It is permanently abandoned for this task. Internal isolated planning
+review is recorded separately in internal-review.md with identity limitations;
+it does not retroactively satisfy an external or cross-model certification.
