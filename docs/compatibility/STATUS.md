@@ -14,7 +14,11 @@ latest official Gherkin 43.0.0 (Messages 35). [Pinned matrix](CAPABILITIES.md).
 
 The foundation is preserved on both origin branches. Additive local Docusaurus
 sites have a separate [behavior boundary](DOCS-SITE-ACCEPTANCE.md).
-[SDK/FFI work](SDK-ROADMAP.md) remains proposed pending calibration/adoption;
+[SDK/FFI phase46](SDK-ROADMAP.md) is owner-adopted. Shared Rust SDK and native
+TypeScript/Python adapter source is written; package builds and phase-end
+behavior acceptance have not run yet. The next KBD boundary requires its operator-signed
+implementation-completion amendment; the eleven adopted cases are unchanged.
+No SDK parity or installation claim is made;
 [Behave and pytest-bdd](PYTHON-TARGETS.md) are researched, not verified adapters.
 
 ## Available locally

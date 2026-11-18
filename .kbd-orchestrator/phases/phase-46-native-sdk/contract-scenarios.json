@@ -1,0 +1,79 @@
+[
+  [
+    "SDK-001",
+    "Compile plaintext source to faithful AST and Pickles in all three installed SDKs",
+    "Rules, outlines, both argument orders and Unicode retain source locations and identities",
+    "Pinned Gherkin43 complete AST/Pickle fixture output",
+    "Mutate an expected cell or location; comparison must fail"
+  ],
+  [
+    "SDK-002",
+    "Compile Markdown through the same native implementation",
+    "Literal backticks in steps/tables/docstrings remain content; declaration tags remain tags",
+    "Pinned Gherkin43 Markdown corpus and retained phase45 cases",
+    "Misplaced or repeated argument must return a typed parse error"
+  ],
+  [
+    "SDK-003",
+    "Compile empty/comment-only input without invented scenarios",
+    "Valid featureless input yields no Pickles",
+    "Pinned Gherkin43 featureless fixtures",
+    "Inject a synthetic Feature/Pickle into expected output and reject"
+  ],
+  [
+    "SDK-004",
+    "Recover after malformed input in the same host",
+    "Typed SOURCE_ERROR retains the exact original URI; a following valid request succeeds",
+    "Invalid official fixtures paired with a valid fixture",
+    "Invalid input cannot produce successful empty output"
+  ],
+  [
+    "SDK-005",
+    "Discover the versioned implemented operations",
+    "Capabilities identify compiler and rerun operations and do not advertise foreign execution",
+    "Adopted operation schema and actual exported entry points",
+    "Unknown version/operation and premature runtime execution are refused"
+  ],
+  [
+    "SDK-006",
+    "Derive a lossless rerun plan from real Messages",
+    "Retain every attempt and original non-PASSED scenario/Examples-row selectors; keep run_success independent, including failed runs with no selected cases",
+    "Actual pinned Cucumber.js13.3 rerun formatter for selection; original Messages and pinned EventDataCollector for full attempt history",
+    "Drop a failed attempt or replace original row with a synthetic line and reject"
+  ],
+  [
+    "SDK-007",
+    "Reject incomplete or inconsistent run evidence",
+    "Missing references or missing TestRunFinished remain visible errors; a finished run may retain interrupted attempts with completed=false and UNKNOWN",
+    "Native Collector state contract and retained phase44 fixtures",
+    "Truncate a genuine stream; no empty passing plan"
+  ],
+  [
+    "SDK-008",
+    "Represent a completed passing run as no rerun",
+    "No selected cases means None/empty plan and cannot mean run everything",
+    "Native LocalSelection contract",
+    "Bogus nonempty/all-source selection is rejected"
+  ],
+  [
+    "SDK-009",
+    "Extend the safe SDK from an external Rust consumer",
+    "Namespaced extension returns its real result without overriding built-ins",
+    "Consumer-owned extension behavior and reserved-name contract",
+    "Reserved builtin or duplicate registration is refused"
+  ],
+  [
+    "SDK-010",
+    "Consume actual native package artifacts outside the checkout",
+    "Local npm archive and Python wheel execute native entry points from fresh directories; a real external TypeScript consumer imports the public declarations, compiles and executes inside this same phase-end BDD scenario",
+    "Archive/binary hashes, fresh-process isolated installs, resolved facade/native paths and real results; Rust consumer records dependency provenance",
+    "Remove native artifact from a disposable install, launch another fresh host process; explicit load failure with no module cache, checkout injection, parser or subprocess fallback"
+  ],
+  [
+    "SDK-011",
+    "Keep requests isolated in one host process",
+    "Different URIs, parse failures and run IDs cannot leak across requests",
+    "Independent fixture identities and paired request sequence",
+    "Cross-associated IDs must fail or differ from the correct output"
+  ]
+]

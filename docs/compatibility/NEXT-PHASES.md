@@ -9,8 +9,10 @@ now build; their separate acceptance and failures are in [the docs boundary](DOC
 
 Read scenario-candidates.md, calibration-proposal.json, SDK-CONTRACT-PROPOSAL.md,
 sdk-contract.schema.json, oracle-identities.json and review/internal-review.md
-under .kbd-orchestrator/phases/phase-46-native-sdk. Owner-reviewed calibration
-and contract adoption remain the precise prerequisite before SDK generation.
+under .kbd-orchestrator/phases/phase-46-native-sdk. Travis explicitly adopted the
+eleven-case first phase; owner-adoption.json and the bound adopted-contract.json
+record that decision. Individual calibration verdicts remain unspecified. Rust
+SDK and native adapter source now exists; packaging/BDD has not yet executed.
 Shared compiler/rerun and Rust extensions come first; foreign callbacks and
 framework integration follow. Both Behave and pytest-bdd are researched optional
 adapters; no exclusive choice blocks the shared core.

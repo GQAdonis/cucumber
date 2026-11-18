@@ -1,0 +1,59 @@
+{
+  "status": "PHASE_ADOPTED_BY_OWNER; individual example verdicts not separately supplied",
+  "phase": "phase-46-native-sdk",
+  "positive": [
+    {
+      "example": "TypeScript compiles through Rust and receives original AST/Pickle identities.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Python derives failed Examples-row selectors while retaining all retry attempts.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "An external Rust consumer registers a namespaced extension without replacing core behavior.",
+      "ownerVerdict": null
+    }
+  ],
+  "deferred": [
+    {
+      "example": "Foreign execution, async callbacks and selected framework adaptation remain mandatory later work.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Multi-platform certification and publication follow ownership/platform decisions.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Both Docusaurus sites are separate additive work; deployment excluded.",
+      "ownerVerdict": null
+    }
+  ],
+  "rareCritical": [
+    {
+      "example": "Missing native binary fails without semantic fallback.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Truncated Messages cannot produce a passing empty plan.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Failure or identities cannot leak into later requests.",
+      "ownerVerdict": null
+    }
+  ],
+  "ownerPhaseDecision": {
+    "source": "Trusted parent delegation from 6afa890d-2338-8191-9915-c61bb8e630da",
+    "question": "Approve the first SDK phase: shared Rust compilation and rerun planning exposed through native TypeScript/Python bindings, safe Rust extensions, and verified installable local packages, with foreign step execution and Behave/pytest-bdd adapters following?",
+    "answer": "Yes adopt that as the first SDK phase and proceed",
+    "scope": "Adopted eleven-case boundary and concrete reviewed contract; implement, verify only at complete phase end, internal review and material corrections.",
+    "individualCalibrationVerdicts": "Not separately supplied; preserve null fields rather than fabricate answers.",
+    "prohibitions": [
+      "external review transmission",
+      "registry publication",
+      "site deployment",
+      "premature upstream contributions"
+    ]
+  }
+}

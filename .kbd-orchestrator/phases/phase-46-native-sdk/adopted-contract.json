@@ -1,0 +1,751 @@
+{
+  "contractVersion": "2",
+  "kind": "kbd.adopted-contract",
+  "identity": {
+    "projectId": "39208255-8a57-4101-8014-7952fe9993e7",
+    "runId": "project-20261118T062840Z",
+    "phaseId": "phase-46-native-sdk",
+    "planRevision": 1,
+    "contractDigest": "00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785"
+  },
+  "digestNormalization": {
+    "algorithm": "sha256",
+    "command": "jq -S -c 'del(.identity.contractDigest) | del(.identity.planRevision)' adopted-contract.json",
+    "stalenessRule": "Only the latest canonical bound digest applies; mismatch rejects stale acceptance, preserving history."
+  },
+  "adoptionSource": "Trusted parent delegation 6afa890d-2338-8191-9915-c61bb8e630da: Travis answered Yes adopt that as the first SDK phase and proceed; exact question/answer in owner-adoption.json and canonical decision sdk46-travis-explicit-adoption.",
+  "decisionOwner": "Travis",
+  "amendmentPolicy": "Material acceptance changes require explicit owner adoption and canonical signed amendment; ordinary implementation corrections remain within the adopted boundary and repair budget.",
+  "releaseClaim": {
+    "userOperation": "Compile source-preserving Gherkin and derive lossless rerun plans from installed Rust, TypeScript and Python SDK surfaces, with safe Rust-owned extensions.",
+    "supportedEnvironments": [
+      "Initial behavioral certification target: Darwin arm64, Node26.5.0, CPython3.11.3, Rust1.88.0"
+    ],
+    "currentCapabilities": "Core through45 is verified; SDK and native packages are adopted but not yet implemented or verified.",
+    "explicitUnknowns": [
+      "Other runtime/platform behavior",
+      "Public package names and ownership",
+      "Foreign execution and Behave/pytest-bdd adapter compatibility"
+    ]
+  },
+  "statusVocabulary": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_EXERCISED"
+  ],
+  "scenarioMatrix": [
+    {
+      "id": "SDK-001",
+      "name": "Compile plaintext source to faithful AST and Pickles in all three installed SDKs",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Rules, outlines, both argument orders and Unicode retain source locations and identities",
+      "sourceRequirement": "openspec:native-sdk#SDK-001 Compile plaintext source to faithful AST and Pickles in all three installed SDKs",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Source compiler"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Rules, outlines, both argument orders and Unicode retain source locations and identities",
+        "expectedTruthSource": "Pinned Gherkin43 complete AST/Pickle fixture output; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Mutate an expected cell or location; comparison must fail",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-002",
+      "name": "Compile Markdown through the same native implementation",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Literal backticks in steps/tables/docstrings remain content; declaration tags remain tags",
+      "sourceRequirement": "openspec:native-sdk#SDK-002 Compile Markdown through the same native implementation",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Source compiler"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Literal backticks in steps/tables/docstrings remain content; declaration tags remain tags",
+        "expectedTruthSource": "Pinned Gherkin43 Markdown corpus and retained phase45 cases; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Misplaced or repeated argument must return a typed parse error",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-003",
+      "name": "Compile empty/comment-only input without invented scenarios",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Valid featureless input yields no Pickles",
+      "sourceRequirement": "openspec:native-sdk#SDK-003 Compile empty/comment-only input without invented scenarios",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Source compiler"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Valid featureless input yields no Pickles",
+        "expectedTruthSource": "Pinned Gherkin43 featureless fixtures; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Inject a synthetic Feature/Pickle into expected output and reject",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-004",
+      "name": "Recover after malformed input in the same host",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Typed SOURCE_ERROR retains the exact original URI; a following valid request succeeds",
+      "sourceRequirement": "openspec:native-sdk#SDK-004 Recover after malformed input in the same host",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Strict errors and isolation"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Typed SOURCE_ERROR retains the exact original URI; a following valid request succeeds",
+        "expectedTruthSource": "Invalid official fixtures paired with a valid fixture; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Invalid input cannot produce successful empty output",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-005",
+      "name": "Discover the versioned implemented operations",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Capabilities identify compiler and rerun operations and do not advertise foreign execution",
+      "sourceRequirement": "openspec:native-sdk#SDK-005 Discover the versioned implemented operations",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Strict errors and isolation"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Capabilities identify compiler and rerun operations and do not advertise foreign execution",
+        "expectedTruthSource": "Adopted operation schema and actual exported entry points; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Unknown version/operation and premature runtime execution are refused",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-006",
+      "name": "Derive a lossless rerun plan from real Messages",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Retain every attempt and original non-PASSED scenario/Examples-row selectors; keep run_success independent, including failed runs with no selected cases",
+      "sourceRequirement": "openspec:native-sdk#SDK-006 Derive a lossless rerun plan from real Messages",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Lossless rerun plans"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Retain every attempt and original non-PASSED scenario/Examples-row selectors; keep run_success independent, including failed runs with no selected cases",
+        "expectedTruthSource": "Actual pinned Cucumber.js13.3 rerun formatter for selection; original Messages and pinned EventDataCollector for full attempt history; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Drop a failed attempt or replace original row with a synthetic line and reject",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-007",
+      "name": "Reject incomplete or inconsistent run evidence",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Missing references or missing TestRunFinished remain visible errors; a finished run may retain interrupted attempts with completed=false and UNKNOWN",
+      "sourceRequirement": "openspec:native-sdk#SDK-007 Reject incomplete or inconsistent run evidence",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Lossless rerun plans"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Missing references or missing TestRunFinished remain visible errors; a finished run may retain interrupted attempts with completed=false and UNKNOWN",
+        "expectedTruthSource": "Native Collector state contract and retained phase44 fixtures; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Truncate a genuine stream; no empty passing plan",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-008",
+      "name": "Represent a completed passing run as no rerun",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "No selected cases means None/empty plan and cannot mean run everything",
+      "sourceRequirement": "openspec:native-sdk#SDK-008 Represent a completed passing run as no rerun",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Lossless rerun plans"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "No selected cases means None/empty plan and cannot mean run everything",
+        "expectedTruthSource": "Native LocalSelection contract; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Bogus nonempty/all-source selection is rejected",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-009",
+      "name": "Extend the safe SDK from an external Rust consumer",
+      "ownerTask": "T1+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Namespaced extension returns its real result without overriding built-ins",
+      "sourceRequirement": "openspec:native-sdk#SDK-009 Extend the safe SDK from an external Rust consumer",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Safe Rust extensions"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Namespaced extension returns its real result without overriding built-ins",
+        "expectedTruthSource": "Consumer-owned extension behavior and reserved-name contract; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Reserved builtin or duplicate registration is refused",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-010",
+      "name": "Consume actual native package artifacts outside the checkout",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Local npm archive and Python wheel execute native entry points from fresh directories; a real external TypeScript consumer imports the public declarations, compiles and executes inside this same phase-end BDD scenario",
+      "sourceRequirement": "openspec:native-sdk#SDK-010 Consume actual native package artifacts outside the checkout",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Native installed language packages"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Local npm archive and Python wheel execute native entry points from fresh directories; a real external TypeScript consumer imports the public declarations, compiles and executes inside this same phase-end BDD scenario",
+        "expectedTruthSource": "Archive/binary hashes, fresh-process isolated installs, resolved facade/native paths and real results; Rust consumer records dependency provenance; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Remove native artifact from a disposable install, launch another fresh host process; explicit load failure with no module cache, checkout injection, parser or subprocess fallback",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    },
+    {
+      "id": "SDK-011",
+      "name": "Keep requests isolated in one host process",
+      "ownerTask": "T1+T2+T3+T4",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Different URIs, parse failures and run IDs cannot leak across requests",
+      "sourceRequirement": "openspec:native-sdk#SDK-011 Keep requests isolated in one host process",
+      "reasonNow": "Expose proven native operations through reusable in-process package boundaries without duplicated host semantics.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Strict errors and isolation"
+      ],
+      "productionEntry": "Rust cucumber_sdk::Sdk; installed cucumber-native-local TypeScript package and cucumber_native_local Python package native request/compile/rerun entry points.",
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Different URIs, parse failures and run IDs cannot leak across requests",
+        "expectedTruthSource": "Independent fixture identities and paired request sequence; exact artifacts bound by oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "comparator": "Full graph equality under bijective ID mapping without source-field normalization, exact original attempt/URI/status/run-success comparisons and explicit typed error/installed-path assertions as applicable; no exit-only acceptance."
+      },
+      "negativeControl": {
+        "input": "Cross-associated IDs must fail or differ from the correct output",
+        "expectedRejection": "Independent comparator rejects corrupted results or native API returns the specified typed error; original artifacts unchanged.",
+        "commandRef": "sdk46-controls"
+      },
+      "fixtures": "Retained fixture identity file .kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9; each packaged consumer uses a fresh outside-checkout temporary root recorded in evidence.",
+      "evidence": "Original child argv, exits, stdout/stderr, fixture/archive/native hashes, installed realpaths, actual control observations and cleanup receipts.",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "invalidationKeys": [
+        "SDK/core/adapters source digests",
+        "oracle-identities.json sha256=eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+        "sdk-contract.schema.json sha256=429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+        "host/runtime/package identities"
+      ],
+      "restoration": "Remove only recorded disposable package consumers and controls; preserve original fixtures and evidence, never overwrite prior runs."
+    }
+  ],
+  "functionalScope": [
+    "Source compiler",
+    "Strict errors and isolation",
+    "Lossless rerun plans",
+    "Safe Rust extensions",
+    "Native installed language packages"
+  ],
+  "resilienceScope": {
+    "policy": "Adopted integrity requirements never defer due to budget exhaustion; checkpoint and report unmet.",
+    "deferredOptional": [
+      "Foreign runtime callbacks and framework adapters belong to following phases, not this acceptance boundary."
+    ]
+  },
+  "exclusions": [
+    "Registry registration/publication",
+    "Site deployment",
+    "External review transmission",
+    "Foreign step execution",
+    "Broader platform certification",
+    "Upstream submissions before programme completion"
+  ],
+  "requiredSafetyChecks": [
+    {
+      "id": "PRESERVE",
+      "description": "No lost attempts, source identities, evidence or silent fallback.",
+      "scenarioIds": [
+        "SDK-001",
+        "SDK-006",
+        "SDK-007",
+        "SDK-008",
+        "SDK-010",
+        "SDK-011"
+      ]
+    },
+    {
+      "id": "EXTENSIONS",
+      "description": "Rust extensions cannot override core names or another registration.",
+      "scenarioIds": [
+        "SDK-009"
+      ]
+    }
+  ],
+  "budgets": {
+    "timeMinutes": 240,
+    "toolCalls": 200,
+    "repairAttempts": 2,
+    "noProgressLimit": 3,
+    "tokenBudget": "UNKNOWN",
+    "tokenFallback": "Use elapsed time and tool-call ceiling; checkpoint before exhaustion.",
+    "consumedAtAuthoring": {
+      "scope": "Owner-adopted implementation starts after binding; preceding planning retained separately."
+    },
+    "exhaustion": "Checkpoint and BLOCKED; preserve all evidence and do not claim success."
+  },
+  "evidenceInvalidation": "Bind source, contract, oracle, runtime and package digests. Invalidate only affected behavior after material changes; retain old evidence and consumed repair budget.",
+  "workerRoutes": {
+    "agent": "Internal Codex execution team",
+    "model": "Exact deployment identity unavailable",
+    "billing": "Existing user-authorized internal execution; no external inference providers",
+    "subagents": "Separate Rust SDK, Node and Python adapter scopes; root acceptance orchestration. Review dormant until complete BDD success.",
+    "reviewRoundsMax": 2
+  },
+  "boundaryPacket": {
+    "postImplementationOnly": true,
+    "singleRun": true,
+    "commands": [
+      {
+        "id": "sdk46-prepare",
+        "kind": "build",
+        "argv": [
+          "python3",
+          "sdk/acceptance/prepare.py"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "SDK-001",
+          "SDK-002",
+          "SDK-003",
+          "SDK-004",
+          "SDK-005",
+          "SDK-006",
+          "SDK-007",
+          "SDK-008",
+          "SDK-009",
+          "SDK-010",
+          "SDK-011"
+        ]
+      },
+      {
+        "id": "sdk46-behavior",
+        "kind": "scenario",
+        "argv": [
+          "env",
+          "RUSTUP_TOOLCHAIN=1.88.0",
+          "cargo",
+          "test",
+          "--locked",
+          "--manifest-path",
+          "sdk/Cargo.toml",
+          "--test",
+          "language_sdk",
+          "--",
+          "--tags",
+          "@sdk46"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "SDK-001",
+          "SDK-002",
+          "SDK-003",
+          "SDK-004",
+          "SDK-005",
+          "SDK-006",
+          "SDK-007",
+          "SDK-008",
+          "SDK-009",
+          "SDK-010",
+          "SDK-011"
+        ]
+      },
+      {
+        "id": "sdk46-controls",
+        "kind": "negativeControl",
+        "argv": [
+          "env",
+          "RUSTUP_TOOLCHAIN=1.88.0",
+          "cargo",
+          "test",
+          "--locked",
+          "--manifest-path",
+          "sdk/Cargo.toml",
+          "--test",
+          "language_sdk",
+          "--",
+          "--tags",
+          "@sdk46_negative"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "SDK-001",
+          "SDK-002",
+          "SDK-003",
+          "SDK-004",
+          "SDK-005",
+          "SDK-006",
+          "SDK-007",
+          "SDK-008",
+          "SDK-009",
+          "SDK-010",
+          "SDK-011"
+        ]
+      }
+    ],
+    "expectedEffects": [
+      "Generate locks/build native artifacts/package local archives at completed boundary",
+      "Create isolated outside-checkout consumer environments",
+      "Write original evidence under docs/compatibility/evidence/sdk46-first"
+    ],
+    "requiredApprovals": "Owner explicitly adopted this phase and directed implementation, phase-end BDD, internal review/material corrections and origin preservation. No registration/publication/deployment authorized.",
+    "receipts": [
+      "Exact commands/exits/stdout/stderr",
+      "Source/fixture/package/native hashes",
+      "BDD Messages and per-case/control observations",
+      "Installed module paths and cleanup"
+    ],
+    "cleanup": [
+      "Remove only recorded temporary consumer environments after both packets; retain archives and original evidence."
+    ],
+    "stopConditions": [
+      "Fail on missing tools or native artifacts",
+      "Reject zero selected scenarios",
+      "Stop after unexpected side effects or exhausted repair budget",
+      "No external reviewer transmission"
+    ]
+  },
+  "status": {
+    "implementationComplete": false
+  },
+  "calibration": {
+    "examplesPath": ".kbd-orchestrator/phases/phase-46-native-sdk/calibration.json",
+    "sha256": "c651f1da5023601faf678d1e8a3d7ae5e06b7e7d4660ade2e5ec9ed9426446e6"
+  },
+  "method": {
+    "name": "VLBV",
+    "packVersion": "source-worktree VLBV1.1.0",
+    "referenceSha256": "7f86e6ececc44aa982bd2af35578d8daed2b39e7f3f286460713b6121da13b5c",
+    "openspecVersion": "2.1.0",
+    "specDeltaDigest": "3981fe2402e33d9770e44ee40b459d20d4859e4f6a21e29da5bea4a57c7ed7b7"
+  },
+  "closure": {
+    "implementationComplete": false,
+    "behaviorAccepted": false,
+    "releaseEligible": false,
+    "releaseAuthorized": false
+  }
+}
