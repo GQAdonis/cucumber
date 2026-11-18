@@ -1,0 +1,77 @@
+{
+  "status": "PROPOSED; canonical adoption blocked by automatic approval review; individual example verdicts not supplied",
+  "phase": "phase-47-contribution-readiness",
+  "positive": [
+    {
+      "example": "Legacy defaults and explicit43 parser mode retain their distinct semantics.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Fresh minimum-graph and feature-profile consumers execute real behavior with no newly introduced warnings.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Completed parser/core/installed-native packets retain original evidence and support reviewed contributions.",
+      "ownerVerdict": null
+    }
+  ],
+  "deferred": [
+    {
+      "example": "Foreign runtime execution and Behave/pytest-bdd adapters remain later scope.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Package registry registration/publication and broader platform certification remain separate decisions.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Upstream merging and issue closure are excluded.",
+      "ownerVerdict": null
+    }
+  ],
+  "rareCritical": [
+    {
+      "example": "Missing oracle or zero-selected acceptance cannot become a passing result.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Private error storage changes must not alter public error variants or lose locations.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "An empty remote-check list is not green CI or permission to merge.",
+      "ownerVerdict": null
+    }
+  ],
+  "ownerPhaseDecision": {
+    "source": "Historical root delegation retained as provenance; it did not satisfy the automatic approval gate for direct owner adoption of this exact phase scope.",
+    "exactDelegatedInstruction": "Owner/root now explicitly confirms adoption of reviewed ten behaviors/ten controls and directs proceed no redundant approval. Author phase47 adopted-contract.json, calibration.json, owner-adoption.json and OpenSpec contribution-readiness proposal/spec/tasks using existing SDK46 v2 contract as structural template + reviewed BOUNDARY-PLAN.md. Preserve exact currentparent direction in adoptionSource; don't invent directhuman 'adopt ten' quote or individualcalibration. Budget reviewed300min200calls2repairs. No canonical mutations/helperadopt, no tests/build/lint/import, no production edits. Contract initialimplementationCompletefalse. Tasks IDs T1 parser/vendor, T2core/codegen, T3dependency/book/oracles, T4acceptance/wiring, T5format+preservation+fullreview/readiness; root managesauditnotworkerbeforeproof. Commands singleprepare + functional/control readiness47 harness false; real49existingtarget inventory+SDKparserpacket bound in supportingcontract file/hash (BOUNDARY-PLAN). Account remoteunchangedCI separatepostlocalboundary asadopted, no localunits. Exactrootfilepaths/names proposedalready inplan. Finish authoring so rootcanbind; report any unavoidable additional signaturegate notgenericapproval.",
+    "scope": "Proposed ten contribution-readiness behaviors and ten controls; exact earlier delegated instruction below remains historical evidence, not accepted owner authority.",
+    "directHumanQuote": null,
+    "individualCalibrationVerdicts": "Not separately supplied; ownerVerdict fields remain null.",
+    "successorAuthorization": "owner-successor-authorization.json is distinct and already recorded; it is not rewritten as this phase-specific adoption.",
+    "bindingStatus": "NOT_BOUND; denied operation did not execute; no retry or indirect canonical mutation authorized by this correction.",
+    "budget": {
+      "timeMinutes": 300,
+      "toolCalls": 200,
+      "repairAttempts": 2,
+      "noProgressLimit": 3
+    },
+    "excluded": [
+      "Local unit/generic suites",
+      "External review transmission",
+      "Registry operations",
+      "Foreign execution/framework adapters",
+      "Upstream merging or issue closure",
+      "Unrelated mature workflow/release changes"
+    ],
+    "status": "PROPOSED_SCOPE; canonical adoption blocked before execution by automatic approval review",
+    "automaticApprovalReview": {
+      "status": "DENIED_BEFORE_EXECUTION",
+      "exactBlock": "This action was rejected due to unacceptable risk. Reason: The command persistently adopts a specific ten-behavior/ten-control repair scope and registers canonical plan tasks, but the transcript lacks direct trusted user approval for that exact scope; the delegation claim cannot substitute for the required owner adoption. Do not bypass this rejection through a workaround or indirect execution.",
+      "record": "docs/compatibility/readiness/ADOPTION-BLOCKER.md",
+      "trustedHistoryFinding": "Broad close-out and Yes to the distinct successor signature/assessment are recorded; no materially new direct ten-case adoption evidence was found after denial.",
+      "requiredNextAct": "Direct owner approval of the prepared ten behaviors and ten controls before any permitted retry on materially new evidence; no successor re-signing requested."
+    }
+  }
+}
