@@ -1,0 +1,98 @@
+{
+  "status": "PHASE_ADOPTED_BY_DIRECT_OWNER_APPROVAL; individual example verdicts not separately supplied",
+  "phase": "phase-47-contribution-readiness",
+  "positive": [
+    {
+      "example": "Legacy defaults and explicit43 parser mode retain their distinct semantics.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Fresh minimum-graph and feature-profile consumers execute real behavior with no newly introduced warnings.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Completed parser/core/installed-native packets retain original evidence and support reviewed contributions.",
+      "ownerVerdict": null
+    }
+  ],
+  "deferred": [
+    {
+      "example": "Foreign runtime execution and Behave/pytest-bdd adapters remain later scope.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Package registry registration/publication and broader platform certification remain separate decisions.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Upstream merging and issue closure are excluded.",
+      "ownerVerdict": null
+    }
+  ],
+  "rareCritical": [
+    {
+      "example": "Missing oracle or zero-selected acceptance cannot become a passing result.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Private error storage changes must not alter public error variants or lose locations.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "An empty remote-check list is not green CI or permission to merge.",
+      "ownerVerdict": null
+    }
+  ],
+  "ownerPhaseDecision": {
+    "source": "Direct trusted owner approval verified through user_message_read by root; original delegated claim and initial denial retained as history.",
+    "exactDelegatedInstruction": "Owner/root now explicitly confirms adoption of reviewed ten behaviors/ten controls and directs proceed no redundant approval. Author phase47 adopted-contract.json, calibration.json, owner-adoption.json and OpenSpec contribution-readiness proposal/spec/tasks using existing SDK46 v2 contract as structural template + reviewed BOUNDARY-PLAN.md. Preserve exact currentparent direction in adoptionSource; don't invent directhuman 'adopt ten' quote or individualcalibration. Budget reviewed300min200calls2repairs. No canonical mutations/helperadopt, no tests/build/lint/import, no production edits. Contract initialimplementationCompletefalse. Tasks IDs T1 parser/vendor, T2core/codegen, T3dependency/book/oracles, T4acceptance/wiring, T5format+preservation+fullreview/readiness; root managesauditnotworkerbeforeproof. Commands singleprepare + functional/control readiness47 harness false; real49existingtarget inventory+SDKparserpacket bound in supportingcontract file/hash (BOUNDARY-PLAN). Account remoteunchangedCI separatepostlocalboundary asadopted, no localunits. Exactrootfilepaths/names proposedalready inplan. Finish authoring so rootcanbind; report any unavoidable additional signaturegate notgenericapproval.",
+    "scope": "Reviewed ten contribution-readiness behaviors and ten controls;300min/200calls/two repairs; local phase-end BDD and separate unchanged remote CI; no workflow changes.",
+    "directHumanQuote": "Yes adopt the boundary",
+    "individualCalibrationVerdicts": "Not separately supplied; ownerVerdict fields remain null.",
+    "successorAuthorization": "owner-successor-authorization.json is distinct and already recorded; it is not rewritten as this phase-specific adoption.",
+    "bindingStatus": "Owner decision readiness47-owner-adoption recorded and Plan/change/T1\u2013T5 registered per root; contract digest not yet bound by this author.",
+    "budget": {
+      "timeMinutes": 300,
+      "toolCalls": 200,
+      "repairAttempts": 2,
+      "noProgressLimit": 3
+    },
+    "excluded": [
+      "Local unit/generic suites",
+      "External review transmission",
+      "Registry operations",
+      "Foreign execution/framework adapters",
+      "Upstream merging or issue closure",
+      "Unrelated mature workflow/release changes"
+    ],
+    "status": "OWNER_ADOPTED; canonical owner decision and Plan/change/task registration succeeded; contract binding pending root",
+    "automaticApprovalReview": {
+      "status": "RESOLVED_BY_MATERIALLY_NEW_DIRECT_APPROVAL_AND_SUCCESSFUL_SUPPORTED_RETRY",
+      "exactBlock": "This action was rejected due to unacceptable risk. Reason: The command persistently adopts a specific ten-behavior/ten-control repair scope and registers canonical plan tasks, but the transcript lacks direct trusted user approval for that exact scope; the delegation claim cannot substitute for the required owner adoption. Do not bypass this rejection through a workaround or indirect execution.",
+      "record": "docs/compatibility/readiness/ADOPTION-BLOCKER.md",
+      "requiredNextAct": "No repeat owner-adoption or successor-signing question. Root completes supported contract binding/dispatch. A later distinct implementation-complete authorization remains separate.",
+      "initialStatus": "DENIED_BEFORE_EXECUTION",
+      "historicalTrustedHistoryFinding": "Broad close-out and Yes to the distinct successor signature/assessment are recorded; no materially new direct ten-case adoption evidence was found after denial.",
+      "resolution": {
+        "source": "Trusted user_message_read history verified by parent /root and relayed in current delegation",
+        "questionMessageId": "Sentinel_2a5ba49c6a3081919040dcdc439e4882",
+        "questionSummary": "Approve the reviewed ten behaviors and ten controls,300min/200calls/two repairs, with no workflow changes. This summary is not an invented verbatim question.",
+        "answerMessageId": "Sentinel_657e589d934c81918a36a783879d7aa5",
+        "answeredAt": "2026-11-18T12:46:30.408117+00:00",
+        "answer": "Yes adopt the boundary",
+        "canonicalDecision": "readiness47-owner-adoption",
+        "retryOutcome": "Parent reports supported retry succeeded; Plan/change/T1\u2013T5 registered. Contract digest binding remains a subsequent root action."
+      }
+    },
+    "directApproval": {
+      "source": "Trusted user_message_read history verified by parent /root and relayed in current delegation",
+      "questionMessageId": "Sentinel_2a5ba49c6a3081919040dcdc439e4882",
+      "questionSummary": "Approve the reviewed ten behaviors and ten controls,300min/200calls/two repairs, with no workflow changes. This summary is not an invented verbatim question.",
+      "answerMessageId": "Sentinel_657e589d934c81918a36a783879d7aa5",
+      "answeredAt": "2026-11-18T12:46:30.408117+00:00",
+      "answer": "Yes adopt the boundary",
+      "canonicalDecision": "readiness47-owner-adoption",
+      "retryOutcome": "Parent reports supported retry succeeded; Plan/change/T1\u2013T5 registered. Contract digest binding remains a subsequent root action."
+    }
+  }
+}

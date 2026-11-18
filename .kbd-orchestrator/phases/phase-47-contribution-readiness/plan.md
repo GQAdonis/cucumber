@@ -1,0 +1,34 @@
+# Phase47 contribution-readiness execution plan
+
+Owner approval: trusted answer “Yes adopt the boundary”,2026-11-18T12:46:30.408117+00:00, message Sentinel_657e589d934c81918a36a783879d7aa5. Root verified direct history and recorded readiness47-owner-adoption plus Plan/change/T1–T5 registration. Contract binding/dispatch are subsequent supported root actions. Scope and budget are exactly adopted-contract.json and the hash-bound BOUNDARY-PLAN.md: ten behaviors/ten controls,300min/200calls/two repairs. No individual calibration verdict or exact deployed model is invented.
+
+## Backend and authority
+
+OpenSpec change `contribution-readiness`, managed through the existing KBD apply driver. Root exclusively owns canonical lifecycle, task boundaries, binding, budget/evidence accounting, authorizations and final readiness decisions. Workers return source diffs/findings; none mutate canonical state or execute verification. Existing build/release workflows and the Pages source branch remain intact. No external review transmission, registry operation or foreign-execution work.
+
+## Task model assignments
+
+All routes use native internal Codex orchestration through collaboration tools, under the current session's inherited model. Exact model/deployment: UNKNOWN. No third-party provider, billing route or cross-model certification is selected. Worker role names below are planned role slots, not a claim that new agents already exist; root may assign an existing internal agent to the same disjoint scope and record its actual identity without changing task acceptance.
+
+| Task reference | Planned native role / scope | Dependencies and handoff |
+| --- | --- | --- |
+| phase-47-contribution-readiness/contribution-readiness/T4 (acceptance authoring first) | Internal acceptance worker; tests/features/contribution_readiness/readiness.feature, tests/contribution_readiness.rs, tests/readiness/** and necessary manifest acceptance entry coordinated with T3 | Author all10+10 business/compatibility cases before any production code. Initial authored-scenarios handoff releases T1–T3; T4 stays in progress until final wiring is complete. This is an authoring barrier, not an early test gate. |
+| phase-47-contribution-readiness/contribution-readiness/T1 | Internal parser/vendor worker; sibling gherkin production/private-error/policy source and dedicated acceptance scope, then matching cucumber vendor production files/provenance | After T4 scenario-source handoff. Preserve public variants/defaults and intentional legacy empty-step behavior. Coordinate only vendor packaging differences with root; no broad workflow edits. Return exact changed files and semantic rationale. |
+| phase-47-contribution-readiness/contribution-readiness/T2 | Internal core/codegen worker; cucumber core feature gates and codegen source/expectation corrections | After T4 scenario-source handoff; independent of T1 except final integration. Avoid T3 manifest ownership; return actual API/timing preservation rationale and files. No local unit runs. |
+| phase-47-contribution-readiness/contribution-readiness/T3 | Internal dependency/book/oracle worker; manifests/locks policy, source-based minimum constraints, book/base-cause analysis and oracle packaging support | After T4 scenario-source handoff. Own manifest edits with root coordinating T4's target addition. Source-only decisions during implementation; diagnostic execution belongs to the completed BDD boundary. No speculative Makefile/workflow change. |
+| phase-47-contribution-readiness/contribution-readiness/T4 (final wiring) | Same internal acceptance role, coordinated with root | Complete fixture/source/oracle hashes, exact49-target/parser/SDK packet wiring, external consumers, nonzero guards and owned evidence/cleanup after interfaces from T1–T3 stabilize. Do not execute. |
+| phase-47-contribution-readiness/contribution-readiness/T5 | Root or internal integration role; final source formatting and preservation/review/readiness handoff preparation | After T1–T4 source completion. Apply intended formatting edits without an early validation run. Prepare complete-diff review packet and source checkpoint. T5 production completion is preparation only; audit/behavior/readiness remain dormant until their actual gates. |
+
+Parallel source work is allowed only across the disjoint T1/T2/T3 scopes after acceptance authoring. Shared manifests/vendor identity are coordinated explicitly; no concurrent blind overwrites. No implementation evidence is a passing behavior result.
+
+## Complete boundary and post-proof gates
+
+1. Root confirms all planned production and acceptance source complete, records supported task completion and obtains the established implementation-complete boundary authorization. Do not assume earlier successor-signing permission covers another signed manifest.
+2. Run only the contract's single preparation plus functional/control readiness47 commands, including the hash-bound existing49-target/parser/fresh-installed-SDK packet. No early build/import/typecheck/lint or local unit/generic suite. Preserve original failed attempts and finite cumulative repair accounting.
+3. After successful whole-phase BDD, independent internal QA and code-review roles inspect the complete delivered Cucumber/Gherkin scope, including SDK/FFI/wrappers and documentation/packaging. They must be separate from implementation roles where available; actual identities/model limits are retained. Root owns review dispatch/dispositions. Material behavioral corrections require the complete authorized repair boundary; no per-task review loops before proof.
+4. Preserve authorized commits/pushes after the local boundary. Existing remote CI runs unchanged and is a separate exact-head readiness gate, including its honest unit/lint/book nature. Missing, pending or failed checks are not PASS; do not promote/merge based on empty checks. No upstream merge or registry operation.
+5. Ensure Reflect is registered before canonical phase closure, then use supported closure/archive/reconciliation/reflection operations. Preserve the earlier phase46 limitation without reopening or editing canonical state. Report actual completed/proved/pending scope and stop at any real budget/authority blocker.
+
+## Limits
+
+Local SDK certification remains Darwin arm64/Rust1.88/Node26.5/Python3.11.3/TypeScript6.0.3. All source/base/fixture choices and unresolved book causality are agent-owned technical work within the adopted diagnostic boundary, not redundant owner preference questions. Acceptance scope and300min/200calls/two repairs cannot grow silently. Remote waiting is recorded honestly; no budget reset or telemetry invention. Broad language parity, foreign callbacks/adapters, universal platform readiness and public package distribution are not phase47 claims.

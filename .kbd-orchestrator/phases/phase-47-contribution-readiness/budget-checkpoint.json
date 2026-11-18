@@ -1,0 +1,16 @@
+{
+  "recordedAt": "2026-11-18T13:24:13.311436+00:00",
+  "elapsedMinutes": 31.1,
+  "toolCallsCharged": 150,
+  "toolCallLimit": 200,
+  "repairAttempts": 0,
+  "repairLimit": 2,
+  "method": "Conservative manual upper-bound accounting through source integration, not machine telemetry. Reconstructed root calls plus worker reported counts are rounded upward; acceptance worker count was reconstructed, not machine-measured. Future calls must be added; no reset on handoff.",
+  "workers": {
+    "parser": 12,
+    "core": 18,
+    "dependency": 14,
+    "acceptanceIncludingHelper": 32
+  },
+  "remaining": "At most50 calls before further accounting; elapsed300min budget continues during authority wait."
+}

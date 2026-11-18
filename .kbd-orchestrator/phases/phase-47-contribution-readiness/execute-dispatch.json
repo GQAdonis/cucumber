@@ -1,0 +1,35 @@
+{
+  "dispatchedAt": "2026-11-18T12:53:07.493077+00:00",
+  "phase": "phase-47-contribution-readiness",
+  "change": "contribution-readiness",
+  "backend": "native internal Codex/OpenSpec",
+  "model": "inherited; exact deployment UNKNOWN",
+  "assignments": {
+    "T1": "/root/readiness_parser",
+    "T2": "/root/readiness_core",
+    "T3": "/root/readiness_dependencies",
+    "T4": "/root/sdk_acceptance",
+    "T5": "/root"
+  },
+  "contractDigest": "044ed16edabd5ab24a9750bf6f7e797ff1497d5a6bc79de0300d2322cf7c87ab",
+  "pending": [
+    "acceptance source first",
+    "production repairs",
+    "whole-phase BDD",
+    "independent full-delivered-scope review",
+    "reflection and actual remote readiness"
+  ],
+  "budgets": {
+    "timeMinutes": 300,
+    "toolCalls": 200,
+    "repairAttempts": 2,
+    "noProgressLimit": 3,
+    "tokenBudget": "UNKNOWN",
+    "tokenFallback": "Elapsed time and tool-call ceiling; checkpoint before exhaustion.",
+    "consumedAtAuthoring": {
+      "scope": "Owner-adopted implementation starts with root canonical dispatch; preparation has not executed production or verification. Earlier planning remains separate."
+    },
+    "accounting": "Track actual elapsed dispatch time and tool calls honestly, including waits; automatic remote jobs are a separate post-local-BDD gate, not additional local unit commands or a silent budget reset. Preserve estimated versus measured telemetry.",
+    "exhaustion": "Checkpoint and report BLOCKED/unmet; do not broaden scope, weaken checks or claim merge readiness."
+  }
+}
