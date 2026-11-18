@@ -1,3 +1,7 @@
+# Current authorization update
+
+The exact successor manifest has now been signed with explicit owner permission, verified and canonically started. Assessment is complete and independently cleared for specification. The original proposal below is retained as history; its unsigned/not-activated wording is superseded only for successor entry, not adoption of the ten proposed cases.
+
 # Proposed contribution-readiness repair phase
 
 Status: prepared, not adopted or activated. Phase46 remains CLOSED/PASS; its evidence remains valid for the finite exercised cases, not a claim of clean existing CI. Broad owner intent authorizes completing contributions, but the exact prior signing authorization covered only phase46 implementation completion. The attached unsigned start-successor manifest names phase-47-contribution-readiness. No signature was reused, generated or requested from an external service.
