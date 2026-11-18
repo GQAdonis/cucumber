@@ -6,7 +6,7 @@
     "runId": "project-20261118T062840Z",
     "phaseId": "phase-46-native-sdk",
     "planRevision": 1,
-    "contractDigest": "00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785"
+    "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0"
   },
   "digestNormalization": {
     "algorithm": "sha256",
@@ -21,7 +21,7 @@
     "supportedEnvironments": [
       "Initial behavioral certification target: Darwin arm64, Node26.5.0, CPython3.11.3, Rust1.88.0"
     ],
-    "currentCapabilities": "Core through45 is verified; SDK and native packages are adopted but not yet implemented or verified.",
+    "currentCapabilities": "Core through45 is verified; SDK, native wrappers and packaged acceptance source implementation is complete. SDK package build/install and behavioral verification have not run; no SDK acceptance or parity claim.",
     "explicitUnknowns": [
       "Other runtime/platform behavior",
       "Public package names and ownership",
@@ -729,7 +729,7 @@
     ]
   },
   "status": {
-    "implementationComplete": false
+    "implementationComplete": true
   },
   "calibration": {
     "examplesPath": ".kbd-orchestrator/phases/phase-46-native-sdk/calibration.json",
@@ -743,7 +743,7 @@
     "specDeltaDigest": "3981fe2402e33d9770e44ee40b459d20d4859e4f6a21e29da5bea4a57c7ed7b7"
   },
   "closure": {
-    "implementationComplete": false,
+    "implementationComplete": true,
     "behaviorAccepted": false,
     "releaseEligible": false,
     "releaseAuthorized": false

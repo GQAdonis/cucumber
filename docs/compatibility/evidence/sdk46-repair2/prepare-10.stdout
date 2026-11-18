@@ -1,0 +1,71 @@
+[
+  {
+    "id": "cucumber-native-local@0.0.0",
+    "name": "cucumber-native-local",
+    "version": "0.0.0",
+    "size": 1234843,
+    "unpackedSize": 3347956,
+    "shasum": "4e205c69b79023aa952e734a045f8ca693f5aa75",
+    "integrity": "sha512-LwZuMyNBTfE3APj8eS+uCRYMNYXEk8FIT7qGup/VBFVtjjaGZbx1nX3DzvIUIGscKl7UEw31UOoKlcBTs2tYJA==",
+    "filename": "cucumber-native-local-0.0.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "LICENSE-MIT",
+        "size": 1208,
+        "mode": 420
+      },
+      {
+        "path": "NOTICE",
+        "size": 1133,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 4242,
+        "mode": 420
+      },
+      {
+        "path": "cucumber_sdk.node",
+        "size": 3312096,
+        "mode": 493
+      },
+      {
+        "path": "index.d.ts",
+        "size": 3538,
+        "mode": 420
+      },
+      {
+        "path": "index.js",
+        "size": 1124,
+        "mode": 420
+      },
+      {
+        "path": "licenses/LICENSE-GHERKIN",
+        "size": 1134,
+        "mode": 420
+      },
+      {
+        "path": "licenses/LICENSE-GHERKIN-RUST-APACHE",
+        "size": 10847,
+        "mode": 420
+      },
+      {
+        "path": "licenses/LICENSE-GHERKIN-RUST-MIT",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 702,
+        "mode": 420
+      }
+    ],
+    "entryCount": 11,
+    "bundled": []
+  }
+]

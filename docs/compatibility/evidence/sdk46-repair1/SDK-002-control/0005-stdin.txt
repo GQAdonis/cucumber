@@ -1,0 +1,7 @@
+# Feature: Literal
+## Scenario: Both
+* Given payload
+  | `@table` | café 😀 |
+  ````application/`@media`
+  literal `@body`
+  ````

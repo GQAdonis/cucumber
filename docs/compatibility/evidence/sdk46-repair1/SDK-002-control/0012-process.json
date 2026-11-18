@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/gherkinOracleRoot/markdown-oracle.mjs",
+    "invalid.feature.md"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/gherkinOracleRoot",
+  "exit": 1,
+  "stdinSha256": "f353b866efaaabccd68aa675b9064c5cee6690d4683217dbe484b1d8a16ed0df"
+}

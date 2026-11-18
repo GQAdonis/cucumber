@@ -86,8 +86,11 @@ try:
     record('preparation-start.json', {'consumerRoot': str(CONSUMERS), 'root': str(ROOT), 'platform': platform.platform(), 'architecture': platform.machine(), 'pythonExecutable': sys.executable, 'source': snapshot()})
     if sys.platform != 'darwin' or platform.machine() != 'arm64':
         raise RuntimeError('This first adopted package proof is Darwin arm64 only')
-    for argv in (['rustc', '--version'], ['cargo', '--version'], ['node', '--version'], ['npm', '--version'], [sys.executable, '--version']):
-        run(argv)
+    versions = {}
+    for label, argv in (('rustc', ['rustc', '--version']), ('cargo', ['cargo', '--version']), ('node', ['node', '--version']), ('npm', ['npm', '--version']), ('python', [sys.executable, '--version'])):
+        versions[label] = run(argv).strip()
+    if not versions['rustc'].startswith('rustc 1.88.0 ') or versions['node'] != 'v26.5.0' or versions['python'] != 'Python 3.11.3':
+        raise RuntimeError('Adopted runtime identity mismatch: expected Rust1.88.0, Node26.5.0 and Python3.11.3; see original version receipts')
     for manifest in ('sdk/Cargo.toml', 'bindings/node/Cargo.toml', 'bindings/python/Cargo.toml'):
         run(['cargo', 'generate-lockfile', '--manifest-path', str(ROOT / manifest)])
     target = CONSUMERS / 'cargo-target'

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "cargo",
+    "--version"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:06:04.954162+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:06:05.014213+00:00",
+  "stdout": "prepare-02.stdout",
+  "stderr": "prepare-02.stderr"
+}

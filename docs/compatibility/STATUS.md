@@ -12,17 +12,34 @@ separate verified phases from remaining interoperability boundaries.
 Baselines: Cucumber.js 13.3.0, its Gherkin 42.0.1 and Messages 34.2.1, alongside
 latest official Gherkin 43.0.0 (Messages 35). [Pinned matrix](CAPABILITIES.md).
 
-The foundation is preserved on both origin branches. Additive local Docusaurus
-sites have a separate [behavior boundary](DOCS-SITE-ACCEPTANCE.md).
-[SDK/FFI phase46](SDK-ROADMAP.md) is owner-adopted. Shared Rust SDK and native
-TypeScript/Python adapter source is written; package builds and phase-end
-behavior acceptance have not run yet. The next KBD boundary requires its operator-signed
-implementation-completion amendment; the eleven adopted cases are unchanged.
-No SDK parity or installation claim is made;
-[Behave and pytest-bdd](PYTHON-TARGETS.md) are researched, not verified adapters.
+The foundation is preserved on both origin branches. **SDK46 is canonically
+CLOSED PASS** for the adopted shared compiler/rerun and Rust-extension boundary.
+Final repair2 built and installed actual local native packages and passed
+11 functional cases /33 steps plus11 negative controls /33 steps, with outer
+Messages proof for all22 cases/66 steps and owned cleanup. The verified host is
+Darwin arm64, Rust1.88.0, Node26.5.0, CPython3.11.3 and TypeScript6.0.3.
+Scoped internal review and static QA resolved their material findings; this is
+not the final audit of the whole core/Gherkin programme or a full-parity claim.
+See [SDK46 results and retained repairs](PHASE46-SDK.md) and [SDK roadmap](SDK-ROADMAP.md).
+
+Both documentation sites are live:
+[Cucumber](https://gqadonis.github.io/cucumber/) and
+[Gherkin](https://gqadonis.github.io/gherkin/). Their separate [Pages delivery](DOCS-PAGES.md)
+records local10/64 and public4/22 BDD evidence plus the repository About updates.
+These counts apply to the recorded source/deployment snapshots.
+[Behave and pytest-bdd](PYTHON-TARGETS.md) remain researched, unimplemented adapters;
+foreign step execution, other platforms and public package publication are later gates.
 
 ## Available locally
 
+- `cucumber_sdk::Sdk` provides shared native compilation, lossless rerun plans,
+  capability reporting and versioned JSON requests; instance-owned Rust
+  `Extension` registration does not replace built-ins or expose host callbacks.
+- Actual NAPI-RS Node/TypeScript and PyO3 Python artifacts were installed into
+  fresh outside-checkout consumers at the SDK46 boundary. Local archives are
+  retained under ignored `evidence/sdk46-repair2/artifacts/`; identity hashes,
+  realpaths and process receipts remain in retained evidence. Packages use
+  provisional private names and are not registered or published.
 - Native Messages rerun plans retain every attempt and produce safe paired source/line selections, independently compared with the actual JS13.3 formatter. An empty plan never launches an unrestricted rerun.
 - VLBV receipt projection validates lifecycle/retry chains, exact process-to-stream binding, and every supplied control/cleanup association. It remains read-only and does not authorize repairs.
 - Markdown literal tag-like content now follows official state-aware token precedence, including consumed argument slots and genuine declaration tags.
@@ -87,6 +104,8 @@ BDD scenarios. Every accepted final command exited 0.
 
 | Phase | Focused result | Evidence / contract |
 |---|---|---|
+| 46 installed SDK, final repair2 | 11/33 functional +11/33 controls; outer Messages22/66; canonical CLOSED PASS | [SDK46](PHASE46-SDK.md) |
+| Documentation/Pages | local10/64; public4/22, separate recorded boundaries | [Pages delivery](DOCS-PAGES.md) |
 | 43 receipt consistency | 22/90 new;25/85 prior | [Phase43](PHASE43-VLBV-CONSISTENCY.md) |
 | 44 native rerun | 19/73 | [Phase44](PHASE44-RERUN.md) |
 | 45 Markdown precedence | 21/100 | [Phase45](markdown-precedence.md) |
@@ -137,9 +156,12 @@ BDD scenarios. Every accepted final command exited 0.
 | 41 generated seeds | 10/45; affected69/282 | [Replay](PHASE41-GENERATED-ORDERING.md) |
 | Final Rust1.88 acceptance | 172/670 across13 named BDD targets | [Compiler boundary](MSRV-ACCEPTANCE-PLAN.md) |
 
-Only focused phase-end BDD ran. No unit suites, generic Cargo test, lint/check,
-early builds, workflow dispatches or deployment checks ran. Initial harness and
-protocol-order failures are retained in evidence. The shrinking original Messages
+For the historical core phases through45, only focused phase-end BDD ran: no unit
+suites, generic Cargo test, lint/check, early builds, workflow dispatches or
+deployment checks. SDK46 later built/installed artifacts only in its adopted
+whole-phase packet; separately authorized documentation delivery has its own
+Pages workflows and public acceptance. Initial harness and protocol-order
+failures are retained in evidence. The shrinking original Messages
 count removes obsolete negative cases as retries/hooks become supported; their
 new positive/negative behavior coverage lives in dedicated phase targets.
 Primary development boundaries used rustc1.99.1. The final selected boundary
@@ -172,24 +194,34 @@ cucumber-rs/gherkin `4c30e3a48a0226bf907053a0a9e738e91cf06727`, cloned at
 `/Users/gqadonis/Projects/references/gherkin`. It is the parser source of truth;
 production changes are mirrored into `vendor/gherkin` with provenance/hashes.
 The existing GQAdonis/cucumber fork base remains
-`d95872541ee2a43d71089c64bd3fa8848e24c922`. All implementation is local,
-uncommitted and unpublished. No additional dependency fork is justified yet.
+`d95872541ee2a43d71089c64bd3fa8848e24c922`. Authorized preservation commits and
+pushes supersede the historical local-only status; the through45 source is on
+both origin `foundation/rust-bdd-sdk` branches. See [delivery](DELIVERY.md) for
+preserved foundation identities. No registry package is published, and no
+additional dependency fork is justified yet.
 
 The CI/CD skill was found at
 `~/.claude/skills/ci-cd-and-automation/SKILL.md` (symlink into `~/.agents`) and
 copied to `.agents/skills/ci-cd-and-automation/SKILL.md`, preserving the source.
-Project overrides enforce BDD-only/end-phase execution. No workflow, branch
-protection or security setting was changed.
+Project overrides enforce BDD-only/end-phase execution. Existing Rust CI,
+release and mdBook workflows remain unchanged. The separately authorized
+[documentation Pages workflows and narrow hosting setup](DOCS-PAGES.md) are
+additive; no unrelated branch-protection or security change is claimed.
 
-No access blocker is pending. The concrete bounded implementation is verified;
-remaining literal-JS and protocol boundaries are explicit in
+No access blocker remains for the completed foundation/SDK boundary. Remaining
+literal-JS, protocol and unadopted execution work is explicit in
 [NEXT-PHASES.md](NEXT-PHASES.md) and [DELIVERY.md](DELIVERY.md).
-Remote Git reuse needs separately authorized code publication; registry release
-also needs a published compatible parser version because Cargo strips paths.
-No PR, merge, deployment or production change was made. Browser adapters remain
-decoupled, agent-browser still wraps Node Playwright, and San Saba is untouched.
+Repository preservation pushes and fork documentation deployment are authorized
+and have occurred. Registry publication remains gated on names, ownership,
+publication scope and dependency/artifact closure; Cargo strips path dependencies
+for registry releases. Matching upstream issues/PRs follow the remaining work
+and full programme audit, not this scoped SDK closure. No merge or application
+production change is claimed. Browser adapters remain decoupled, agent-browser
+still wraps Node Playwright, and San Saba is untouched.
 
 Latest sibling parser verification also passed73 scenarios/241 steps on Rust1.88
 ([evidence](evidence/phase45-parser-affected-bdd.log)). Through42 inventories are
 preserved in `evidence/through42-checkpoint/`; current inventories identify the
-through45 snapshot. Both repositories remain uncommitted and unpublished.
+through45 snapshot. Those historical inventories do not describe newer SDK or
+documentation sources. Both foundation forks are preserved remotely; SDK native
+archives remain local and registry-unpublished.

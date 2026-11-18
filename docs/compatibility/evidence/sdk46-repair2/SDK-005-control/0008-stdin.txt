@@ -1,0 +1,1 @@
+{"requests": ["{", "[]", "{\"version\":2,\"operation\":\"capabilities\",\"input\":{}}", "{\"version\":1,\"operation\":\"execute\",\"input\":{}}", "{\"version\":1,\"operation\":\"compile\",\"input\":{}}", "{\"version\":2,\"operation\":\"execute\",\"input\":{}}", "{\"version\":1,\"operation\":\"capabilities\",\"input\":{},\"extra\":1}"], "facade": false}

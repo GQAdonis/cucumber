@@ -1,3 +1,7 @@
+# Resolved checkpoint — phase46 CLOSED PASS
+
+On 2026-11-18 Travis explicitly authorized the exact existing-key signature. It verified, the adopted boundary and two authorized repairs completed, and canonical closure recorded PASS for all eleven cases plus controls (22 scenarios / 66 steps). See closure-packet.md and docs/compatibility/PHASE46-SDK.md. The following is the retained historical pre-signature handoff, not current instructions.
+
 # Phase46 implementation complete; B4 not executed
 
 Travis's first-SDK-phase adoption is resolved. The exact answer is preserved in

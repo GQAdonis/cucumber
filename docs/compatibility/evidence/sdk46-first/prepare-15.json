@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-u7n28yen/builder/bin/python",
+    "-m",
+    "maturin",
+    "build",
+    "--release",
+    "--locked",
+    "--manifest-path",
+    "/Volumes/T7/Projects/references/cucumber/bindings/python/Cargo.toml",
+    "--interpreter",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-u7n28yen/python/bin/python",
+    "--out",
+    "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-first/artifacts"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber/bindings/python",
+  "startedAt": "2026-11-18T11:03:57.430048+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:04:21.107113+00:00",
+  "stdout": "prepare-15.stdout",
+  "stderr": "prepare-15.stderr"
+}

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/jsOracleRoot/oracle.mjs"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/jsOracleRoot",
+  "exit": 0,
+  "stdinSha256": "be7b00ccf3b85f4f14419c901e5262271b48a32abdf13c6a489dd624afeb5a3b"
+}

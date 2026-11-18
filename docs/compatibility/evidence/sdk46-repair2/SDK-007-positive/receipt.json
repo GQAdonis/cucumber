@@ -1,0 +1,21 @@
+{
+  "case": "SDK-007",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "forgedNumericAttemptRejected": "INVALID_MESSAGES",
+      "sameHostRecovery": true
+    },
+    {
+      "typedErrors": [
+        "INCOMPLETE_RUN",
+        "MISSING_REFERENCE",
+        "RUN_ALREADY_FINISHED",
+        "INVALID_MESSAGES"
+      ],
+      "interruptedAttemptsRetained": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

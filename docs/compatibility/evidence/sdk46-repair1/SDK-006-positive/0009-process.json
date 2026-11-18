@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/python/bin/python",
+    "-I",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/python-consumer.py"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx",
+  "exit": 0,
+  "stdinSha256": "5c060e214dd09dce26e6be97e4733b477ff782df25211567af8fb1fc18c39c8c"
+}

@@ -1,0 +1,19 @@
+{
+  "case": "SDK-011",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "sameHostRequests": 6,
+      "uriIsolation": [
+        "memory://one.feature",
+        "memory://two.feature"
+      ],
+      "runIsolation": [
+        "owner-A",
+        "owner-B"
+      ]
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

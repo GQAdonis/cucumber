@@ -1,0 +1,5 @@
+{
+  "reason": "OpenSpec static validation rejected single-level delta header; only heading depth corrected after behavioral closure; all eleven requirements and scenario text unchanged. Signed contract and its historical input digest are unchanged.",
+  "beforeSha256": "a4929146bcaf4cfe9b99a4969941fd95f210a6184b84d314ff931f526216de68",
+  "afterSha256": "d9a3d85658d671f7a28bb094d95652b947ab12b260ec5691fdcca1bcf17ff70e"
+}

@@ -1,0 +1,24 @@
+{
+  "case": "SDK-002",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "officialGoodFixtures": 5,
+      "format": "markdown",
+      "hosts": [
+        "rust",
+        "node",
+        "python"
+      ]
+    },
+    {
+      "livePinnedMarkdownBoundaries": 5
+    },
+    {
+      "control": "repeated Markdown argument",
+      "typedRejection": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

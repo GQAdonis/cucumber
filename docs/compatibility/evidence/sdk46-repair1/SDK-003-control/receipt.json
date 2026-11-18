@@ -1,0 +1,21 @@
+{
+  "case": "SDK-003",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "officialGoodFixtures": 2,
+      "format": "gherkin",
+      "hosts": [
+        "rust",
+        "node",
+        "python"
+      ]
+    },
+    {
+      "control": "invented featureless pickle",
+      "rejected": "graph array length differs"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

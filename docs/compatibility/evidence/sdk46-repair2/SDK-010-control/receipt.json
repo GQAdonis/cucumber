@@ -1,0 +1,44 @@
+{
+  "case": "SDK-010",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "nativeArtifacts": [
+        {
+          "host": "rust",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/cargo-target/release/sdk46-external-consumer",
+          "sha256": "61f43f757040a518e3d6e6eafc395db4cf76b6a2de81ed5cc28db7d875af139f"
+        },
+        {
+          "host": "node",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/node/node_modules/cucumber-native-local/cucumber_sdk.node",
+          "sha256": "e0b30d7d72ff5bb5cc0edc5ac9fc7494a3183c9ed4a909f1495ed679fa55f9e0"
+        },
+        {
+          "host": "python",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+          "sha256": "8ce2f9009cba3f936fa02a1a0279f337fa948c8806a373993ebab137165d4ea1"
+        }
+      ],
+      "realTypeScriptConsumer": true
+    },
+    {
+      "control": "node fresh-process missing native",
+      "explicitFailure": "node:internal/modules/cjs/loader:1573\n  throw err;\n  ^\n\nError: Cannot find module './cucumber_sdk.node'\nRequire stack:\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde/node_modules/cucumber-native-local/index.js\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde/consumer.cjs\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)\n    at Module._load (node:internal/modules/cjs/loader:1346:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.require (node:internal/modules/cjs/loader:1679:12)\n    at require (node:internal/modules/helpers:196:16)\n    at Object.<anonymous> (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde/node_modules/cucumber-native-local/index.js:4:16)\n    at Module._compile (node:internal/modules/cjs/loader:1934:14) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde/node_modules/cucumber-native-local/index.js',\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde/consumer.cjs'\n  ]\n}\n\nNode.js v26.5.0\n"
+    },
+    {
+      "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-node-yuflehde",
+      "removed": true
+    },
+    {
+      "control": "python fresh-process missing native",
+      "explicitFailure": "Traceback (most recent call last):\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-python-wp4_ti32/consumer.py\", line 4, in <module>\n    import cucumber_native_local as sdk\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-python-wp4_ti32/cucumber_native_local/__init__.py\", line 10, in <module>\n    from . import _native\nImportError: cannot import name '_native' from partially initialized module 'cucumber_native_local' (most likely due to a circular import) (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-python-wp4_ti32/cucumber_native_local/__init__.py)\n"
+    },
+    {
+      "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/sdk46-missing-python-wp4_ti32",
+      "removed": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

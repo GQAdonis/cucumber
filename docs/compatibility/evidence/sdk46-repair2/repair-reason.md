@@ -1,0 +1,3 @@
+# B5 repair2
+
+Independent post-BDD review found SDK46-IR-01: arbitrary-precision JSON decoding can reinterpret special objects as numeric values. Strict request and NDJSON types now use lexical RawValue materialization; exact numbers preserved; forged-map cases remain within SDK005/007. Static QA SQA-01 found missing promised outer BDD Messages: the harness now retains source-aware Messages plus text, and cleanup verifies both11-scenario/33-step streams. All implementation is complete before this final repair packet. Repeat all11 behaviors/controls because the JSON parser is shared by all operations; preserve first and repair1 evidence unchanged. Owner authorizes addressing failures within adopted scope. Cumulative repair use:2 of2; no extra free reruns.

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/consumer.cjs"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor",
+  "exit": 1,
+  "stdinSha256": "c0c78cb77034e574160f194939a35a55b77812867a908eb45807d45692f58cd0"
+}

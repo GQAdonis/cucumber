@@ -22,16 +22,22 @@ foundation/rust-bdd-sdk; see [delivery and retained BDD evidence](docs/compatibi
 The adopted [SDK programme](docs/compatibility/SDK-ROADMAP.md) now has source for
 the shared native compiler/rerun SDK, Rust-owned extensions, and in-process
 [Node/TypeScript](bindings/node/README.md) and [Python](bindings/python/README.md)
-bindings. The complete phase-end BDD boundary is pending: native packages have
-not yet been built or installation-verified, and nothing is published. Foreign
-step execution and Behave/pytest-bdd adapters are not implemented. Start with
-[the Rust SDK source guide](sdk/README.md).
+bindings. The completed repair2 boundary built and installed local native packages:
+11 functional scenarios /33 steps and 11 negative controls /33 steps passed,
+with outer Messages proof for all 22 scenarios /66 steps and cleanup retained.
+This is bounded Darwin arm64 proof; scoped internal review and static QA resolved their material findings. No registry package is published. Foreign step execution and
+Behave/pytest-bdd adapters are not implemented. See [phase46 evidence and limits](docs/compatibility/PHASE46-SDK.md)
+and [the Rust SDK guide](sdk/README.md).
 
 The additive [Docusaurus site](docs-site/README.md) passed its earlier paired-site
 boundary: 10 scenarios / 64 steps. That proof covers the prior documentation
 source, not these SDK additions or subsequent page edits. See [retained
-documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md). The additive Pages workflow targets [public fork documentation](https://gqadonis.github.io/cucumber/);
-see [deployment status and verification](docs-site/README.md#pages-delivery).
+documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md).
+[Cucumber](https://gqadonis.github.io/cucumber/) and
+[Gherkin](https://gqadonis.github.io/gherkin/) fork documentation are live; the
+public Pages boundary passed 4 scenarios /22 steps and both repository About
+links were updated. Those results precede these latest page edits; see
+[deployment status and verification](docs-site/README.md#pages-delivery).
 
 This fork adds opt-in keyword-independent step matching, a portable snapshot of
 its compatible Gherkin parser, ordered scenario hooks, and a bounded standard

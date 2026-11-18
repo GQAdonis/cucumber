@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "cargo",
+    "generate-lockfile",
+    "--manifest-path",
+    "/Volumes/T7/Projects/references/cucumber/bindings/node/Cargo.toml"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:03:09.879830+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:03:10.313258+00:00",
+  "stdout": "prepare-07.stdout",
+  "stderr": "prepare-07.stderr"
+}

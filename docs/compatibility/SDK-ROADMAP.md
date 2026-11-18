@@ -1,11 +1,12 @@
-# Shared native SDK programme — phase46 implementation
+# Shared native SDK programme — phase46 installed-package evidence
 
 The verified Rust foundation through45 is preserved on both origins. Travis has
 adopted the eleven-case first SDK contract; owner calibration/adoption is no
-longer a blocker. Source for the shared SDK and both native bindings now exists.
-The complete phase-end behavioral boundary remains pending: no new native package
-has yet been built, installed or behavior-verified. No registry publication or
-foreign-language step execution is claimed.
+longer a blocker. The completed B5 repair2 packet built and installed actual native
+packages and passed 11 functional scenarios /33 steps plus 11 negative-control
+scenarios /33 steps. Outer Messages proof covers all 22 scenarios /66 steps;
+cleanup and original receipts are retained. Scoped internal review and static QA resolved their material findings. No registry publication, full-program clean claim or foreign-language
+step execution is claimed. See [phase46 evidence and limits](PHASE46-SDK.md).
 
 See the [owner adoption](../../.kbd-orchestrator/phases/phase-46-native-sdk/owner-adoption.json),
 [bound contract](../../.kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json)
@@ -16,10 +17,10 @@ Earlier proposal wording is historical; this status does not amend the contract.
 
 | Surface | Source now present | Verification status |
 | --- | --- | --- |
-| Shared Rust SDK | [sdk/src/lib.rs](../../sdk/src/lib.rs): `Sdk::compile`, `Sdk::rerun`, `Sdk::capabilities`, versioned JSON `Sdk::request` | New surface unverified; delegates to through45 core operations |
-| Rust extension interface | `Extension`, `register_extension`, `execute_extension`; instance-owned namespaced operations | New surface unverified; no built-in replacement or host callbacks |
-| Node/TypeScript | [bindings/node](../../bindings/node/README.md): NAPI-RS addon, CommonJS facade and declarations | Source/metadata only; native archive and installed consumer pending |
-| Python | [bindings/python](../../bindings/python/README.md): PyO3 extension, typed facade and wheel metadata | Source/metadata only; native wheel and installed consumer pending |
+| Shared Rust SDK | [sdk/src/lib.rs](../../sdk/src/lib.rs): `Sdk::compile`, `Sdk::rerun`, `Sdk::capabilities`, versioned JSON `Sdk::request` | Installed Rust consumer covered by repair2; delegates to through45 core operations |
+| Rust extension interface | `Extension`, `register_extension`, `execute_extension`; instance-owned namespaced operations | Rust extension contract covered by repair2; no built-in replacement or host callbacks |
+| Node/TypeScript | [bindings/node](../../bindings/node/README.md): NAPI-RS addon, CommonJS facade and declarations | Actual local native archive built and installed outside checkout; repair2 behavior proof retained |
+| Python | [bindings/python](../../bindings/python/README.md): PyO3 extension, typed facade and wheel metadata | Actual local native wheel built and installed outside checkout; repair2 behavior proof retained |
 
 Host facades serialize requests and decode results. Rust owns source compilation,
 rerun selection, protocol validation and structured error semantics. The bindings
@@ -29,14 +30,14 @@ established root build/release workflows remain unchanged.
 
 Targets remain official Gherkin43.0.0, Cucumber.js13.3.0 and Messages34.2.1/35.0.0.
 The first adopted host boundary is Darwin arm64, Rust1.88.0, Node26.5.0 and
-CPython3.11.3, with the TypeScript6.0.3 declaration consumer. These are targets,
-not successful runs or support claims for other environments. Python metadata's
+CPython3.11.3, with the TypeScript6.0.3 declaration consumer. Repair2 passed on
+these exact versions; other environments remain unverified. Python metadata's
 >=3.9 allowance is not proof across those versions.
 
 ## Rust usage from the authored API
 
-The examples in this section describe source APIs and have not yet been executed
-through the complete SDK acceptance packet. A sibling application can declare
+The examples below illustrate APIs exercised by the installed-consumer boundary;
+they are not separate acceptance runs. A sibling application can declare
 `cucumber-sdk = { path = "../cucumber/sdk" }`, retaining the whole Cucumber checkout
 for its core, codegen and vendored parser dependencies.
 
@@ -98,31 +99,37 @@ are mapped to `INTERNAL_ERROR`; aborts/process faults/OOM and application side
 effects are outside recovery. Native library loading occurs before the JSON
 error boundary. See [the SDK guide](../../sdk/README.md) for the exact contract.
 
-## Local native artifacts: preparation is still pending
+## Local native artifacts and completed boundary
 
-Do not run an isolated build, import or installation during implementation.
-After all production and acceptance sources are complete, the orchestrator runs
-the adopted whole-phase packet: [preparation](../../sdk/acceptance/prepare.py),
-eleven behavior cases and eleven negative controls. Follow the bound contract
-rather than replacing it with a package smoke test or unit suite.
+The completed [preparation](../../sdk/acceptance/prepare.py), eleven behavior cases
+and eleven negative controls ran as the adopted whole-phase packet. Future
+behavioral changes retain that phase-end BDD rule; an isolated package smoke test
+or unit suite is not a substitute.
 
-At that boundary, preparation is intended to:
+The repair2 packet completed these steps:
 
-1. Resolve independent lockfiles under Rust1.88 and build the actual native addon.
-   Copy the host library to `bindings/node/cucumber_sdk.node` before packing;
-   `npm pack` alone does not build a binary. Install the local private archive
+1. Resolved independent lockfiles under Rust1.88 and built the actual native addon.
+   The host library was copied to `bindings/node/cucumber_sdk.node` before packing;
+   `npm pack` alone does not build a binary. The local private archive was installed
    into a fresh outside-checkout consumer with scripts disabled.
-2. Build a wheel using pinned maturin1.12.6 and PyO3 0.30.1, then install that
-   wheel into a fresh outside-checkout Python environment.
-3. Build the external Rust consumer and retain original argv, exits, logs,
+2. Built a wheel using pinned maturin1.12.6 and PyO3 0.30.1, then installed it
+   into a fresh outside-checkout Python environment.
+3. Built the external Rust consumer and retained original argv, exits, logs,
    archive/native hashes, installed realpaths and dependency identities.
-4. Exercise public Rust/TypeScript/Python operations, official pinned oracles and
+4. Exercised public Rust/TypeScript/Python operations, official pinned oracles and
    negative controls, including visible failure when an installed native binary
-   is missing; retain cleanup observations and every attempt.
+   was missing; retained outer Messages and cleanup observations.
 
-No resulting artifact or passing installation is claimed yet. The Node archive
-will be specific to its build host; cross-platform prebuilts and a standalone
-Python source distribution are not certified. See [packaging acceptance](../../sdk/acceptance/README.md)
+Local artifacts are retained under
+`docs/compatibility/evidence/sdk46-repair2/artifacts/`, ignored by Git; hashes and
+process/install receipts are retained with the evidence. They are not registry
+releases. The Node archive is host-specific; cross-platform prebuilts and a
+standalone Python source distribution are not certified.
+
+The initial Node24 runtime mismatch remains recorded. Repair1 passed its BDD
+cases, but review subsequently found JSON map/type confusion and missing outer
+Messages evidence. Repair2 corrected those issues and passed the full packet;
+earlier evidence was not overwritten. See [the phase report](PHASE46-SDK.md). See [packaging acceptance](../../sdk/acceptance/README.md)
 and the binding READMEs for current layout and provisional identities.
 
 Both local distributions use the placeholder name `cucumber-native-local` at
@@ -149,12 +156,17 @@ Through45 core evidence remains valid for its preserved source snapshot; it is
 not new SDK proof. Both independent Docusaurus packages passed the earlier
 [documentation boundary](DOCS-SITE-ACCEPTANCE.md): 10 scenarios /64 steps,
 including isolated broken-link controls. That evidence describes the prior
-site source, not subsequent SDK page edits. Hosting is undecided; no site
-deployment occurred. mdBook and mature build/release workflows remain intact.
+site source, not subsequent SDK page edits. Both fork Pages sites are now live:
+[Cucumber](https://gqadonis.github.io/cucumber/) and
+[Gherkin](https://gqadonis.github.io/gherkin/). Their separate public boundary passed
+4 scenarios /22 steps and both repository About links were updated. These latest
+page edits still need their own documentation boundary and delivery. mdBook and
+mature build/release workflows remain intact.
 
 ## Review and upstream contribution gates
 
-After the full implementation and phase-end BDD proof, independently audit both
+Scoped internal review and static QA resolved their material findings after the
+completed SDK behavioral boundary. The final programme gate covers both
 repositories: core/SDK correctness, FFI ownership and panic/exception handling,
 callbacks/cancellation where implemented, compatibility/defaults, packaging
 closure, documentation and maintainability. Retain finding IDs, severity, source

@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/builder/bin/python",
+    "-m",
+    "pip",
+    "install",
+    "maturin==1.12.6",
+    "jsonschema==4.25.1"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:07:01.980174+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:07:04.799086+00:00",
+  "stdout": "prepare-14.stdout",
+  "stderr": "prepare-14.stderr"
+}

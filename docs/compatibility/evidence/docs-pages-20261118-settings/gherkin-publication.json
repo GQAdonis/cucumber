@@ -1,0 +1,27 @@
+{
+  "repository": "GQAdonis/gherkin",
+  "homepage": "https://gqadonis.github.io/gherkin/",
+  "pages": {
+    "url": "https://api.github.com/repos/GQAdonis/gherkin/pages",
+    "status": null,
+    "cname": null,
+    "custom_404": false,
+    "html_url": "https://gqadonis.github.io/gherkin/",
+    "build_type": "workflow",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "public": true,
+    "protected_domain_state": null,
+    "pending_domain_unverified_at": null,
+    "https_enforced": true
+  },
+  "workflowRun": {
+    "id": 44292845898,
+    "head_sha": "24ab35f2824796ca88da4fd49a8e163adb710c99",
+    "html_url": "https://github.com/GQAdonis/gherkin/actions/runs/44292845898",
+    "status": "completed",
+    "conclusion": "success"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.boundary-authorization",
+  "phaseId": "phase-46-native-sdk",
+  "events": [
+    {
+      "boundary": "B4",
+      "authorizedAt": "2026-11-18T11:02:42.201Z",
+      "authorizer": "Travis; exact signing and phase-end verification authorization recorded in signing-authorization.json",
+      "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+      "reason": "All phase46 production complete; exact implementation amendment signed and verified; run adopted B4 packet once."
+    },
+    {
+      "boundary": "B5",
+      "authorizedAt": "2026-11-18T11:06:04.156Z",
+      "authorizer": "Travis; latest delegation explicitly authorizes addressing phase-end failures within adopted scope",
+      "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+      "reason": "B5 repair1: exact runtime admission and existing Node26.5 selection; original B4 Node24 mismatch retained; all11 behavior cases unexercised."
+    },
+    {
+      "boundary": "B5",
+      "authorizedAt": "2026-11-18T11:16:34.431Z",
+      "authorizer": "Travis; latest delegation authorizes fixing phase-end failures within adopted scope",
+      "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+      "reason": "B5 repair2: resolve SDK46-IR-01 strict JSON object/number confusion and SQA-01 outer BDD Messages; complete source/control changes before final packet; repair budget2of2."
+    }
+  ]
+}

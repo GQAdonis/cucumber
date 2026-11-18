@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/gherkinOracleRoot",
+  "startedAt": "2026-11-18T11:18:19.433608+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:18:19.755745+00:00",
+  "stdout": "prepare-23.stdout",
+  "stderr": "prepare-23.stderr"
+}

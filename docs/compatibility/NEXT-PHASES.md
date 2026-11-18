@@ -3,26 +3,38 @@
 ## Current continuation — 2026-11-18
 
 The preserved through45 implementation is on origin foundation/rust-bdd-sdk.
-New SDK scope is governed by [SDK roadmap](SDK-ROADMAP.md), [both Python
-targets](PYTHON-TARGETS.md) and the phase46 planning packet. Both additive sites
-now build; their separate acceptance and failures are in [the docs boundary](DOCS-SITE-ACCEPTANCE.md).
+**SDK46 is canonically CLOSED PASS** for the adopted shared compiler/rerun,
+Rust-owned extension and installed native binding boundary. Final repair2 passed
+11 functional cases /33 steps plus11 controls /33 steps, with outer Messages
+proof for22 cases/66 steps and owned cleanup. Actual local npm/wheel artifacts
+and an external Rust consumer were exercised on Darwin arm64, Rust1.88.0,
+Node26.5.0, CPython3.11.3 and TypeScript6.0.3. Scoped internal review and static
+QA resolved material findings; initial runtime mismatch and repair history are
+retained in [SDK46 evidence](PHASE46-SDK.md). This is not full-programme audit
+completion or full ecosystem parity.
 
-Read scenario-candidates.md, calibration-proposal.json, SDK-CONTRACT-PROPOSAL.md,
-sdk-contract.schema.json, oracle-identities.json and review/internal-review.md
-under .kbd-orchestrator/phases/phase-46-native-sdk. Travis explicitly adopted the
-eleven-case first phase; owner-adoption.json and the bound adopted-contract.json
-record that decision. Individual calibration verdicts remain unspecified. Rust
-SDK and native adapter source now exists; packaging/BDD has not yet executed.
-Shared compiler/rerun and Rust extensions come first; foreign callbacks and
-framework integration follow. Both Behave and pytest-bdd are researched optional
-adapters; no exclusive choice blocks the shared core.
+The [SDK roadmap](SDK-ROADMAP.md) and [both Python targets](PYTHON-TARGETS.md)
+distinguish that completed boundary from later unadopted work. Foreign step
+execution, captured registrations/World factories, asynchronous host callbacks
+and framework adapters require a new bounded contract; none was silently added
+to SDK46. Behave and pytest-bdd remain researched optional adapters with distinct
+lifecycles. Other platform/runtime combinations and public package support remain
+unverified. Local artifacts live under ignored `evidence/sdk46-repair2/artifacts/`;
+their identities and installed-consumer receipts are retained.
 
-External review transmission is prohibited and the denied dispatch must not be
-retried. Internal review records exact model uncertainty, not cross-model
-certification. Package names/ownership block public registration/publishing only;
-hosting remains unresolved. After complete implementation and BDD, independently
-audit both codebases, correct material findings, then recheck upstream policies
-and overlapping PRs391/405 before matching issues/PRs. No premature submissions.
+Both additive sites are live at [Cucumber](https://gqadonis.github.io/cucumber/)
+and [Gherkin](https://gqadonis.github.io/gherkin/). [Pages delivery](DOCS-PAGES.md)
+records local10/64 and public4/22 acceptance plus both repository About updates.
+Those observations apply to the recorded site/deployment snapshots.
+
+External review transmission remains prohibited and the denied dispatch must
+not be retried. Internal reviewers record exact model uncertainty, not cross-model
+certification. Package names, ownership/access, publication scope, platform
+selection and artifact/license closure remain public distribution gates; local
+installed-artifact proof is complete. After the remaining requested implementation
+and BDD, complete the independent whole-programme audit of both codebases, correct
+material findings, then recheck upstream policies and overlapping PRs391/405
+before matching issues/PRs. Scoped SDK review is not a substitute for that gate.
 Read-only [upstream overlap preparation](UPSTREAM-OVERLAP.md) now records both
 PRs open/unmerged at the 2026-11-18 check, and distinguishes process sharding
 from our local scheduler. [Python adapter requirements](PYTHON-ADAPTER-REQUIREMENTS.md)
@@ -37,6 +49,8 @@ featureless documents and the complete official43 plaintext corpus. See
 
 ## Latest concrete gaps resolved
 
+- **46 CLOSED PASS:** native compiler/rerun SDK, Rust-owned extensions and actual installed Node/TypeScript/Python artifacts; repair2 passed22 cases/66 steps including controls, with outer Messages proof and cleanup. Scoped review/static QA findings were resolved; [bounded evidence and limitations](PHASE46-SDK.md) remain explicit.
+- **Documentation delivered:** both fork Pages sites are live with recorded local10/64 and public4/22 BDD proof; see [delivery](DOCS-PAGES.md).
 - **43 completed:** lifecycle/retry/process associations and all supplied receipt consistency,22/90 new cases plus25/85 prior regression. Exact process.messages binding is required with an actionable migration diagnostic.
 - **44 completed:** native standard-Messages rerun plan preserving all attempts and original source locations;19/73 with the actual JS13.3 formatter and a real exact-row follow-up execution.
 - **45 completed:** state-aware Markdown tag precedence,21/100 complete graph/real-handler cases; sibling parser and vendor synchronized.
@@ -89,6 +103,13 @@ defect or access blocker remains from this bounded review.
 
 ## Remaining interoperability boundaries
 
+- Native language bindings expose compiler/rerun operations, not foreign step
+  execution. Behave/pytest-bdd adapters, host callback lifecycle and cancellation,
+  captured registrations and World factories remain unimplemented and unadopted
+  follow-on scope. Do not infer them from successful source compilation.
+- SDK46 proves only its recorded Darwin arm64 runtime versions. Other operating
+  systems, architectures, Node/Python versions, portable prebuilt distributions
+  and standalone Python source-distribution closure require separate evidence.
 - Explicit native expression APIs cover the verified builtins, descriptors and
   name policy. JS transformer/automatic raw-registry/snippet APIs and arbitrary
   JavaScript regex/numeric equivalence remain outside those implementations.
@@ -115,14 +136,20 @@ defect or access blocker remains from this bounded review.
 
 Author acceptance first, finish each bounded implementation/harness, then run only
 its focused BDD. No unit suites or premature checks. Preserve initial failed
-boundary evidence. No access or approval blocker is pending.
+boundary evidence. No access or approval blocker remains for SDK46; future
+execution contracts and public package decisions are separate gates.
 
 Only dependency fork needed/created: `GQAdonis/gherkin`, cloned beside cucumber.
 `vendor/gherkin` is its portable production snapshot with source provenance and
 hashes. No machine-specific Cargo override or new dependency fork is needed.
-Code remains local and unpublished. Remote/registry delivery requires separately
-authorized publishing; Cargo strips path dependencies for registry releases.
-No merge, deployment, production, workflow or security setting change is authorized.
+Authorized preservation commits/pushes have preserved the foundation on both
+origin branches. Separately authorized documentation-only Pages workflows and
+hosting delivery are recorded in [DOCS-PAGES.md](DOCS-PAGES.md); mature Rust
+build/release processes remain intact. Native SDK artifacts are local and
+registry-unpublished. Public registration/publication still requires confirmed
+names, ownership/access, scope and dependency/license closure; Cargo strips path
+dependencies for registry releases. No merge, unrelated production deployment
+or unrelated workflow/security change is part of this continuation.
 
 The CI/CD skill was copied from `~/.claude/skills/ci-cd-and-automation/SKILL.md`
 (resolving to `~/.agents`) into `.agents/skills/ci-cd-and-automation/SKILL.md`,
@@ -144,8 +171,10 @@ Rust1.88 acceptance is now recorded in [the delivery record](DELIVERY.md).
 ## Delivery boundary
 
 The concrete bounded runner/parser/protocol/source-order/preparation/name-policy
-work listed here is implemented and verified. No access or approval blocker is
-pending. Literal full-JS equivalence remains limited by the two documented upstream
+work listed here is implemented and verified. SDK46 additionally has canonical
+CLOSED PASS for its adopted installed-artifact boundary and resolved scoped review
+findings. Later execution/platform/publication gates above remain open. Literal
+full-JS equivalence remains limited by the two documented upstream
 inconsistencies, native regex/numeric/transformer and worker models, unimplemented
 JS snippet/automatic raw-registry selection, and uncertified arbitrary external
 plugins. These are explicit remaining contracts, not a blanket completion claim.
@@ -155,4 +184,6 @@ contract; no unrelated project or mature build/release process was changed.
 Latest sibling parser verification also passed73 scenarios/241 steps on Rust1.88
 ([evidence](evidence/phase45-parser-affected-bdd.log)). Through42 inventories are
 preserved in `evidence/through42-checkpoint/`; current inventories identify the
-through45 snapshot. Both repositories remain uncommitted and unpublished.
+through45 snapshot. Those inventories remain historical, not newer SDK/site
+source identities. Both foundation forks are preserved remotely; local SDK
+artifacts and registry publication remain distinct from those source pushes.

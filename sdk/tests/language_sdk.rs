@@ -1,5 +1,5 @@
 //! Installed-language SDK behavior; invoked only at the complete phase boundary.
-use cucumber::{World as _, given, when, then};
+use cucumber::{World as _, WriterExt as _, given, when, then};
 use std::{path::PathBuf, process::{Command, Output}, sync::atomic::{AtomicUsize, Ordering}};
 static PASSED: AtomicUsize = AtomicUsize::new(0);
 
@@ -34,7 +34,22 @@ fn result(world: &mut InstalledSdk) { accepted(world); }
 #[then("the false result is rejected without losing original evidence")]
 fn rejected(world: &mut InstalledSdk) { accepted(world); }
 fn main() {
+    let root = PathBuf::from(env!("CARGO_MANIFEST_DIR")).parent().unwrap().to_path_buf();
+    let runtime_path = root.join("sdk/acceptance/runtime.json");
+    let runtime: serde_json::Value = serde_json::from_slice(&std::fs::read(&runtime_path).expect("prepared phase runtime")).unwrap();
+    let args: Vec<_> = std::env::args().collect();
+    let functional = args.iter().any(|arg| arg == "@sdk46");
+    let controls = args.iter().any(|arg| arg == "@sdk46_negative");
+    assert!(functional != controls, "select exactly one complete adopted SDK tag packet");
+    let messages_path = PathBuf::from(runtime["evidence"].as_str().unwrap()).join(
+        if functional { "functional-messages.ndjson" } else { "controls-messages.ndjson" });
+    let output = std::fs::OpenOptions::new().write(true).create_new(true)
+        .open(&messages_path).expect("outer BDD Messages evidence must never be overwritten");
+    let sources = cucumber::parser::SourceStore::new();
+    let writer = cucumber::writer::Basic::stdout::<InstalledSdk>().summarized()
+        .tee(cucumber::writer::Messages::with_source_store::<InstalledSdk>(output, sources.clone()).discard_stats_writes());
     futures::executor::block_on(InstalledSdk::cucumber().max_concurrent_scenarios(1)
+        .with_source_store(sources).with_writer(writer)
         .fail_on_skipped().run_and_exit(concat!(env!("CARGO_MANIFEST_DIR"), "/acceptance/features")));
     assert_eq!(PASSED.load(Ordering::SeqCst), 11, "a phase packet must run exactly eleven adopted scenarios; zero/partial/unfiltered selection is invalid");
     if std::env::args().any(|arg| arg == "@sdk46_negative") {

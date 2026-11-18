@@ -1,0 +1,50 @@
+{
+  "case": "SDK-005",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "capabilities": {
+        "baselines": {
+          "cucumberJs": "13.3.0",
+          "gherkin": "43.0.0",
+          "messages": [
+            "34.2.1",
+            "35.0.0"
+          ]
+        },
+        "foreignStepExecution": false,
+        "formats": [
+          "gherkin",
+          "markdown"
+        ],
+        "kind": "capabilities",
+        "operations": [
+          "capabilities",
+          "compile",
+          "rerun"
+        ],
+        "protocolVersions": [
+          1
+        ]
+      }
+    },
+    {
+      "forgedNumericVersionRejected": "INVALID_REQUEST",
+      "sameHostRecovery": true
+    },
+    {
+      "control": "strict validation precedence",
+      "codes": [
+        "INVALID_REQUEST",
+        "INVALID_REQUEST",
+        "UNSUPPORTED_VERSION",
+        "UNKNOWN_OPERATION",
+        "INVALID_REQUEST",
+        "UNSUPPORTED_VERSION",
+        "INVALID_REQUEST"
+      ]
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

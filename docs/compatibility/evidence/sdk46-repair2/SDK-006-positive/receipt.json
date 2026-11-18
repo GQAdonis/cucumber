@@ -1,0 +1,32 @@
+{
+  "case": "SDK-006",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "realRunner": "retries",
+      "attempts": 4,
+      "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2/SDK-006-positive/actual-runner/retries.feature:4"
+    },
+    {
+      "realRunner": "outline",
+      "attempts": 3,
+      "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2/SDK-006-positive/actual-runner/outline.feature:7:9"
+    },
+    {
+      "exactAttemptDecimal": "9007199254740993",
+      "failedRunWithoutSelectedCases": true,
+      "supplementalProtocolStatuses": [
+        "UNKNOWN",
+        "PASSED",
+        "SKIPPED",
+        "PENDING",
+        "UNDEFINED",
+        "AMBIGUOUS",
+        "FAILED"
+      ],
+      "optionalOriginalRunId": null
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

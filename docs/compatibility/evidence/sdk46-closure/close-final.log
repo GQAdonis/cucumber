@@ -1,0 +1,1 @@
+CLOSED phase=phase-46-native-sdk verdict=PASS evidence=sha256:10ac7bcb79f97d6622d1600f65cad332cf83649da4d062f63116ff28a9751be8 contract=a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0 run=project-20261118T062840Z entries=22 budget-note=budget-exhausted (dispatch for this phase now refused)

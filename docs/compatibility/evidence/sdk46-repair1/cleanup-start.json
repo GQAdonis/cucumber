@@ -1,0 +1,121 @@
+{
+  "consumerRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx",
+  "owner": {
+    "kind": "sdk46-disposable-consumers",
+    "root": "/Volumes/T7/Projects/references/cucumber",
+    "evidence": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair1"
+  },
+  "receipts": [
+    {
+      "case": "SDK-001",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-001",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-002",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-002",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-003",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-003",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-004",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-004",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-005",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-005",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-006",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-006",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-007",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-007",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-008",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-008",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-009",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-009",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-010",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-010",
+      "mode": "control",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-011",
+      "mode": "positive",
+      "status": "PASS"
+    },
+    {
+      "case": "SDK-011",
+      "mode": "control",
+      "status": "PASS"
+    }
+  ],
+  "startedAt": "2026-11-18T11:10:04.861428+00:00"
+}

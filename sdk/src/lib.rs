@@ -7,6 +7,7 @@
 
 mod error;
 mod model;
+mod json_input;
 
 pub use error::{ErrorCode, SdkError};
 pub use model::{Attempt, CompileInput, Compiled, Entry, RerunPlan, SourceFormat};
@@ -120,7 +121,7 @@ impl Sdk {
             let mut collector = rerun::Collector::new();
             for (index, text) in ndjson.lines().enumerate() {
                 if text.trim().is_empty() { continue; }
-                let envelope: Value = serde_json::from_str(text).map_err(|error| {
+                let envelope = json_input::parse(text).map_err(|error| {
                     message_error(error.to_string(), index + 1)
                 })?;
                 if !envelope.is_object() {
@@ -200,7 +201,7 @@ impl Sdk {
     }
 
     fn dispatch(&self, text: &str) -> Result<Value, SdkError> {
-        let request: Value = serde_json::from_str(text).map_err(|error| invalid(error.to_string()))?;
+        let request = json_input::parse(text).map_err(|error| invalid(error.to_string()))?;
         let object = request.as_object().ok_or_else(|| invalid("request must be an object"))?;
         let version = object.get("version").and_then(Value::as_number)
             .ok_or_else(|| invalid("version must be an integer"))?;

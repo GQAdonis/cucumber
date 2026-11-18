@@ -1,0 +1,16 @@
+{
+  "case": "SDK-004",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "sameHostRecovery": [
+        "rust",
+        "node",
+        "python"
+      ],
+      "originalUri": "memory://original:42/不正.feature"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

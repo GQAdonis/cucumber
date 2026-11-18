@@ -284,6 +284,13 @@ def sdk005(control):
         result = success(output['responses'][0])
         demand(result['operations'] == ['capabilities','compile','rerun'] and result['foreignStepExecution'] is False, 'premature execution capability')
     OBSERVATIONS.append({'capabilities': success(outputs['rust']['responses'][0])})
+    # An actual JSON object must never become a numeric protocol version merely
+    # because its key matches serde_json's arbitrary-precision implementation.
+    forged_version = '{"version":{"$serde_json::private::Number":"1"},"operation":"capabilities","input":{}}'
+    for output in hosts([forged_version, request('capabilities')]).values():
+        error(output['responses'][0], 'INVALID_REQUEST')
+        success(output['responses'][1])
+    OBSERVATIONS.append({'forgedNumericVersionRejected':'INVALID_REQUEST','sameHostRecovery':True})
     if control:
         raw = ['{', '[]', '{"version":2,"operation":"capabilities","input":{}}',
                '{"version":1,"operation":"execute","input":{}}',
@@ -419,6 +426,14 @@ def sdk006(control):
 
 def sdk007(control):
     original = real_messages()['passing']
+    # Use the real runner stream, changing only the numeric attempt into a raw
+    # JSON map. The ordinary and >2**53 numeric cases remain covered separately.
+    forged_attempt = copy.deepcopy(original)
+    next(e['testCaseStarted'] for e in forged_attempt if 'testCaseStarted' in e)['attempt'] = {'$serde_json::private::Number':'1'}
+    for output in hosts([rerun_request(forged_attempt), rerun_request(original)]).values():
+        error(output['responses'][0], 'INVALID_MESSAGES')
+        compare_plan(success(output['responses'][1]), original)
+    OBSERVATIONS.append({'forgedNumericAttemptRejected':'INVALID_MESSAGES','sameHostRecovery':True})
     truncated = [e for e in original if 'testRunFinished' not in e]
     missing = copy.deepcopy(original)
     next(e['testCaseStarted'] for e in missing if 'testCaseStarted' in e)['testCaseId'] = 'missing-case'

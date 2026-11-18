@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "cargo",
+    "metadata",
+    "--locked",
+    "--format-version",
+    "1",
+    "--manifest-path",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-u7n28yen/rust/Cargo.toml"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-u7n28yen/rust",
+  "startedAt": "2026-11-18T11:04:50.123539+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:04:50.487493+00:00",
+  "stdout": "prepare-21.stdout",
+  "stderr": "prepare-21.stderr"
+}

@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "rustc",
+    "--version"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:16:34.818315+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:16:34.945585+00:00",
+  "stdout": "prepare-01.stdout",
+  "stderr": "prepare-01.stderr"
+}

@@ -24,3 +24,7 @@ The follow-up explicitly prohibits external transmission and retry of this
 command. It is permanently abandoned for this task. Internal isolated planning
 review is recorded separately in internal-review.md with identity limitations;
 it does not retroactively satisfy an external or cross-model certification.
+
+## Current bounded SDK review
+
+The post-implementation SDK review and static QA have now completed, with their material findings corrected and independently resolved after repair2. See docs/compatibility/SDK46-INTERNAL-REVIEW.md and SDK46-STATIC-QA.md. The final whole-program core/Gherkin audit remains a distinct later gate. External dispatch remains prohibited and was not retried.

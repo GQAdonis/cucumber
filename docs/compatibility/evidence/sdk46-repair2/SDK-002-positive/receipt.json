@@ -1,0 +1,20 @@
+{
+  "case": "SDK-002",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "officialGoodFixtures": 5,
+      "format": "markdown",
+      "hosts": [
+        "rust",
+        "node",
+        "python"
+      ]
+    },
+    {
+      "livePinnedMarkdownBoundaries": 5
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

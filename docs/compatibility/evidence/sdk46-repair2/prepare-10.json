@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "npm",
+    "pack",
+    "--json",
+    "--ignore-scripts",
+    "--pack-destination",
+    "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2/artifacts"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber/bindings/node",
+  "startedAt": "2026-11-18T11:17:16.678301+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:17:17.471649+00:00",
+  "stdout": "prepare-10.stdout",
+  "stderr": "prepare-10.stderr"
+}
