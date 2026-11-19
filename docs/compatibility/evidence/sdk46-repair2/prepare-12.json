@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Users/gqadonis/.pyenv/versions/3.11.3/bin/python3",
+    "-m",
+    "venv",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/builder"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:17:18.224711+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:17:20.924379+00:00",
+  "stdout": "prepare-12.stdout",
+  "stderr": "prepare-12.stderr"
+}

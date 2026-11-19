@@ -1,0 +1,459 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.88s
+     Running tests/dry_run.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/dry_run-ff56feda9b4705d2)
+Feature: Inspect selected scenarios without invoking application callbacks
+  Scenario Outline: Classifications remain visible without executing definitions
+   ✔  Given a dry-run application configured for "known"
+   ✔  When the selected application is inspected
+   ✔  Then its step outcomes are "SKIPPED"
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+   ✔  And schema-valid Messages preserve the classification and successful run in the official Query
+  Scenario Outline: Classifications remain visible without executing definitions
+   ✔  Given a dry-run application configured for "undefined"
+   ✔  When the selected application is inspected
+   ✔  Then its step outcomes are "UNDEFINED"
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+   ✔  And schema-valid Messages preserve the classification and successful run in the official Query
+  Scenario Outline: Classifications remain visible without executing definitions
+   ✔  Given a dry-run application configured for "ambiguous"
+   ✔  When the selected application is inspected
+   ✔  Then its step outcomes are "AMBIGUOUS"
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+   ✔  And schema-valid Messages preserve the classification and successful run in the official Query
+  Scenario Outline: Classifications remain visible without executing definitions
+   ✔  Given a dry-run application configured for "mixed"
+   ✔  When the selected application is inspected
+   ✔  Then its step outcomes are "SKIPPED,UNDEFINED,SKIPPED,AMBIGUOUS"
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+   ✔  And schema-valid Messages preserve the classification and successful run in the official Query
+  Scenario: Retained scenario selections describe skipped decisions
+   ✔  Given a dry-run application configured for "observed hooks"
+   ✔  When the selected application is inspected
+   ✔  Then selected scenario callbacks have dry-run skip decisions and excluded callbacks are absent
+   ✔  And Messages contain skipped callback slots and the real native World initialization
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Unobserved and replaced legacy hooks remain suppressed
+   ✔  Given a dry-run application configured for "legacy hooks"
+   ✔  When the selected application is inspected
+   ✔  Then native setup and cleanup retain skipped metadata without invocation records
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Global hooks retain honest skipped lifecycle decisions
+   ✔  Given a dry-run application configured for "global hooks"
+   ✔  When the selected application is inspected
+   ✔  Then global selections are skipped in setup and reverse cleanup order without actual invocation records
+   ✔  And Messages contain zero-duration skipped global decisions with real definition identities
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: An empty selected scenario still constructs its World
+   ✔  Given a dry-run application configured for "empty"
+   ✔  When the selected application is inspected
+   ✔  Then one World is constructed and the empty attempt is skipped
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Constructor context cannot acquire callback capabilities during inspection
+   ✔  Given a dry-run application configured for "constructor context"
+   ✔  When the selected application is inspected
+   ✔  Then the constructor has no active attachment or completion scope
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Actual constructor failure is not hidden by classification success
+   ✔  Given a dry-run application configured for "constructor failure"
+   ✔  When the selected application is inspected
+   ✔  Then the actual initialization failure is reported without retry or callback invocation
+  Scenario: Selection happens before World construction
+   ✔  Given a dry-run application configured for "selection"
+   ✔  When the selected application is inspected
+   ✔  Then only the selected scenario constructs a World
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Explicit execution mode is retained across runner builders and clones
+   ✔  Given a dry-run application configured for "builder preservation"
+   ✔  When the selected application is inspected
+   ✔  Then its step outcomes are "SKIPPED"
+   ✔  And inspection succeeds once without invoking callbacks or deadlines
+  Scenario: Turning inspection off restores the retained outcome policy
+   ✔  Given a dry-run application configured for "restore run"
+   ✔  When the selected application is inspected
+   ✔  Then ordinary invocation resumes and its configured pending outcome remains authoritative
+  Scenario: Existing applications execute by default
+   ✔  Given a dry-run application configured for "default run"
+   ✔  When the selected application is inspected
+   ✔  Then the ordinary body executes and legacy outcome metadata stays absent
+[Summary]
+1 feature
+14 scenarios (14 passed)
+59 steps (59 passed)
+     Running tests/dry_run_formats.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/dry_run_formats-ca82392cc2da1e15)
+Feature: Report inspection classifications without inventing execution failure
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JSON" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JUnit" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "libtest" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+[Summary]
+1 feature
+9 scenarios (9 passed)
+30 steps (30 passed)
+     Running tests/line_selection.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/line_selection-1d096cfb6b834a76)
+Feature: Source-aware line selection uses original declarations and Examples rows
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "scenario"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first and last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "feature"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "rule"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "background"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "step"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "examples"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "table header"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "comment"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "scenario"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first and last row"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice red"
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "feature"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "rule"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "background"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "step"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "examples"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "table header"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario Outline: Select only source locations linked to an executable scenario
+   ✔  Given a "markdown" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "separator"
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+   ✔  And origin metadata retains every original scenario and Examples row
+  Scenario: Source lines compose with typed names tags and the application predicate
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  And typed names tags and the caller predicate select only the eligible green invoice
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green, invoice green"
+  Scenario: Repeated source selections are a union without duplicate execution
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And the first row is selected repeatedly by absolute relative and symlink paths
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+  Scenario: An unrestricted file selection supersedes its restricted lines
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And the source is selected by its first row and as a whole file
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Multiple discovered files are selected independently
+   ✔  Given two discoverable sources and a selector for an absent third source
+   ✔  When each discovered source is selected by its scenario declaration
+   ✔  Then both selected files execute once and the absent selector causes no error
+  Scenario: A selector outside discovery does not add new inputs
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And only a path outside parser discovery is selected
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+  Scenario: Empty selectors impose no additional restriction
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And an empty explicit source selection
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Invalid selector values are rejected before execution
+   ✔  Given an unconfigured source selector
+   ✔  When a zero line and an empty path are requested
+   ✔  Then both invalid values are rejected with meaningful errors
+  Scenario: Captured origin generations survive changes and deletion
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  When a source snapshot is retained then its file is changed reparsed and deleted
+   ✔  Then retained origins still refer to their original source generation
+  Scenario: Default parsing retains legacy expansion without source selection
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  When the source executes without line selectors
+   ✔  Then the selected scenario bodies are "health, invoice green, invoice green, invoice red"
+  Scenario: Selecting a duplicate row preserves the complete source graph
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "second row"
+   ✔  When the source executes with source-backed Messages and line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+   ✔  And the report retains all Pickles but references only the selected original row
+  Scenario: Line-only convenience also composes a configured CLI name and caller predicate
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "outline"
+   ✔  And the CLI selects red while the caller selects green
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are ""
+  Scenario: Line selection captures its own metadata without a reporting store
+   ✔  Given a "plain" selection source with comments duplicate rows and Rule backgrounds
+   ✔  And its selected source locations are "first row"
+   ✔  And no external source store is configured
+   ✔  When the source executes with explicit line selection
+   ✔  Then the selected scenario bodies are "invoice green"
+[Summary]
+1 feature
+38 scenarios (38 passed)
+178 steps (178 passed)
+     Running tests/messages_custom_metadata.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_custom_metadata-e0e2dd614c9b57ce)
+Feature: Explicit custom parameter metadata describes the actual registered Rust types
+  Scenario Outline: Complete custom descriptors preserve actual source and raw argument trees
+   ✔  Given a custom expression fixture "simple color" with explicitly declared snippet and preference flags
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then the original custom expression and full raw argument groups agree with the pinned official expression library
+   ✔  And the emitted custom descriptor retains the actual name and regex with the declared flags
+   ✔  And existing Rust handler conversion remains unchanged
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Complete custom descriptors preserve actual source and raw argument trees
+   ✔  Given a custom expression fixture "nested custom value" with explicitly declared snippet and preference flags
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then the original custom expression and full raw argument groups agree with the pinned official expression library
+   ✔  And the emitted custom descriptor retains the actual name and regex with the declared flags
+   ✔  And existing Rust handler conversion remains unchanged
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Complete custom descriptors preserve actual source and raw argument trees
+   ✔  Given a custom expression fixture "absent custom group" with explicitly declared snippet and preference flags
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then the original custom expression and full raw argument groups agree with the pinned official expression library
+   ✔  And the emitted custom descriptor retains the actual name and regex with the declared flags
+   ✘  And existing Rust handler conversion remains unchanged
+      Step failed:
+      Defined: tests/features/messages_custom_metadata/custom.feature:8:5
+      Matched: tests/messages_custom_metadata.rs:186:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: ["b"]
+       right: [""]
+  Scenario Outline: Complete custom descriptors preserve actual source and raw argument trees
+   ✔  Given a custom expression fixture "Unicode prefix" with explicitly declared snippet and preference flags
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then the original custom expression and full raw argument groups agree with the pinned official expression library
+   ✔  And the emitted custom descriptor retains the actual name and regex with the declared flags
+   ✔  And existing Rust handler conversion remains unchanged
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario: Existing custom types without metadata remain compatible
+   ✔  Given a custom parameter implementing only the existing name and regex contract
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then its handler still passes and unavailable expression metadata remains omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario: Previously available complete manual descriptors continue working
+   ✔  Given a custom expression registered through the existing explicit metadata options
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then its complete custom descriptor and argument groups remain available
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario: Conflicting custom names fail visibly instead of overwriting provenance
+   ✔  Given two complete custom descriptors with the same name and different actual regexes
+   ✔  When their source-backed Messages reporter starts
+   ✔  Then reporting identifies the descriptor conflict without a successful run-finished envelope
+  Scenario: A descriptor cannot misidentify its actual custom Rust type
+   ✔  Given an explicit custom descriptor whose name or regex differs from its registered type
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reporting rejects the inconsistent descriptor without fabricating metadata
+Feature: Explicit raw capture mappings report actual groups without guessing handler arguments
+  Scenario Outline: Declared argument mappings preserve real group structure and source ranges
+   ✔  Given a raw regex fixture "independent captures" with an explicit argument capture mapping
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reported raw arguments follow the declared capture order and actual nested group structure
+   ✔  And native JavaScript indices verify their raw values and UTF-16 positions
+   ✔  And unknown parameter names and parameter descriptors remain omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Declared argument mappings preserve real group structure and source ranges
+   ✔  Given a raw regex fixture "one outer argument" with an explicit argument capture mapping
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reported raw arguments follow the declared capture order and actual nested group structure
+   ✔  And native JavaScript indices verify their raw values and UTF-16 positions
+   ✔  And unknown parameter names and parameter descriptors remain omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Declared argument mappings preserve real group structure and source ranges
+   ✔  Given a raw regex fixture "flat nested arguments" with an explicit argument capture mapping
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reported raw arguments follow the declared capture order and actual nested group structure
+   ✔  And native JavaScript indices verify their raw values and UTF-16 positions
+   ✔  And unknown parameter names and parameter descriptors remain omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Declared argument mappings preserve real group structure and source ranges
+   ✔  Given a raw regex fixture "absent and empty capture" with an explicit argument capture mapping
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reported raw arguments follow the declared capture order and actual nested group structure
+   ✔  And native JavaScript indices verify their raw values and UTF-16 positions
+   ✔  And unknown parameter names and parameter descriptors remain omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario Outline: Declared argument mappings preserve real group structure and source ranges
+   ✔  Given a raw regex fixture "Unicode prefix" with an explicit argument capture mapping
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reported raw arguments follow the declared capture order and actual nested group structure
+   ✔  And native JavaScript indices verify their raw values and UTF-16 positions
+   ✔  And unknown parameter names and parameter descriptors remain omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+  Scenario: Invalid capture mappings cannot invent arguments
+   ✔  Given a raw regex with a declared argument index outside its actual captures
+   ✔  When the explicit raw metadata is constructed
+   ✔  Then construction rejects the invalid capture mapping visibly
+  Scenario: Hidden matcher settings cannot silently contradict explicit metadata
+   ✔  Given explicit raw metadata paired with a matcher whose external flags change the observed match
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then reporting rejects the inconsistent descriptor without fabricating metadata
+  Scenario: Existing insertion clears obsolete raw capture metadata
+   ✔  Given a raw registration with explicit capture metadata replaced through the existing insertion API
+   ✔  When its native handler and source-backed Messages reporter execute
+   ✔  Then its handler still passes and unavailable expression metadata remains omitted
+   ✔  And all emitted envelopes satisfy both supported Messages schemas
+[Summary]
+2 features
+16 scenarios (15 passed, 1 failed)
+77 steps (76 passed, 1 failed)
+
+thread 'main' (104799262) panicked at src/cucumber.rs:1523:13:
+1 step failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test messages_custom_metadata`

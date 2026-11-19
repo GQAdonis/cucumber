@@ -1,0 +1,17 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0282]: type annotations needed for `&mut _`
+   --> tests/ordered_scheduling.rs:105:79
+    |
+105 | ...ties",move|scope,world|{
+    |                     ^^^^^
+106 | ...cenario.name.clone(),scope.attempt,format!("{:?}",scope.scenario_id),world.id,std::ptr::from_ref(scope.scenario.as_ref()) as usi...
+    |                                                                         -------- type must be known at this point
+    |
+help: consider giving this closure parameter an explicit type, where the type for type parameter `W` is specified
+    |
+105 |         let step_hooks=StepHooks::new().before("record identities",move|scope,world: &mut W|{
+    |                                                                                    ++++++++
+
+For more information about this error, try `rustc --explain E0282`.
+error: could not compile `cucumber` (test "ordered_scheduling") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...

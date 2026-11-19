@@ -1,0 +1,67 @@
+   Compiling profile-none v0.0.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/applications/profile-none)
+error[E0277]: the trait bound `Events: NonTransforming` is not satisfied
+   --> src/main.rs:142:22
+    |
+142 |         .with_writer(writer)
+    |          ----------- ^^^^^^ the trait `NonTransforming` is not implemented for `Events`
+    |          |
+    |          required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `NonTransforming`:
+              AssertNormalized<Wr>
+              Normalize<W, Wr>
+              Summarize<Wr>
+              Tee<L, R>
+              cucumber::writer::Basic<O>
+              cucumber::writer::Or<L, R, F>
+              cucumber::writer::RunHooks<Wr>
+              cucumber::writer::discard::Arbitrary<Wr>
+              cucumber::writer::discard::Stats<Wr>
+    = note: required for `cucumber::writer::discard::Stats<Events>` to implement `NonTransforming`
+    = note: 3 redundant requirements hidden
+    = note: required for `Normalize<Application, Tee<Basic<&mut Vec<u8>>, Arbitrary<...>>>` to implement `NonTransforming`
+    = note: required for `Normalize<Application, Tee<Basic<&mut Vec<u8>>, Arbitrary<...>>>` to implement `Summarizable`
+    = note: required for `Summarize<Normalize<Application, Tee<Basic<&mut Vec<u8>>, ...>>>` to implement `Writer<Application>`
+note: required by a bound in `cucumber::Cucumber::<W, P, I, R, Wr, Cli>::with_writer`
+   --> /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/cucumber.rs:174:16
+    |
+169 |     pub fn with_writer<NewWr>(
+    |            ----------- required by a bound in this associated function
+...
+174 |         NewWr: Writer<W>,
+    |                ^^^^^^^^^ required by this bound in `Cucumber::<W, P, I, R, Wr, Cli>::with_writer`
+    = note: the full name for the type has been written to '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target-1.88.0/debug/deps/profile_none-b91b727352b0579c.long-type-3015177667086880174.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `max_concurrent_scenarios` exists for struct `Cucumber<Application, Basic, _, Basic<Application>, Summarize<...>>`, but its trait bounds were not satisfied
+   --> src/main.rs:143:10
+    |
+44  |   struct Events(Arc<Mutex<Vec<Value>>>);
+    |   ------------- doesn't satisfy `Events: NonTransforming`
+...
+140 |       let application = cucumber::Cucumber::new()
+    |  _______________________-
+141 | |         .steps(steps)
+142 | |         .with_writer(writer)
+143 | |         .max_concurrent_scenarios(1)
+    | |         -^^^^^^^^^^^^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    | |_________|
+    |
+    |
+   ::: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/writer/summarize.rs:134:1
+    |
+134 |   pub struct Summarize<Writer> {
+    |   ---------------------------- doesn't satisfy `_: Writer<Application>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Events: NonTransforming`
+            which is required by `Summarize<Normalize<Application, Tee<cucumber::writer::Basic<&mut Vec<u8>>, cucumber::writer::discard::Arbitrary<cucumber::writer::discard::Stats<Events>>>>>: Writer<Application>`
+note: the trait `NonTransforming` must be implemented
+   --> /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/writer/mod.rs:439:1
+    |
+439 | pub trait NonTransforming {}
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some errors have detailed explanations: E0277, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `profile-none` (bin "profile-none") due to 2 previous errors

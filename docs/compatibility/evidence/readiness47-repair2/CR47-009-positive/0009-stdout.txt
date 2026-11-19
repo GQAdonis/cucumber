@@ -1,0 +1,51 @@
+Feature: Report native retry attempts to portable consumers
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "recovered"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 2 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,false"
+   ✔  And attempt first-step statuses are "FAILED,PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 3 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,true,false"
+   ✔  And attempt first-step statuses are "FAILED,FAILED,FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "passing"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "undefined"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "UNDEFINED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 0 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario: Keep retry outcomes separate across concurrent scenarios
+   ✔  Given concurrent recovering and exhausted scenarios
+   ✔  When they run through the Messages writer
+   ✔  Then each scenario has its own contiguous attempt sequence
+   ✔  And the recovered scenario does not hide the exhausted failure
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+[Summary]
+1 feature
+6 scenarios (6 passed)
+40 steps (40 passed)

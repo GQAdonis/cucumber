@@ -1,0 +1,21 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0283]: type annotations needed
+   --> tests/messages_errors.rs:31:5
+    |
+ 31 |     Execution::cucumber().with_parser(Recorded(results)).steps(Collection::new().given(None,Regex::new("^accepted$").unwrap(),pass))
+    |     ^^^^^^^^^^^^^^^^^^^ cannot infer type of the type parameter `I` declared on the associated function `cucumber`
+    |
+    = note: the type must implement `AsRef<Path>`
+note: required by a bound in `cucumber`
+   --> src/lib.rs:269:20
+    |
+269 |     fn cucumber<I: AsRef<Path>>() -> DefaultCucumber<Self, I>
+    |                    ^^^^^^^^^^^ required by this bound in `World::cucumber`
+help: consider specifying a concrete type for the type parameter `I`
+    |
+ 31 |     Execution::cucumber::</* Type */>().with_parser(Recorded(results)).steps(Collection::new().given(None,Regex::new("^accepted$").unwrap(),pass))
+    |                        ++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "messages_errors") due to 1 previous error

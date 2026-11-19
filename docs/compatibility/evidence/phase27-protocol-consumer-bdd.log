@@ -1,0 +1,39 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.23s
+     Running tests/messages_consumer.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_consumer-7418920fa79fd3ea)
+Feature: Exchange native reports with official Cucumber.js consumers
+  Scenario: Render a tagged Rule outline with both step arguments
+   ✔  Given a rich native execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query resolves both example rows and their arguments
+   ✔  And the official JUnit formatter reports two passing examples
+  Scenario: Report final outcomes after recovery and exhausted retries
+   ✔  Given a mixed retry execution report
+   ✔  When the pinned official JavaScript consumers read the report
+   ✔  Then the official query retains two final outcomes from four attempts
+   ✔  And the official JUnit formatter reports one passing and one failing case
+[Summary]
+1 feature
+2 scenarios (2 passed)
+8 steps (8 passed)
+     Running tests/messages_versions.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_versions-2baeddd4ffabc0df)
+Feature: Select a standard Messages protocol explicitly
+  Scenario Outline: Emit supported source and execution in the chosen protocol
+   ✔  Given a source-backed reporter configured for "34.2.1"
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "34.2.1" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+  Scenario Outline: Emit supported source and execution in the chosen protocol
+   ✔  Given a source-backed reporter configured for "35.0.0"
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "35.0.0" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+  Scenario: Existing constructors retain their protocol version
+   ✔  Given a source-backed reporter using its default protocol
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "34.2.1" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+[Summary]
+1 feature
+3 scenarios (3 passed)
+12 steps (12 passed)

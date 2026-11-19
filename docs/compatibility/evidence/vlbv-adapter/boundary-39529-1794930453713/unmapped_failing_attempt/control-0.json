@@ -1,0 +1,31 @@
+{
+  "scenarioId": "VLBV-1",
+  "runId": "stream-0",
+  "assertionId": "fixed-truth",
+  "candidateDigest": "063ef4e680059451e35cdaada4986acce2ecbb5e78f722da1f608568c618b1ec",
+  "commandRef": "negative",
+  "expectedRejection": "independent fixed truth comparison",
+  "observedRejection": "independent fixed truth comparison",
+  "exercised": true,
+  "sensitive": true,
+  "messages": {
+    "path": "control-0.ndjson",
+    "sha256": "a8f6651452080b6bf20c509186cc65b028cc2eed2ef86fd5019e610f83a3a6ab"
+  },
+  "process": {
+    "path": "control-0.process.json",
+    "sha256": "97eabd22fd4dda526ac338ac9be8fc25cccfec89897f56b0f81d74b090666772"
+  },
+  "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-0deoaA/negative.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-0deoaA/negative.feature#node-2-3-case-attempt-0",
+  "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-0deoaA/negative.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-0deoaA/negative.feature#node-2-3-case-step-0",
+  "evidence": [
+    {
+      "path": "control-0.ndjson",
+      "sha256": "a8f6651452080b6bf20c509186cc65b028cc2eed2ef86fd5019e610f83a3a6ab"
+    },
+    {
+      "path": "independent-truth.txt",
+      "sha256": "1ea7a9b77da8c725742658e48d686d50bdaaf7f8b0289b1061adec3d249e5071"
+    }
+  ]
+}

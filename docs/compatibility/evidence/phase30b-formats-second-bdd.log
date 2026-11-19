@@ -1,0 +1,41 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0283]: type annotations needed
+   --> tests/execution_control_formats.rs:87:22
+    |
+ 87 |                     .tee(writer::Json::for_tee(second.clone())).normalized();
+    |                      ^^^ cannot infer type of the type parameter `W` declared on the method `tee`
+    |
+    = note: the type must implement `World`
+help: the following types implement trait `World`
+   --> tests/execution_control_formats.rs:20:1
+    |
+ 20 | impl cucumber::World for Application{
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ `Application`
+...
+ 38 | #[derive(Debug,Default,cucumber::World)]
+    |                        ^^^^^^^^^^^^^^^ `Acceptance`
+    = note: the type must also implement `Debug`
+    = note: required for `Arbitrary<Stats<Json<Buffer>>>` to implement `Writer<_>`
+note: required by a bound in `tee`
+   --> src/writer/mod.rs:262:19
+    |
+262 |     fn tee<W, Wr: Writer<W>>(self, other: Wr) -> Tee<Self, Wr>;
+    |                   ^^^^^^^^^ required by this bound in `WriterExt::tee`
+    = note: required for `cucumber::writer::Json<Buffer>` to implement `Writer<_>`
+    = note: 2 redundant requirements hidden
+    = note: required for `Arbitrary<Stats<Json<Buffer>>>` to implement `Writer<_>`
+note: required by a bound in `tee`
+   --> src/writer/mod.rs:262:19
+    |
+262 |     fn tee<W, Wr: Writer<W>>(self, other: Wr) -> Tee<Self, Wr>;
+    |                   ^^^^^^^^^ required by this bound in `WriterExt::tee`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/execution_control_formats-dd5f3f22ef0bc713.long-type-15968976773464891250.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+    = note: this error originates in the derive macro `cucumber::World` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider specifying the generic arguments
+    |
+ 87 |                     .tee::<W, cucumber::writer::discard::Arbitrary<cucumber::writer::discard::Stats<cucumber::writer::Json<Buffer>>>>(writer::Json::for_tee(second.clone())).normalized();
+    |                         +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "execution_control_formats") due to 1 previous error

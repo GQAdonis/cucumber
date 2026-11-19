@@ -1,0 +1,42 @@
+{
+  "root": "/Volumes/T7/Projects/references/cucumber",
+  "evidence": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2",
+  "consumerRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j",
+  "nodeRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/node",
+  "nodeExecutable": "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+  "nodeConsumer": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/node/node-consumer.cjs",
+  "pythonExecutable": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/python/bin/python",
+  "pythonConsumer": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/python-consumer.py",
+  "acceptancePython": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/builder/bin/python",
+  "rustExecutable": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/cargo-target/release/sdk46-external-consumer",
+  "typescriptExecutable": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/node/node_modules/typescript/bin/tsc",
+  "jsOracleRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/jsOracleRoot",
+  "gherkinOracleRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/gherkinOracleRoot",
+  "artifacts": [
+    {
+      "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2/artifacts/cucumber-native-local-0.0.0.tgz",
+      "sha256": "7a43bf68aadbe72829d2b6e7e320b660f9159bc8c2799ad3931b11e42069b917",
+      "bytes": 1234843
+    },
+    {
+      "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair2/artifacts/cucumber_native_local-0.0.0-cp311-cp311-macosx_11_0_arm64.whl",
+      "sha256": "b835effa6bdf97a5492fc13173a1f2a0d7d0bdbd9e410ff26cb0cdfd91fd3f87",
+      "bytes": 1244624
+    },
+    {
+      "path": "/Volumes/T7/Projects/references/cucumber/bindings/node/cucumber_sdk.node",
+      "sha256": "e0b30d7d72ff5bb5cc0edc5ac9fc7494a3183c9ed4a909f1495ed679fa55f9e0",
+      "bytes": 3312096
+    },
+    {
+      "path": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/cargo-target/release/sdk46-external-consumer",
+      "sha256": "61f43f757040a518e3d6e6eafc395db4cf76b6a2de81ed5cc28db7d875af139f",
+      "bytes": 6099776
+    },
+    {
+      "path": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+      "sha256": "8ce2f9009cba3f936fa02a1a0279f337fa948c8806a373993ebab137165d4ea1",
+      "bytes": 3274128
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "case": "SDK-004",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "sameHostRecovery": [
+        "rust",
+        "node",
+        "python"
+      ],
+      "originalUri": "memory://original:42/不正.feature"
+    },
+    {
+      "control": "malformed input disguised as empty success",
+      "rejected": "invalid input produced successful result"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

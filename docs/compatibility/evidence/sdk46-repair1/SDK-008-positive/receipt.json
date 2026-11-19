@@ -1,0 +1,16 @@
+{
+  "case": "SDK-008",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "passingRunNoSelection": true,
+      "attempts": 2,
+      "localSelection": {
+        "resolverCalls": 0,
+        "selectionIsNone": true
+      }
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

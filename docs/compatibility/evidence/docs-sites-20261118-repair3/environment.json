@@ -1,0 +1,21 @@
+{
+  "node": "v26.5.0",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "browser": "157.0.8103.79",
+  "origin": "http://127.0.0.1:60259",
+  "sites": {
+    "cucumber": {
+      "root": "/Volumes/T7/Projects/references/cucumber/docs-site",
+      "heading": "Cucumber for Rust",
+      "prefix": "/preview/cucumber/",
+      "build": "/Volumes/T7/Projects/references/cucumber/docs-site/build"
+    },
+    "gherkin": {
+      "root": "/Volumes/T7/Projects/references/gherkin/docs-site",
+      "heading": "Gherkin for Rust",
+      "prefix": "/preview/gherkin/",
+      "build": "/Volumes/T7/Projects/references/gherkin/docs-site/build"
+    }
+  }
+}

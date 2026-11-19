@@ -1,0 +1,25 @@
+{
+  "case": "SDK-007",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "forgedNumericAttemptRejected": "INVALID_MESSAGES",
+      "sameHostRecovery": true
+    },
+    {
+      "typedErrors": [
+        "INCOMPLETE_RUN",
+        "MISSING_REFERENCE",
+        "RUN_ALREADY_FINISHED",
+        "INVALID_MESSAGES"
+      ],
+      "interruptedAttemptsRetained": true
+    },
+    {
+      "control": "truncated stream disguised as empty passing plan",
+      "rejected": "invalid input produced successful result"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

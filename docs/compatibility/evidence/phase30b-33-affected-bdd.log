@@ -1,0 +1,1322 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 38.52s
+     Running tests/compatibility.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/compatibility-13481fd98d9ea12c)
+Feature: Portable feature steps carry a document and table together
+  Scenario: A document precedes a table
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A table precedes a document
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: Outline values expand in both arguments
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A second document is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+  Scenario: A table document table sequence is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+Feature: Reuse a step vocabulary across Gherkin keywords
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario: Legacy consumers keep keyword specific lookup by default
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+   ✔  And the observed balances are ""
+  Scenario: Legacy consumers can retain equal patterns in different keyword groups
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 2 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,42"
+  Scenario: Ambiguous cross keyword definitions fail without invoking either body
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 1 steps fail and 0 steps are skipped
+   ✔  And the output reports an ambiguous match
+   ✔  And the observed balances are ""
+  Scenario: Undefined phrases remain skipped
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+  Scenario: Inherited and wildcard keywords reuse the same definition
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 4 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,43,44,45"
+  Scenario: Localized keywords share the same matching policy
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+[Summary]
+2 features
+20 scenarios (20 passed)
+115 steps (115 passed)
+     Running tests/composable_filters.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/composable_filters-6efa714aba8c2320)
+Feature: Explicit composable selection preserves legacy CLI precedence
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "names OR tags AND predicate"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty tag expression"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "missing repeated tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  And CLI filter configuration "name alternative"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "name and tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "none"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario: Explicit policy survives clone and type-changing builders
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the executor is cloned and its parser runner writer CLI and hook adapters are replaced
+   ✔  Then exactly "invoice green" execute through real handlers
+[Summary]
+1 feature
+12 scenarios (12 passed)
+56 steps (56 passed)
+     Running tests/hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/hooks-016a9713099a12d4)
+Feature: Reusable ordered scenario lifecycle hooks
+  Scenario: Setup follows registration order and teardown unwinds in reverse order
+   ✔  Given the lifecycle configuration "ordered"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: A setup failure stops later setup and steps but still runs teardown
+   ✔  Given the lifecycle configuration "before-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "before-one"
+  Scenario: Teardown continues after asynchronous failures and reports every failure
+   ✔  Given the lifecycle configuration "after-failures"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-two"
+   ✔  And the hook diagnostic contains "after-one"
+  Scenario: Teardown continues when a callback panics before returning its future
+   ✔  Given the lifecycle configuration "sync-after-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-sync,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-sync"
+  Scenario: Teardown sees the failed scenario and still releases resources
+   ✔  Given the lifecycle configuration "step-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 1 failed steps and 0 hook errors
+   ✔  And teardown observes a failed step
+  Scenario: Conditional hooks use inherited feature rule and scenario tags
+   ✔  Given the lifecycle configuration "tagged"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "tagged-before,background,step,tagged-after"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Each retry gets fresh scenario state and repeats its hooks
+   ✔  Given the lifecycle configuration "retry"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one,before-one,before-two,background,step,after-two,after-one"
+   ✔  And both attempts start with fresh world state
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Legacy replacement hooks retain last-registration behavior
+   ✔  Given the lifecycle configuration "legacy"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-two,background,step,after-two"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: After-only hooks can observe a scenario with no initialized world
+   ✔  Given the lifecycle configuration "after-only"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "after-without-world"
+   ✔  And the run has 0 failed steps and 0 hook errors
+[Summary]
+1 feature
+9 scenarios (9 passed)
+42 steps (42 passed)
+     Running tests/messages.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages-b94f0647b88bba92)
+Feature: Portable Cucumber execution reports
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "passing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "failing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "FAILED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "undefined" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "UNDEFINED,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "ambiguous" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "AMBIGUOUS,SKIPPED"
+   ✔  And the completed run reports success "false"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "parallel" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "empty" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the reported step statuses are ""
+   ✔  And the completed run reports success "true"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "initial conjunction" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "wildcard" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Context,Unknown,Unknown"
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "inherited background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then every envelope validates against the official Messages 34.2.1 schema
+   ✔  And source, AST, pickle and execution references are complete
+   ✔  And the pickle step types are "Action,Action"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "outline" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "scenario outlines"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "table" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "docstring" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "step arguments"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "rule" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "rules"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "tags" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "tags"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "description" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "descriptions"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "language" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "English"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "missing source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "source unavailable"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "changed source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "differs from runner AST"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "empty with background" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "empty scenarios with backgrounds"
+   ✔  And no successful completed run is emitted
+[Summary]
+1 feature
+20 scenarios (20 passed)
+97 steps (97 passed)
+     Running tests/messages_attachments.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_attachments-bfdbc0a613172952)
+Feature: Applications attach typed evidence to actual execution scopes
+  Scenario: Text and binary evidence preserve caller content and metadata
+   ✔  Given an attachment-aware application in "payloads" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves exact text and binary evidence with their media types and file names
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Scenario and step hooks attach within their actual execution scopes
+   ✔  Given an attachment-aware application in "hooks" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves evidence under the actual scenario hook or step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Concurrent scenarios retain independent attachment scopes
+   ✔  Given an attachment-aware application in "concurrent" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each concurrent scenario retrieves only its own evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Retried scenarios retain evidence from each distinct attempt
+   ✔  Given an attachment-aware application in "retry" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each attempt retrieves its own evidence and the final attempt passes
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across step boundaries cannot target a later step
+   ✔  Given an attachment-aware application in "late step" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old step handle rejects the write while the current scope accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across retries cannot target a later attempt
+   ✔  Given an attachment-aware application in "late attempt" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old attempt handle rejects the write while the retry accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Completed applications cannot append evidence through retained handles
+   ✔  Given an attachment-aware application in "completed" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then all retained scope handles reject writes after completion
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Existing World implementations run without an attachment override
+   ✔  Given an existing application with no attachment-aware constructor
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then its original World constructor and steps still run successfully
+   ✔  And the report contains no invented attachments
+  Scenario: Lazy World construction can attach within its first actual step
+   ✔  Given an attachment-aware application in "lazy" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves constructor and body evidence under the first step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+[Summary]
+1 feature
+9 scenarios (9 passed)
+36 steps (36 passed)
+     Running tests/messages_backgrounds.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_backgrounds-82a6881f0df884af)
+Feature: Empty scenarios have an explicit background execution policy
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "feature empty" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "rule empty" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "feature outline" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "rule outline" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "mixed" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 3 background steps and 2 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "no background" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Official execution matches empty and nonempty Pickles
+   ✔  Given a "official fixture" feature with background steps
+   ✔  When it executes with the Gherkin 43 background policy and Messages
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario: Runner clones and type-changing builders retain the selected policy
+   ✔  Given a "rule empty" feature with background steps
+   ✔  When a cloned configured runner executes after hook and scheduling builders
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And empty Pickles execute only their scenario hook stages
+   ✔  And real handlers ran 0 background steps and 0 body steps
+   ✔  And the background report is schema-valid and successful
+  Scenario Outline: Legacy applications retain background execution
+   ✔  Given a "feature empty" feature with background steps
+   ✔  When it executes with the default runner and native summary writer
+   ✔  Then real handlers ran 1 background steps and 0 body steps
+   ✔  And the native run has no failures or parser errors
+  Scenario Outline: Legacy applications retain background execution
+   ✔  Given a "rule empty" feature with background steps
+   ✔  When it executes with the default runner and native summary writer
+   ✔  Then real handlers ran 2 background steps and 0 body steps
+   ✔  And the native run has no failures or parser errors
+  Scenario: Legacy execution cannot masquerade as an official empty Pickle
+   ✔  Given a "rule empty" feature with background steps
+   ✔  When it executes with the default runner and source-backed Messages
+   ✔  Then reporting visibly rejects the unexpected background execution
+   ✔  And no successful empty-scenario completion is emitted
+  Scenario: Source-only conversion needs no runner policy
+   ✔  Given a "rule outline" feature with background steps
+   ✔  When its legacy parser snapshot is converted without execution
+   ✔  Then its complete AST and Pickles match the pinned official compiler
+   ✔  And its empty Pickles retain feature and Rule backgrounds only in the AST
+[Summary]
+1 feature
+12 scenarios (12 passed)
+64 steps (64 passed)
+     Running tests/messages_expression_metadata.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_expression_metadata-46112da37377fe7b)
+Feature: Built-in expression provenance and argument groups survive Messages reporting
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "integer" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "float" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "word" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "anonymous" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-double" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-single" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-empty" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "unicode-prefix" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "optional-alternative" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "numeric-alias" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Repeated string captures retain accurate spans despite the pinned index polyfill defect
+   ✔  Given a metadata run using the "string-escaped" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then native JavaScript indices verify the truthful range and isolate the pinned nested-start discrepancy
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Ambiguous matches retain argument-list alignment with definition identities
+   ✔  Given a metadata run with two matching built-in expressions
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then each reported argument list belongs to the definition at the same index
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Replacing a registration clears its obsolete expression metadata
+   ✔  Given an expression registration replaced through the existing raw insertion API
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "legacy expression" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "unannotated nested regex" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "external regex flags" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "undescribed custom type" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Inconsistent explicit metadata fails visibly
+   ✔  Given a raw registration carrying metadata that describes a different expression
+   ✔  When that inconsistent registration executes
+   ✔  Then reporting identifies the metadata mismatch without a successful run-finished envelope
+  Scenario: Existing manual StepConstructor implementations remain source-compatible
+   ✔  Given a manual StepConstructor implementing only the original required method
+   ✔  When its collection executes with Messages reporting
+   ✔  Then its step still passes with raw definition metadata
+[Summary]
+1 feature
+19 scenarios (19 passed)
+85 steps (85 passed)
+     Running tests/messages_logs.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_logs-b6a03c3ee0561943)
+Feature: Native tracing logs remain faithful in Messages reports
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "plain" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "plain" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "hooks" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "hooks" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "retry" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "retry" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "concurrent" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "concurrent" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "fanout" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "fanout" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+[Summary]
+1 feature
+5 scenarios (5 passed)
+30 steps (30 passed)
+     Running tests/messages_retries.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_retries-4820941946c0e5d0)
+Feature: Report native retry attempts to portable consumers
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "recovered"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 2 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,false"
+   ✔  And attempt first-step statuses are "FAILED,PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 3 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,true,false"
+   ✔  And attempt first-step statuses are "FAILED,FAILED,FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "passing"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "undefined"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "UNDEFINED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 0 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario: Keep retry outcomes separate across concurrent scenarios
+   ✔  Given concurrent recovering and exhausted scenarios
+   ✔  When they run through the Messages writer
+   ✔  Then each scenario has its own contiguous attempt sequence
+   ✔  And the recovered scenario does not hide the exhausted failure
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+[Summary]
+1 feature
+6 scenarios (6 passed)
+40 steps (40 passed)
+     Running tests/messages_run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_run_hooks-b626baf8b74509e8)
+Feature: Exchange actual global hook execution through standard Messages
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "passing"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "setup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "cleanup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "both failures"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "empty input"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario: Sequential store reuse does not leak earlier run hooks
+   ✔  Given two sequential runs sharing a global-hook store
+   ✔  When each run is reported with its own Messages writer
+   ✔  Then each report contains only its own observed global-hook invocations
+   ✔  And both reports have complete unsuccessful or successful final outcomes
+[Summary]
+1 feature
+6 scenarios (6 passed)
+34 steps (34 passed)
+     Running tests/messages_scenario_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_scenario_hooks-dd3a7b5f7c7ef9c5)
+Feature: Navigate observed individual scenario callbacks through standard Messages
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "passing"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "true"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "first setup fails"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "false"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "cleanup fails"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "false"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "both stages fail"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "false"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "inherited tags"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "true"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "empty native"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "true"
+  Scenario Outline: Report ordered callback slots and actual outcomes
+   ✔  Given an observed scenario registry configured for "empty js setup"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then every selected callback has a stable TestStep and real source definition
+   ✔  And executed callbacks preserve their actual timestamps and result
+   ✔  And skipped callback slots do not claim execution or elapsed duration
+   ✔  And the official Query resolves callback results and final success "false"
+  Scenario: Retry keeps selected callback identities and fresh invocation evidence
+   ✔  Given an observed scenario registry configured for "recovering retry"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then one TestCase keeps stable callback slots across two attempts
+   ✔  And each attempt reports its own callback outcomes and final retry decision
+  Scenario: Attachments belong to their actual callback
+   ✔  Given an observed scenario registry configured for "callback attachments"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then the official Query retrieves each payload from its originating callback
+   ✔  And stale callback handles cannot attach to another callback
+  Scenario: Concurrent outline cases retain their callback evidence
+   ✔  Given an observed scenario registry configured for "concurrent outline"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then each expanded row retains its own callback invocations and evidence
+  Scenario: Legacy stage replacement retains composite reporting where necessary
+   ✔  Given an observed scenario registry configured for "legacy stage replacement"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then selected registry callbacks are individual and the replaced stage is composite
+  Scenario Outline: Constructor evidence retains its observed native boundary
+   ✔  Given an observed scenario registry configured for "constructor attachment"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then constructor evidence is not attributed to a callback that has not started
+   ✔  And the official Query resolves callback results and final success "true"
+  Scenario Outline: Constructor evidence retains its observed native boundary
+   ✔  Given an observed scenario registry configured for "constructor failure"
+   ✔  When the native attempt is reported with its scenario-hook records
+   ✔  Then constructor evidence is not attributed to a callback that has not started
+   ✔  And the official Query resolves callback results and final success "false"
+[Summary]
+1 feature
+13 scenarios (13 passed)
+64 steps (64 passed)
+     Running tests/messages_support_code.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_support_code-70d5073d66bdd58a)
+Feature: Actual registered support code is discoverable in standard Messages
+  Scenario: Consumers resolve a macro definition to its actual Rust source
+   ✔  Given a support-code run configured as "macro"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves the actual compiled regex and Rust registration location
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "unique"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "ambiguous"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 2 definitions and observes "AMBIGUOUS"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "undefined"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 0 definitions and observes "UNDEFINED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "keyword-specific"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 0 definitions and observes "UNDEFINED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "keyword-independent"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "independent-late"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "cross-keyword"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 2 definitions and observes "AMBIGUOUS"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Later collection builders replace the observed registry and its policy
+   ✔  Given a support-code run configured as "replacement"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then only the final replacement collection is reported and executed
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Duplicate raw registrations retain existing replacement semantics
+   ✔  Given a support-code run configured as "duplicate"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves one raw definition with an empty source reference
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Definition identities remain stable across retries
+   ✔  Given a support-code run configured as "retry"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then both attempts reference the same single registered definition
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Custom runners may omit support-code metadata without implementing a new method
+   ✔  Given a support-code run configured as "custom"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then unsupported definition metadata is omitted rather than fabricated
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Definitions remain discoverable for planned steps skipped after a failure
+   ✔  Given a support-code run configured as "skipped"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the skipped planned step still resolves its actual definition
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Type-changing runner builders preserve the reporting handoff
+   ✔  Given a support-code run configured as "builder-chain"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+[Summary]
+1 feature
+14 scenarios (14 passed)
+56 steps (56 passed)
+     Running tests/run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/run_hooks-88b421e0f0e26107)
+Feature: Complete native run setup and cleanup with honest failure outcomes
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "passing"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before both"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 2 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "all fail"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 4 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "body fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: Global callbacks run for an empty feature
+   ✔  Given a run lifecycle configured for "empty"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Retries do not repeat global callbacks
+   ✔  Given a run lifecycle configured for "retry"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: A setup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: A cleanup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: Concurrent scenarios share one global setup and cleanup
+   ✔  Given a run lifecycle configured for "parallel"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Sequential reuse does not change a completed run's failure count
+   ✔  Given a reusable run-hook registry and observation store
+   ✔  When one failing run and one passing run execute sequentially
+   ✔  Then their completed statistics and callback records remain separate
+[Summary]
+1 feature
+14 scenarios (14 passed)
+62 steps (62 passed)
+     Running tests/scenario_hook_records.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/scenario_hook_records-2a481fcac227e4ff)
+Feature: Observe actual scenario callbacks without changing legacy lifecycle behavior
+  Scenario: Record ordered setup and reverse cleanup as separate actual callbacks
+   ✔  Given an observed scenario-hook registry configured for "passing"
+   ✔  When the application executes its scenario
+   ✔  Then selected callbacks execute in registration order and reverse cleanup order
+   ✔  And each executed callback has its own definition and invocation identity
+   ✔  And recorded timestamps and outcomes describe actual executions
+  Scenario: Failed setup records later selected setup as skipped
+   ✔  Given an observed scenario-hook registry configured for "setup failure"
+   ✔  When the application executes its scenario
+   ✔  Then the failed setup callback and every cleanup callback execute
+   ✔  And later selected setup is recorded as skipped without an invocation identity
+   ✔  And no scenario body executes
+  Scenario: Construction panics have the same cleanup guarantees as asynchronous failures
+   ✔  Given an observed scenario-hook registry configured for "constructor panic"
+   ✔  When the application executes its scenario
+   ✔  Then every selected cleanup callback executes
+   ✔  And the actual failing callback has its own diagnostic
+  Scenario: Scoped cleanup observes earlier cleanup failures
+   ✔  Given an observed scenario-hook registry configured for "cleanup failure"
+   ✔  When the application executes its scenario
+   ✔  Then the first cleanup callback observes a passing body
+   ✔  And the next cleanup callback observes the earlier cleanup failure
+   ✔  And both cleanup callbacks retain the original passing body snapshot
+  Scenario: Equal-severity cleanup failures retain the original failing result
+   ✔  Given an observed scenario-hook registry configured for "body and cleanup failure"
+   ✔  When the application executes its scenario
+   ✔  Then later cleanup retains the body's first failing diagnostic
+   ✔  And every individual cleanup failure remains available in records
+  Scenario: Existing after callbacks retain their pre-cleanup snapshot
+   ✔  Given an observed scenario-hook registry configured for "mixed legacy and scoped"
+   ✔  When the application executes its scenario
+   ✔  Then legacy cleanup receives its original ScenarioFinished snapshot
+   ✔  And scoped cleanup observes the earlier cleanup failure
+  Scenario: Tag-excluded callbacks do not become skipped executions
+   ✔  Given an observed scenario-hook registry selected by inherited feature Rule and scenario tags
+   ✔  When the application executes its scenario
+   ✔  Then only matching callback definitions have selected slots
+   ✔  And excluded callbacks have neither skipped records nor invocation identities
+  Scenario: Retrying preserves definitions and separates actual callback attempts
+   ✔  Given an observed scenario-hook registry configured for "retry"
+   ✔  When the application executes its scenario
+   ✔  Then callback definitions remain stable across attempts
+   ✔  And every attempt has a fresh World and distinct execution identities
+   ✔  And scoped cleanup observes failure with retry availability only on the first attempt
+  Scenario: Concurrent cases cannot exchange callback observations
+   ✔  Given two concurrent scenarios sharing an observed scenario-hook registry
+   ✔  When the application executes both scenarios
+   ✔  Then each callback scope and record belongs to its actual scenario and attempt
+  Scenario: Legacy stage replacement leaves no phantom callback executions
+   ✔  Given an observed registry whose before stage is replaced using the legacy builder
+   ✔  When the application executes its scenario
+   ✔  Then only the legacy before callback and registered cleanup callbacks execute
+   ✔  And replaced registrations have no selected slots or invocation records
+  Scenario: Evidence belongs to the individual callback that produced it
+   ✔  Given an observed scenario-hook registry configured for "attachments"
+   ✔  When the application executes its scenario
+   ✔  Then evidence from each callback retains that callback's definition identity
+   ✔  And a handle retained from an earlier callback rejects later writes
+  Scenario: Native empty-scenario behavior stays the default
+   ✔  Given an observed registry with failing setup and an empty scenario under native policy
+   ✔  When the application executes its scenario
+   ✔  Then every selected cleanup callback still executes
+   ✔  And scoped cleanup receives the native failed-setup snapshot
+  Scenario: Explicit JS13.3 policy follows the empty-Pickle hook classification
+   ✔  Given an observed registry with failing setup and an empty scenario under JS13.3 policy
+   ✔  When the application executes its scenario
+   ✔  Then registered cleanup slots are skipped without invented invocations
+   ✔  And the initial setup failure remains the run failure
+  Scenario: Empty-Pickle cleanup arguments remain absent under explicit JS13.3 policy
+   ✔  Given an observed registry with passing setup and an empty scenario under JS13.3 policy
+   ✔  When the application executes its scenario
+   ✔  Then registered cleanup callbacks run in reverse order
+   ✔  And their scoped result and retry-decision arguments are absent
+  Scenario: Existing unobserved registries retain attachment reporting compatibility
+   ✔  Given an unobserved legacy hook registry with typed attachments
+   ✔  When the application executes its scenario
+   ✔  Then its evidence remains under the native composite hook targets
+   ✔  And a handle retained from an earlier callback rejects later writes
+  Scenario: An observed stage can select zero callbacks
+   ✔  Given an observed scenario-hook registry configured for "all excluded"
+   ✔  When the application executes its scenario
+   ✔  Then the plan records present stages with empty callback selections
+   ✔  And no callback invocation is invented
+  Scenario: World initialization failure is distinct from callback failure
+   ✔  Given an observed registry whose World constructor fails
+   ✔  When the application executes its scenario
+   ✔  Then the constructor failure has its own observation
+   ✔  And selected setup callbacks are skipped because initialization failed
+   ✔  And selected cleanup callbacks still execute without a World
+  Scenario: Constructor evidence is not attributed to a callback
+   ✔  Given an observed scenario-hook registry configured for "constructor evidence"
+   ✔  When the application executes its scenario
+   ✔  Then constructor evidence retains its native setup target
+   ✔  And callback evidence retains its individual callback target
+[Summary]
+1 feature
+18 scenarios (18 passed)
+76 steps (76 passed)
+     Running tests/scheduling.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/scheduling-2781ffb31b1c1ef6)
+Feature: Async scenario scheduling preserves application isolation
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 1
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "3"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 3
+   ✔  And no scenarios remain active
+  Scenario Outline: Valid limits bound active scenarios and permit useful overlap
+   ✔  Given 6 scenarios with independent World state
+   ✔  And a concurrency limit of "unlimited"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 6
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "scenario" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "rule" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario Outline: Serial tags reserve exclusive execution across tag scopes
+   ✔  Given concurrent scenarios and serial scenarios tagged at "feature" scope
+   ✔  And a concurrency limit of "2"
+   ✔  When the coordinated feature is executed
+   ✔  Then all 6 scenarios pass with isolated World values
+   ✔  And the observed peak concurrency is 2
+   ✔  And both serial scenarios ran exclusively
+   ✔  And no scenarios remain active
+  Scenario: Fail fast leaves queued scenarios unstarted at concurrency one
+   ✔  Given 3 scenarios whose first step fails
+   ✔  And a concurrency limit of "1"
+   ✔  When the coordinated feature is executed with fail fast
+   ✔  Then exactly one scenario fails and the other scenarios never start
+   ✔  And no scenarios remain active
+[Summary]
+1 feature
+8 scenarios (8 passed)
+50 steps (50 passed)
+     Running tests/step_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/step_hooks-ef4fd8f7e86e2914)
+Feature: Ordered native step lifecycle callbacks
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "passing"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "passed"
+   ✔  And the final native failed step count is 0
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "before fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,after-two,after-one"
+   ✔  And the after-step callbacks observe "not run"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "body fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "failed"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "after fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "passed"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "all fail"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,after-two,after-one"
+   ✔  And the after-step callbacks observe "not run"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Undefined steps do not invoke step hooks
+   ✔  Given a step lifecycle configured for "undefined"
+   ✔  When the native scenario executes
+   ✔  Then no step hook or body invocation occurs
+   ✔  And the native scenario reports one skipped step
+  Scenario: Ambiguous steps do not invoke step hooks
+   ✔  Given a step lifecycle configured for "ambiguous"
+   ✔  When the native scenario executes
+   ✔  Then no step hook or body invocation occurs
+   ✔  And the final native failed step count is 1
+  Scenario: Background and scenario steps receive inherited tag-selected callbacks
+   ✔  Given a tagged feature and Rule with a background and scenario step
+   ✔  When the native scenario executes
+   ✔  Then selected hooks surround both steps and excluded hooks never run
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Retried steps have separate attempt identities and fresh worlds
+   ✔  Given a step lifecycle configured for "retry"
+   ✔  When the native scenario executes
+   ✔  Then both attempts have complete hook traces and distinct execution identities
+   ✔  And only the first attempt has a failed hook record
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Later steps skipped after a failure have no hook invocations
+   ✔  Given a step lifecycle configured for "later skipped"
+   ✔  When the native scenario executes
+   ✔  Then hook records refer only to the first executed step
+   ✔  And the final native failed step count is 1
+[Summary]
+1 feature
+10 scenarios (10 passed)
+51 steps (51 passed)
+     Running tests/timeouts.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/timeouts-3936bb284fb91e37)
+Feature: Applications opt into bounded callback execution
+  Scenario: Existing applications retain unlimited execution by default
+   ✔  Given an application using the legacy timeout defaults
+   ✔  When its gated step is released after an injected deadline would have elapsed
+   ✔  Then the step passes without a timeout
+  Scenario: The explicit JavaScript preset chooses five seconds
+   ✔  Given an application using the JavaScript timeout preset
+   ✔  When it invokes a step with no definition override
+   ✔  Then the callback receives a five-second deadline
+  Scenario: A timed-out body is cancelled before cleanup
+   ✔  Given an application whose body remains pending with scoped attachments
+   ✔  When its callback deadline expires
+   ✔  Then its body is dropped and reports a timeout failure
+   ✔  And its retained attachment handle rejects a later write
+   ✔  And cleanup still executes
+  Scenario: A timed-out attempt retries with fresh state
+   ✔  Given an application whose first body attempt exceeds its deadline
+   ✔  When it runs with one retry and a completing second attempt
+   ✔  Then both attempts retain distinct failure and success evidence
+  Scenario Outline: Definition overrides remain local
+   ✔  Given two application steps with the first override "longer"
+   ✔  When their inherited and overridden deadlines are exercised
+   ✔  Then only the first step uses "longer" and the second keeps the default
+  Scenario Outline: Definition overrides remain local
+   ✔  Given two application steps with the first override "disabled"
+   ✔  When their inherited and overridden deadlines are exercised
+   ✔  Then only the first step uses "disabled" and the second keeps the default
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before scenario" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after scenario" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before step" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after step" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before run" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after run" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario: Concurrent executions do not share deadline state
+   ✔  Given two overlapping scenarios with independent callback deadlines
+   ✔  When only one deadline expires and the other body completes
+   ✔  Then one scenario fails and the other passes without crossed attribution
+  Scenario: Timeouts run without a Tokio runtime
+   ✔  Given an application on a plain futures executor
+   ✔  When a real timer expires while its body remains pending
+   ✔  Then the timeout is reported without requiring a runtime-specific reactor
+[Summary]
+1 feature
+14 scenarios (14 passed)
+50 steps (50 passed)

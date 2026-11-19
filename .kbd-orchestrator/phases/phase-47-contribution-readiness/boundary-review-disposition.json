@@ -1,0 +1,7 @@
+{
+  "finding": "CR47-007 timing wording",
+  "disposition": "Corrected as requested: implementation-owned constraints within adopted scope, no early probes; unresolved B4 is BLOCKED/FAIL.",
+  "review": "review/boundary-plan-review.md",
+  "finalProposalSha256": "d339642d263fd91b5314b9a669f2e90f0deaa9af5345fb550c0d73bbfc1a485e",
+  "executionAuthority": false
+}

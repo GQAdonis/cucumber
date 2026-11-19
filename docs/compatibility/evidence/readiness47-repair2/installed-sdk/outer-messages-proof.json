@@ -1,0 +1,49 @@
+{
+  "packets": [
+    {
+      "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/functional-messages.ndjson",
+      "mode": "positive",
+      "sha256": "6b7e8ac34e89a20d75cb929ffcb97cd8ca8536905590373d0d0f669e6429c22b",
+      "cases": 11,
+      "steps": 33,
+      "runSuccess": true,
+      "scenarioIds": [
+        "SDK-001",
+        "SDK-002",
+        "SDK-003",
+        "SDK-004",
+        "SDK-005",
+        "SDK-006",
+        "SDK-007",
+        "SDK-008",
+        "SDK-009",
+        "SDK-010",
+        "SDK-011"
+      ]
+    },
+    {
+      "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/controls-messages.ndjson",
+      "mode": "control",
+      "sha256": "d1378a18494d4aef5138b1ae1c3b3b9fe198daae6bf8851f9b18ee7572fcfe88",
+      "cases": 11,
+      "steps": 33,
+      "runSuccess": true,
+      "scenarioIds": [
+        "SDK-001",
+        "SDK-002",
+        "SDK-003",
+        "SDK-004",
+        "SDK-005",
+        "SDK-006",
+        "SDK-007",
+        "SDK-008",
+        "SDK-009",
+        "SDK-010",
+        "SDK-011"
+      ]
+    }
+  ],
+  "cases": 22,
+  "steps": 66,
+  "status": "PASS"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "fixed-truth",
+  "scenarioId": "VLBV-1",
+  "runId": "stream-0",
+  "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-VZMzhj/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-VZMzhj/input-0.feature#node-2-3-case-attempt-0",
+  "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-VZMzhj/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-VZMzhj/input-0.feature#node-2-3-case-step-0",
+  "candidateDigest": "76f3ae9b176aad66546247e4fea8e551f8420850ac4f3c66d4c27599ced2dc88",
+  "oracle": {
+    "observation": "Actual observed value",
+    "expectedTruthSource": "independent-truth.txt",
+    "comparator": "real handler assert_eq(actual, expected)"
+  },
+  "status": "PASS",
+  "observed": "{\"duration\":{\"nanos\":220000,\"seconds\":0},\"status\":\"PASSED\"}",
+  "exercised": true,
+  "realCollaborators": [
+    "real Rust callback"
+  ],
+  "substitutedBoundaries": [],
+  "evidence": [
+    {
+      "path": "observed-0-0-VLBV-1.json",
+      "sha256": "e252219b76609f18a6afa64a4f2c956353a4a8d4aad3f4e0a9335d1e3f8404fe"
+    },
+    {
+      "path": "independent-truth.txt",
+      "sha256": "1ea7a9b77da8c725742658e48d686d50bdaaf7f8b0289b1061adec3d249e5071"
+    },
+    {
+      "path": "run-0.ndjson",
+      "sha256": "474edaef5f90e912503c4412d83ddaab98242223034035a102458fafe188b395"
+    }
+  ]
+}

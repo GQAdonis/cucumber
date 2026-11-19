@@ -1,0 +1,48 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.37s
+     Running tests/messages_run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_run_hooks-ae614cda911310af)
+Feature: Exchange actual global hook execution through standard Messages
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "passing"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "setup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "cleanup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "both failures"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "empty input"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario: Sequential store reuse does not leak earlier run hooks
+   ✔  Given two sequential runs sharing a global-hook store
+   ✔  When each run is reported with its own Messages writer
+   ✔  Then each report contains only its own observed global-hook invocations
+   ✔  And both reports have complete unsuccessful or successful final outcomes
+[Summary]
+1 feature
+6 scenarios (6 passed)
+34 steps (34 passed)

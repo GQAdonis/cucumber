@@ -1,0 +1,970 @@
+{
+  "case": "CR47-005",
+  "mode": "positive",
+  "status": "PASS",
+  "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "observations": [
+    {
+      "actualGeneratedWorlds": {
+        "contexts": {
+          "attachmentClosed": true,
+          "completionClosed": true,
+          "explicitTimeout": true,
+          "messages": [
+            {
+              "meta": {
+                "cpu": {
+                  "name": "aarch64"
+                },
+                "implementation": {
+                  "name": "cucumber-rs",
+                  "version": "0.23.0"
+                },
+                "os": {
+                  "name": "macos"
+                },
+                "protocolVersion": "34.2.1",
+                "runtime": {
+                  "name": "Rust"
+                }
+              }
+            },
+            {
+              "stepDefinition": {
+                "id": "step-definition-0",
+                "pattern": {
+                  "source": "^contextual evidence$",
+                  "type": "REGULAR_EXPRESSION"
+                },
+                "sourceReference": {}
+              }
+            },
+            {
+              "testRunStarted": {
+                "id": "run-0",
+                "timestamp": {
+                  "nanos": 153115000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "source": {
+                "data": "Feature: Context\n Scenario: Scoped evidence\n  Given contextual evidence\n",
+                "mediaType": "text/x.cucumber.gherkin+plain",
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature"
+              }
+            },
+            {
+              "gherkinDocument": {
+                "comments": [],
+                "feature": {
+                  "children": [
+                    {
+                      "scenario": {
+                        "description": "",
+                        "examples": [],
+                        "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2",
+                        "keyword": "Scenario",
+                        "location": {
+                          "column": 2,
+                          "line": 2
+                        },
+                        "name": "Scoped evidence",
+                        "steps": [
+                          {
+                            "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#step-3-3",
+                            "keyword": "Given ",
+                            "keywordType": "Context",
+                            "location": {
+                              "column": 3,
+                              "line": 3
+                            },
+                            "text": "contextual evidence"
+                          }
+                        ],
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "description": "",
+                  "keyword": "Feature",
+                  "language": "en",
+                  "location": {
+                    "column": 1,
+                    "line": 1
+                  },
+                  "name": "Context",
+                  "tags": []
+                },
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature"
+              }
+            },
+            {
+              "pickle": {
+                "astNodeIds": [
+                  "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2"
+                ],
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2",
+                "language": "en",
+                "location": {
+                  "column": 2,
+                  "line": 2
+                },
+                "name": "Scoped evidence",
+                "steps": [
+                  {
+                    "astNodeIds": [
+                      "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#step-3-3"
+                    ],
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-step-0",
+                    "text": "contextual evidence",
+                    "type": "Context"
+                  }
+                ],
+                "tags": [],
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature"
+              }
+            },
+            {
+              "testCase": {
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case",
+                "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2",
+                "testRunStartedId": "run-0",
+                "testSteps": [
+                  {
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-step-0",
+                    "pickleStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-step-0",
+                    "stepDefinitionIds": [
+                      "step-definition-0"
+                    ],
+                    "stepMatchArgumentsLists": [
+                      {
+                        "stepMatchArguments": []
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "testCaseStarted": {
+                "attempt": 0,
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-attempt-0",
+                "testCaseId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case",
+                "timestamp": {
+                  "nanos": 153132000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepStarted": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-step-0",
+                "timestamp": {
+                  "nanos": 153137000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "attachment": {
+                "body": "context payload",
+                "contentEncoding": "IDENTITY",
+                "mediaType": "text/plain",
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-step-0",
+                "timestamp": {
+                  "nanos": 153173000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-step-0",
+                "testStepResult": {
+                  "duration": {
+                    "nanos": 73000,
+                    "seconds": 0
+                  },
+                  "status": "SKIPPED"
+                },
+                "timestamp": {
+                  "nanos": 153210000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testCaseFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/contexts.feature#node-2-2-case-attempt-0",
+                "timestamp": {
+                  "nanos": 153358000,
+                  "seconds": 1795127008
+                },
+                "willBeRetried": false
+              }
+            },
+            {
+              "testRunFinished": {
+                "success": true,
+                "testRunStartedId": "run-0",
+                "timestamp": {
+                  "nanos": 153381000,
+                  "seconds": 1795127008
+                }
+              }
+            }
+          ],
+          "timerMilliseconds": [
+            50
+          ],
+          "trace": [
+            "contexts:init",
+            "contexts:1"
+          ]
+        },
+        "custom": {
+          "messages": [
+            {
+              "meta": {
+                "cpu": {
+                  "name": "aarch64"
+                },
+                "implementation": {
+                  "name": "cucumber-rs",
+                  "version": "0.23.0"
+                },
+                "os": {
+                  "name": "macos"
+                },
+                "protocolVersion": "34.2.1",
+                "runtime": {
+                  "name": "Rust"
+                }
+              }
+            },
+            {
+              "stepDefinition": {
+                "id": "step-definition-0",
+                "pattern": {
+                  "source": "custom {int}",
+                  "type": "CUCUMBER_EXPRESSION"
+                },
+                "sourceReference": {
+                  "location": {
+                    "column": 1,
+                    "line": 70
+                  },
+                  "uri": "src/main.rs"
+                }
+              }
+            },
+            {
+              "parameterType": {
+                "id": "parameter-type-0",
+                "name": "int",
+                "preferForRegularExpressionMatch": true,
+                "regularExpressions": [
+                  "-?\\d+",
+                  "\\d+"
+                ],
+                "useForSnippets": true
+              }
+            },
+            {
+              "testRunStarted": {
+                "id": "run-0",
+                "timestamp": {
+                  "nanos": 151376000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "source": {
+                "data": "Feature: Custom\n Scenario: Initialization\n  Given custom 1\n",
+                "mediaType": "text/x.cucumber.gherkin+plain",
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature"
+              }
+            },
+            {
+              "gherkinDocument": {
+                "comments": [],
+                "feature": {
+                  "children": [
+                    {
+                      "scenario": {
+                        "description": "",
+                        "examples": [],
+                        "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2",
+                        "keyword": "Scenario",
+                        "location": {
+                          "column": 2,
+                          "line": 2
+                        },
+                        "name": "Initialization",
+                        "steps": [
+                          {
+                            "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#step-3-3",
+                            "keyword": "Given ",
+                            "keywordType": "Context",
+                            "location": {
+                              "column": 3,
+                              "line": 3
+                            },
+                            "text": "custom 1"
+                          }
+                        ],
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "description": "",
+                  "keyword": "Feature",
+                  "language": "en",
+                  "location": {
+                    "column": 1,
+                    "line": 1
+                  },
+                  "name": "Custom",
+                  "tags": []
+                },
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature"
+              }
+            },
+            {
+              "pickle": {
+                "astNodeIds": [
+                  "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2"
+                ],
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2",
+                "language": "en",
+                "location": {
+                  "column": 2,
+                  "line": 2
+                },
+                "name": "Initialization",
+                "steps": [
+                  {
+                    "astNodeIds": [
+                      "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#step-3-3"
+                    ],
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-step-0",
+                    "text": "custom 1",
+                    "type": "Context"
+                  }
+                ],
+                "tags": [],
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature"
+              }
+            },
+            {
+              "testCase": {
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case",
+                "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2",
+                "testRunStartedId": "run-0",
+                "testSteps": [
+                  {
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-step-0",
+                    "pickleStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-step-0",
+                    "stepDefinitionIds": [
+                      "step-definition-0"
+                    ],
+                    "stepMatchArgumentsLists": [
+                      {
+                        "stepMatchArguments": [
+                          {
+                            "group": {
+                              "start": 7,
+                              "value": "1"
+                            },
+                            "parameterTypeName": "int"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "testCaseStarted": {
+                "attempt": 0,
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-attempt-0",
+                "testCaseId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case",
+                "timestamp": {
+                  "nanos": 151419000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepStarted": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-step-0",
+                "timestamp": {
+                  "nanos": 151436000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-step-0",
+                "testStepResult": {
+                  "duration": {
+                    "nanos": 87000,
+                    "seconds": 0
+                  },
+                  "status": "PASSED"
+                },
+                "timestamp": {
+                  "nanos": 151523000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testCaseFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/custom.feature#node-2-2-case-attempt-0",
+                "timestamp": {
+                  "nanos": 151686000,
+                  "seconds": 1795127008
+                },
+                "willBeRetried": false
+              }
+            },
+            {
+              "testRunFinished": {
+                "success": true,
+                "testRunStartedId": "run-0",
+                "timestamp": {
+                  "nanos": 151727000,
+                  "seconds": 1795127008
+                }
+              }
+            }
+          ],
+          "trace": [
+            "custom:init",
+            "custom:42"
+          ]
+        },
+        "generic": {
+          "arbitraryGenericInventory": false,
+          "generatedExpressionMetadata": true,
+          "inventorySpecialization": "Generic<usize>",
+          "messages": [
+            {
+              "meta": {
+                "cpu": {
+                  "name": "aarch64"
+                },
+                "implementation": {
+                  "name": "cucumber-rs",
+                  "version": "0.23.0"
+                },
+                "os": {
+                  "name": "macos"
+                },
+                "protocolVersion": "34.2.1",
+                "runtime": {
+                  "name": "Rust"
+                }
+              }
+            },
+            {
+              "stepDefinition": {
+                "id": "step-definition-0",
+                "pattern": {
+                  "source": "generic {int}",
+                  "type": "CUCUMBER_EXPRESSION"
+                },
+                "sourceReference": {
+                  "location": {
+                    "column": 1,
+                    "line": 53
+                  },
+                  "uri": "src/main.rs"
+                }
+              }
+            },
+            {
+              "parameterType": {
+                "id": "parameter-type-0",
+                "name": "int",
+                "preferForRegularExpressionMatch": true,
+                "regularExpressions": [
+                  "-?\\d+",
+                  "\\d+"
+                ],
+                "useForSnippets": true
+              }
+            },
+            {
+              "testRunStarted": {
+                "id": "run-0",
+                "timestamp": {
+                  "nanos": 149314000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "source": {
+                "data": "Feature: Generic\n Scenario: Default specialization\n  Given generic 7\n",
+                "mediaType": "text/x.cucumber.gherkin+plain",
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature"
+              }
+            },
+            {
+              "gherkinDocument": {
+                "comments": [],
+                "feature": {
+                  "children": [
+                    {
+                      "scenario": {
+                        "description": "",
+                        "examples": [],
+                        "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2",
+                        "keyword": "Scenario",
+                        "location": {
+                          "column": 2,
+                          "line": 2
+                        },
+                        "name": "Default specialization",
+                        "steps": [
+                          {
+                            "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#step-3-3",
+                            "keyword": "Given ",
+                            "keywordType": "Context",
+                            "location": {
+                              "column": 3,
+                              "line": 3
+                            },
+                            "text": "generic 7"
+                          }
+                        ],
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "description": "",
+                  "keyword": "Feature",
+                  "language": "en",
+                  "location": {
+                    "column": 1,
+                    "line": 1
+                  },
+                  "name": "Generic",
+                  "tags": []
+                },
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature"
+              }
+            },
+            {
+              "pickle": {
+                "astNodeIds": [
+                  "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2"
+                ],
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2",
+                "language": "en",
+                "location": {
+                  "column": 2,
+                  "line": 2
+                },
+                "name": "Default specialization",
+                "steps": [
+                  {
+                    "astNodeIds": [
+                      "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#step-3-3"
+                    ],
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-step-0",
+                    "text": "generic 7",
+                    "type": "Context"
+                  }
+                ],
+                "tags": [],
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature"
+              }
+            },
+            {
+              "testCase": {
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case",
+                "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2",
+                "testRunStartedId": "run-0",
+                "testSteps": [
+                  {
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-step-0",
+                    "pickleStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-step-0",
+                    "stepDefinitionIds": [
+                      "step-definition-0"
+                    ],
+                    "stepMatchArgumentsLists": [
+                      {
+                        "stepMatchArguments": [
+                          {
+                            "group": {
+                              "start": 8,
+                              "value": "7"
+                            },
+                            "parameterTypeName": "int"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "testCaseStarted": {
+                "attempt": 0,
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-attempt-0",
+                "testCaseId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case",
+                "timestamp": {
+                  "nanos": 149421000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepStarted": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-step-0",
+                "timestamp": {
+                  "nanos": 149471000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-step-0",
+                "testStepResult": {
+                  "duration": {
+                    "nanos": 368000,
+                    "seconds": 0
+                  },
+                  "status": "PASSED"
+                },
+                "timestamp": {
+                  "nanos": 149839000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testCaseFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/generic.feature#node-2-2-case-attempt-0",
+                "timestamp": {
+                  "nanos": 150539000,
+                  "seconds": 1795127008
+                },
+                "willBeRetried": false
+              }
+            },
+            {
+              "testRunFinished": {
+                "success": true,
+                "testRunStartedId": "run-0",
+                "timestamp": {
+                  "nanos": 150571000,
+                  "seconds": 1795127008
+                }
+              }
+            }
+          ],
+          "trace": [
+            "generic:init",
+            "generic:7"
+          ]
+        },
+        "legacy": {
+          "messages": [
+            {
+              "meta": {
+                "cpu": {
+                  "name": "aarch64"
+                },
+                "implementation": {
+                  "name": "cucumber-rs",
+                  "version": "0.23.0"
+                },
+                "os": {
+                  "name": "macos"
+                },
+                "protocolVersion": "34.2.1",
+                "runtime": {
+                  "name": "Rust"
+                }
+              }
+            },
+            {
+              "stepDefinition": {
+                "id": "step-definition-0",
+                "pattern": {
+                  "source": "^legacy works$",
+                  "type": "REGULAR_EXPRESSION"
+                },
+                "sourceReference": {
+                  "location": {
+                    "column": 1,
+                    "line": 77
+                  },
+                  "uri": "src/main.rs"
+                }
+              }
+            },
+            {
+              "testRunStarted": {
+                "id": "run-0",
+                "timestamp": {
+                  "nanos": 152308000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "source": {
+                "data": "Feature: Legacy\n Scenario: Ordinary World\n  Given legacy works\n",
+                "mediaType": "text/x.cucumber.gherkin+plain",
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature"
+              }
+            },
+            {
+              "gherkinDocument": {
+                "comments": [],
+                "feature": {
+                  "children": [
+                    {
+                      "scenario": {
+                        "description": "",
+                        "examples": [],
+                        "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2",
+                        "keyword": "Scenario",
+                        "location": {
+                          "column": 2,
+                          "line": 2
+                        },
+                        "name": "Ordinary World",
+                        "steps": [
+                          {
+                            "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#step-3-3",
+                            "keyword": "Given ",
+                            "keywordType": "Context",
+                            "location": {
+                              "column": 3,
+                              "line": 3
+                            },
+                            "text": "legacy works"
+                          }
+                        ],
+                        "tags": []
+                      }
+                    }
+                  ],
+                  "description": "",
+                  "keyword": "Feature",
+                  "language": "en",
+                  "location": {
+                    "column": 1,
+                    "line": 1
+                  },
+                  "name": "Legacy",
+                  "tags": []
+                },
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature"
+              }
+            },
+            {
+              "pickle": {
+                "astNodeIds": [
+                  "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2"
+                ],
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2",
+                "language": "en",
+                "location": {
+                  "column": 2,
+                  "line": 2
+                },
+                "name": "Ordinary World",
+                "steps": [
+                  {
+                    "astNodeIds": [
+                      "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#step-3-3"
+                    ],
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-step-0",
+                    "text": "legacy works",
+                    "type": "Context"
+                  }
+                ],
+                "tags": [],
+                "uri": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature"
+              }
+            },
+            {
+              "testCase": {
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case",
+                "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2",
+                "testRunStartedId": "run-0",
+                "testSteps": [
+                  {
+                    "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-step-0",
+                    "pickleStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-step-0",
+                    "stepDefinitionIds": [
+                      "step-definition-0"
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "testCaseStarted": {
+                "attempt": 0,
+                "id": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-attempt-0",
+                "testCaseId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case",
+                "timestamp": {
+                  "nanos": 152318000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepStarted": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-step-0",
+                "timestamp": {
+                  "nanos": 152322000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testStepFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-attempt-0",
+                "testStepId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-step-0",
+                "testStepResult": {
+                  "duration": {
+                    "nanos": 89000,
+                    "seconds": 0
+                  },
+                  "status": "PASSED"
+                },
+                "timestamp": {
+                  "nanos": 152411000,
+                  "seconds": 1795127008
+                }
+              }
+            },
+            {
+              "testCaseFinished": {
+                "testCaseStartedId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive/legacy.feature#node-2-2-case-attempt-0",
+                "timestamp": {
+                  "nanos": 152553000,
+                  "seconds": 1795127008
+                },
+                "willBeRetried": false
+              }
+            },
+            {
+              "testRunFinished": {
+                "success": true,
+                "testRunStartedId": "run-0",
+                "timestamp": {
+                  "nanos": 152576000,
+                  "seconds": 1795127008
+                }
+              }
+            }
+          ],
+          "trace": [
+            "legacy:body"
+          ]
+        }
+      },
+      "limitation": "Default generic inventory only; arbitrary generic instantiations are not claimed."
+    }
+  ],
+  "originalSourcesUnchanged": true,
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "generate-lockfile"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/generated-options",
+      "startedAt": "2026-11-19T22:21:50.207613+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:21:51.029613+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "build",
+        "--locked",
+        "--features",
+        "macros,output-messages"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/generated-options",
+      "startedAt": "2026-11-19T22:21:51.030436+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:23:26.750706+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "metadata",
+        "--locked",
+        "--format-version",
+        "1",
+        "--features",
+        "macros,output-messages"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/generated-options",
+      "startedAt": "2026-11-19T22:23:26.751554+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:23:27.684088+00:00"
+    },
+    {
+      "argv": [
+        "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0/debug/generated-options",
+        "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/generated-positive"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n",
+      "startedAt": "2026-11-19T22:23:27.798715+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:23:28.182572+00:00"
+    }
+  ]
+}

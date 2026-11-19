@@ -1,0 +1,174 @@
+{
+  "contractVersion": "2",
+  "kind": "kbd.adopted-contract",
+  "identity": {
+    "projectId": "00000000-0000-4000-8000-000000000039",
+    "runId": "phase39-run",
+    "phaseId": "phase39-fixture",
+    "planRevision": null,
+    "contractDigest": null
+  },
+  "digestNormalization": {
+    "algorithm": "sha256",
+    "command": "jq -S -c 'del(.identity.contractDigest) | del(.identity.planRevision)'",
+    "stalenessRule": "exact bound snapshot bytes"
+  },
+  "adoptionSource": "Phase39 isolated BDD fixture",
+  "decisionOwner": "fixture owner",
+  "amendmentPolicy": "existing signed canonical amendment path",
+  "releaseClaim": {
+    "userOperation": "project evidence",
+    "supportedEnvironments": [
+      "isolated fixture"
+    ],
+    "currentCapabilities": "read-only adapter",
+    "explicitUnknowns": [
+      "producer truth"
+    ]
+  },
+  "statusVocabulary": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_EXERCISED"
+  ],
+  "scenarioMatrix": [
+    {
+      "id": "VLBV-1",
+      "name": "Real operation",
+      "actor": "operator",
+      "usefulOutcome": "accept only actual evidence",
+      "sourceRequirement": "native: receipt projection",
+      "reasonNow": "finite phase",
+      "likelihood": "required",
+      "mandatory": true,
+      "ownerTask": "T1",
+      "productionEntry": "application",
+      "realCollaborators": [
+        "real Rust callback"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Actual observed value",
+        "expectedTruthSource": "independent-truth.txt",
+        "comparator": "real handler assert_eq(actual, expected)"
+      },
+      "negativeControl": {
+        "input": "wrong",
+        "expectedRejection": "independent fixed truth comparison",
+        "commandRef": "negative"
+      },
+      "fixtures": "isolated scratch",
+      "evidence": "original child process and NDJSON",
+      "limitations": [
+        "fixture demonstrates adapter admission, not arbitrary producer honesty"
+      ],
+      "invalidationKeys": [
+        "production.mjs",
+        "independent-truth.txt"
+      ],
+      "restoration": "application child exited with no live owned process"
+    }
+  ],
+  "functionalScope": [
+    "receipt projection"
+  ],
+  "resilienceScope": {
+    "policy": "required cases never waived",
+    "deferredOptional": []
+  },
+  "exclusions": [
+    "publication"
+  ],
+  "requiredSafetyChecks": [
+    {
+      "id": "isolated",
+      "description": "scratch only",
+      "scenarioIds": [
+        "VLBV-1"
+      ]
+    }
+  ],
+  "budgets": {
+    "timeMinutes": 60,
+    "toolCalls": 100,
+    "repairAttempts": 2,
+    "noProgressLimit": 3,
+    "tokenBudget": "UNKNOWN",
+    "tokenFallback": "time and calls",
+    "exhaustion": "BLOCKED"
+  },
+  "evidenceInvalidation": "candidate/source/contract changes",
+  "workerRoutes": {
+    "agent": "fixture",
+    "model": "none"
+  },
+  "boundaryPacket": {
+    "postImplementationOnly": true,
+    "singleRun": true,
+    "commands": [
+      {
+        "id": "run-0",
+        "kind": "scenario",
+        "argv": [
+          "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj/application",
+          "--vlbv-child",
+          "pass",
+          "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj/input-0.feature"
+        ],
+        "cwd": "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj",
+        "scenarioIds": [
+          "VLBV-1"
+        ]
+      },
+      {
+        "id": "negative",
+        "kind": "negativeControl",
+        "argv": [
+          "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj/application",
+          "--vlbv-child",
+          "fail",
+          "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj/negative.feature"
+        ],
+        "cwd": "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-A26ekj",
+        "scenarioIds": [
+          "VLBV-1"
+        ]
+      }
+    ],
+    "expectedEffects": [
+      "isolated processes"
+    ],
+    "requiredApprovals": "fixture owner",
+    "receipts": [
+      "process",
+      "oracle",
+      "control",
+      "cleanup"
+    ],
+    "cleanup": [
+      "scratch restored"
+    ],
+    "stopConditions": [
+      "failure"
+    ]
+  },
+  "status": {
+    "implementationComplete": true
+  },
+  "calibration": {
+    "examplesPath": "independent-truth.txt",
+    "sha256": "1ea7a9b77da8c725742658e48d686d50bdaaf7f8b0289b1061adec3d249e5071"
+  },
+  "method": {
+    "name": "VLBV",
+    "packVersion": "1.15.0",
+    "referenceSha256": "1ea7a9b77da8c725742658e48d686d50bdaaf7f8b0289b1061adec3d249e5071"
+  },
+  "closure": {
+    "implementationComplete": true,
+    "behaviorAccepted": false,
+    "releaseEligible": false,
+    "releaseAuthorized": false
+  }
+}

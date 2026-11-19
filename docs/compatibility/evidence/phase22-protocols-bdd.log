@@ -1,0 +1,23 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.51s
+     Running tests/messages_versions.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_versions-c786b9ac1bc9bcd2)
+Feature: Select a standard Messages protocol explicitly
+  Scenario Outline: Emit supported source and execution in the chosen protocol
+   ✔  Given a source-backed reporter configured for "34.2.1"
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "34.2.1" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+  Scenario Outline: Emit supported source and execution in the chosen protocol
+   ✔  Given a source-backed reporter configured for "35.0.0"
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "35.0.0" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+  Scenario: Existing constructors retain their protocol version
+   ✔  Given a source-backed reporter using its default protocol
+   ✔  When a rich outline with native hooks and retries executes
+   ✔  Then the report declares "34.2.1" and satisfies its official schema
+   ✔  And source, argument, hook and final attempt outcomes remain intact
+[Summary]
+1 feature
+3 scenarios (3 passed)
+12 steps (12 passed)

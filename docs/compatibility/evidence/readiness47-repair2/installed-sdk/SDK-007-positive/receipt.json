@@ -1,0 +1,25 @@
+{
+  "case": "SDK-007",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "forgedNumericAttemptRejected": "INVALID_MESSAGES",
+      "sameHostRecovery": true
+    },
+    {
+      "typedErrors": [
+        "INCOMPLETE_RUN",
+        "MISSING_REFERENCE",
+        "RUN_ALREADY_FINISHED",
+        "INVALID_MESSAGES"
+      ],
+      "interruptedAttemptsRetained": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true,
+  "successorSourceIdentities": {
+    "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/successor-source-identities.json",
+    "sha256": "42f3e0cefb16c695737c85d1db5572995f0dd4800e6a95aefa83ac4dc2005e79"
+  }
+}

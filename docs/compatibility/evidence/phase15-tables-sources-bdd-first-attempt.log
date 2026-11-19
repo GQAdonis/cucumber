@@ -1,0 +1,11 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0433]: cannot find module or crate `serde_json` in this scope
+   --> tests/sources.rs:325:25
+    |
+325 |     world.payloads.push(serde_json::to_string(&table.rows).unwrap());
+    |                         ^^^^^^^^^^ use of unresolved module or unlinked crate `serde_json`
+    |
+    = help: if you wanted to use a crate named `serde_json`, use `cargo add serde_json` to add it to your `Cargo.toml`
+
+For more information about this error, try `rustc --explain E0433`.
+error: could not compile `cucumber` (test "sources") due to 1 previous error

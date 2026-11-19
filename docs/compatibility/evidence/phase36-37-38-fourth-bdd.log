@@ -1,0 +1,172 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.42s
+     Running tests/lexical_semantics.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/lexical_semantics-6bd18103e98e1628)
+Feature: Explicit Gherkin43 lexical semantics preserve source and official token behavior
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "NBSP" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "BOM" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "EM SPACE" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "IDEOGRAPHIC SPACE" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "vertical tab" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "form feed" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "carriage return" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "line separator" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Unicode token padding is interpreted without rewriting the source
+   ✔  Given a classic source padded with "paragraph separator" around declarations tags steps and Examples
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✘  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:6:5
+      Matched: tests/lexical_semantics.rs:85:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 0
+       right: 1
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "BOM trims titles and step text"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "NEL remains title and step text"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "NEL remains inside a tag"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "BOM separates tags"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "Unicode-indented directive and comment"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Token content uses ECMAScript whitespace instead of Rust whitespace
+   ✔  Given the lexical source case "Unicode whitespace before a trailing tag comment"
+   ✔  When it is parsed and executed with explicit Gherkin43 lexical semantics
+   ✔  Then the complete AST and Pickles equal the pinned official Gherkin43 compiler
+   ✔  And real handlers receive the official trimmed names arguments and inherited tags
+  Scenario Outline: Characters outside ECMAScript whitespace are not token padding
+   ✔  Given the lexical source case "NEL before Feature"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both reject it without a successful run or invented source nodes
+  Scenario Outline: Characters outside ECMAScript whitespace are not token padding
+   ✔  Given the lexical source case "NBSP inside a tag"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both reject it without a successful run or invented source nodes
+  Scenario Outline: Featureless documents use the same explicit whitespace policy
+   ✔  Given a featureless source containing "NBSP"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both produce an empty document with the exact captured source
+  Scenario Outline: Featureless documents use the same explicit whitespace policy
+   ✔  Given a featureless source containing "BOM"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both produce an empty document with the exact captured source
+  Scenario Outline: Featureless documents use the same explicit whitespace policy
+   ✔  Given a featureless source containing "EM SPACE"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both produce an empty document with the exact captured source
+  Scenario Outline: Featureless documents use the same explicit whitespace policy
+   ✔  Given a featureless source containing "line separator"
+   ✔  When native and official compilers interpret the source
+   ✔  Then both produce an empty document with the exact captured source
+  Scenario: Legacy token padding remains unchanged
+   ✔  Given a classic source padded with "NBSP" around declarations tags steps and Examples
+   ✔  When it is parsed with the default legacy lexical policy
+   ✔  Then legacy parsing still rejects the Unicode token indentation
+  Scenario: Legacy trailing NEL trimming remains unchanged
+   ✔  Given the lexical source case "NEL remains title and step text"
+   ✔  When it is parsed with the default legacy lexical policy
+   ✔  Then native legacy values retain their previous Rust trimming behavior
+  Scenario: Captured lexical policy survives source replacement and deletion
+   ✔  Given a classic source padded with "EM SPACE" around declarations tags steps and Examples
+   ✘  When the immutable source snapshot is retained and the file is replaced then deleted
+      Step failed:
+      Defined: tests/features/lexical_semantics/lexical.feature:68:5
+      Matched: tests/lexical_semantics.rs:128:1
+      Step panicked. Captured output: called `Option::unwrap()` on a `None` value
+[Summary]
+1 feature
+24 scenarios (14 passed, 10 failed)
+77 steps (67 passed, 10 failed)
+
+thread 'main' (105418276) panicked at src/cucumber.rs:1537:13:
+10 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test lexical_semantics`

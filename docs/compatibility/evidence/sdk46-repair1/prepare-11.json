@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "npm",
+    "install",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/node",
+  "startedAt": "2026-11-18T11:06:55.499019+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:06:56.144647+00:00",
+  "stdout": "prepare-11.stdout",
+  "stderr": "prepare-11.stderr"
+}

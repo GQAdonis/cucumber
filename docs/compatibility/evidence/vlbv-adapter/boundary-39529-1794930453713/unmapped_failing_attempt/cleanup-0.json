@@ -1,0 +1,18 @@
+{
+  "scenarioId": "VLBV-1",
+  "runId": "stream-0",
+  "candidateDigest": "063ef4e680059451e35cdaada4986acce2ecbb5e78f722da1f608568c618b1ec",
+  "requirement": "application child exited with no live owned process",
+  "status": "PASS",
+  "observed": "child process exited; no owned live process",
+  "evidence": [
+    {
+      "path": "restored-0.json",
+      "sha256": "b25361abefd75bfba21910020dde130001146d643106eda64cc3ed457e0355f1"
+    },
+    {
+      "path": "run-0.process.json",
+      "sha256": "7d7bb23bb7c934059ec29938ca60fd0257b2f21bc7334726098ba9da1b9b4015"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "case": "SDK-001",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "officialGoodFixtures": 50,
+      "format": "gherkin",
+      "hosts": [
+        "rust",
+        "node",
+        "python"
+      ]
+    },
+    {
+      "officialBadFixtures": 12
+    },
+    {
+      "control": "changed original source location",
+      "rejected": "full source graph differs from independent oracle"
+    },
+    {
+      "control": "dangling original AST reference",
+      "rejected": "dangling graph references"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

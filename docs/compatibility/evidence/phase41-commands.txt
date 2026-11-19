@@ -1,0 +1,5 @@
+set -o pipefail
+cargo test --features output-messages,tracing --test generated_ordering 2>&1 | tee docs/compatibility/evidence/phase41-first-bdd.log
+# exit0,10 scenarios/45 steps
+cargo test --features output-messages,tracing --test ordered_scheduling --test dynamic_assignment --test retry_policy --test messages_logs --test source_paths 2>&1 | tee docs/compatibility/evidence/phase41-affected-bdd.log
+# exit0,69 scenarios/282 steps

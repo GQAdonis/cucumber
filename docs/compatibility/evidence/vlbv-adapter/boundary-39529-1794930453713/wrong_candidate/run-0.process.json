@@ -1,0 +1,28 @@
+{
+  "projectId": "00000000-0000-4000-8000-000000000039",
+  "runId": "phase39-run",
+  "phase": "phase39-fixture",
+  "contractDigest": "715b19a6e049a95ca10ecf27eef85eecc0b48da32826b97beb54a0122f64e500",
+  "candidateDigest": "0000000000000000000000000000000000000000000000000000000000000000",
+  "commandId": "run-0",
+  "argv": [
+    "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-UHj1Xg/application",
+    "--vlbv-child",
+    "pass",
+    "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-UHj1Xg/input-0.feature"
+  ],
+  "cwd": "/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-UHj1Xg",
+  "startedAt": "2026-11-17T15:47:37.414Z",
+  "finishedAt": "2026-11-17T15:47:37.772Z",
+  "exitCode": 0,
+  "messages": {
+    "path": "run-0.ndjson",
+    "sha256": "ad8b03715bbd73aa54ca75f690d5fca4b0cd3e425b77dd63005ea4bee928b5f2"
+  },
+  "pid": 39714,
+  "signal": null,
+  "stderr": {
+    "path": "run-0.stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

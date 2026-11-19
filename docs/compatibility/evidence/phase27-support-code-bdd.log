@@ -1,0 +1,78 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.56s
+     Running tests/messages_support_code.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_support_code-1e82ae515b79832c)
+Feature: Actual registered support code is discoverable in standard Messages
+  Scenario: Consumers resolve a macro definition to its actual Rust source
+   ✔  Given a support-code run configured as "macro"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves the actual compiled regex and Rust registration location
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "unique"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "ambiguous"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 2 definitions and observes "AMBIGUOUS"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "undefined"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 0 definitions and observes "UNDEFINED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "keyword-specific"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 0 definitions and observes "UNDEFINED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "keyword-independent"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "independent-late"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario Outline: Definition references follow the selected matching policy
+   ✔  Given a support-code run configured as "cross-keyword"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 2 definitions and observes "AMBIGUOUS"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Later collection builders replace the observed registry and its policy
+   ✔  Given a support-code run configured as "replacement"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then only the final replacement collection is reported and executed
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Duplicate raw registrations retain existing replacement semantics
+   ✔  Given a support-code run configured as "duplicate"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves one raw definition with an empty source reference
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Definition identities remain stable across retries
+   ✔  Given a support-code run configured as "retry"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then both attempts reference the same single registered definition
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Custom runners may omit support-code metadata without implementing a new method
+   ✔  Given a support-code run configured as "custom"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then unsupported definition metadata is omitted rather than fabricated
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Definitions remain discoverable for planned steps skipped after a failure
+   ✔  Given a support-code run configured as "skipped"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the skipped planned step still resolves its actual definition
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+  Scenario: Type-changing runner builders preserve the reporting handoff
+   ✔  Given a support-code run configured as "builder-chain"
+   ✔  When that run completes and the pinned official Query reads its Messages
+   ✔  Then the consumer resolves 1 definitions and observes "PASSED"
+   ✔  And every emitted envelope satisfies the pinned Messages schema
+[Summary]
+1 feature
+14 scenarios (14 passed)
+56 steps (56 passed)

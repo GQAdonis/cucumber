@@ -1,0 +1,383 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 18.07s
+     Running tests/dynamic_assignment.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/dynamic_assignment-0fde20918619294f)
+Feature: Assign logical cases using the resources held by active cases
+  Scenario: Cases sharing a browser resource cannot overlap
+   ✔  Given ordered cases configured for "shared browser"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then cases sharing a browser resource execute exclusively
+   ✔  And observed decisions refer to actual logical cases rather than worker identities
+  Scenario: Independent browser and workspace resources can overlap
+   ✔  Given ordered cases configured for "independent resources"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then independent cases overlap within the configured capacity
+   ✔  And assignment callbacks see the previously admitted logical reservations
+  Scenario: The first eligible queued case can bypass an ineligible concurrent case
+   ✔  Given ordered cases configured for "first eligible"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the first eligible candidate is admitted in queue order
+   ✔  And an earlier rejected case remains queued for later consideration
+  Scenario: No eligible candidate waits for actual progress
+   ✔  Given ordered cases configured for "wait for release"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then blocked cases remain unassigned until the active case releases its reservation
+   ✔  And the dispatcher waits without repeated idle decisions or unbounded record growth
+  Scenario: A delayed retry retains its resource reservation
+   ✔  Given ordered cases configured for "retry delay"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the retrying logical case remains assigned throughout its delay
+   ✔  And its fresh retry World does not create a second logical admission
+   ✔  And independent resources can proceed while conflicting resources remain blocked
+  Scenario: Assignment cannot bypass a queued Serial barrier
+   ✔  Given ordered cases configured for "queued Serial barrier"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then no candidate after the first Serial barrier is evaluated or admitted early
+   ✔  And the Serial case starts only after all preceding assigned cases complete
+  Scenario: An active Serial case remains exclusive even if the predicate accepts everything
+   ✔  Given ordered cases configured for "active Serial"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the Serial case never overlaps another logical reservation
+  Scenario: Idle fallback does not bypass a rejected Serial front
+   ✔  Given ordered cases configured for "rejected Serial"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then idle fallback chooses the Serial front and preserves its exclusivity
+  Scenario: An always-rejecting policy progresses with a visible aggregate warning
+   ✔  Given ordered cases configured for "idle fallback"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then each idle fallback admits the queue head without claiming predicate eligibility
+   ✔  And a single aggregate warning reports the actual idle intervention count on stderr
+   ✔  And skipped predicate choices are not fabricated callback or worker execution records
+  Scenario: An application receives fallback warnings through its configured sink
+   ✔  Given ordered cases configured for "custom warning sink"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the configured sink receives one typed aggregate warning
+   ✔  And the same warning is retained in the assignment decision store
+   ✔  And the default stderr warning is suppressed
+  Scenario: Expanded outline cases retain their actual source and tag context
+   ✔  Given ordered cases configured for "outline resource tags"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the predicate observes expanded native source identities and inherited resource tags
+   ✔  And decision snapshots preserve their fixed ordered-plan positions
+  Scenario: Configuration survives cloning and type-changing builders
+   ✔  Given ordered cases configured for "builder preservation"
+   ✔  When the application runs with explicit dynamic assignment
+   ✔  Then the installed policy and shared decision store remain active
+  Scenario: Native scheduling remains unchanged without explicit assignment
+   ✔  Given ordered cases configured for "default native"
+   ✔  When the application runs without dynamic assignment
+   ✔  Then ordinary native scheduling executes without assignment callbacks or warnings
+  Scenario: A predicate programming error is not converted into idle fallback
+   ✔  Given ordered cases configured for "predicate panic"
+   ✔  When the application catches its configured predicate failure
+   ✔  Then the original panic propagates and no candidate is admitted by fallback
+   ✔  And no completed run or successful callback is invented
+[Summary]
+1 feature
+14 scenarios (14 passed)
+55 steps (55 passed)
+     Running tests/messages_logs.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_logs-d41e9952a0f9fd90)
+Feature: Native tracing logs remain faithful in Messages reports
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "plain" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "plain" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "hooks" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "hooks" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "retry" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "retry" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "concurrent" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "concurrent" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Real tracing logs survive reporting without changed attribution
+   ✔  Given a native tracing application in "fanout" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "fanout" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retries" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retries" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 0 delays
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retry delay" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retry delay" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 2 delays
+[Summary]
+1 feature
+7 scenarios (7 passed)
+46 steps (46 passed)
+     Running tests/ordered_scheduling.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-cdb1142caf0c5584)
+Feature: Schedule a complete selected application in a reproducible global order
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "defined" order with one active case
+   ✔  Then actual case starts follow the "defined" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "reverse" order with one active case
+   ✔  Then actual case starts follow the "reverse" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "0"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "reproducible"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "café-🦀"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario: Filtering precedes the global permutation
+   ✔  Given an application with selected and excluded cases in several sources
+   ✔  When the selected application runs in random order with string seed "selected"
+   ✔  Then its actual starts match shuffling only the selected cases
+   ✔  And excluded cases construct no World and invoke no callbacks
+  Scenario: A delayed source producer can finish before any application callbacks
+   ✔  Given a source stream whose second feature and completion wait on controlled gates
+   ✔  When the application requests explicit reverse scheduling
+   ✔  Then the producer reaches both gates without executor starvation
+   ✔  And no World or application hook starts before source completion
+   ✔  When the remaining source and completion gates are released
+   ✔  Then actual case starts follow the complete reverse sequence
+  Scenario: Source errors survive buffered plan collection
+   ✔  Given a source stream containing valid cases and a parse error
+   ✔  When the complete application runs in defined order without fail fast
+   ✔  Then the parse error remains visible and makes the run unsuccessful
+   ✔  And all valid selected cases execute in defined order
+  Scenario: Concurrent cases overlap without exceeding configured capacity
+   ✔  Given three ordered concurrent cases coordinated by entry and release gates
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the first two cases enter before either is released
+   ✔  And the third case enters only after capacity is released
+   ✔  And observed active case count never exceeds two
+  Scenario: A serial case is an exclusive barrier in the selected global order
+   ✔  Given the ordered cases concurrent A, concurrent B, serial C and concurrent D
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then A and B may overlap but C waits until both have finished
+   ✔  And D waits until C has finished
+   ✔  And C never overlaps another case
+  Scenario: A retry retains its logical case slot and fresh attempt identity
+   ✔  Given a first case that fails once and succeeds on its second attempt
+   ✔  And a following case waiting for the only execution slot
+   ✔  When the complete application runs in defined order with one active case
+   ✔  Then both attempts of the first case finish before the following case starts
+   ✔  And retry attempts have distinct ScenarioIds and Worlds with unchanged source identity
+   ✔  And terminal counters report two passed cases and one recovered failed attempt
+  Scenario: A delayed retry retains its slot while unrelated capacity remains useful
+   ✔  Given a retrying case with a controlled retry delay and two following cases
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the retrying case retains one slot while another case can progress
+   ✔  And the delayed retry starts only after its delay gate is released
+   ✔  And no more than two logical cases are active
+  Scenario: A serial case retains exclusivity across retries and retry delay
+   ✔  Given a serial case that retries after a controlled delay before another case
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the following case cannot enter during either serial attempt or its delay
+   ✔  And it enters after the serial case reaches its terminal result
+  Scenario: Fail fast observes terminal failure after retry exhaustion
+   ✔  Given a first case that fails every permitted attempt and a following case
+   ✔  When the complete application runs in defined order with one active case and fail fast
+   ✔  Then all permitted attempts of the first case run
+   ✔  And the following case never constructs a World or invokes callbacks
+   ✔  And the run reports the terminal failure without duplicate feature finishes
+  Scenario: JavaScript parallel zero explicitly selects serial execution
+   ✔  Given three selected cases and explicit JavaScript parallel value zero
+   ✔  When the complete application runs in defined order
+   ✔  Then all three cases execute with an active case limit of one
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "CLI"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "builder"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario: Empty buffered input completes without application cases
+   ✔  Given a source stream that completes without selected cases
+   ✔  When the complete application runs in defined order
+   ✔  Then the run completes without constructing a World or dispatching a case
+  Scenario: Legacy callers keep their existing scheduling policy
+   ✔  Given the existing legacy serial-priority fixture with positive concurrency
+   ✔  When the application runs without explicit scheduling options
+   ✔  Then the established legacy fixture dispatch and retry behavior is preserved
+[Summary]
+1 feature
+19 scenarios (19 passed)
+81 steps (81 passed)
+     Running tests/retry_policy.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/retry_policy-3c4891c7ef3118ba)
+Feature: Validate an explicit retry budget and official inherited tag gate
+  Scenario: A typed tag gate requires a positive budget before execution
+   ✔  Given retry budget 0 and an explicitly supplied official tag gate
+   ✔  When the application validates its retry policy
+   ✔  Then validation rejects the configuration before parsing or constructing a World
+  Scenario: Zero without a gate explicitly disables retry
+   ✔  Given an application with retry policy "disabled"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "feature tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Rule tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "scenario tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Examples tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario: A native retry tag cannot bypass an unmatched official gate
+   ✔  Given an application with retry policy "unmatched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario: A native retry tag cannot enlarge the explicit budget
+   ✔  Given an application with retry policy "matched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: Explicit typed policy is authoritative over legacy CLI retry configuration
+   ✔  Given an application with retry policy "conflicting legacy CLI"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "FAILED"
+  Scenario: A later custom retry-options callback replaces the policy callback
+   ✔  Given an application with retry policy "custom override"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "pending"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "PENDING"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "ambiguous"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "AMBIGUOUS"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "undefined"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "UNDEFINED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "skipped"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "SKIPPED"
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "recovered"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 2 attempts are reported and its final status is "PASSED"
+   ✔  And schema-valid Messages and official Query retain the final success "true"
+   ✔  And each attempt owns a fresh World and cleanup completes
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "exhausted"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 3 attempts are reported and its final status is "FAILED"
+   ✔  And schema-valid Messages and official Query retain the final success "false"
+   ✔  And each attempt owns a fresh World and cleanup completes
+[Summary]
+1 feature
+16 scenarios (16 passed)
+56 steps (56 passed)
+     Running tests/source_paths.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/source_paths-53c5ef7e91e0a51f)
+Feature: Discover an ordered selection of reusable feature sources
+  Scenario: Preserve the supplied file sequence
+   ✔  Given a source selection "files"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Sort each directory expansion without sorting the full selection
+   ✔  Given a source selection "directories"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: Deduplicate overlapping selections at first occurrence
+   ✔  Given a source selection "overlap"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A,C"
+   ✔  And each selected source constructs one World
+  Scenario: Preserve sequence across explicit globs
+   ✔  Given a source selection "globs"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,C,A"
+  Scenario: An empty explicit selection executes no sources
+   ✔  Given a source selection "empty"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are ""
+  Scenario: A missing literal file remains an observable parse error
+   ✔  Given a source selection "missing"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: An unmatched glob contributes no source
+   ✔  Given a source selection "unmatched"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+  Scenario: Syntax errors do not hide valid selected sources
+   ✔  Given a source selection "invalid"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A"
+   ✔  And one source error makes the run unsuccessful
+  Scenario: Source format still governs directory discovery
+   ✔  Given a source selection "mixed formats"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "M,A"
+   ✔  And captured sources retain their exact original contents
+  Scenario: Source line selectors compose with the ordered selection
+   ✔  Given a source selection "lines"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B"
+  Scenario: The explicit source plan takes precedence over the legacy CLI glob
+   ✔  Given a source selection "cli override"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "B,A"
+  Scenario: The default parser retains sorted directory discovery
+   ✔  Given a source selection "legacy"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "A,B,C"
+  Scenario: Sort valid Unicode filenames using the official string order
+   ✔  Given a source selection "unicode paths"
+   ✔  When the selected source plan runs
+   ✔  Then observed source cases are "U,V"
+[Summary]
+1 feature
+13 scenarios (13 passed)
+44 steps (44 passed)

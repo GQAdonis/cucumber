@@ -1,0 +1,110 @@
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.02s
+     Running tests/messages_docstrings.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_docstrings-2f18bad5825bcfb1)
+Feature: One official doc-string value across execution and portable reports
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "closing suffix" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "closing suffix" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "repeated escapes" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "repeated escapes" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "NBSP indentation" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "NBSP indentation" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "mixed Unicode indent" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "mixed Unicode indent" syntax and "CRLF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "BOM indentation" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "inactive escapes" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "short indentation" syntax and "CRLF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "quotes" doc-string using "whitespace boundary" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario Outline: Native handlers and Messages agree with the official parser
+   ✔  Given a "backticks" doc-string using "all whitespace" syntax and "LF" line endings
+   ✔  When the feature runs with Gherkin 43 doc-string semantics and captured Messages
+   ✔  Then the actual handler payload equals the official Pickle content
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And doc-string media type and delimiter location match the official AST
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario: Legacy payload remains independent of normalized report content
+   ✔  Given a legacy doc-string containing repeated escaped quotes
+   ✔  When the feature runs with legacy doc-string semantics and captured Messages
+   ✔  Then the handler retains the exact legacy payload
+   ✔  And the complete source AST and Pickles equal the pinned official parser modulo IDs and URI
+   ✔  And every envelope satisfies Messages 34 and the run passed
+  Scenario: Legacy delimiter acceptance remains unchanged
+   ✔  Given a doc-string delimiter indented with NBSP
+   ✔  When it is parsed with the legacy native policy
+   ✔  Then the legacy parser still rejects that newly opt-in syntax
+[Summary]
+1 feature
+15 scenarios (15 passed)
+86 steps (86 passed)

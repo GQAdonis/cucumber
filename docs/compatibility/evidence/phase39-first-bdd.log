@@ -1,0 +1,7 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.63s
+     Running tests/vlbv_adapter.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/vlbv_adapter-7c80a493dfd3910b)
+[Summary]
+0 features
+0 scenarios
+0 steps

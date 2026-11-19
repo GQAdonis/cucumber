@@ -1,0 +1,144 @@
+(node:28288) ExperimentalWarning: localStorage is not available because --localstorage-file was not provided.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[ERROR] Error: Unable to build website for locale en.
+    at tryToBuildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:76:15)
+    at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9
+    ... 4 lines matching cause stack trace ...
+    at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+  [cause]: Error: Docusaurus static site generation failed for 7 paths:
+  - "/preview/cucumber/compatibility/"
+  - "/preview/cucumber/contributing/"
+  - "/preview/cucumber/evidence/"
+  - "/preview/cucumber/getting-started/"
+  - "/preview/cucumber/sdk/"
+  - "/preview/cucumber/vlbv/"
+  - "/preview/cucumber/"
+      at throwSSGError (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:56:11)
+      at createGlobalSSGResult (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)
+      ... 11 lines matching cause stack trace ...
+      at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+    [cause]: AggregateError
+        at throwSSGError (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:57:16)
+        at createGlobalSSGResult (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgGlobalResult.js:66:9)
+        at /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:30:68
+        at async executeSSG (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgExecutor.js:143:20)
+        at async buildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/buildLocale.js:88:31)
+        at async runBuildLocaleTask (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:91:5)
+        at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:72:13
+        at async tryToBuildLocale (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:68:9)
+        at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:34:9
+        at async mapAsyncSequential (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/utils/lib/jsUtils.js:21:24)
+        at async Command.build (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/build/build.js:33:5)
+        at async Promise.all (index 0)
+        at async runCLI (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/commands/cli.js:56:5)
+        at async file:///Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/bin/docusaurus.mjs:44:3 {
+      [errors]: [
+        Error: Can't render static file for pathname "/preview/cucumber/compatibility/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/contributing/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/evidence/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/getting-started/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/sdk/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/vlbv/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        },
+        Error: Can't render static file for pathname "/preview/cucumber/"
+            at generateStaticFile (/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/core/lib/ssg/ssgRenderer.js:131:20)
+            at async /Volumes/T7/Projects/references/cucumber/docs-site/node_modules/p-map/index.js:57:22 {
+          [cause]: TypeError: Cannot read properties of undefined (reading 'id')
+              at DocItem (server.bundle.js:3576:89)
+              at renderWithHooks (server.bundle.js:22343:18)
+              at renderElement (server.bundle.js:22481:14)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at renderElement (server.bundle.js:22926:11)
+              at retryNode (server.bundle.js:23199:16)
+              at renderNodeDestructive (server.bundle.js:22993:7)
+              at finishFunctionComponent (server.bundle.js:22384:9)
+              at renderElement (server.bundle.js:22483:7)
+        }
+      ]
+    }
+  }
+}

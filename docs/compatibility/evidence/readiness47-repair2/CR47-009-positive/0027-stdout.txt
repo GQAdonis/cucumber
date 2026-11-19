@@ -1,0 +1,104 @@
+Feature: Native Markdown parsing retains official source semantics
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "misc.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "datatables.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "docstrings.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "tags.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "French fallback"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "language-looking prose"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "bullets and Unicode columns"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "indentation and separator rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "variable fences and media"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "table then docstring"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "docstring then table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "rule backgrounds and examples"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "blank first line"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "empty source"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "duplicate docstrings"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "table docstring table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "inconsistent rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "unterminated fence"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "dangling tags"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario: Markdown remains independently available from Messages output
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then the parser API returns an owned native feature without a reporting dependency
+[Summary]
+1 feature
+21 scenarios (21 passed)
+78 steps (78 passed)

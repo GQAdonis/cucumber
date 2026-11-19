@@ -1,0 +1,194 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.26s
+     Running tests/messages.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages-76d14bce877697dc)
+Feature: Portable Cucumber execution reports
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "passing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "failing" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "undefined" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "ambiguous" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "parallel" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Exchange source and execution outcomes with standard consumers
+   ✔  Given a "empty" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:9:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "initial conjunction" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:27:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "wildcard" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:27:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Preserve official pickle keyword context
+   ✔  Given a "inherited background" plain English feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then every envelope validates against the official Messages 34.2.1 schema
+      Step failed:
+      Defined: tests/features/messages/messages.feature:27:5
+      Matched: tests/messages.rs:126:1
+      Step panicked. Captured output: unexpected reporting error: Some("invalid Messages event sequence: run has not started")
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "outline" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "scenario outlines"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "scenario outlines", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "table" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "step arguments"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "step arguments", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "docstring" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "step arguments"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "step arguments", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "hooks" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "hooks"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "hooks", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "retries" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "retries"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "retries", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "parse error" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✔  Then reporting fails visibly with "parser errors"
+   ✔  And no successful completed run is emitted
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "rule" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "rules"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "rules", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "tags" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "tags"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "tags", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "description" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "descriptions"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "descriptions", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "language" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "English"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "English", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "missing source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "source unavailable"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "source unavailable", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "changed source" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "differs from runner AST"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "differs from runner AST", got "invalid Messages event sequence: run has not started"
+  Scenario Outline: Refuse unsupported information instead of fabricating interoperability
+   ✔  Given a "empty with background" unsupported feature run
+   ✔  When the run is reported as Cucumber Messages
+   ✘  Then reporting fails visibly with "empty scenarios with backgrounds"
+      Step failed:
+      Defined: tests/features/messages/messages.feature:40:5
+      Matched: tests/messages.rs:269:1
+      Step panicked. Captured output: expected "empty scenarios with backgrounds", got "invalid Messages event sequence: run has not started"
+[Summary]
+1 feature
+23 scenarios (1 passed, 22 failed)
+70 steps (48 passed, 22 failed)
+
+thread 'main' (102057546) panicked at src/cucumber.rs:1273:13:
+22 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test messages`

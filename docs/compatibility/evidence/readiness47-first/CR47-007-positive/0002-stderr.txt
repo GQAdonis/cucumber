@@ -1,0 +1,294 @@
+ Downloading crates ...
+  Downloaded borrow-or-share v0.2.0
+  Downloaded anstyle v1.0.0
+  Downloaded typed-builder-macro v0.23.0
+  Downloaded scopeguard v1.1.0
+  Downloaded lock_api v0.4.6
+  Downloaded syn v0.15.22
+  Downloaded zerofrom v0.1.3
+  Downloaded thread_local v1.1.4
+  Downloaded zerovec-derive v0.11.1
+  Downloaded yoke v0.8.0
+  Downloaded uuid v1.2.2
+  Downloaded zerotrie v0.2.0
+  Downloaded unicode-linebreak v0.1.4
+  Downloaded portable-atomic v1.7.0
+  Downloaded clap_builder v4.4.4
+  Downloaded zerovec v0.11.1
+  Downloaded zerocopy v0.7.31
+  Downloaded fancy-regex v0.16.0
+  Downloaded tracing-subscriber v0.3.16
+  Downloaded bstr v0.1.2
+  Downloaded syn v1.0.73
+  Downloaded quick-xml v0.39.0
+  Downloaded syn v2.0.89
+  Downloaded icu_properties_data v2.0.0
+  Downloaded textwrap v0.16.0
+  Downloaded sharded-slab v0.1.4
+  Downloaded rustix v0.38.0
+  Downloaded serde_json v1.0.18
+  Downloaded dtoa v0.4.0
+  Downloaded crossbeam-channel v0.4.0
+  Downloaded regex-automata v0.4.8
+  Downloaded base64 v0.22.0
+  Downloaded tracing-core v0.1.30
+  Downloaded smallvec v1.13.1
+  Downloaded libc v0.2.155
+  Downloaded globwalk v0.9.0
+  Downloaded serde_with v3.0.0
+  Downloaded serde_derive v1.0.220
+  Downloaded rand v0.10.0
+  Downloaded rand v0.8.0
+  Downloaded num-bigint v0.4.0
+  Downloaded memchr v2.6.0
+  Downloaded icu_provider v2.0.0
+  Downloaded aho-corasick v1.0.0
+  Downloaded aho-corasick v0.7.3
+  Downloaded writeable v0.6.0
+  Downloaded walkdir v2.2.7
+  Downloaded unicode-width v0.1.10
+  Downloaded unicode-ident v1.0.0
+  Downloaded typed-builder v0.23.0
+  Downloaded tracing-log v0.1.3
+  Downloaded tracing-attributes v0.1.11
+  Downloaded tokio v1.40.0
+  Downloaded tokio-macros v2.4.0
+  Downloaded tinystr v0.8.0
+  Downloaded thiserror-impl v2.0.0
+  Downloaded thiserror v2.0.0
+  Downloaded tempfile v3.2.0
+  Downloaded synstructure v0.13.0
+  Downloaded synstructure v0.12.4
+  Downloaded slab v0.4.7
+  Downloaded serde_with_macros v3.0.0
+  Downloaded serde v1.0.220
+  Downloaded pin-project v1.0.2
+  Downloaded icu_locale_core v2.0.0
+  Downloaded icu_collections v2.0.0
+  Downloaded derive_more v2.0.0
+  Downloaded darling_core v0.20.0
+  Downloaded clap v4.4.4
+  Downloaded bitflags v2.4.1
+  Downloaded zerofrom-derive v0.1.1
+  Downloaded utf8parse v0.2.1
+  Downloaded unicode-xid v0.2.2
+  Downloaded terminal_size v0.3.0
+  Downloaded serial_test_derive v3.0.0
+  Downloaded quote v1.0.35
+  Downloaded proc-macro2 v1.0.91
+  Downloaded once_cell v1.20.1
+  Downloaded num-integer v0.1.44
+  Downloaded log v0.4.17
+  Downloaded ignore v0.4.11
+  Downloaded icu_normalizer v2.0.0
+  Downloaded globset v0.4.3
+  Downloaded getrandom v0.4.0
+  Downloaded derive_more-impl v2.0.0
+  Downloaded deranged v0.5.2
+  Downloaded dashmap v5.1.0
+  Downloaded darling_macro v0.20.0
+  Downloaded ctor v0.1.0
+  Downloaded crossbeam-utils v0.8.14
+  Downloaded crossbeam-utils v0.7.0
+  Downloaded clap_derive v4.4.2
+  Downloaded ahash v0.8.4
+  Downloaded smawk v0.3.1
+  Downloaded serial_test v3.0.0
+  Downloaded serde_core v1.0.220
+  Downloaded same-file v1.0.4
+  Downloaded remove_dir_all v0.5.0
+  Downloaded rand_core v0.6.2
+  Downloaded ppv-lite86 v0.2.8
+  Downloaded pin-project-internal v1.0.2
+  Downloaded parking_lot_core v0.9.0
+  Downloaded num_cpus v1.13.1
+  Downloaded num-rational v0.4.0
+  Downloaded num-iter v0.1.42
+  Downloaded num-complex v0.4.0
+  Downloaded nu-ansi-term v0.46.0
+  Downloaded memchr v1.0.1
+  Downloaded litemap v0.8.0
+  Downloaded linked-hash-map v0.5.3
+  Downloaded lazy_static v1.3.0
+  Downloaded itoa v1.0.1
+  Downloaded itoa v0.4.0
+  Downloaded inventory v0.3.0
+  Downloaded inflections v1.1.0
+  Downloaded icu_properties v2.0.0
+  Downloaded icu_normalizer_data v2.0.0
+  Downloaded heck v0.4.0
+  Downloaded fraction v0.15.0
+  Downloaded displaydoc v0.2.3
+  Downloaded darling v0.20.0
+  Downloaded colorchoice v1.0.0
+  Downloaded clap_lex v0.5.0
+  Downloaded cfg-if v1.0.0
+  Downloaded cfg-if v0.1.2
+  Downloaded yoke-derive v0.8.0
+  Downloaded version_check v0.9.4
+  Downloaded unicode-xid v0.1.0
+  Downloaded tracing v0.1.22
+  Downloaded ref-cast-impl v1.0.16
+  Downloaded ref-cast v1.0.16
+  Downloaded rand_chacha v0.3.0
+  Downloaded quote v0.6.10
+  Downloaded potential_utf v0.1.2
+  Downloaded pin-project-lite v0.2.11
+  Downloaded overload v0.1.1
+  Downloaded outref v0.5.0
+  Downloaded mime v0.3.16
+  Downloaded ghost v0.1.4
+  Downloaded getrandom v0.2.7
+  Downloaded autocfg v0.1.6
+  Downloaded either v1.6.0
+  Downloaded autocfg v1.0.0
+  Downloaded anyhow v1.0.72
+  Downloaded ahash v0.7.7
+  Downloaded Inflector v0.11.0
+  Downloaded console v0.16.0
+  Downloaded bytecount v0.6.0
+  Downloaded proc-macro2 v0.4.21
+  Downloaded junit-report v0.9.0
+  Downloaded anstyle-parse v0.2.0
+  Downloaded anstream v0.5.0
+  Downloaded num v0.4.0
+  Downloaded errno v0.3.1
+  Downloaded anstyle-query v1.0.0
+   Compiling proc-macro2 v1.0.91
+   Compiling unicode-ident v1.0.0
+   Compiling unicode-xid v0.2.2
+   Compiling autocfg v1.0.0
+   Compiling libc v0.2.155
+   Compiling syn v1.0.73
+   Compiling cfg-if v1.0.0
+   Compiling memchr v2.6.0
+   Compiling serde_core v1.0.220
+   Compiling serde v1.0.220
+   Compiling version_check v0.9.4
+   Compiling stable_deref_trait v1.2.0
+   Compiling once_cell v1.20.1
+   Compiling lazy_static v1.3.0
+   Compiling smallvec v1.13.1
+   Compiling num-traits v0.2.19
+   Compiling aho-corasick v1.0.0
+   Compiling regex-syntax v0.8.5
+   Compiling ahash v0.7.7
+   Compiling log v0.4.17
+   Compiling quote v1.0.35
+   Compiling regex-automata v0.4.8
+   Compiling syn v2.0.89
+   Compiling getrandom v0.2.7
+   Compiling num-integer v0.1.44
+   Compiling slab v0.4.7
+   Compiling writeable v0.6.0
+   Compiling autocfg v0.1.6
+   Compiling litemap v0.8.0
+   Compiling regex v1.11.1
+   Compiling proc-macro2 v0.4.21
+   Compiling parking_lot_core v0.9.0
+   Compiling pin-project-lite v0.2.11
+   Compiling crossbeam-utils v0.7.0
+   Compiling hashbrown v0.12.3
+   Compiling num-bigint v0.4.0
+   Compiling icu_normalizer_data v2.0.0
+   Compiling rustix v0.38.0
+   Compiling strsim v0.10.0
+   Compiling synstructure v0.13.0
+   Compiling fnv v1.0.7
+   Compiling synstructure v0.12.4
+   Compiling ref-cast v1.0.16
+   Compiling icu_properties_data v2.0.0
+   Compiling futures-sink v0.3.32
+   Compiling ident_case v1.0.1
+   Compiling bitflags v2.4.1
+   Compiling futures-core v0.3.32
+   Compiling unicode-xid v0.1.0
+   Compiling scopeguard v1.1.0
+   Compiling futures-channel v0.3.32
+   Compiling lock_api v0.4.6
+   Compiling darling_core v0.20.0
+   Compiling errno v0.3.1
+   Compiling num-rational v0.4.0
+   Compiling num-iter v0.1.42
+   Compiling futures-io v0.3.32
+   Compiling itoa v0.4.0
+   Compiling utf8parse v0.2.1
+   Compiling dtoa v0.4.0
+   Compiling futures-task v0.3.32
+   Compiling cfg-if v0.1.2
+   Compiling anstyle-parse v0.2.0
+   Compiling parking_lot v0.12.3
+   Compiling quote v0.6.10
+error[E0308]: mismatched types
+  --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:70:19
+   |
+70 |         .div_ceil(&big_digit::BITS.into())
+   |          -------- ^^^^^^^^^^^^^^^^^^^^^^^ expected `u64`, found `&_`
+   |          |
+   |          arguments to this method are incorrect
+   |
+   = note:   expected type `u64`
+           found reference `&_`
+note: method defined here
+  --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+   = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+   |
+70 -         .div_ceil(&big_digit::BITS.into())
+70 +         .div_ceil(big_digit::BITS.into())
+   |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:585:19
+    |
+585 |         .div_ceil(&u64::from(bits))
+    |          -------- ^^^^^^^^^^^^^^^^ expected `u64`, found `&u64`
+    |          |
+    |          arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+585 -         .div_ceil(&u64::from(bits))
+585 +         .div_ceil(u64::from(bits))
+    |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:613:19
+    |
+613 |         .div_ceil(&u64::from(bits))
+    |          -------- ^^^^^^^^^^^^^^^^ expected `u64`, found `&u64`
+    |          |
+    |          arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+613 -         .div_ceil(&u64::from(bits))
+613 +         .div_ceil(u64::from(bits))
+    |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint.rs:398:54
+    |
+398 |                 let root_scale = extra_bits.div_ceil(&n64);
+    |                                             -------- ^^^^ expected `u64`, found `&u64`
+    |                                             |
+    |                                             arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+398 -                 let root_scale = extra_bits.div_ceil(&n64);
+398 +                 let root_scale = extra_bits.div_ceil(n64);
+    |
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `num-bigint` (lib) due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...

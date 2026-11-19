@@ -1,0 +1,820 @@
+{
+  "contractVersion": "2",
+  "kind": "kbd.adopted-contract",
+  "identity": {
+    "projectId": "39208255-8a57-4101-8014-7952fe9993e7",
+    "runId": "project-20261118T062840Z",
+    "phaseId": "phase-47-contribution-readiness",
+    "planRevision": 1,
+    "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7"
+  },
+  "digestNormalization": {
+    "algorithm": "sha256",
+    "command": "jq -S -c 'del(.identity.contractDigest) | del(.identity.planRevision)' adopted-contract.json",
+    "stalenessRule": "Only the latest canonical bound digest applies; mismatch rejects stale acceptance, preserving history."
+  },
+  "adoptionSource": "Direct trusted approval verified by root through user_message_read: question Sentinel_2a5ba49c6a3081919040dcdc439e4882 offered these ten behaviors/ten controls and300min/200calls/two repairs with no workflow changes; Travis answered \"Yes adopt the boundary\" in Sentinel_657e589d934c81918a36a783879d7aa5 at2026-11-18T12:46:30.408117+00:00. Supported retry succeeded with readiness47-owner-adoption plus Plan/change/T1–T5 registration. Exact prior delegated claim/denial retained in owner-adoption.json. Individual calibration remains null.",
+  "decisionOwner": "Travis",
+  "amendmentPolicy": "Material acceptance changes require the established owner/canonical signed amendment route. Routine minimum dependency selection, resolver pinning and book fixture/cause investigation are agent-owned implementation/diagnostic work within this accepted scope; no redundant owner version-choice gate.",
+  "releaseClaim": {
+    "userOperation": "Use and review preserved Cucumber/Gherkin foundation contributions with restored compatibility, real complete-boundary acceptance, independent review and actual separate required remote checks before ready/safe fork-main integration.",
+    "supportedEnvironments": [
+      "Local Rust1.88.0 Darwin arm64; installed SDK Node26.5.0 CPython3.11.3 TypeScript6.0.3",
+      "Separate unchanged remote CI records its real stable/beta/nightly and three-OS identities; no local proof inference across platforms"
+    ],
+    "currentCapabilities": "Phase46 SDK and prior bounded core/parser evidence are retained. Phase47 repairs and proposed acceptance source are not implemented or executed; remote readiness failures remain observed.",
+    "explicitUnknowns": [
+      "Correct minimal dependency constraints and exact resolver pin to derive from source/diagnostic boundary",
+      "Book failure attribution to contribution/base/tool to establish inside accepted scope",
+      "Later masked remote CI findings",
+      "Foreign execution/framework adapters/public package/platform parity excluded"
+    ]
+  },
+  "statusVocabulary": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_EXERCISED"
+  ],
+  "scenarioMatrix": [
+    {
+      "id": "CR47-001",
+      "name": "Preserve legacy table escape policy and explicit Gherkin43 behavior",
+      "ownerTask": "T1+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Legacy Default/new/new_latest reject the historical invalid Examples and step-table escape; explicit43 preserves official literal values, recognized escapes and following-step identity.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-001 Preserve legacy table escape policy and explicit Gherkin43 behavior",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "GherkinEnv constructors, TableSemantics and Feature/Document parsers in fork and vendor.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Legacy Default/new/new_latest reject the historical invalid Examples and step-table escape; explicit43 preserves official literal values, recognized escapes and following-step identity.",
+        "expectedTruthSource": "Immutable upstream legacy expectation and pinned official Gherkin43 source/AST fixture observations.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Switch only policy and require the expected semantic difference; corrupt one cell/step observation and reject.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-002",
+      "name": "Preserve public parse errors across private storage repair",
+      "ownerTask": "T1+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Classic and Markdown malformed sources retain public variants, path, structured position and promised diagnostics; following valid input succeeds.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-002 Preserve public parse errors across private storage repair",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "External consumer pattern matches ParseFileError and observes ParseError::position and display.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Classic and Markdown malformed sources retain public variants, path, structured position and promised diagnostics; following valid input succeeds.",
+        "expectedTruthSource": "Retained public source/diagnostic contract and original malformed fixtures; compare expected-token sets only with explicit stable normalization.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Mutate path/location or suppress error; comparator rejects and valid recovery remains required.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-003",
+      "name": "Keep parser fork and vendor production identity and behavior aligned",
+      "ownerTask": "T1+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Recorded production source/manifest correspondence and same-policy featureless/malformed/valid results agree between independently built fork/vendor consumers.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-003 Keep parser fork and vendor production identity and behavior aligned",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "Separate external applications linked to each parser source.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Recorded production source/manifest correspondence and same-policy featureless/malformed/valid results agree between independently built fork/vendor consumers.",
+        "expectedTruthSource": "Recorded fork/vendor production file hashes plus independent legacy/official43 truth from CR47-001.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Corrupt one byte in disposable comparison copy or one output observation; reject without mutating production source.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-004",
+      "name": "Execute public feature-profile consumers without new warnings",
+      "ownerTask": "T2+T3+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Eight explicit profiles compile and execute matched behavior under Rust1.88 with -Dwarnings; undefined-step control remains nonpassing.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-004 Execute public feature-profile consumers without new warnings",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "Actual external consumer cargo run with none/macros/timestamps/output-json/output-junit/libtest/tracing/output-messages.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Eight explicit profiles compile and execute matched behavior under Rust1.88 with -Dwarnings; undefined-step control remains nonpassing.",
+        "expectedTruthSource": "Declared handler side effects and applicable writer outputs through actual external consumer processes.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Undefined step produces no handler side effect and a visible nonpassing outcome; all-feature builds cannot substitute for no-Messages profiles.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-005",
+      "name": "Execute derived generic and custom-init Worlds with intended options",
+      "ownerTask": "T2+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Generic/custom-init/legacy Worlds execute with intended DefinitionOptions and attachment/completion contexts.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-005 Execute derived generic and custom-init Worlds with intended options",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "cucumber-codegen generated registrations and shared runtime contexts used by external BDD consumers.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Generic/custom-init/legacy Worlds execute with intended DefinitionOptions and attachment/completion contexts.",
+        "expectedTruthSource": "Real handler, lifecycle and Messages observations from externally compiled applications, not merely token snapshots.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Remove expected metadata or misassociate attachment scope in copied observation and require rejection.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-006",
+      "name": "Invoke locked dry-run lifecycle oracles from a fresh package boundary",
+      "ownerTask": "T3+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Actual dry_run acceptance invokes pinned Query/Messages collaborators without ambient node_modules dependency.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-006 Invoke locked dry-run lifecycle oracles from a fresh package boundary",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "tests/dry_run.rs with actual tests/interop/consume.mjs and scenario-hooks.mjs.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Actual dry_run acceptance invokes pinned Query/Messages collaborators without ambient node_modules dependency.",
+        "expectedTruthSource": "Fresh locked @cucumber/query16.0.0/Messages34.2.1 child-process results and retained dry_run lifecycle expectations.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Remove oracle from disposable install and launch fresh process; explicit failure with no skip/canned response/fallback.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-007",
+      "name": "Resolve and execute the actual minimal dependency graph on Rust1.88",
+      "ownerTask": "T3+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Pinned nightly minimal-resolution graph and actual root/dev-dependent affected path build and execute with Rust1.88; corrected constraints derive from source/diagnostic evidence.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-007 Resolve and execute the actual minimal dependency graph on Rust1.88",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "cargo update -Z minimal-versions in owned copied workspace, followed by Rust1.88 real affected consumer execution.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Pinned nightly minimal-resolution graph and actual root/dev-dependent affected path build and execute with Rust1.88; corrected constraints derive from source/diagnostic evidence.",
+        "expectedTruthSource": "Resolved Cargo locks/dependency identities, retained incompatible ICU/Yoke graph and actual consumer behavior.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "The original incompatible graph is rejected; normal compatible-latest resolution cannot count as minimum proof.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-008",
+      "name": "Establish book example linkage and attribute the existing failure",
+      "ownerTask": "T3+T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "Actual agreed book example links and executes through a fresh consumer; immutable-base comparison/tool/artifact evidence distinguishes contribution regression from existing tool behavior.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-008 Establish book example linkage and attribute the existing failure",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "OBSERVED",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "External application using preserved book source, with unchanged remote make test.book as a distinct additional gate.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "Actual agreed book example links and executes through a fresh consumer; immutable-base comparison/tool/artifact evidence distinguishes contribution regression from existing tool behavior.",
+        "expectedTruthSource": "Original source block and immutable PR base, same toolchain/layout comparison, actual handler outcomes; mdBook0.5.4 source does not support the simple relative-path hypothesis.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Remove required dependency in disposable consumer and require failure; existence of rlib alone is rejected as proof.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-009",
+      "name": "Guard dedicated BDD discovery and reject missing selections",
+      "ownerTask": "T4",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "New boundary runs exact adopted scenario identities/counts; existing parser compatibility uses dedicated entry point without changing intentional legacy skips.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-009 Guard dedicated BDD discovery and reject missing selections",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "Proposed contribution_readiness harness and existing dedicated Gherkin step_arguments harness.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "New boundary runs exact adopted scenario identities/counts; existing parser compatibility uses dedicated entry point without changing intentional legacy skips.",
+        "expectedTruthSource": "Frozen feature source identities and actual outer Messages plus nonzero receipt.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Wrong tag/empty feature selection fails the new guard; original tests/cucumber.rs intentional skipped behavior is not changed.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    },
+    {
+      "id": "CR47-010",
+      "name": "Retain complete affected parser core and installed SDK behavior",
+      "ownerTask": "T1+T2+T3+T4+T5",
+      "actor": "Downstream Rust/SDK consumer and contribution maintainer",
+      "usefulOutcome": "All49 named root BDD targets, parser packet and fresh installed-native functional/control packet retain adopted matching/source/Messages/rerun and package behavior.",
+      "sourceRequirement": "openspec:contribution-readiness#CR47-010 Retain complete affected parser core and installed SDK behavior",
+      "reasonNow": "Observed contribution CI/compatibility failures and explicit preservation/readiness requirements.",
+      "likelihood": "UNKNOWN",
+      "mandatory": true,
+      "scopeRefs": [
+        "Legacy and explicit43 parser compatibility",
+        "Public diagnostics and portable vendor identity",
+        "Core/codegen feature and runtime behavior",
+        "Dependency/book/oracle consumer readiness",
+        "Finite complete BDD evidence and independent contribution readiness"
+      ],
+      "productionEntry": "Exact supporting BOUNDARY-PLAN commands:49 root targets, standalone parser and SDK language_sdk packets.",
+      "realCollaborators": [
+        "Actual Rust parser/core/codegen consumers",
+        "Pinned official Gherkin43 and Messages/query/expression/rerun packages where applicable",
+        "Fresh installed Rust/Node/Python native SDK consumers for cumulative packet",
+        "Separate unchanged remote CI after local boundary"
+      ],
+      "substitutedBoundaries": [],
+      "oracle": {
+        "observation": "All49 named root BDD targets, parser packet and fresh installed-native functional/control packet retain adopted matching/source/Messages/rerun and package behavior.",
+        "expectedTruthSource": "Pinned official corpus, JS consumers, original source/attempt IDs and real installed native package paths/hashes; no old log substitution.",
+        "comparator": "Per-case exact behavior/control requirements and immutable source/fixture/lock/native provenance in supporting plan; no exit-only, zero-selected, missing-collaborator or historic-log acceptance."
+      },
+      "negativeControl": {
+        "input": "Existing controls execute; corrupt identity/drop attempt/remove native library where specified and prove rejection.",
+        "expectedRejection": "Actual false result or missing collaborator is visibly rejected with original artifacts preserved; no silent skip/fallback.",
+        "commandRef": "readiness47-controls"
+      },
+      "fixtures": "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd; exact fixture/source/lock/base identities are retained before use; unresolved technical causes are diagnosed only in adopted whole-phase boundary, never premature probes.",
+      "evidence": "Outer source-aware BDD Messages, per-case/control receipts, original argv/cwd/exits/stdout/stderr, source/fixture/graph/native identities, real observations and owned cleanup.",
+      "limitations": [
+        "Local BDD and separate automatic remote CI are distinct",
+        "No local unit suites",
+        "Internal exact reviewer model UNKNOWN; no external/cross-model certification",
+        "No foreign execution/framework/registry/full-parity claim"
+      ],
+      "invalidationKeys": [
+        "Phase47 bound contract digest",
+        "docs/compatibility/readiness/BOUNDARY-PLAN.md sha256=ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+        "Changed parser/core/codegen/SDK/acceptance source and frozen fixture identities",
+        "Actual runtime/lock/package/native/base identities"
+      ],
+      "restoration": "Remove only recorded owned temporary consumers/control copies after retained proof; preserve source, evidence and Pages branch."
+    }
+  ],
+  "functionalScope": [
+    "Legacy and explicit43 parser compatibility",
+    "Public diagnostics and portable vendor identity",
+    "Core/codegen feature and runtime behavior",
+    "Dependency/book/oracle consumer readiness",
+    "Finite complete BDD evidence and independent contribution readiness"
+  ],
+  "resilienceScope": {
+    "policy": "Do not weaken integrity, suppress failed collaborators, bypass checks or silently grow acceptance under budget pressure; preserve failures and report unmet boundaries.",
+    "deferredOptional": [
+      "Foreign execution, framework adapters and registry distribution remain later scope."
+    ]
+  },
+  "exclusions": [
+    "Local unit/generic test suites or early build/import/typecheck/lint",
+    "External review transmission",
+    "Foreign execution/framework adapters",
+    "Registry registration/publication",
+    "Upstream merging or issue closure",
+    "Unrelated mature build/release workflow changes",
+    "Unproved cross-platform/full-parity claims"
+  ],
+  "requiredSafetyChecks": [
+    {
+      "id": "PRESERVE",
+      "description": "Retain public defaults/error APIs, identities and original evidence; never treat missing/zero/skipped checks as success.",
+      "scenarioIds": [
+        "CR47-001",
+        "CR47-002",
+        "CR47-003",
+        "CR47-004",
+        "CR47-005",
+        "CR47-006",
+        "CR47-007",
+        "CR47-008",
+        "CR47-009",
+        "CR47-010"
+      ]
+    },
+    {
+      "id": "WORKFLOWS",
+      "description": "Keep mature build/release workflows and legacy intentional-skip harness semantics; separate remote checks from local BDD.",
+      "scenarioIds": [
+        "CR47-006",
+        "CR47-008",
+        "CR47-009",
+        "CR47-010"
+      ]
+    }
+  ],
+  "budgets": {
+    "timeMinutes": 300,
+    "toolCalls": 400,
+    "repairAttempts": 2,
+    "noProgressLimit": 3,
+    "tokenBudget": "UNKNOWN",
+    "tokenFallback": "Elapsed time and tool-call ceiling; checkpoint before exhaustion.",
+    "consumedAtAuthoring": {
+      "scope": "Owner-adopted implementation starts with root canonical dispatch; preparation has not executed production or verification. Earlier planning remains separate."
+    },
+    "accounting": "Track actual elapsed dispatch time and tool calls honestly, including waits; automatic remote jobs are a separate post-local-BDD gate, not additional local unit commands or a silent budget reset. Preserve estimated versus measured telemetry.",
+    "exhaustion": "Checkpoint and report BLOCKED/unmet; do not broaden scope, weaken checks or claim merge readiness.",
+    "timeAccounting": {
+      "mode": "elapsed-minus-documented-required-owner-approval-waits",
+      "rule": "Keep the original execution start and 300-minute active allowance. Subtract only recorded periods during which required owner approval blocks dependent work. Count all active preparation, implementation, execution, review, repair and remote CI waiting. Increase the total tool-call ceiling to 400 without resetting consumed calls; retain two repair cycles.",
+      "recordedOwnerApprovalWaits": [
+        {
+          "from": "2026-11-18T13:30:00+00:00",
+          "until": "2026-11-19T21:51:19.889832+00:00",
+          "reason": "Conservative interval after the preserved source handoff, awaiting the exact implementation-complete signing permission. Ends at the trusted affirmative message Sentinel_80352fbb69fc8191a6e6133df0898c13."
+        }
+      ],
+      "subsequentOwnerApprovalWaits": "Record actual stop and trusted owner-approval instants in retained evidence; subtract only those documented intervals. No active work or remote CI waiting may be excluded."
+    }
+  },
+  "evidenceInvalidation": "Bind source, contract, oracle, runtime and package digests. Invalidate only affected behavior after material changes; retain old evidence and consumed repair budget.",
+  "workerRoutes": {
+    "agent": "Internal Codex execution team",
+    "model": "Exact deployment identity unavailable",
+    "billing": "Existing authorized internal orchestration; no external inference providers",
+    "subagents": "Separate parser/vendor, core/codegen, dependency/book/oracles and acceptance scopes; root owns canonical state, post-proof independent audit and readiness.",
+    "reviewRoundsMax": 2
+  },
+  "boundaryPacket": {
+    "postImplementationOnly": true,
+    "singleRun": true,
+    "commands": [
+      {
+        "id": "readiness47-prepare",
+        "kind": "build",
+        "argv": [
+          "python3",
+          "tests/readiness/prepare.py"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "CR47-001",
+          "CR47-002",
+          "CR47-003",
+          "CR47-004",
+          "CR47-005",
+          "CR47-006",
+          "CR47-007",
+          "CR47-008",
+          "CR47-009",
+          "CR47-010"
+        ]
+      },
+      {
+        "id": "readiness47-behavior",
+        "kind": "scenario",
+        "argv": [
+          "env",
+          "RUSTUP_TOOLCHAIN=1.88.0",
+          "cargo",
+          "test",
+          "--locked",
+          "--all-features",
+          "--test",
+          "contribution_readiness",
+          "--",
+          "--tags",
+          "@readiness47"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "CR47-001",
+          "CR47-002",
+          "CR47-003",
+          "CR47-004",
+          "CR47-005",
+          "CR47-006",
+          "CR47-007",
+          "CR47-008",
+          "CR47-009",
+          "CR47-010"
+        ]
+      },
+      {
+        "id": "readiness47-controls",
+        "kind": "negativeControl",
+        "argv": [
+          "env",
+          "RUSTUP_TOOLCHAIN=1.88.0",
+          "cargo",
+          "test",
+          "--locked",
+          "--all-features",
+          "--test",
+          "contribution_readiness",
+          "--",
+          "--tags",
+          "@readiness47_negative"
+        ],
+        "cwd": ".",
+        "scenarioIds": [
+          "CR47-001",
+          "CR47-002",
+          "CR47-003",
+          "CR47-004",
+          "CR47-005",
+          "CR47-006",
+          "CR47-007",
+          "CR47-008",
+          "CR47-009",
+          "CR47-010"
+        ]
+      }
+    ],
+    "expectedEffects": [
+      "Prepare fresh locked collaborators and external consumers only at whole-phase end",
+      "Run exactly10 functional plus10 control outer scenarios/60steps and bound nested49-target/parser/installed-native packet",
+      "Retain exclusive fresh evidence and original failures; do not overwrite prior phase receipts"
+    ],
+    "requiredApprovals": "Exact phase owner adoption is resolved by the trusted answer recorded in owner-adoption.json; no redundant approval question. Root completes supported binding/dispatch and later implementation-complete boundary authorization. Prior successor signing is not blanket permission for a different manifest.",
+    "receipts": [
+      "Exact commands/exits/stdout/stderr and allowed environment identities",
+      "Source/fixture/lock/base/package/native hashes and real resolved paths",
+      "Outer BDD Messages and10+10 per-case/control observations",
+      "Bound nested scenario counts/results; separate exact-head remote CI run/job identities",
+      "Owned cleanup and retained original failure evidence"
+    ],
+    "cleanup": [
+      "Remove only recorded disposable consumers/control copies after complete packet; retain identities, archives where intended and all original evidence."
+    ],
+    "stopConditions": [
+      "Missing real collaborator or unverifiable source/artifact identity",
+      "Zero/partial/skipped new outer scenarios or mismatch against bound nested inventory",
+      "Unexpected side effects, exhausted budget or repair allowance",
+      "No external reviewer transmission or local unit suites"
+    ]
+  },
+  "status": {
+    "implementationComplete": true,
+    "adoptionPending": false
+  },
+  "calibration": {
+    "examplesPath": ".kbd-orchestrator/phases/phase-47-contribution-readiness/calibration.json",
+    "sha256": "c3e7e67f22fc1d169b2b83743efb8e18e89c5bc4a78428f1f0f3fc5bd2647b6b"
+  },
+  "method": {
+    "name": "VLBV",
+    "packVersion": "source-worktree VLBV1.1.0",
+    "referenceSha256": "7f86e6ececc44aa982bd2af35578d8daed2b39e7f3f286460713b6121da13b5c",
+    "openspecVersion": "2.1.0",
+    "specDeltaDigest": "72c6a086872e3b5493a308f27916e33e2e8740f1e68864f44ae076255fa60d30"
+  },
+  "closure": {
+    "implementationComplete": true,
+    "behaviorAccepted": false,
+    "releaseEligible": false,
+    "releaseAuthorized": false
+  },
+  "supportingContract": {
+    "path": "docs/compatibility/readiness/BOUNDARY-PLAN.md",
+    "sha256": "ab530e5a8025301c184dfc269bde186cfb1bde756e0c231b1093962d739a3ecd",
+    "newOuterPacket": {
+      "functionalScenarios": 10,
+      "functionalSteps": 30,
+      "controlScenarios": 10,
+      "controlSteps": 30
+    },
+    "rootPacket": {
+      "targetCount": 49,
+      "plannedSourceInventoryScenarios": 797,
+      "plannedSourceInventorySteps": 3399,
+      "inventoryStatus": "Static source inventory, not runtime proof; names and exact commands bound in supporting plan."
+    },
+    "parserPacket": {
+      "target": "step_arguments",
+      "scenarios": 73,
+      "steps": 241
+    },
+    "sdkPacket": {
+      "functionalScenarios": 11,
+      "functionalSteps": 33,
+      "controlScenarios": 11,
+      "controlSteps": 33
+    },
+    "featureProfiles": [
+      "none",
+      "macros",
+      "timestamps",
+      "output-json",
+      "output-junit",
+      "libtest",
+      "tracing",
+      "output-messages"
+    ],
+    "remoteChecks": "Separate unchanged automatic CI after complete local boundary; empty list not PASS; no local replica unit/lint/book suites."
+  },
+  "artifactStatus": "DIRECT_OWNER_ADOPTED; owner decision/Plan/change/tasks registered; digest binding pending root; implementation not started",
+  "adoptionGate": {
+    "status": "RESOLVED_BY_DIRECT_OWNER_APPROVAL",
+    "directApproval": {
+      "source": "Trusted user_message_read history verified by parent /root and relayed in current delegation",
+      "questionMessageId": "Sentinel_2a5ba49c6a3081919040dcdc439e4882",
+      "questionSummary": "Approve the reviewed ten behaviors and ten controls,300min/200calls/two repairs, with no workflow changes. This summary is not an invented verbatim question.",
+      "answerMessageId": "Sentinel_657e589d934c81918a36a783879d7aa5",
+      "answeredAt": "2026-11-18T12:46:30.408117+00:00",
+      "answer": "Yes adopt the boundary",
+      "canonicalDecision": "readiness47-owner-adoption",
+      "retryOutcome": "Parent reports supported retry succeeded; Plan/change/T1–T5 registered. Contract digest binding remains a subsequent root action."
+    },
+    "directOwnerAdoption": true,
+    "canonicalOwnerDecision": "readiness47-owner-adoption",
+    "canonicalBinding": false,
+    "historicalDenialRecord": "docs/compatibility/readiness/ADOPTION-BLOCKER.md"
+  }
+}

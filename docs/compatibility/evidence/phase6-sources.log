@@ -1,0 +1,33 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.70s
+     Running tests/sources.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/sources-2f3d43d9f101671e)
+Feature: Reports retain the exact source that was parsed
+  Scenario Outline: Source remains available after the filesystem changes
+   ✔  Given a source document without a final newline
+   ✔  When the parser captures the source and the file is rewritten
+   ✔  Then the snapshot contains the exact original bytes
+   ✔  And the captured native feature matches the parsed feature
+  Scenario Outline: Source remains available after the filesystem changes
+   ✔  Given a source document without a final newline
+   ✔  When the parser captures the source and the file is deleted
+   ✔  Then the snapshot contains the exact original bytes
+   ✔  And the captured native feature matches the parsed feature
+  Scenario: Outlines retain their original source and unexpanded AST
+   ✔  Given a source document containing an outline
+   ✔  When the parser captures the source and expands its examples
+   ✔  Then the snapshot still contains the outline template
+   ✔  And the runner input contains both expanded examples
+  Scenario: The configured default dialect accompanies the source
+   ✔  Given a French source document without a language directive
+   ✔  When the French parser captures the source
+   ✔  Then the snapshot records the French default dialect
+   ✔  And the captured native feature matches the parsed feature
+  Scenario: Captured source generations remain immutable when a store is reused
+   ✔  Given a source document without a final newline
+   ✔  When the same path is parsed again with different content
+   ✔  Then the retained first snapshot contains the original bytes
+   ✔  And the current snapshot contains the newly parsed bytes
+[Summary]
+1 feature
+5 scenarios (5 passed)
+20 steps (20 passed)

@@ -8,3 +8,6 @@
 **/*.rs.bk
 
 /*.cast.json
+
+# Owned phase-end acceptance runtime; retained receipts live in evidence.
+/tests/readiness/runtime.json

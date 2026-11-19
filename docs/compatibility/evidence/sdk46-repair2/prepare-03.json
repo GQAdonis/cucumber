@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "node",
+    "--version"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:16:34.998460+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:16:35.027715+00:00",
+  "stdout": "prepare-03.stdout",
+  "stderr": "prepare-03.stderr"
+}

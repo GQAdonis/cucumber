@@ -1,0 +1,131 @@
+Feature: Contribution evidence rejects misleading compatibility claims
+  Scenario: Latest vocabulary cannot silently enable new table semantics
+   ✔  Given the adopted contribution readiness case "CR47-001"
+   ✔  When the declared misleading result is exercised
+   ✔  Then rejection is proved without altering original sources or evidence
+  Scenario: Changed parser path or location cannot pass the diagnostic oracle
+   ✔  Given the adopted contribution readiness case "CR47-002"
+   ✔  When the declared misleading result is exercised
+   ✔  Then rejection is proved without altering original sources or evidence
+  Scenario: A changed disposable parser snapshot or observation is rejected
+   ✔  Given the adopted contribution readiness case "CR47-003"
+   ✔  When the declared misleading result is exercised
+   ✔  Then rejection is proved without altering original sources or evidence
+  Scenario: Undefined steps fail without invoking registered handlers
+   ✔  Given the adopted contribution readiness case "CR47-004"
+   ✔  When the declared misleading result is exercised
+   ✘  Then rejection is proved without altering original sources or evidence
+      Step failed:
+      Defined: tests/features/contribution_readiness/controls.feature:26:5
+      Matched: tests/contribution_readiness.rs:69:1
+      Step panicked. Captured output: CR47-004: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 381, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 182, in cr004
+          built=consumer('profile-'+profile,ROOT/'tests/readiness/consumers/profiles.rs',WORK,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 50, in consumer
+          RUN.run(['cargo','build','--locked',*flags],directory,extra_env=env)
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0002 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-first/CR47-004-control
+  Scenario: Missing definition metadata or wrong attachment scope is rejected
+   ✔  Given the adopted contribution readiness case "CR47-005"
+   ✔  When the declared misleading result is exercised
+   ✔  Then rejection is proved without altering original sources or evidence
+  Scenario: A fresh host reports its deliberately removed oracle package
+   ✔  Given the adopted contribution readiness case "CR47-006"
+   ✔  When the declared misleading result is exercised
+   ✘  Then rejection is proved without altering original sources or evidence
+      Step failed:
+      Defined: tests/features/contribution_readiness/controls.feature:38:5
+      Matched: tests/contribution_readiness.rs:69:1
+      Step panicked. Captured output: CR47-006: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 381, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 254, in cr006
+          OBS.append({'actualDryRun':target('dry_run')})
+                                     ^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 246, in target
+          result=RUN.run(['cargo','test','--locked',*flags,'--test',name],root,extra_env=extra_env)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0001 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-first/CR47-006-control
+  Scenario: The retained incompatible minimum graph is rejected
+   ✔  Given the adopted contribution readiness case "CR47-007"
+   ✔  When the declared misleading result is exercised
+   ✘  Then rejection is proved without altering original sources or evidence
+      Step failed:
+      Defined: tests/features/contribution_readiness/controls.feature:44:5
+      Matched: tests/contribution_readiness.rs:69:1
+      Step panicked. Captured output: CR47-007: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 381, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 283, in cr007
+          demand('yoke'in result['stderr'] and ('trait bound'in result['stderr'] or 'different versions'in result['stderr']),'incompatible graph failed for an unrelated reason')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: incompatible graph failed for an unrelated reason
+  Scenario: A book consumer without its required dependency cannot link
+   ✔  Given the adopted contribution readiness case "CR47-008"
+   ✔  When the declared misleading result is exercised
+   ✔  Then rejection is proved without altering original sources or evidence
+  Scenario: Wrong tags and empty feature paths cannot pass a scope guard
+   ✔  Given the adopted contribution readiness case "CR47-009"
+   ✔  When the declared misleading result is exercised
+   ✘  Then rejection is proved without altering original sources or evidence
+      Step failed:
+      Defined: tests/features/contribution_readiness/controls.feature:56:5
+      Matched: tests/contribution_readiness.rs:69:1
+      Step panicked. Captured output: CR47-009: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 381, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 329, in cr009
+          for name in TARGETS: observations.append(target(name))
+                                                   ^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 246, in target
+          result=RUN.run(['cargo','test','--locked',*flags,'--test',name],root,extra_env=extra_env)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0001 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-first/CR47-009-control
+  Scenario: Existing packet controls reject changed fixtures and missing native code
+   ✔  Given the adopted contribution readiness case "CR47-010"
+   ✔  When the declared misleading result is exercised
+   ✘  Then rejection is proved without altering original sources or evidence
+      Step failed:
+      Defined: tests/features/contribution_readiness/controls.feature:62:5
+      Matched: tests/contribution_readiness.rs:69:1
+      Step panicked. Captured output: CR47-010: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 381, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 341, in cr010
+          observations=[target(name) for name in TARGETS]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 341, in <listcomp>
+          observations=[target(name) for name in TARGETS]
+                        ^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 246, in target
+          result=RUN.run(['cargo','test','--locked',*flags,'--test',name],root,extra_env=extra_env)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0001 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-first/CR47-010-control
+[Summary]
+1 feature
+10 scenarios (5 passed, 5 failed)
+30 steps (25 passed, 5 failed)

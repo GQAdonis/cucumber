@@ -1,0 +1,20 @@
+{
+  "case": "SDK-008",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "passingRunNoSelection": true,
+      "attempts": 2,
+      "localSelection": {
+        "resolverCalls": 0,
+        "selectionIsNone": true
+      }
+    },
+    {
+      "control": "empty plan replaced with all-source selection",
+      "rejected": "original selectors changed"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+    "node_modules/@cucumber/cucumber/bin/cucumber.js",
+    "--config",
+    "acceptance/cucumber.mjs"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber/docs-site",
+  "code": 1,
+  "expectedScenarios": 9,
+  "started": 0,
+  "finished": 0,
+  "runSuccess": false,
+  "passed": false
+}

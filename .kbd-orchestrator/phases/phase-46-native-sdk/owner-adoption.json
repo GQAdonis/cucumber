@@ -1,0 +1,13 @@
+{
+  "source": "Trusted parent delegation from 6afa890d-2338-8191-9915-c61bb8e630da",
+  "question": "Approve the first SDK phase: shared Rust compilation and rerun planning exposed through native TypeScript/Python bindings, safe Rust extensions, and verified installable local packages, with foreign step execution and Behave/pytest-bdd adapters following?",
+  "answer": "Yes adopt that as the first SDK phase and proceed",
+  "scope": "Adopted eleven-case boundary and concrete reviewed contract; implement, verify only at complete phase end, internal review and material corrections.",
+  "individualCalibrationVerdicts": "Not separately supplied; preserve null fields rather than fabricate answers.",
+  "prohibitions": [
+    "external review transmission",
+    "registry publication",
+    "site deployment",
+    "premature upstream contributions"
+  ]
+}

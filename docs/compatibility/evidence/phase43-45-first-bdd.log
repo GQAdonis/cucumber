@@ -1,0 +1,465 @@
+   Compiling crossbeam-utils v0.8.23
+   Compiling log v0.4.35
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling globset v0.4.21
+   Compiling serial_test v3.5.0
+   Compiling crossbeam-epoch v0.9.21
+   Compiling crossbeam-deque v0.8.8
+   Compiling ignore v0.4.34
+   Compiling globwalk v0.9.1
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 46.82s
+     Running tests/messages_markdown_precedence.rs (target/debug/deps/messages_markdown_precedence-7f8d417533cbd3cc)
+Feature: Markdown literal content wins over tag syntax in executable tokens
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "first step inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "following step inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "feature background inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "rule background inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "data table inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "following data row inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "Examples header inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "Examples body inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "opening fence media inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "table then fence inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "fence then table inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "docstring content inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "standalone inherited tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "tag-looking declaration stays tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "consumed fence slot remains tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "consumed table slot remains tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "pending tag before literal step"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "duplicate literal docstrings"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "literal table docstring table"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "literal inconsistent rows"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "dangling standalone tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+[Summary]
+1 feature
+21 scenarios (21 passed)
+100 steps (100 passed)
+     Running tests/messages_rerun.rs (target/debug/deps/messages_rerun-33c26201917d697d)
+Feature: Derive an actionable rerun selection without losing original execution evidence
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "PASSED" and run success "true"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "none"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "SKIPPED" and run success "true"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "PENDING" and run success "true"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "UNDEFINED" and run success "false"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "AMBIGUOUS" and run success "false"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "FAILED" and run success "false"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario Outline: Rerun membership follows protocol status rather than run success
+   ✔  Given a completed protocol case with status "UNKNOWN" and run success "true"
+   ✔  When the application collects its rerun plan
+   ✔  Then the rerun selection contains "case"
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario: Recovered retries retain history but only exhausted cases are selected
+   ✔  Given a real application with recovering and exhausted cases
+   ✔  When the application collects its rerun plan
+   ✔  Then every original retry attempt remains inspectable
+   ✔  And only the exhausted terminal attempt contributes a rerun location
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario: A second native execution selects the exact original failed Examples rows
+   ✔  Given a real filtered concurrent Rule outline with duplicate row values
+   ✔  When the application collects its rerun plan
+   ✔  And the application executes the safe local rerun selection
+   ✔  Then only the original failed Examples row locations execute again
+   ✔  And the original attempt denominator and evidence remain unchanged
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario: Grouped output preserves encounter order and duplicate source lines
+   ✔  Given completed cases sharing source locations across multiple URIs
+   ✔  When the application collects its rerun plan
+   ✔  Then URI groups and repeated lines preserve the official encounter order
+   ✔  And a configured separator agrees with the pinned JavaScript formatter
+  Scenario: An interrupted started attempt remains UNKNOWN at the run boundary
+   ✔  Given a run that finishes after a case starts without its finish event
+   ✔  When the application collects its rerun plan
+   ✔  Then the unfinished attempt is retained as UNKNOWN and selected
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario: An unfinished stream cannot claim a final rerun plan
+   ✔  Given a protocol stream without testRunFinished
+   ✔  When the application collects its rerun plan
+   ✔  Then collection reports an incomplete run rather than a successful empty plan
+  Scenario Outline: Missing source or execution references remain explicit errors
+   ✔  Given a protocol stream with a missing "testCase" reference
+   ✔  When the application collects its rerun plan
+   ✔  Then collection reports the missing "testCase" reference without guessed locations
+  Scenario Outline: Missing source or execution references remain explicit errors
+   ✔  Given a protocol stream with a missing "pickle" reference
+   ✔  When the application collects its rerun plan
+   ✔  Then collection reports the missing "pickle" reference without guessed locations
+  Scenario Outline: Missing source or execution references remain explicit errors
+   ✔  Given a protocol stream with a missing "document" reference
+   ✔  When the application collects its rerun plan
+   ✔  Then collection reports the missing "document" reference without guessed locations
+  Scenario Outline: Missing source or execution references remain explicit errors
+   ✔  Given a protocol stream with a missing "astNode" reference
+   ✔  When the application collects its rerun plan
+   ✔  Then collection reports the missing "astNode" reference without guessed locations
+  Scenario: Run-level failure does not invent a scenario rerun location
+   ✔  Given a failed protocol run with parse and global-hook failures but no case attempts
+   ✔  When the application collects its rerun plan
+   ✔  Then run failure remains visible and no scenario selection is invented
+   ✔  And the formatted result agrees with the pinned JavaScript rerun formatter
+  Scenario: A passing run produces an explicit empty local rerun selection
+   ✔  Given a real application whose selected cases all pass
+   ✔  When the application collects its rerun plan
+   ✔  Then local selection is None and the URI resolver is never called
+   ✔  And no unrestricted LineSelectors are used to launch a second run
+  Scenario: URI resolution failures do not silently become local paths
+   ✔  Given a completed protocol case with status "FAILED" and run success "false"
+   ✔  When the application collects its rerun plan
+   ✔  Then a rejecting URI resolver returns its error without a fallback path
+[Summary]
+1 feature
+19 scenarios (19 passed)
+73 steps (73 passed)
+     Running tests/vlbv_adapter.rs (target/debug/deps/vlbv_adapter-a16749e4f457f82f)
+Feature: Project real Cucumber evidence into the existing VLBV boundary result contract
+  Scenario: Complete real-path receipts support scoped acceptance
+   ✔  Given a real Cucumber run with frozen v2 contract and complete assertion control and cleanup receipts
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And the canonical result fields and all original evidence references are retained
+  Scenario: A green runner is insufficient without an exercised oracle
+   ✔  Given boundary evidence for "green without assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: An exercised product mismatch remains a failure
+   ✔  Given boundary evidence for "product mismatch"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And the actual failed observation remains in the attempt ledger
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong candidate"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "stale production source"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong contract binding"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong canonical run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "skipped step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "dry run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "undefined step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: The adopted denominator includes scenarios absent from the runner
+   ✔  Given boundary evidence for "missing adopted scenario"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the exercised scenario passes and the absent adopted scenario is NOT_EXERCISED
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "missing control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "non-sensitive control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: Unknown restoration blocks acceptance
+   ✔  Given boundary evidence for "unknown cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "process exit two"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "truncated stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: A successful retry retains the earlier failed oracle
+   ✔  Given boundary evidence for "failed then successful retry"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "unauthorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "bound authorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every failed and successful attempt is retained
+  Scenario: An unsupported acceptance profile fails closed
+   ✔  Given boundary evidence for "stochastic profile"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: Projection never writes canonical state or launches the boundary packet
+   ✔  Given boundary evidence for "read-only projection"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every canonical input and sentinel remains unchanged
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "nonzero green process"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "nonzero product process"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "failed global completion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unsuccessful run"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unknown step status"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unknown step status"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unmapped failing attempt"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unmapped failing attempt"
+Feature: Receipt consistency prevents malformed evidence from becoming acceptance
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "orphan step start"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan step start"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "orphan global hook finish"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "unfinished global hook"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "reversed step lifecycle"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "lifecycle order"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "nonzero first attempt"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "duplicate attempt number"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "missing promised retry"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "unpromised successor"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario: Repair history must have a distinct previously admitted predecessor
+   ✔  Given boundary evidence for "self repair predecessor"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "repair predecessor"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed parse error"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "parse error"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed global failure"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook failed"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed run exception"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "run exception"
+  Scenario Outline: Process receipts bind the exact product and control streams
+   ✔  Given boundary evidence for "substituted product stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+   ✔  And a legacy receipt without the stream binding is also blocked with migration guidance
+  Scenario Outline: Process receipts bind the exact product and control streams
+   ✔  Given boundary evidence for "substituted control stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+   ✔  And a legacy receipt without the stream binding is also blocked with migration guidance
+  Scenario: Valid interleaved scenarios keep their independent receipt histories
+   ✔  Given boundary evidence for "valid interleaved lifecycle"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And all interleaved adopted scenarios pass with separate attempt identities
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "nonboolean exercised claim"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "exercised boolean"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "orphan failed assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan assertion"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "conflicting cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "duplicate cleanup"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "conflicting control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "duplicate control"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "orphan control assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan control assertion"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "repair after unexercised cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "cleanup unknown"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "repair after inconsistent control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+[Summary]
+2 features
+47 scenarios (47 passed)
+175 steps (175 passed)

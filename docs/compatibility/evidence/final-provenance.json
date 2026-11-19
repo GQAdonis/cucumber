@@ -1,0 +1,80 @@
+{
+  "createdAtUtc": "2026-11-17T15:55:12.748225+00:00",
+  "scope": "Completed through45 local snapshot after phase-end-only BDD. Hashes establish bytes, not independent observation truth. Historical through42 manifests retained separately.",
+  "cucumber": {
+    "path": "/Volumes/T7/Projects/references/cucumber",
+    "head": "d95872541ee2a43d71089c64bd3fa8848e24c922",
+    "sourceFiles": 798,
+    "inventory": "current-source-sha256.txt",
+    "inventorySha256": "0cbc9b7eeddaf343ad4e5d5321fa74abb070248a34fdf09dd813ee7ac55b7876"
+  },
+  "gherkin": {
+    "path": "/Volumes/T7/Projects/references/gherkin",
+    "head": "4c30e3a48a0226bf907053a0a9e738e91cf06727",
+    "sourceFiles": 284,
+    "inventory": "gherkin-source-sha256.txt",
+    "inventorySha256": "d2ce57bcecf0105c50cc6cfd5553ee875591ad61177a6b750eecf74687b416ab",
+    "vendorSourceAndBuildMatches": [
+      "build.rs",
+      "src/LICENSE-GHERKIN",
+      "src/keywords.rs",
+      "src/languages-43.json",
+      "src/languages.json",
+      "src/lib.rs",
+      "src/markdown.rs",
+      "src/parser.rs",
+      "src/tagexpr.rs"
+    ],
+    "vendorSourceAndBuildDifferences": [],
+    "vendorSha256ManifestMismatches": []
+  },
+  "compiler": "rustc 1.88.0 (6b00bc388 2025-06-23)",
+  "phase43To45Boundaries": {
+    "phase43-45-first-bdd.log": {
+      "targets": 3,
+      "passedScenarios": 87,
+      "passedSteps": 348,
+      "exitCode": 0,
+      "logSha256": "a2ca38e855c0582125ab4667bce1c50b033c4ac732f99c86ef34d6374c3a4eab"
+    },
+    "phase43-45-affected-bdd.log": {
+      "targets": 8,
+      "passedScenarios": 106,
+      "passedSteps": 460,
+      "exitCode": 0,
+      "logSha256": "ebf92617d69a87ec9cf16ec64f7c76eee3bf5d14c63ec54ae916e8bd3e1ab39c"
+    },
+    "phase45-parser-affected-bdd.log": {
+      "targets": 1,
+      "passedScenarios": 73,
+      "passedSteps": 241,
+      "exitCode": 0,
+      "logSha256": "b0cc6a8df7109c43c637bd420d50e3ed3b5a4a0a903197a31206dd8b5547148f"
+    }
+  },
+  "historicalThrough42": {
+    "directory": "through42-checkpoint",
+    "finalMsrvBoundary": {
+      "targets": 13,
+      "passedScenarios": 172,
+      "passedSteps": 670,
+      "exitCode": 0,
+      "log": "msrv-1.88-first-bdd.log",
+      "logSha256": "f64ed6502de263686485c5ce116acaa5ad660a10daeee94efd6352719e121a12"
+    }
+  },
+  "sourceInventoryExcludes": [
+    "docs/compatibility/evidence/**",
+    "docs/evidence/**",
+    "Git-ignored caches/artifacts; Cargo.lock is explicitly included"
+  ],
+  "gitStatus": "All implementation remains local and uncommitted/unpushed. Both base HEADs unchanged. No merge/deployment, established workflow/build/release or security setting change.",
+  "ciSkill": {
+    "original": "/Users/gqadonis/.claude/skills/ci-cd-and-automation/SKILL.md",
+    "originalSha256": "a6ed8ed56456b01ff8314c44eefc69897d9905ae4e06bb2b7036286efb79b5f0",
+    "project": ".agents/skills/ci-cd-and-automation/SKILL.md",
+    "projectSha256": "5bccb04a78ca9bb13fd75f4ea403279c73d30f36d6310958e81aa024093d9390",
+    "difference": "Only the task-specific Cucumber scope section was inserted; original source content retained."
+  },
+  "evidenceInventory": "current-evidence-sha256.txt"
+}

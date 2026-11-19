@@ -1,0 +1,1202 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 27.32s
+     Running tests/hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/hooks-dedec37f71240103)
+Feature: Reusable ordered scenario lifecycle hooks
+  Scenario: Setup follows registration order and teardown unwinds in reverse order
+   ✔  Given the lifecycle configuration "ordered"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: A setup failure stops later setup and steps but still runs teardown
+   ✔  Given the lifecycle configuration "before-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "before-one"
+  Scenario: Teardown continues after asynchronous failures and reports every failure
+   ✔  Given the lifecycle configuration "after-failures"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-two"
+   ✔  And the hook diagnostic contains "after-one"
+  Scenario: Teardown continues when a callback panics before returning its future
+   ✔  Given the lifecycle configuration "sync-after-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-sync,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-sync"
+  Scenario: Teardown sees the failed scenario and still releases resources
+   ✔  Given the lifecycle configuration "step-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 1 failed steps and 0 hook errors
+   ✔  And teardown observes a failed step
+  Scenario: Conditional hooks use inherited feature rule and scenario tags
+   ✔  Given the lifecycle configuration "tagged"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "tagged-before,background,step,tagged-after"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Each retry gets fresh scenario state and repeats its hooks
+   ✔  Given the lifecycle configuration "retry"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one,before-one,before-two,background,step,after-two,after-one"
+   ✔  And both attempts start with fresh world state
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Legacy replacement hooks retain last-registration behavior
+   ✔  Given the lifecycle configuration "legacy"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-two,background,step,after-two"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: After-only hooks can observe a scenario with no initialized world
+   ✔  Given the lifecycle configuration "after-only"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "after-without-world"
+   ✔  And the run has 0 failed steps and 0 hook errors
+[Summary]
+1 feature
+9 scenarios (9 passed)
+42 steps (42 passed)
+     Running tests/messages_attachments.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_attachments-4679cb25caa27021)
+Feature: Applications attach typed evidence to actual execution scopes
+  Scenario: Text and binary evidence preserve caller content and metadata
+   ✔  Given an attachment-aware application in "payloads" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves exact text and binary evidence with their media types and file names
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Scenario and step hooks attach within their actual execution scopes
+   ✔  Given an attachment-aware application in "hooks" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves evidence under the actual scenario hook or step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Concurrent scenarios retain independent attachment scopes
+   ✔  Given an attachment-aware application in "concurrent" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each concurrent scenario retrieves only its own evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Retried scenarios retain evidence from each distinct attempt
+   ✔  Given an attachment-aware application in "retry" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each attempt retrieves its own evidence and the final attempt passes
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across step boundaries cannot target a later step
+   ✔  Given an attachment-aware application in "late step" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old step handle rejects the write while the current scope accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across retries cannot target a later attempt
+   ✔  Given an attachment-aware application in "late attempt" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old attempt handle rejects the write while the retry accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Completed applications cannot append evidence through retained handles
+   ✔  Given an attachment-aware application in "completed" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then all retained scope handles reject writes after completion
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Existing World implementations run without an attachment override
+   ✔  Given an existing application with no attachment-aware constructor
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then its original World constructor and steps still run successfully
+   ✔  And the report contains no invented attachments
+  Scenario: Lazy World construction can attach within its first actual step
+   ✔  Given an attachment-aware application in "lazy" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves constructor and body evidence under the first step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+[Summary]
+1 feature
+9 scenarios (9 passed)
+36 steps (36 passed)
+     Running tests/messages_corpus.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_corpus-5732c61819d2f2fa)
+Feature: Adopt the complete official Gherkin 43 plaintext fixture corpus
+  Scenario Outline: Accepted source background.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "background.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source complex_background.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "complex_background.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source conjunctions.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "conjunctions.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source datatables.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "datatables.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source datatables_with_new_lines.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "datatables_with_new_lines.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source descriptions_with_comments.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "descriptions_with_comments.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source docstrings.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "docstrings.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source docstrings.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "docstrings.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source empty.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "empty.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source escaped_pipes.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "escaped_pipes.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source example_token_multiple.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "example_token_multiple.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source example_tokens_everywhere.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "example_tokens_everywhere.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source extra_table_content.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "extra_table_content.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_emoji.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_emoji.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_fr.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_fr.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source i18n_no.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "i18n_no.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_background_1.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_background_1.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_background_2.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_background_2.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_1.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_1.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_2.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_2.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_feature_3.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_feature_3.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_scenario.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_scenario.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source incomplete_scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "incomplete_scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source language.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal-example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal-example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal.crlf.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal.crlf.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source minimal.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "minimal.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source padded_example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "padded_example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source prefixed-keywords.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "prefixed-keywords.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source readme_example.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "readme_example.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule_with_tag.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule_with_tag.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source rule_without_name_and_description.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "rule_without_name_and_description.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_no_newline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_no_newline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_docstring.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_value_with_dollar_sign.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_value_with_dollar_sign.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outline_with_value_with_trailing_backslash.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outline_with_value_with_trailing_backslash.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source scenario_outlines_with_tags.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "scenario_outlines_with_tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source several_examples.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "several_examples.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source spaces_in_language.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "spaces_in_language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source star-keywords.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "star-keywords.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source step_with_datatable_and_docstring.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "step_with_datatable_and_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source tagged_feature_with_scenario_outline.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "tagged_feature_with_scenario_outline.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source tags.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source trim_space.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "trim_space.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source trim_tab.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "trim_tab.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Accepted source very_long.feature retains its complete official graph
+   ✔  Given the official good plaintext fixture "very_long.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then the entire graph equals its official expectation modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34
+  Scenario Outline: Invalid source backslash_at_end_of_line_in_datatable.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "backslash_at_end_of_line_in_datatable.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source file_ends_with_open_docstring.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "file_ends_with_open_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source inconsistent_cell_count.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "inconsistent_cell_count.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source invalid_language.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "invalid_language.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source multiple_parser_errors.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "multiple_parser_errors.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source not_gherkin.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "not_gherkin.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source repeated_step_docstring.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "repeated_step_docstring.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source single_parser_error.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "single_parser_error.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unexpected_end_of_file.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unexpected_end_of_file.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unexpected_eof.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unexpected_eof.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source unfinished_datatable.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "unfinished_datatable.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+  Scenario Outline: Invalid source whitespace_in_tags.feature fails native document parsing
+   ✔  Given the official bad plaintext fixture "whitespace_in_tags.feature"
+   ✔  When it is processed with all explicit Gherkin 43 source policies
+   ✔  Then native document parsing rejects that official bad fixture
+[Summary]
+1 feature
+62 scenarios (62 passed)
+236 steps (236 passed)
+     Running tests/messages_documents.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_documents-23ca514a626fe4bd)
+Feature: Explicit latest mode processes complete Gherkin documents
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "blank" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "whitespace" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "comments without newline" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario Outline: Valid featureless sources produce exact empty document reports
+   ✔  Given a "CRLF comments" featureless source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then its exact source and empty graph equal the pinned official parser
+   ✔  And it has zero Pickles or test cases and a successful schema-valid run
+  Scenario: Featureless documents coexist with ordinary executed features
+   ✔  Given a directory containing blank commented and ordinary feature files
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then every source has exactly one document and only the ordinary feature executes
+   ✔  And all document envelopes satisfy the pinned schema
+  Scenario Outline: Invalid documents cannot become successful empty reports
+   ✔  Given a "arbitrary text" invalid source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then the pinned official parser and native runtime both reject the document
+   ✔  And it has no empty document record and no successful run
+  Scenario Outline: Invalid documents cannot become successful empty reports
+   ✔  Given a "language directive" invalid source
+   ✔  When it runs through the explicit latest Cucumber convenience and Messages
+   ✔  Then the pinned official parser and native runtime both reject the document
+   ✔  And it has no empty document record and no successful run
+  Scenario: Existing default parsing still requires a Feature
+   ✔  Given a "blank" featureless source
+   ✔  When it runs with default parser policies and source-backed Messages
+   ✔  Then the legacy report contains a parse error and no empty document
+  Scenario: Empty-document snapshots preserve the selected fallback dialect
+   ✔  Given a "comments without newline" featureless source
+   ✔  When a latest parser with French fallback captures the document
+   ✔  Then its immutable empty record preserves exact bytes path and French fallback
+   ✔  And Feature snapshots stay absent while input bytes remain available
+  Scenario: Latest convenience validates the currently configured dialect
+   ✔  Given a Basic parser configured with the legacy formal dialect
+   ✔  When latest document semantics are requested
+   ✔  Then the unsupported fallback is reported without silent replacement
+  Scenario: Retained empty generations survive replacement invalid input and failed reads
+   ✔  Given a "comments without newline" featureless source
+   ✔  When successive captures replace it with a comment feature invalid text and missing file
+   ✔  Then each current generation has the correct record type and retained empty bytes stay unchanged
+[Summary]
+1 feature
+11 scenarios (11 passed)
+41 steps (41 passed)
+     Running tests/messages_errors.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_errors-6b09de5b757d611e)
+Feature: Report input failures without inventing successful execution
+  Scenario Outline: Preserve failed source diagnostics after its file changes
+   ✔  Given an input with a "syntax" failure
+   ✔  When parsing finishes and the source file is "deleted" before reporting
+   ✔  Then the report contains the exact captured source and native diagnostic location
+   ✔  And every error-report envelope satisfies the pinned Messages schema
+   ✔  And the run completes unsuccessfully without invented test cases
+  Scenario Outline: Preserve failed source diagnostics after its file changes
+   ✔  Given an input with a "syntax" failure
+   ✔  When parsing finishes and the source file is "rewritten" before reporting
+   ✔  Then the report contains the exact captured source and native diagnostic location
+   ✔  And every error-report envelope satisfies the pinned Messages schema
+   ✔  And the run completes unsuccessfully without invented test cases
+  Scenario Outline: Preserve failed source diagnostics after its file changes
+   ✔  Given an input with a "expansion" failure
+   ✔  When parsing finishes and the source file is "deleted" before reporting
+   ✔  Then the report contains the exact captured source and native diagnostic location
+   ✔  And every error-report envelope satisfies the pinned Messages schema
+   ✔  And the run completes unsuccessfully without invented test cases
+  Scenario: A missing input is a run failure without an invented source
+   ✔  Given an input with a "missing file" failure
+   ✔  When the missing input is reported
+   ✔  Then the report identifies the I/O failure without a fabricated parse source
+   ✔  And every error-report envelope satisfies the pinned Messages schema
+   ✔  And the run completes unsuccessfully without invented test cases
+  Scenario: Valid scenarios still report alongside a rejected source
+   ✔  Given a directory with valid and invalid feature inputs
+   ✔  When the directory is run without fail-fast
+   ✔  Then the passing scenario and rejected source are both represented
+   ✔  And every error-report envelope satisfies the pinned Messages schema
+   ✔  And the overall run is unsuccessful
+  Scenario: A failed later read does not reuse an older source generation
+   ✔  Given a successful source snapshot retained before its file is deleted
+   ✔  When the missing input is reported
+   ✔  Then the current input is cleared and the retained snapshot stays unchanged
+   ✔  And the report identifies the I/O failure without a fabricated parse source
+   ✔  And the run completes unsuccessfully without invented test cases
+[Summary]
+1 feature
+6 scenarios (6 passed)
+30 steps (30 passed)
+     Running tests/messages_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_hooks-6fe3c84d3ffd360a)
+Feature: Report observed native scenario hook stages through Messages
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "passing"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "before-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "FAILED,SKIPPED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "after-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "body-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,FAILED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "undefined"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,UNDEFINED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "filtered"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "body"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "empty"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "before-one,before-two,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "before-retry"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "FAILED,SKIPPED,SKIPPED,PASSED;PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "after-retry"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED;PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "after-failure"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED;PASSED,PASSED,PASSED,FAILED"
+   ✔  And hook run success is "false"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+[Summary]
+1 feature
+10 scenarios (10 passed)
+70 steps (70 passed)
+     Running tests/messages_markdown.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_markdown-48529e02527f9464)
+Feature: Native Markdown parsing retains official source semantics
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "misc.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "datatables.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "docstrings.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Complete official Markdown fixture graphs are preserved
+   ✔  Given the official Markdown fixture "tags.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the pinned expectation
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "French fallback"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "language-looking prose"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "bullets and Unicode columns"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "indentation and separator rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "variable fences and media"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "table then docstring"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "docstring then table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "rule backgrounds and examples"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "blank first line"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Matcher boundaries agree with the pinned official Markdown parser
+   ✔  Given the Markdown boundary "empty source"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then its entire Markdown graph equals the live pinned oracle
+   ✔  And its native projection retains original source positions and arguments
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "duplicate docstrings"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "table docstring table"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "inconsistent rows"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "unterminated fence"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario Outline: Invalid Markdown arguments fail visibly
+   ✔  Given the Markdown boundary "dangling tags"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then both native Markdown and the pinned oracle reject it
+  Scenario: Markdown remains independently available from Messages output
+   ✔  Given the official Markdown fixture "minimal.feature.md"
+   ✔  When its native Markdown document is parsed and compiled
+   ✔  Then the parser API returns an owned native feature without a reporting dependency
+[Summary]
+1 feature
+21 scenarios (21 passed)
+78 steps (78 passed)
+     Running tests/messages_retries.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_retries-68c3d92d6eac3629)
+Feature: Report native retry attempts to portable consumers
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "recovered"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 2 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,false"
+   ✔  And attempt first-step statuses are "FAILED,PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 3 distinct attempts of one test case
+   ✔  And attempt retry flags are "true,true,false"
+   ✔  And attempt first-step statuses are "FAILED,FAILED,FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "passing"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "PASSED"
+   ✔  And the final run success is "true"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "undefined"
+   ✔  When it runs with a retry budget of 2 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "UNDEFINED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario Outline: Report the actual retry lifecycle
+   ✔  Given a retrying feature with outcome "exhausted"
+   ✔  When it runs with a retry budget of 0 through the Messages writer
+   ✔  Then the report contains 1 distinct attempts of one test case
+   ✔  And attempt retry flags are "false"
+   ✔  And attempt first-step statuses are "FAILED"
+   ✔  And the final run success is "false"
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+  Scenario: Keep retry outcomes separate across concurrent scenarios
+   ✔  Given concurrent recovering and exhausted scenarios
+   ✔  When they run through the Messages writer
+   ✔  Then each scenario has its own contiguous attempt sequence
+   ✔  And the recovered scenario does not hide the exhausted failure
+   ✔  And all retry envelopes satisfy the pinned schema and reference graph
+[Summary]
+1 feature
+6 scenarios (6 passed)
+40 steps (40 passed)
+     Running tests/messages_run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_run_hooks-ae614cda911310af)
+Feature: Exchange actual global hook execution through standard Messages
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "passing"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "setup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "cleanup failure"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 1 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "both failures"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "false"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario Outline: Report global lifecycle outcomes and scenario gating
+   ✔  Given a run with global hooks configured for "empty input"
+   ✔  When its shared global-hook records are reported as Messages
+   ✔  Then every observed global invocation has a definition and paired lifecycle
+   ✔  And global setup is reported before scenarios and cleanup after them
+   ✔  And the report contains 0 scenario attempts and success "true"
+   ✔  And the official consumer resolves the global-hook outcomes
+  Scenario: Sequential store reuse does not leak earlier run hooks
+   ✔  Given two sequential runs sharing a global-hook store
+   ✔  When each run is reported with its own Messages writer
+   ✔  Then each report contains only its own observed global-hook invocations
+   ✔  And both reports have complete unsuccessful or successful final outcomes
+[Summary]
+1 feature
+6 scenarios (6 passed)
+34 steps (34 passed)
+     Running tests/messages_source.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_source-2e71fe00a66fa874)
+Feature: Localized source graphs use the parser's selected vocabulary
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_fr"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match official localized Gherkin 43 source graphs
+   ✔  Given the official localized Gherkin 43 fixture "i18n_emoji"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: The captured fallback dialect applies without a language directive
+   ✔  Given a legacy French feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "fr" with step keywords "Soit ,Quand ,Alors "
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: A newly registered dialect retains no-space step keywords
+   ✔  Given a Gherkin 43 Malayalam feature using the parser fallback without a directive
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "ml" with step keywords "നൽകിയത്,എപ്പോൾ,പിന്നെ"
+   ✔  And the pickle step types are localized as "Context,Action,Outcome"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Latest-only Rule keywords retain localized structure and Unicode columns
+   ✔  Given a Gherkin 43 Chinese feature with a latest-only Rule keyword and Unicode table cells
+   ✔  When its captured source is converted to Messages
+   ✔  Then the graph language is "zh-CN" with a Rule keyword "规则"
+   ✔  And its Unicode table cell columns are 9 and 14
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Multiply classified localized keywords remain Unknown
+   ✔  Given a Gherkin 43 French feature with wildcard and conjunction steps
+   ✔  When its captured source is converted to Messages
+   ✔  Then the pickle step types are localized as "Context,Unknown,Unknown"
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Legacy vocabulary does not acquire a latest-only structural keyword
+   ✔  Given a legacy Chinese feature containing the latest-only Rule spelling
+   ✔  When its captured source is converted to Messages
+   ✔  Then the legacy graph retains that spelling as feature description
+   ✔  And every graph envelope validates against Messages 34.2.1
+Feature: Source-faithful portable Gherkin reports
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "rule_with_tag"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "complex_background"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "descriptions"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "several_examples"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "escaped_pipes"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "docstrings"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "step_with_datatable_and_docstring"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario Outline: Match the official Gherkin 43 source graph
+   ✔  Given the official Gherkin 43 fixture "example_tokens_everywhere"
+   ✔  When its captured source is converted to Messages
+   ✔  Then its AST and pickles equal the official fixture modulo IDs and URI
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Selected outline rows retain original source and example identities
+   ✔  Given a tagged outline inside a rule with comments between example rows
+   ✔  When only the selected expanded scenario runs with captured-source reporting
+   ✔  Then the report contains the complete original unexpanded AST
+   ✔  And the executed test case references the selected real example row
+   ✔  And both argument values are normalized and ordered in its pickle
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Captured source survives deletion after parsing
+   ✔  Given a feature captured before its file is deleted
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting succeeds using the captured bytes without a final newline
+   ✔  And every graph envelope validates against Messages 34.2.1
+  Scenario: Missing captured source fails visibly
+   ✔  Given an executed feature absent from the shared source store
+   ✔  When its recorded native feature runs with captured-source reporting
+   ✔  Then reporting rejects the missing snapshot without a successful completion
+  Scenario: Literal language directives in content retain their source meaning
+   ✔  Given an English feature with a language directive inside a doc string and a later comment
+   ✔  When its captured source is converted to Messages
+   ✔  Then the document remains English and retains both literal directive lines
+   ✔  And every graph envelope validates against Messages 34.2.1
+[Summary]
+2 features
+19 scenarios (19 passed)
+80 steps (80 passed)
+     Running tests/run_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/run_hooks-6a4465534542c26e)
+Feature: Complete native run setup and cleanup with honest failure outcomes
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "passing"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before both"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 2 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "before construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after construct fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 1 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "all fail"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global hook statistics report 4 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario Outline: Continue global hooks and gate scenarios on setup success
+   ✔  Given a run lifecycle configured for "body fails"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: Global callbacks run for an empty feature
+   ✔  Given a run lifecycle configured for "empty"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Retries do not repeat global callbacks
+   ✔  Given a run lifecycle configured for "retry"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global hook statistics report 0 failures
+   ✔  And global records identify each actual callback and its result
+  Scenario: A setup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "before fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: A cleanup failure produces an unsuccessful run_and_exit process
+   ✔  Given a run lifecycle configured for "after fails"
+   ✔  When an isolated process runs it using run_and_exit
+   ✔  Then the process fails with a global hook diagnostic
+  Scenario: Concurrent scenarios share one global setup and cleanup
+   ✔  Given a run lifecycle configured for "parallel"
+   ✔  When the native run completes with global hooks
+   ✔  Then the run lifecycle trace is "before-one,before-two,body,body,after-two,after-one"
+   ✔  And global records identify each actual callback and its result
+  Scenario: Sequential reuse does not change a completed run's failure count
+   ✔  Given a reusable run-hook registry and observation store
+   ✔  When one failing run and one passing run execute sequentially
+   ✔  Then their completed statistics and callback records remain separate
+[Summary]
+1 feature
+14 scenarios (14 passed)
+62 steps (62 passed)
+     Running tests/scenario_hook_records.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/scenario_hook_records-063c77411f1cc16e)
+Feature: Observe actual scenario callbacks without changing legacy lifecycle behavior
+  Scenario: Record ordered setup and reverse cleanup as separate actual callbacks
+   ✔  Given an observed scenario-hook registry configured for "passing"
+   ✔  When the application executes its scenario
+   ✔  Then selected callbacks execute in registration order and reverse cleanup order
+   ✔  And each executed callback has its own definition and invocation identity
+   ✔  And recorded timestamps and outcomes describe actual executions
+  Scenario: Failed setup records later selected setup as skipped
+   ✔  Given an observed scenario-hook registry configured for "setup failure"
+   ✔  When the application executes its scenario
+   ✔  Then the failed setup callback and every cleanup callback execute
+   ✔  And later selected setup is recorded as skipped without an invocation identity
+   ✔  And no scenario body executes
+  Scenario: Construction panics have the same cleanup guarantees as asynchronous failures
+   ✔  Given an observed scenario-hook registry configured for "constructor panic"
+   ✔  When the application executes its scenario
+   ✔  Then every selected cleanup callback executes
+   ✔  And the actual failing callback has its own diagnostic
+  Scenario: Scoped cleanup observes earlier cleanup failures
+   ✔  Given an observed scenario-hook registry configured for "cleanup failure"
+   ✔  When the application executes its scenario
+   ✔  Then the first cleanup callback observes a passing body
+   ✔  And the next cleanup callback observes the earlier cleanup failure
+   ✔  And both cleanup callbacks retain the original passing body snapshot
+  Scenario: Equal-severity cleanup failures retain the original failing result
+   ✔  Given an observed scenario-hook registry configured for "body and cleanup failure"
+   ✔  When the application executes its scenario
+   ✔  Then later cleanup retains the body's first failing diagnostic
+   ✔  And every individual cleanup failure remains available in records
+  Scenario: Existing after callbacks retain their pre-cleanup snapshot
+   ✔  Given an observed scenario-hook registry configured for "mixed legacy and scoped"
+   ✔  When the application executes its scenario
+   ✔  Then legacy cleanup receives its original ScenarioFinished snapshot
+   ✔  And scoped cleanup observes the earlier cleanup failure
+  Scenario: Tag-excluded callbacks do not become skipped executions
+   ✔  Given an observed scenario-hook registry selected by inherited feature Rule and scenario tags
+   ✔  When the application executes its scenario
+   ✔  Then only matching callback definitions have selected slots
+   ✔  And excluded callbacks have neither skipped records nor invocation identities
+  Scenario: Retrying preserves definitions and separates actual callback attempts
+   ✔  Given an observed scenario-hook registry configured for "retry"
+   ✔  When the application executes its scenario
+   ✔  Then callback definitions remain stable across attempts
+   ✔  And every attempt has a fresh World and distinct execution identities
+   ✔  And scoped cleanup observes failure with retry availability only on the first attempt
+  Scenario: Concurrent cases cannot exchange callback observations
+   ✔  Given two concurrent scenarios sharing an observed scenario-hook registry
+   ✔  When the application executes both scenarios
+   ✔  Then each callback scope and record belongs to its actual scenario and attempt
+  Scenario: Legacy stage replacement leaves no phantom callback executions
+   ✔  Given an observed registry whose before stage is replaced using the legacy builder
+   ✔  When the application executes its scenario
+   ✔  Then only the legacy before callback and registered cleanup callbacks execute
+   ✔  And replaced registrations have no selected slots or invocation records
+  Scenario: Evidence belongs to the individual callback that produced it
+   ✔  Given an observed scenario-hook registry configured for "attachments"
+   ✔  When the application executes its scenario
+   ✔  Then evidence from each callback retains that callback's definition identity
+   ✔  And a handle retained from an earlier callback rejects later writes
+  Scenario: Native empty-scenario behavior stays the default
+   ✔  Given an observed registry with failing setup and an empty scenario under native policy
+   ✔  When the application executes its scenario
+   ✔  Then every selected cleanup callback still executes
+   ✔  And scoped cleanup receives the native failed-setup snapshot
+  Scenario: Explicit JS13.3 policy follows the empty-Pickle hook classification
+   ✔  Given an observed registry with failing setup and an empty scenario under JS13.3 policy
+   ✔  When the application executes its scenario
+   ✔  Then registered cleanup slots are skipped without invented invocations
+   ✔  And the initial setup failure remains the run failure
+  Scenario: Empty-Pickle cleanup arguments remain absent under explicit JS13.3 policy
+   ✔  Given an observed registry with passing setup and an empty scenario under JS13.3 policy
+   ✔  When the application executes its scenario
+   ✔  Then registered cleanup callbacks run in reverse order
+   ✔  And their scoped result and retry-decision arguments are absent
+  Scenario: Existing unobserved registries retain attachment reporting compatibility
+   ✔  Given an unobserved legacy hook registry with typed attachments
+   ✔  When the application executes its scenario
+   ✔  Then its evidence remains under the native composite hook targets
+   ✔  And a handle retained from an earlier callback rejects later writes
+  Scenario: An observed stage can select zero callbacks
+   ✔  Given an observed scenario-hook registry configured for "all excluded"
+   ✔  When the application executes its scenario
+   ✔  Then the plan records present stages with empty callback selections
+   ✔  And no callback invocation is invented
+  Scenario: World initialization failure is distinct from callback failure
+   ✔  Given an observed registry whose World constructor fails
+   ✔  When the application executes its scenario
+   ✔  Then the constructor failure has its own observation
+   ✔  And selected setup callbacks are skipped because initialization failed
+   ✔  And selected cleanup callbacks still execute without a World
+  Scenario: Constructor evidence is not attributed to a callback
+   ✔  Given an observed scenario-hook registry configured for "constructor evidence"
+   ✔  When the application executes its scenario
+   ✔  Then constructor evidence retains its native setup target
+   ✔  And callback evidence retains its individual callback target
+[Summary]
+1 feature
+18 scenarios (18 passed)
+76 steps (76 passed)
+     Running tests/sources.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/sources-29bd67fd638ed07e)
+Feature: Applications select an official dialect catalogue explicitly
+  Scenario: The selected catalogue applies to a source language directive
+   ✔  Given a Texan source using the corrected Rule keyword
+   ✔  When the parser captures it with the Gherkin 43 catalogue
+   ✔  Then the captured feature contains the Texan rule and its scenario
+   ✔  And the snapshot records the Gherkin 43 catalogue
+  Scenario: Existing parsers retain the legacy catalogue by default
+   ✔  Given a source document without a final newline
+   ✔  When the parser captures the source and the file is rewritten
+   ✔  Then the snapshot records the legacy catalogue
+  Scenario: Changing catalogue never silently replaces an unsupported configured dialect
+   ✔  Given a parser configured for the legacy formal dialect
+   ✔  When the parser selects the Gherkin 43 catalogue
+   ✔  Then the catalogue change reports the unsupported formal dialect
+Feature: Applications choose the doc-string values delivered to step handlers
+  Scenario: Official content reaches a real step handler without media-type text
+   ✔  Given an application feature with a typed doc-string payload
+   ✔  When the application runs with official doc-string semantics
+   ✔  Then the handler receives the normalized payload exactly
+   ✔  And the snapshot records official doc-string semantics and the original source
+  Scenario: Outline values expand inside normalized doc strings before execution
+   ✔  Given an application outline with two doc-string payload examples
+   ✔  When the application runs with official doc-string semantics
+   ✔  Then both handlers receive their expanded normalized payloads exactly
+   ✔  And the snapshot keeps the unexpanded normalized doc-string template
+   ✔  And the snapshot records official doc-string semantics and the original source
+  Scenario: Existing applications retain legacy content without opting in
+   ✔  Given an application feature with a legacy doc-string payload
+   ✔  When the application runs with its default parser
+   ✔  Then the handler receives the legacy payload including its edge newlines
+   ✔  And the snapshot records legacy doc-string semantics and the original source
+Feature: Reports retain the exact source that was parsed
+  Scenario Outline: Source remains available after the filesystem changes
+   ✔  Given a source document without a final newline
+   ✔  When the parser captures the source and the file is rewritten
+   ✔  Then the snapshot contains the exact original bytes
+   ✔  And the captured native feature matches the parsed feature
+  Scenario Outline: Source remains available after the filesystem changes
+   ✔  Given a source document without a final newline
+   ✔  When the parser captures the source and the file is deleted
+   ✔  Then the snapshot contains the exact original bytes
+   ✔  And the captured native feature matches the parsed feature
+  Scenario: Outlines retain their original source and unexpanded AST
+   ✔  Given a source document containing an outline
+   ✔  When the parser captures the source and expands its examples
+   ✔  Then the snapshot still contains the outline template
+   ✔  And the runner input contains both expanded examples
+  Scenario: The configured default dialect accompanies the source
+   ✔  Given a French source document without a language directive
+   ✔  When the French parser captures the source
+   ✔  Then the snapshot records the French default dialect
+   ✔  And the captured native feature matches the parsed feature
+  Scenario: Captured source generations remain immutable when a store is reused
+   ✔  Given a source document without a final newline
+   ✔  When the same path is parsed again with different content
+   ✔  Then the retained first snapshot contains the original bytes
+   ✔  And the current snapshot contains the newly parsed bytes
+Feature: Applications explicitly reject inconsistent table sizes
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "step" table with a "shorter" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "Examples" table with a "shorter" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Strict applications reject shorter and longer table rows
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then one parse error prevents every table handler from running
+   ✔  And the invalid table source has no successful snapshot
+  Scenario Outline: Valid strict table values reach real handlers
+   ✔  Given an application "step" table with a "matching" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then the "step" table values reach the handler exactly
+   ✔  And the source snapshot records "Gherkin 43" table sizing
+  Scenario Outline: Valid strict table values reach real handlers
+   ✔  Given an application "Examples" table with a "matching" later row
+   ✔  When the table application runs with "Gherkin 43" sizing
+   ✔  Then the "Examples" table values reach the handler exactly
+   ✔  And the source snapshot records "Gherkin 43" table sizing
+  Scenario Outline: Existing applications preserve excess-cell truncation
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When the table application runs with "default" sizing
+   ✔  Then the "step" table values reach the handler exactly
+   ✔  And the source snapshot records "Legacy" table sizing
+  Scenario Outline: Existing applications preserve excess-cell truncation
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When the table application runs with "default" sizing
+   ✔  Then the "Examples" table values reach the handler exactly
+   ✔  And the source snapshot records "Legacy" table sizing
+  Scenario Outline: Basic parser exposes a typed strict-table failure
+   ✔  Given an application "step" table with a "longer" later row
+   ✔  When Basic parses the table with strict sizing
+   ✔  Then Basic reports the inconsistent-cell-count diagnostic
+  Scenario Outline: Basic parser exposes a typed strict-table failure
+   ✔  Given an application "Examples" table with a "longer" later row
+   ✔  When Basic parses the table with strict sizing
+   ✔  Then Basic reports the inconsistent-cell-count diagnostic
+[Summary]
+4 features
+21 scenarios (21 passed)
+81 steps (81 passed)

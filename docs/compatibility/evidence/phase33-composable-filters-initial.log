@@ -1,0 +1,83 @@
+ Downloading crates ...
+  Downloaded junit-report v0.9.1
+  Downloaded derive-getters v0.5.0
+   Compiling ident_case v1.0.1
+   Compiling strsim v0.11.1
+   Compiling time-core v0.1.9
+   Compiling num-conv v0.2.2
+   Compiling deranged v0.5.9
+   Compiling powerfmt v0.2.1
+   Compiling derive-getters v0.5.0
+   Compiling quick-xml v0.41.0
+   Compiling mime v0.3.18
+   Compiling Inflector v0.11.4
+   Compiling darling_core v0.24.1
+   Compiling time-macros v0.2.32
+   Compiling time v0.3.55
+   Compiling junit-report v0.9.1
+   Compiling darling_macro v0.24.1
+   Compiling darling v0.24.1
+   Compiling serde_with_macros v3.24.0
+   Compiling serde_with v3.24.0
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: methods `rule` and `scenario` are never used
+   --> src/writer/basic.rs:284:19
+    |
+193 | impl<Out: io::Write> Basic<Out> {
+    | ------------------------------- methods in this implementation
+...
+284 |     pub(crate) fn rule<W: Debug>(
+    |                   ^^^^
+...
+337 |     pub(crate) fn scenario<W: Debug>(
+    |                   ^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:161:5
+    |
+161 |     unused,
+    |     ^^^^^^
+    = note: `#[warn(dead_code)]` implied by `#[warn(unused)]`
+
+warning: unreachable `pub` item
+   --> src/runner/outcomes.rs:31:5
+    |
+ 31 |     pub fn merge(&mut self, other: Self) {
+    |     ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     |
+    |     help: consider restricting its visibility: `pub(crate)`
+    |
+note: the lint level is defined here
+   --> src/lib.rs:159:5
+    |
+159 |     unreachable_pub,
+    |     ^^^^^^^^^^^^^^^
+
+warning: unreachable `pub` item
+  --> src/runner/outcomes.rs:35:5
+   |
+35 |     pub fn diagnostic(&self, stage: &str) -> String {
+   |     ---^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |     |
+   |     help: consider restricting its visibility: `pub(crate)`
+
+warning: `cucumber` (lib) generated 3 warnings (run `cargo fix --lib -p cucumber` to apply 2 suggestions)
+error[E0283]: type annotations needed
+   --> tests/composable_filters.rs:84:15
+    |
+ 84 |     let app = Execution::cucumber().with_writer(writer::Basic::new(
+    |               ^^^^^^^^^^^^^^^^^^^ cannot infer type of the type parameter `I` declared on the associated function `cucumber`
+    |
+    = note: the type must implement `AsRef<Path>`
+note: required by a bound in `cucumber`
+   --> src/lib.rs:294:20
+    |
+294 |     fn cucumber<I: AsRef<Path>>() -> DefaultCucumber<Self, I>
+    |                    ^^^^^^^^^^^ required by this bound in `World::cucumber`
+help: consider specifying a concrete type for the type parameter `I`
+    |
+ 84 |     let app = Execution::cucumber::</* Type */>().with_writer(writer::Basic::new(
+    |                                  ++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "composable_filters") due to 1 previous error

@@ -1,0 +1,8 @@
+    Blocking waiting for file lock on package cache
+    Updating crates.io index
+    Blocking waiting for file lock on package cache
+     Locking 152 packages to latest compatible versions
+      Adding cucumber v0.22.1 (available: v0.23.0)
+      Adding juniper v0.17.2 (available: v0.18.0)
+      Adding peg v0.6.3 (available: v0.8.6)
+      Adding syn v2.0.119 (available: v3.0.10)

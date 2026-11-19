@@ -1,0 +1,39 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0597]: `self.language` does not live long enough
+   --> src/parser/basic.rs:187:24
+    |
+184 |     pub fn with_dialect_catalog(mut self, catalog: DialectCatalog)
+    |                                 -------- binding `self` declared here
+...
+187 |         let language = self.language.as_deref().unwrap_or("en");
+    |                        ^^^^^^^^^^^^^ borrowed value does not live long enough
+188 |         if !catalog.supports(language) {
+189 |             return Err(UnsupportedLanguageError(language.into()));
+    |                                                 --------------- argument requires that `self.language` is borrowed for `'static`
+...
+193 |     }
+    |     - `self.language` dropped here while still borrowed
+
+error[E0505]: cannot move out of `self` because it is borrowed
+   --> src/parser/basic.rs:192:12
+    |
+184 |     pub fn with_dialect_catalog(mut self, catalog: DialectCatalog)
+    |                                 -------- binding `self` declared here
+...
+187 |         let language = self.language.as_deref().unwrap_or("en");
+    |                        ------------- borrow of `self.language` occurs here
+188 |         if !catalog.supports(language) {
+189 |             return Err(UnsupportedLanguageError(language.into()));
+    |                                                 --------------- argument requires that `self.language` is borrowed for `'static`
+...
+192 |         Ok(self)
+    |            ^^^^ move out of `self` occurs here
+    |
+help: consider cloning the value if the performance cost is acceptable
+    |
+187 |         let language = self.language.clone().as_deref().unwrap_or("en");
+    |                                     ++++++++
+
+Some errors have detailed explanations: E0505, E0597.
+For more information about an error, try `rustc --explain E0505`.
+error: could not compile `cucumber` (lib) due to 2 previous errors

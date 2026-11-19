@@ -1,0 +1,28 @@
+{
+  "case": "SDK-010",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "nativeArtifacts": [
+        {
+          "host": "rust",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/cargo-target/release/sdk46-external-consumer",
+          "sha256": "61f43f757040a518e3d6e6eafc395db4cf76b6a2de81ed5cc28db7d875af139f"
+        },
+        {
+          "host": "node",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/node/node_modules/cucumber-native-local/cucumber_sdk.node",
+          "sha256": "e0b30d7d72ff5bb5cc0edc5ac9fc7494a3183c9ed4a909f1495ed679fa55f9e0"
+        },
+        {
+          "host": "python",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+          "sha256": "8ce2f9009cba3f936fa02a1a0279f337fa948c8806a373993ebab137165d4ea1"
+        }
+      ],
+      "realTypeScriptConsumer": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

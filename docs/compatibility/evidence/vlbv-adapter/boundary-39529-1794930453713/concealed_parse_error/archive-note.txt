@@ -1,0 +1,1 @@
+Original process/NDJSON/receipt artifacts retained. The executed application binary is not duplicated; its actual digest remains in candidate.json.

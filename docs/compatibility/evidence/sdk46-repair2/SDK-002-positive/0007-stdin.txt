@@ -1,0 +1,11 @@
+`@feature`
+# Feature: Tagged
+`@rule`
+## Rule: Rule
+`@scenario`
+### Scenario Outline: Row <key>
+* Given value <key>
+`@examples`
+#### Examples:
+  | key |
+  | `@literal` |

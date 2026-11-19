@@ -15,6 +15,56 @@ An implementation of the [Cucumber] testing framework for Rust. Fully native, no
 
 
 
+## Fork interoperability work
+
+The current [contribution-readiness repair](docs/compatibility/readiness/IMPLEMENTATION.md)
+has fresh affected proof:49 core BDD targets (797 scenarios/3399 steps), parser
+73/241 and installed native SDK22/66 passed. The shared phase remains open with
+profile-fixture, minimum-graph and boundary-CI integration findings. See the
+[review checkpoint and exact limits](docs/compatibility/readiness/REVIEW-CHECKPOINT.md).
+Existing workflows remain unchanged; review readiness does not imply merge readiness.
+
+This is the GQAdonis fork. The verified foundation is preserved on
+foundation/rust-bdd-sdk; see [delivery and retained BDD evidence](docs/compatibility/DELIVERY.md).
+The adopted [SDK programme](docs/compatibility/SDK-ROADMAP.md) now has source for
+the shared native compiler/rerun SDK, Rust-owned extensions, and in-process
+[Node/TypeScript](bindings/node/README.md) and [Python](bindings/python/README.md)
+bindings. The completed repair2 boundary built and installed local native packages:
+11 functional scenarios /33 steps and 11 negative controls /33 steps passed,
+with outer Messages proof for all 22 scenarios /66 steps and cleanup retained.
+This is bounded Darwin arm64 proof; scoped internal review and static QA resolved their material findings. No registry package is published. Foreign step execution and
+Behave/pytest-bdd adapters are not implemented. See [phase46 evidence and limits](docs/compatibility/PHASE46-SDK.md)
+and [the Rust SDK guide](sdk/README.md).
+
+The additive [Docusaurus site](docs-site/README.md) passed its earlier paired-site
+boundary: 10 scenarios / 64 steps. That proof covers the prior documentation
+source, not these SDK additions or subsequent page edits. See [retained
+documentation evidence](docs/compatibility/DOCS-SITE-ACCEPTANCE.md).
+[Cucumber](https://gqadonis.github.io/cucumber/) and
+[Gherkin](https://gqadonis.github.io/gherkin/) fork documentation are live; the
+public Pages boundary passed 4 scenarios /22 steps and both repository About
+links were updated. Those results precede these latest page edits; see
+[deployment status and verification](docs-site/README.md#pages-delivery).
+
+This fork adds opt-in keyword-independent step matching, a portable snapshot of
+its compatible Gherkin parser, ordered scenario hooks, and a bounded standard
+Messages NDJSON writer. See the [current status and acceptance evidence](docs/compatibility/STATUS.md)
+and [capability matrix](docs/compatibility/CAPABILITIES.md) for supported behavior
+and remaining gaps. Full Cucumber.js parity and Gherkin 43 conformance are still
+in progress; the existing matching default remains unchanged.
+
+The [portable integration guide](docs/compatibility/REUSE.md) shows how to reuse
+this checkout, select compatibility policies, and wire source-backed reports.
+
+For programmatic VLBV integration, the [read-only Messages receipt adapter](docs/compatibility/PHASE39-VLBV-ADAPTER.md)
+produces boundary-results JSON for the existing canonical reader. It preserves
+failed attempts and checks explicit oracle, negative-control, cleanup and candidate
+receipts, including the exact process-to-Messages binding. The
+[producer recipe](docs/compatibility/VLBV-PRODUCER.md) explains attempt/step mapping.
+The [native rerun API](docs/compatibility/PHASE44-RERUN.md) selects original failed
+scenario or Examples-row locations while retaining every attempt. These tools do
+not close phases or authorize releases.
+
 ## Usage
 
 Describe testing scenarios in `.feature` files:
@@ -87,6 +137,7 @@ For more examples check out the Book ([current][1] | [edge][2]).
 
 - `macros` (default): Enables step attributes and auto-wiring.
 - `timestamps`: Enables timestamps collecting for all [Cucumber] events.
+- `output-messages` (implies `timestamps`): Emits [Messages 34.2.1 NDJSON for an explicit supported subset](docs/compatibility/messages.md); unsupported shapes fail visibly.
 - `output-json` (implies `timestamps`): Enables support for outputting in [Cucumber JSON format].
 - `output-junit` (implies `timestamps`): Enables support for outputting [JUnit XML report].
 - `libtest` (implies `timestamps`): Enables compatibility with [Rust `libtest`][4]'s JSON output format. Useful for [IntelliJ Rust plugin integration][3].

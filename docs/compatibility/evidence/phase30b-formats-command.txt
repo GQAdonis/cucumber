@@ -1,0 +1,4 @@
+cargo test --test execution_control_formats --features output-messages,output-json,output-junit,libtest -- --tags @phase30b_formats
+
+Completed Phase30b/33 boundary; native core20 and parser33 primary acceptance passed first.
+Result:18 scenarios/54 steps passed, exit0, warning-free.

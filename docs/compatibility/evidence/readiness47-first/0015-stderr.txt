@@ -1,0 +1,5 @@
+info: syncing channel updates for nightly-2026-11-18-aarch64-apple-darwin
+info: latest update on 2026-11-18 for version 1.102.0-nightly (59cbdee2e 2026-11-17)
+info: downloading 3 components
+info: checking for self-update (current version: 1.29.2)
+info: downloading self-update (new version: 1.29.3)

@@ -1,0 +1,3 @@
+   Compiling cucumber v0.23.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.12s
+     Running tests/messages_custom_metadata.rs (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target/debug/deps/messages_custom_metadata-cfc1ca6b7314615e)

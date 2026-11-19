@@ -1,0 +1,8 @@
+{
+  "examples": "\nFeature: Foo\n  Scenario: Bar\n    Examples:\n      | value |\n      | \\     |\n",
+  "stepTable": "Feature: Tables\n Scenario: Preserve\n  Given payload\n   | \\     |\n  Then following step\n",
+  "recognized": "Feature: Tables\n Scenario: Preserve\n  Given payload\n   | a\\nb | a\\|b | a\\\\b |\n  Then following step\n",
+  "malformed": "Feature: Broken\n Scenario: Bad\n  Given payload\n   | one |\n   | one | two |\n",
+  "valid": "Feature: Valid\n Scenario: Works\n  Given payload\n",
+  "markdownMalformed": "# Feature: Broken\n## Scenario: Bad\n* Given payload\n```\none\n```\n```\ntwo\n```\n"
+}

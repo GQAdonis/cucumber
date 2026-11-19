@@ -1,0 +1,2 @@
+set -o pipefail
+cargo test --features output-messages --test vlbv_adapter -- --tags @phase39_vlbv 2>&1 | tee docs/compatibility/evidence/phase39-third-bdd.log

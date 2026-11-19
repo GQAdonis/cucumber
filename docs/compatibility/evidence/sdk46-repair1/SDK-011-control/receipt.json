@@ -1,0 +1,27 @@
+{
+  "case": "SDK-011",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "sameHostRequests": 6,
+      "uriIsolation": [
+        "memory://one.feature",
+        "memory://two.feature"
+      ],
+      "runIsolation": [
+        "owner-A",
+        "owner-B"
+      ]
+    },
+    {
+      "control": "cross-associated run identity",
+      "rejected": "run identity changed"
+    },
+    {
+      "control": "cross-associated source URI",
+      "rejected": "full source graph differs from independent oracle"
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

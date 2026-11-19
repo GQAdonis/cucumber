@@ -1,0 +1,8 @@
+{
+  "question": "KBD requires a signed successor manifest to start the repair phase. Your earlier key approval covered only the previous amendment. May I use your registered key to sign the phase-47-contribution-readiness manifest and proceed with that assessment?",
+  "answer": "Yes",
+  "scope": "Only exact successor signature and assessment; no invented per-scenario calibration or execution-contract adoption.",
+  "manifest": "docs/compatibility/readiness/start-successor.json",
+  "sha256": "6647b666f48be33a5042189274595e8b3890867be2ce784acde03ab872f55f38",
+  "signatureVerified": true
+}

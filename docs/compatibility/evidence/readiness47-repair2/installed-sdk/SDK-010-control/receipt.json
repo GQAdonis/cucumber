@@ -1,0 +1,48 @@
+{
+  "case": "SDK-010",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "nativeArtifacts": [
+        {
+          "host": "rust",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/cargo-target/release/sdk46-external-consumer",
+          "sha256": "465173dd6b8b319f6e9d812e8b4a0b4c385961fc68e2bc30fd8174fad362fdb9"
+        },
+        {
+          "host": "node",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/node/node_modules/cucumber-native-local/cucumber_sdk.node",
+          "sha256": "4cccb957ac02384ef354c0a77af6e2d9b43a3ab0d9fa204687619cf44abd6f39"
+        },
+        {
+          "host": "python",
+          "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+          "sha256": "5495ab70e3ee00995c199b8a1282986135ae9556d2fad85a8ffbaa222d9f3906"
+        }
+      ],
+      "realTypeScriptConsumer": true
+    },
+    {
+      "control": "node fresh-process missing native",
+      "explicitFailure": "node:internal/modules/cjs/loader:1573\n  throw err;\n  ^\n\nError: Cannot find module './cucumber_sdk.node'\nRequire stack:\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez/node_modules/cucumber-native-local/index.js\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez/consumer.cjs\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)\n    at Module._load (node:internal/modules/cjs/loader:1346:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.require (node:internal/modules/cjs/loader:1679:12)\n    at require (node:internal/modules/helpers:196:16)\n    at Object.<anonymous> (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez/node_modules/cucumber-native-local/index.js:4:16)\n    at Module._compile (node:internal/modules/cjs/loader:1934:14) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez/node_modules/cucumber-native-local/index.js',\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez/consumer.cjs'\n  ]\n}\n\nNode.js v26.5.0\n"
+    },
+    {
+      "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-node-9d1vgiez",
+      "removed": true
+    },
+    {
+      "control": "python fresh-process missing native",
+      "explicitFailure": "Traceback (most recent call last):\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-python-25k3v69w/consumer.py\", line 4, in <module>\n    import cucumber_native_local as sdk\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-python-25k3v69w/cucumber_native_local/__init__.py\", line 10, in <module>\n    from . import _native\nImportError: cannot import name '_native' from partially initialized module 'cucumber_native_local' (most likely due to a circular import) (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-python-25k3v69w/cucumber_native_local/__init__.py)\n"
+    },
+    {
+      "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/sdk46-missing-python-25k3v69w",
+      "removed": true
+    }
+  ],
+  "oracleArtifactsUnchanged": true,
+  "successorSourceIdentities": {
+    "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/successor-source-identities.json",
+    "sha256": "42f3e0cefb16c695737c85d1db5572995f0dd4800e6a95aefa83ac4dc2005e79"
+  }
+}

@@ -1,0 +1,95 @@
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0283]: type annotations needed
+   --> tests/line_selection.rs:109:10
+    |
+105 |     let mut cli=cucumber::cli::Opts::default();
+    |                 ------------------- type must be known at this point
+...
+109 |         .with_cli(cli).filter_run(&world.path,move|_,_,scenario|!restrict||scenario.name=="invoice green").await;
+    |          ^^^^^^^^ cannot infer type of the type parameter `CustomCli` declared on the method `with_cli`
+    |
+    = note: the type must implement `cucumber::cli::Args`
+    = help: the following types implement trait `cucumber::cli::Args`:
+              ()
+              Box<T>
+              Compose<L, R>
+              Opts<Parser, Runner, Writer, Custom>
+              cucumber::cli::Empty
+              cucumber::parser::basic::Cli
+              cucumber::runner::basic::Cli
+              cucumber::writer::basic::Cli
+            and 2 others
+    = note: the type must also implement `std::default::Default`
+note: required by a bound in `Opts`
+   --> src/cli.rs:91:13
+    |
+ 86 | pub struct Opts<Parser, Runner, Writer, Custom = Empty>
+    |            ---- required by a bound in this struct
+...
+ 91 |     Custom: Args,
+    |             ^^^^ required by this bound in `Opts`
+    = note: required for `Opts<Cli, Cli, Cli, _>` to implement `std::default::Default`
+    = note: the full name for the type has been written to '/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/line_selection-1d096cfb6b834a76.long-type-5121516952210500191.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+help: consider specifying a concrete type for the type parameter `CustomCli`
+    |
+109 |         .with_cli::</* Type */>(cli).filter_run(&world.path,move|_,_,scenario|!restrict||scenario.name=="invoice green").await;
+    |                  ++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "line_selection") due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error[E0599]: no method named `parsing_errors` found for struct `cucumber::writer::RunHooks<Wr>` in the current scope
+   --> tests/dry_run_formats.rs:43:74
+    |
+ 43 |     let report=run.with_default_cli().run(&path).await;assert_eq!(report.parsing_errors(),0);
+    |                                                                          ^^^^^^^^^^^^^^ method not found in `cucumber::writer::RunHooks<Wr>`
+    |
+   ::: src/writer/mod.rs:144:8
+    |
+144 |     fn parsing_errors(&self) -> usize;
+    |        -------------- the method is available for `cucumber::writer::RunHooks<Wr>` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Stats` which provides `parsing_errors` is implemented but not in scope; perhaps you want to import it
+    |
+  2 + use cucumber::StatsWriter;
+    |
+
+error[E0599]: no method named `execution_has_failed` found for struct `cucumber::writer::RunHooks<Wr>` in the current scope
+   --> tests/dry_run_formats.rs:44:13
+    |
+ 44 |     (report.execution_has_failed(),report.retried_steps())
+    |             ^^^^^^^^^^^^^^^^^^^^ method not found in `cucumber::writer::RunHooks<Wr>`
+    |
+   ::: src/writer/mod.rs:166:8
+    |
+166 |     fn execution_has_failed(&self) -> bool {
+    |        -------------------- the method is available for `cucumber::writer::RunHooks<Wr>` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Stats` which provides `execution_has_failed` is implemented but not in scope; perhaps you want to import it
+    |
+  2 + use cucumber::StatsWriter;
+    |
+
+error[E0599]: no method named `retried_steps` found for struct `cucumber::writer::RunHooks<Wr>` in the current scope
+   --> tests/dry_run_formats.rs:44:43
+    |
+ 44 |     (report.execution_has_failed(),report.retried_steps())
+    |                                           ^^^^^^^^^^^^^ method not found in `cucumber::writer::RunHooks<Wr>`
+    |
+   ::: src/writer/mod.rs:140:8
+    |
+140 |     fn retried_steps(&self) -> usize;
+    |        ------------- the method is available for `cucumber::writer::RunHooks<Wr>` here
+    |
+    = help: items from traits can only be used if the trait is in scope
+help: trait `Stats` which provides `retried_steps` is implemented but not in scope; perhaps you want to import it
+    |
+  2 + use cucumber::StatsWriter;
+    |
+
+For more information about this error, try `rustc --explain E0599`.
+error: could not compile `cucumber` (test "dry_run_formats") due to 3 previous errors

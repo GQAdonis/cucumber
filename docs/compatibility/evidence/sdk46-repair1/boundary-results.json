@@ -1,0 +1,797 @@
+{
+  "phaseId": "phase-46-native-sdk",
+  "projectId": "39208255-8a57-4101-8014-7952fe9993e7",
+  "runId": "project-20261118T062840Z",
+  "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+  "recordedAt": "2026-11-18T11:15:58.018756+00:00",
+  "executedBy": {
+    "harness": "cucumber-rs0.23 harness=false language_sdk + installed Rust/Node/Python consumers",
+    "version": "phase46 B5repair1",
+    "model": "internal Codex exact deployment unknown"
+  },
+  "sourceDigests": {
+    "sdk/.gitignore": "7cfe49a0b61e8dbe0259ee3a7fe1090d3dcee2d563aaf2a9acd7952c4e29b9db",
+    "sdk/Cargo.toml": "e1eee141f51d8be6aae54ad39bd29db918b45551025d0a434d7ed84ae13e8850",
+    "sdk/README.md": "787f003c364c7a531addec6fc92649bdedf2ddeae23741a3a0a164aa45f59b9c",
+    "sdk/acceptance/README.md": "aa28f6a65940b0adf93e799bc715864a2562a92da099bb6a99c1fe4b6d698cbe",
+    "sdk/acceptance/cases.py": "46bade28e302175795fb0e69fec1b01e14f6d6d1b3d6aa34f44b1f80b4bb39ad",
+    "sdk/acceptance/consumer.rs": "43570e0f77d737204bbd9931e378ef5f93181f551ee3fa90ade59165411450ec",
+    "sdk/acceptance/consumer.ts": "bcb705fe7954b79c8631d4f906eb3306b4909c072784aca0d2ab7a53d5a18579",
+    "sdk/acceptance/features/controls.feature": "fef7f2519ee4b5f42297c2682e686b66e61a834bb92037b75f97d6e3aba1b61b",
+    "sdk/acceptance/features/sdk.feature": "1340e00b332fc5f329e90466f8992119f546701c05e73caa84b396dbe06dac5e",
+    "sdk/acceptance/finalize.py": "1e453780f81c32f4f8a71ed1ca3b60ef58a1bb77590a85c2de8341b32596e158",
+    "sdk/acceptance/node-consumer.cjs": "2b48067a79ee6ccba66bf47cc433a54699c9740914592ee6e8a04961cb3cec6d",
+    "sdk/acceptance/prepare.py": "f5b96b6753dd17d4d7bc113ad36fe191594aad9506b33006352036726c3c562b",
+    "sdk/acceptance/python-consumer.py": "189e26863c9849b43827fd7ff956970076c93ad91fba80e67fc1d174e02d1a85",
+    "sdk/src/error.rs": "83f52c047a2aa8e4702ac5f5b4abdafe3c7995177aa760adb284dd2ca256a2ba",
+    "sdk/src/lib.rs": "c04eee1cb5befe37729ce23bcad8d1ebce0aed4db80f5e00102993b8033a363b",
+    "sdk/src/model.rs": "02ac3be456844f8e0a9c8fc37bb5d4e2ad71c93e0f66b81f6b7474b94d1a87a2",
+    "sdk/tests/language_sdk.rs": "f63f014a6415135f48257395b47573c8da4a8e36ce42326562a9a4b935004a53",
+    "bindings/node/.gitignore": "84e0cccce2289fd7b0a3c9e7fd924303ec2564ac174678cb0bd520904b510c99",
+    "bindings/node/Cargo.toml": "5466422c9fb0d28f21f749e87c6508bd2bc6da3c25ad1d038760d9f8f43ddf65",
+    "bindings/node/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/node/LICENSE-MIT": "0e991a6503baba83ea0db74c3ef0f81589965e5a6143f4d347bf0c7309a6a52c",
+    "bindings/node/NOTICE": "dd942b45327931df320ce3d6f6ec8ea53bd1dfb5024103765388202c403a3ae5",
+    "bindings/node/README.md": "d1ba445910c9a9e5a96236307049d225688de71ef013a93993f6ad5564be15b9",
+    "bindings/node/build.rs": "fcbd1ff3f627a7553fa1704dc6f558998daff8bc256015c37aace62cc49ce584",
+    "bindings/node/index.d.ts": "b9ae8c75dcaead82df789c58d094e1d51ce2dc394fb1d9cfd5a49a2867ec3817",
+    "bindings/node/index.js": "5dfeac957dd0132b5100f1bf7cabc74b7efe7a41a8c7424e0ed77f7f1bdb19c2",
+    "bindings/node/licenses/LICENSE-GHERKIN": "042bda2882d793c42fcd5f4d272579a432d1d52a0e5436202e5e823eae4771b6",
+    "bindings/node/licenses/LICENSE-GHERKIN-RUST-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/node/licenses/LICENSE-GHERKIN-RUST-MIT": "6520420cdd005aea6e6989d79e90edf2c93b501605e6534b30d444203685d2a3",
+    "bindings/node/package.json": "3f3f5da52a0448ed795cf617afe0c8b3742d5e6168c5a3fbf8b4df188ccd5dec",
+    "bindings/node/src/lib.rs": "d051d87dcc70fda1f99ad023d6b02d0c8423905a56d8f501f3589dab130e5109",
+    "bindings/python/.gitignore": "f78368baa01408d6ee8c2ca1ba0eedbe71bc27c74f5e93c0d92b5c99928fdd5b",
+    "bindings/python/Cargo.toml": "c367fd3d3f597bf052a31379066753946d782fbaea2fe0dc53423ae260113f49",
+    "bindings/python/LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/python/LICENSE-MIT": "0e991a6503baba83ea0db74c3ef0f81589965e5a6143f4d347bf0c7309a6a52c",
+    "bindings/python/NOTICE": "dce798253e51fad1d27c60460b7a5bd74a9f8fbd6439d769876a17aeba663164",
+    "bindings/python/README.md": "a90cddb9b3bb29fcb96a2aef582ce55fcf7584c06f54b16c2413c59322d29101",
+    "bindings/python/licenses/GHERKIN-LICENSE-APACHE": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2",
+    "bindings/python/licenses/GHERKIN-LICENSE-MIT": "6520420cdd005aea6e6989d79e90edf2c93b501605e6534b30d444203685d2a3",
+    "bindings/python/licenses/GHERKIN-UPSTREAM-LICENSE": "042bda2882d793c42fcd5f4d272579a432d1d52a0e5436202e5e823eae4771b6",
+    "bindings/python/pyproject.toml": "f2d7af159611cd28b720513130cb1ed2d8747b59bd1deb21ccb0643f30e1c09a",
+    "bindings/python/python/cucumber_native_local/__init__.py": "24a84210b1538c00ada8eb47c1087f29a2c5ab3567afa891fcab06d3d65c8cc1",
+    "bindings/python/python/cucumber_native_local/_native.pyi": "f06047b59f4243db4d73badf4041667ffe215bdcf02860b979b824b0195f7a7c",
+    "bindings/python/python/cucumber_native_local/_types.py": "c56051a4085df855aef5cd975c33f62eadd84fa1694ce8d2c71d317caedae1d2",
+    "bindings/python/python/cucumber_native_local/py.typed": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bindings/python/src/lib.rs": "53f13e620e947316fe2f80df09fd69abceef7d901c523ece7dda4891fbf4a23b",
+    "src/attachment.rs": "3b101604cdc2d37211f213b8df3fc3d737120a37b583e2224685ce509d482d68",
+    "src/cli.rs": "3b3ff5b7525c20ab8edd5f8cd8e7d1b6b31d926c0bc797baf1ed1a3257637fed",
+    "src/codegen.rs": "0aa7e8726144299383825dbd5f525bc791a65288db20763df171262a51c1b4b0",
+    "src/cucumber.rs": "4894cd714ef081ebd80ee20f28fee1d45df23ad2e0487c8aa60c2c53f7824b63",
+    "src/event.rs": "a25eb4400ec407021b38620b07faa8f83e6e15ca30fb4beb24d1092ad9437f1b",
+    "src/execution.rs": "6f74a3602aa560c6a231f16af849d87c5d678657388415396a7b0523d4b85e59",
+    "src/feature.rs": "e0050d4a1c45671ab03d2edf3ae35926f05ca9eda9f12c33a86d3f89593c342a",
+    "src/filter.rs": "806149416709209bdec7cf8357707825d802dfa1328655c8a7305d08a9d02903",
+    "src/future.rs": "5f900796783c270a5976f6072a3f02b566b66760f5456ac9e3b398d8e3846b32",
+    "src/lib.rs": "6d784e5a80d0ecf09493920e3700e6faa40b2b63cc317be4bf7d47adc2724498",
+    "src/parser/basic.rs": "a0482593452817ff2c9c0689b77480f9120dd2aa2362aaa4ec9b6e1c54f48c80",
+    "src/parser/mod.rs": "c116988093f8337406b769929c266b3ad2da514c26f3fc40ef1652d249e68bab",
+    "src/parser/source.rs": "28892dcc0a50f0f1f384a3b67d4d43050537cfcc1e5a2c9db115cb8b21c1cc58",
+    "src/runner/assignment.rs": "cf81fac75e9b5a0cda72c7db1d9976bbbd2bcb35ca72cd5d897ea5aac7abb11d",
+    "src/runner/basic.rs": "d1de4db7e97f2e2b946e16afcdac7f3725a87702b13a269f4dccb54352d7778a",
+    "src/runner/hooks.rs": "9694283fd1f948bef739f0f07efe339afdf057cb86a816b57f19563941ad1802",
+    "src/runner/mod.rs": "bafc6115ca6bc276e3a0425ebb4e88e13e8e12608275e3942b3c3a84095a4151",
+    "src/runner/outcomes.rs": "6c6f9150d71f233d702466844a1c6560c610bea4d0c23b6587d7b092de38e6e7",
+    "src/runner/retry_policy.rs": "2f93dca633a28e00f7ab63d2052bf353314b161b1334df1bb84f69e6c8be040d",
+    "src/runner/run_hooks.rs": "2d21d7bac11353c3d523865dc82b72942313aebc745f29e5fbb8cd2c3347b184",
+    "src/runner/scenario_hooks.rs": "2a2a39fc730def1454958461f064cad3a485bbe473e5bc73213643c29122bc01",
+    "src/runner/scheduling.rs": "fe2a2133a2893eb8a1033bd35ab2233ab2c627deb37b04210545c8ae6fd4637c",
+    "src/runner/step_hooks.rs": "65d765d7ffc7e3bb3740c08e31c568b81bcab8e6711eb3c857aed47f21ccb49b",
+    "src/runner/timeout.rs": "4d4434012e478b953b81203af86b71b35fba16d91c3369be3e821c59bb1b4e66",
+    "src/step/options.rs": "9d564c2a9766f5bed92aab9196fa747f879433d87c269efa75e1ca23f213d024",
+    "src/step.rs": "b8ef6039aba776d5033a6f19996eff4f874d9be925e3065c5dd13300a1c0d2e6",
+    "src/support_code/expression.rs": "878e143963f16d68d8f6a1f55cf0764897c8ec17b4e9809d38c55991ce47114c",
+    "src/support_code.rs": "386606a8723d610a6d70a41aca99d2113a21f865821f90f1f076be0b19dd5a95",
+    "src/tag.rs": "38a36a24ad59891286aed8f39a4027b87bbdcfac6d4930c24ec370f518629f1b",
+    "src/tracing.rs": "d94f3aacbe507aea6ae1a2f191c018f98f81bcfbba0003f69383576472bd3fad",
+    "src/writer/basic.rs": "db3f7a4de0a49354e15ce47673ab2d09ea4c28d5e1a6676690f3c4b265acc691",
+    "src/writer/discard.rs": "da7a024cbda2c0478d0ae7a1aa06d7f6e2153f90719806ea157135e769de0bbe",
+    "src/writer/fail_on_skipped.rs": "db545640bb48af736ece70cb21b3ef9fba733dc1a7daf58080011d59e21a5597",
+    "src/writer/json.rs": "0f0a8c1ba307f656427b3d59c9dbdb2332357b9b55442335dafde7bca3b90ebf",
+    "src/writer/junit.rs": "7d59043980dddb3ecb43673806154a814bd524af41552a78b11505fd731681a1",
+    "src/writer/libtest.rs": "b0433c79683c46aeb8ff371fa19b0b5d320e25ea022272c2d5f15f692996f06d",
+    "src/writer/messages/markdown.rs": "a6438eb1cc1ab370a2d9e8e142a89351f2215161d6d01431ad6ad83810ae9544",
+    "src/writer/messages/rerun.rs": "f6b39a2c7aeff1aec922527e3fa5a9a4a0a565f60df35917375d83dddbac7856",
+    "src/writer/messages/scenario_hooks.rs": "ee7267d1d8ff22e96e9476c2f9067e0b77085868fc691e8ba57c3575a8553b19",
+    "src/writer/messages/source.rs": "68a1d67d5ed39e5590b7c2ee994a2ac87eca2a902a02150e9ee7679dd5fc644b",
+    "src/writer/messages.rs": "74cf9b8bb6bca7bb30d04910e7ac8bae967be388fe3fc1d4eebc6b0c3ac79e0b",
+    "src/writer/mod.rs": "aaa67084666ae7fb7ce8904840dc0efb7b02e0fd24866936422c521b781ae995",
+    "src/writer/normalize.rs": "7e3e9b54f40fedfe449b73fc37e65136ad9e88962dffd96473be732e501549c0",
+    "src/writer/or.rs": "81ae3715f8cca1b8653be9d1c9a542cad2c76a4e0469381102ad5862d11b2e1f",
+    "src/writer/out.rs": "10e799dfd19ebddf8861592b55efa8da7ff2bcc7c943ced3a9eea81c30789b43",
+    "src/writer/repeat.rs": "7b295f83ac18782645332623b76ae95339b7b3020aac34568ec03cc9d76e43f8",
+    "src/writer/run_hooks.rs": "bd1fc0fc5f8e4e01b14a4ac71bb0e3502f8735766c45a7cd0b421573cd8e2adc",
+    "src/writer/summarize.rs": "0e67c7ebcb218266f5bba99ad0ebbfde0956f4a9aaf27377a32b9032613159a1",
+    "src/writer/tee.rs": "325db877e9f9feb05f70281e695a25bfe9e27bab2cd93fba2502a23acc32bb82",
+    "codegen/src/attribute.rs": "213e6c6c9531a7c8137360a27a053cbf0601500c93297c6ed71d889e32de3f6d",
+    "codegen/src/expression_metadata.rs": "ffdc282303739e848d2be9445bdfbb8166fa4706a842fde744730a4e5a0e8601",
+    "codegen/src/lib.rs": "a2b53b2d31c960c30cf508d6aaf7163113c1b42818e790b8a8ceef61c27a7487",
+    "codegen/src/parameter.rs": "244f2b87578a1525e0bd27af2ef435f6d45e176ce9f0888c2d1b457c2ac3cc8e",
+    "codegen/src/world.rs": "fd4bd944610d91c1d616a16d5007d9af359994e3314ee5f3f46c3219b2e3ea01",
+    "vendor/gherkin/src/LICENSE-GHERKIN": "042bda2882d793c42fcd5f4d272579a432d1d52a0e5436202e5e823eae4771b6",
+    "vendor/gherkin/src/keywords.rs": "f17ed92139458e81791eea5c9553a123f306e25560c651da4922d287200e1d8b",
+    "vendor/gherkin/src/languages-43.json": "84c50533cce6f2fbb1c1e1eca14811000a69ef70b5b564075b50bdfa7333c329",
+    "vendor/gherkin/src/languages.json": "a021693a92caf9eeefeb4fddcb8bff8cbc65c99ec46acc139144dfd1119f95a1",
+    "vendor/gherkin/src/lib.rs": "24eb949f6b9474600eb76bec628edbced798e95884ff1fd40be4f9a46972cf4d",
+    "vendor/gherkin/src/markdown.rs": "d94097ff53ad47fc2b5c9e06e2461dab1c19a0383262ac776fb73eb7ce2782b0",
+    "vendor/gherkin/src/parser.rs": "296fd2d9d5b37dc73517280d79a51cb6a2a7fc00c977050eece242ad1df087e6",
+    "vendor/gherkin/src/tagexpr.rs": "1ac43f218c0cd5800c36e7a3cda47d78fd619b9315abfbeb6bd6b030fd04c2a4",
+    "Cargo.toml": "6404ca82d47034392bb151dab10571d7388c273d299c487d71a39e648468540d",
+    "vendor/gherkin/Cargo.toml": "40ed9b86ba1530e6eb91351c815b654ebb76459c9e0526ea22442985f595f1f6",
+    ".kbd-orchestrator/phases/phase-46-native-sdk/adopted-contract.json": "0e34014046f278b83271933e7ffee6006d03572d3a3efee991394acbdb5dbaa5",
+    ".kbd-orchestrator/phases/phase-46-native-sdk/sdk-contract.schema.json": "429e41fccbd003684c79eef140e4622b885ff28c56cc4c708bc1061d7eddd4a3",
+    ".kbd-orchestrator/phases/phase-46-native-sdk/oracle-identities.json": "eb87aac1fce83896683c065390f4f6deae80d3727d9f949a83a1dbb212e47ff9",
+    ".github/workflows/ci.yml": "84edec403e0b5d07146fcdc5190699d05f0ad0d7a5006f2501f21a539d3c6d43",
+    ".github/workflows/audit.yml": "8e5766605bc2d4e541382d8f7bb5307b4f6b7516064a4ed9fef2105786ce574c"
+  },
+  "scenarios": [
+    {
+      "id": "SDK-001-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 50,
+          "format": "gherkin",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        },
+        {
+          "officialBadFixtures": 12
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-001-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-001-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 50,
+          "format": "gherkin",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        },
+        {
+          "officialBadFixtures": 12
+        },
+        {
+          "control": "changed original source location",
+          "rejected": "full source graph differs from independent oracle"
+        },
+        {
+          "control": "dangling original AST reference",
+          "rejected": "dangling graph references"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-001-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-002-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 5,
+          "format": "markdown",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        },
+        {
+          "livePinnedMarkdownBoundaries": 5
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-002-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-002-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 5,
+          "format": "markdown",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        },
+        {
+          "livePinnedMarkdownBoundaries": 5
+        },
+        {
+          "control": "repeated Markdown argument",
+          "typedRejection": true
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-002-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-003-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 2,
+          "format": "gherkin",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-003-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-003-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "officialGoodFixtures": 2,
+          "format": "gherkin",
+          "hosts": [
+            "rust",
+            "node",
+            "python"
+          ]
+        },
+        {
+          "control": "invented featureless pickle",
+          "rejected": "graph array length differs"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-003-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-004-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "sameHostRecovery": [
+            "rust",
+            "node",
+            "python"
+          ],
+          "originalUri": "memory://original:42/\u4e0d\u6b63.feature"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-004-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-004-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "sameHostRecovery": [
+            "rust",
+            "node",
+            "python"
+          ],
+          "originalUri": "memory://original:42/\u4e0d\u6b63.feature"
+        },
+        {
+          "control": "malformed input disguised as empty success",
+          "rejected": "invalid input produced successful result"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-004-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-005-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "capabilities": {
+            "baselines": {
+              "cucumberJs": "13.3.0",
+              "gherkin": "43.0.0",
+              "messages": [
+                "34.2.1",
+                "35.0.0"
+              ]
+            },
+            "foreignStepExecution": false,
+            "formats": [
+              "gherkin",
+              "markdown"
+            ],
+            "kind": "capabilities",
+            "operations": [
+              "capabilities",
+              "compile",
+              "rerun"
+            ],
+            "protocolVersions": [
+              1
+            ]
+          }
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-005-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-005-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "capabilities": {
+            "baselines": {
+              "cucumberJs": "13.3.0",
+              "gherkin": "43.0.0",
+              "messages": [
+                "34.2.1",
+                "35.0.0"
+              ]
+            },
+            "foreignStepExecution": false,
+            "formats": [
+              "gherkin",
+              "markdown"
+            ],
+            "kind": "capabilities",
+            "operations": [
+              "capabilities",
+              "compile",
+              "rerun"
+            ],
+            "protocolVersions": [
+              1
+            ]
+          }
+        },
+        {
+          "control": "strict validation precedence",
+          "codes": [
+            "INVALID_REQUEST",
+            "INVALID_REQUEST",
+            "UNSUPPORTED_VERSION",
+            "UNKNOWN_OPERATION",
+            "INVALID_REQUEST",
+            "UNSUPPORTED_VERSION",
+            "INVALID_REQUEST"
+          ]
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-005-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-006-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "realRunner": "retries",
+          "attempts": 4,
+          "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair1/SDK-006-positive/actual-runner/retries.feature:4"
+        },
+        {
+          "realRunner": "outline",
+          "attempts": 3,
+          "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair1/SDK-006-positive/actual-runner/outline.feature:7:9"
+        },
+        {
+          "exactAttemptDecimal": "9007199254740993",
+          "failedRunWithoutSelectedCases": true,
+          "supplementalProtocolStatuses": [
+            "UNKNOWN",
+            "PASSED",
+            "SKIPPED",
+            "PENDING",
+            "UNDEFINED",
+            "AMBIGUOUS",
+            "FAILED"
+          ],
+          "optionalOriginalRunId": null
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-006-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-006-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "realRunner": "retries",
+          "attempts": 4,
+          "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair1/SDK-006-control/actual-runner/retries.feature:4"
+        },
+        {
+          "realRunner": "outline",
+          "attempts": 3,
+          "formatter": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/sdk46-repair1/SDK-006-control/actual-runner/outline.feature:7:9"
+        },
+        {
+          "exactAttemptDecimal": "9007199254740993",
+          "failedRunWithoutSelectedCases": true,
+          "supplementalProtocolStatuses": [
+            "UNKNOWN",
+            "PASSED",
+            "SKIPPED",
+            "PENDING",
+            "UNDEFINED",
+            "AMBIGUOUS",
+            "FAILED"
+          ],
+          "optionalOriginalRunId": null
+        },
+        {
+          "control": "dropped original failed attempt",
+          "rejected": "attempt evidence lost or altered"
+        },
+        {
+          "control": "synthetic outline row",
+          "rejected": "attempt evidence lost or altered"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-006-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-007-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "typedErrors": [
+            "INCOMPLETE_RUN",
+            "MISSING_REFERENCE",
+            "RUN_ALREADY_FINISHED",
+            "INVALID_MESSAGES"
+          ],
+          "interruptedAttemptsRetained": true
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-007-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-007-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "typedErrors": [
+            "INCOMPLETE_RUN",
+            "MISSING_REFERENCE",
+            "RUN_ALREADY_FINISHED",
+            "INVALID_MESSAGES"
+          ],
+          "interruptedAttemptsRetained": true
+        },
+        {
+          "control": "truncated stream disguised as empty passing plan",
+          "rejected": "invalid input produced successful result"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-007-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-008-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "passingRunNoSelection": true,
+          "attempts": 2,
+          "localSelection": {
+            "resolverCalls": 0,
+            "selectionIsNone": true
+          }
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-008-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-008-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "passingRunNoSelection": true,
+          "attempts": 2,
+          "localSelection": {
+            "resolverCalls": 0,
+            "selectionIsNone": true
+          }
+        },
+        {
+          "control": "empty plan replaced with all-source selection",
+          "rejected": "original selectors changed"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-008-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-009-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "externalRustExtension": {
+            "capabilities": {
+              "ok": true,
+              "result": {
+                "baselines": {
+                  "cucumberJs": "13.3.0",
+                  "gherkin": "43.0.0",
+                  "messages": [
+                    "34.2.1",
+                    "35.0.0"
+                  ]
+                },
+                "foreignStepExecution": false,
+                "formats": [
+                  "gherkin",
+                  "markdown"
+                ],
+                "kind": "capabilities",
+                "operations": [
+                  "capabilities",
+                  "compile",
+                  "rerun"
+                ],
+                "protocolVersions": [
+                  1
+                ]
+              },
+              "version": 1
+            },
+            "duplicateRejected": true,
+            "reservedRejected": [
+              true,
+              true,
+              true
+            ],
+            "result": {
+              "input": {
+                "value": 7
+              },
+              "owner": "external-consumer",
+              "transformed": 21
+            }
+          }
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-009-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-009-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "externalRustExtension": {
+            "capabilities": {
+              "ok": true,
+              "result": {
+                "baselines": {
+                  "cucumberJs": "13.3.0",
+                  "gherkin": "43.0.0",
+                  "messages": [
+                    "34.2.1",
+                    "35.0.0"
+                  ]
+                },
+                "foreignStepExecution": false,
+                "formats": [
+                  "gherkin",
+                  "markdown"
+                ],
+                "kind": "capabilities",
+                "operations": [
+                  "capabilities",
+                  "compile",
+                  "rerun"
+                ],
+                "protocolVersions": [
+                  1
+                ]
+              },
+              "version": 1
+            },
+            "duplicateRejected": true,
+            "reservedRejected": [
+              true,
+              true,
+              true
+            ],
+            "result": {
+              "input": {
+                "value": 7
+              },
+              "owner": "external-consumer",
+              "transformed": 21
+            }
+          }
+        },
+        {
+          "control": "real duplicate/reserved registrations",
+          "rejected": true
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-009-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-010-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "nativeArtifacts": [
+            {
+              "host": "rust",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/cargo-target/release/sdk46-external-consumer",
+              "sha256": "97f94c65da4da997eef2c1447003f80ff8e22f5aef212e156898c9eb2506ba77"
+            },
+            {
+              "host": "node",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/node/node_modules/cucumber-native-local/cucumber_sdk.node",
+              "sha256": "4bb141e58dbf858350b6289f31f056a7845da77f73a2d13b9899270260c528e4"
+            },
+            {
+              "host": "python",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+              "sha256": "5aa8aed2804eda564070012a8c62a5546c36601a50ba62d709aa26cd5a2ed844"
+            }
+          ],
+          "realTypeScriptConsumer": true
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-010-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-010-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "nativeArtifacts": [
+            {
+              "host": "rust",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/cargo-target/release/sdk46-external-consumer",
+              "sha256": "97f94c65da4da997eef2c1447003f80ff8e22f5aef212e156898c9eb2506ba77"
+            },
+            {
+              "host": "node",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/node/node_modules/cucumber-native-local/cucumber_sdk.node",
+              "sha256": "4bb141e58dbf858350b6289f31f056a7845da77f73a2d13b9899270260c528e4"
+            },
+            {
+              "host": "python",
+              "realpath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/python/lib/python3.11/site-packages/cucumber_native_local/_native.cpython-311-darwin.so",
+              "sha256": "5aa8aed2804eda564070012a8c62a5546c36601a50ba62d709aa26cd5a2ed844"
+            }
+          ],
+          "realTypeScriptConsumer": true
+        },
+        {
+          "control": "node fresh-process missing native",
+          "explicitFailure": "node:internal/modules/cjs/loader:1573\n  throw err;\n  ^\n\nError: Cannot find module './cucumber_sdk.node'\nRequire stack:\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/node_modules/cucumber-native-local/index.js\n- /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/consumer.cjs\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1569:15)\n    at wrapResolveFilename (node:internal/modules/cjs/loader:1123:27)\n    at defaultResolveImplForCJSLoading (node:internal/modules/cjs/loader:1147:10)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1174:12)\n    at Module._load (node:internal/modules/cjs/loader:1346:5)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:261:19)\n    at Module.require (node:internal/modules/cjs/loader:1679:12)\n    at require (node:internal/modules/helpers:196:16)\n    at Object.<anonymous> (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/node_modules/cucumber-native-local/index.js:4:16)\n    at Module._compile (node:internal/modules/cjs/loader:1934:14) {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: [\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/node_modules/cucumber-native-local/index.js',\n    '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor/consumer.cjs'\n  ]\n}\n\nNode.js v26.5.0\n"
+        },
+        {
+          "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-node-psfu8vor",
+          "removed": true
+        },
+        {
+          "control": "python fresh-process missing native",
+          "explicitFailure": "Traceback (most recent call last):\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/consumer.py\", line 4, in <module>\n    import cucumber_native_local as sdk\n  File \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/cucumber_native_local/__init__.py\", line 10, in <module>\n    from . import _native\nImportError: cannot import name '_native' from partially initialized module 'cucumber_native_local' (most likely due to a circular import) (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/cucumber_native_local/__init__.py)\n"
+        },
+        {
+          "cleanup": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl",
+          "removed": true
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-010-control/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-011-positive",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD positive scenario",
+      "observed": [
+        {
+          "sameHostRequests": 6,
+          "uriIsolation": [
+            "memory://one.feature",
+            "memory://two.feature"
+          ],
+          "runIsolation": [
+            "owner-A",
+            "owner-B"
+          ]
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-011-positive/receipt.json"
+      ]
+    },
+    {
+      "id": "SDK-011-control",
+      "status": "PASS",
+      "attempted": "Installed-language SDK BDD control scenario",
+      "observed": [
+        {
+          "sameHostRequests": 6,
+          "uriIsolation": [
+            "memory://one.feature",
+            "memory://two.feature"
+          ],
+          "runIsolation": [
+            "owner-A",
+            "owner-B"
+          ]
+        },
+        {
+          "control": "cross-associated run identity",
+          "rejected": "run identity changed"
+        },
+        {
+          "control": "cross-associated source URI",
+          "rejected": "full source graph differs from independent oracle"
+        }
+      ],
+      "evidence": [
+        "docs/compatibility/evidence/sdk46-repair1/SDK-011-control/receipt.json"
+      ]
+    }
+  ],
+  "reviewDisposition": "BLOCKED: SDK46-IR-01 arbitrary-precision object/number confusion; SQA-01 missing outer BDD Messages. All22 original behavior/control receipts passed but review requires repair2; no clean/certified claim.",
+  "repairAttemptsConsumed": 1
+}

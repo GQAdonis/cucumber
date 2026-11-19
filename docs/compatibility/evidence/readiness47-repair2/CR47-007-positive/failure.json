@@ -1,0 +1,48 @@
+{
+  "case": "CR47-007",
+  "mode": "positive",
+  "status": "FAIL",
+  "error": "AssertionError('child 0002 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-007-positive')",
+  "observations": [],
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "+nightly-2026-11-18",
+        "update",
+        "-Z",
+        "minimal-versions"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimum-fixed",
+      "startedAt": "2026-11-19T22:55:28.862969+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:55:30.335986+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--all-features",
+        "--test",
+        "messages_corpus"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimum-fixed",
+      "startedAt": "2026-11-19T22:55:30.344535+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimal-target-positive",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 101,
+      "finishedAt": "2026-11-19T22:56:25.290087+00:00"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+ Downloading crates ...
+  Downloaded icu_locid_transform_data v1.4.0
+  Downloaded icu_locid v1.4.0
+  Downloaded yoke-derive v0.7.3
+  Downloaded yoke v0.7.3
+  Downloaded yoke v0.6.0
+  Downloaded icu_normalizer v1.4.3
+  Downloaded icu_properties v1.4.2
+  Downloaded icu_normalizer_data v1.4.1
+  Downloaded icu_collections v1.4.0
+  Downloaded idna v1.0.2
+  Downloaded icu_locid_transform v1.4.0
+  Downloaded litemap v0.7.2
+  Downloaded icu_provider_macros v1.4.0
+  Downloaded icu_properties_data v1.4.1
+  Downloaded icu_provider v1.4.0
+  Downloaded writeable v0.5.4
+  Downloaded utf16_iter v1.0.3
+  Downloaded tinystr v0.7.4
+   Compiling proc-macro2 v1.0.91
+   Compiling unicode-ident v1.0.0
+   Compiling unicode-xid v0.2.2
+   Compiling libc v0.2.155
+   Compiling autocfg v1.0.0
+   Compiling syn v1.0.73
+   Compiling cfg-if v1.0.0
+   Compiling serde_core v1.0.220
+   Compiling serde v1.0.220
+   Compiling memchr v2.6.0
+   Compiling version_check v0.9.4
+   Compiling stable_deref_trait v1.2.0
+   Compiling once_cell v1.20.1
+   Compiling lazy_static v1.3.0
+   Compiling num-traits v0.2.19
+   Compiling aho-corasick v1.0.0
+   Compiling smallvec v1.13.1
+   Compiling regex-syntax v0.8.5
+   Compiling ahash v0.7.7
+   Compiling log v0.4.17
+   Compiling quote v1.0.35
+   Compiling getrandom v0.2.7
+   Compiling syn v2.0.89
+   Compiling num-integer v0.1.44
+   Compiling slab v0.4.7
+   Compiling litemap v0.7.2
+   Compiling regex-automata v0.4.8
+   Compiling pin-project-lite v0.2.11
+   Compiling proc-macro2 v0.4.21
+   Compiling writeable v0.5.4
+   Compiling autocfg v0.1.6
+   Compiling parking_lot_core v0.9.0
+   Compiling crossbeam-utils v0.7.0
+   Compiling hashbrown v0.12.3
+   Compiling num-bigint v0.4.0
+   Compiling futures-core v0.3.32
+   Compiling ident_case v1.0.1
+   Compiling ref-cast v1.0.16
+   Compiling unicode-xid v0.1.0
+   Compiling rustix v0.38.0
+   Compiling strsim v0.10.0
+   Compiling fnv v1.0.7
+   Compiling futures-sink v0.3.32
+   Compiling scopeguard v1.1.0
+   Compiling bitflags v2.4.1
+   Compiling lock_api v0.4.6
+   Compiling futures-channel v0.3.32
+   Compiling errno v0.3.1
+   Compiling num-iter v0.1.42
+   Compiling num-rational v0.4.0
+   Compiling dtoa v0.4.0
+   Compiling futures-io v0.3.32
+   Compiling futures-task v0.3.32
+   Compiling regex v1.11.1
+   Compiling utf8parse v0.2.1
+   Compiling itoa v0.4.0
+   Compiling icu_locid_transform_data v1.4.0
+   Compiling cfg-if v0.1.2
+   Compiling anstyle-parse v0.2.0
+   Compiling parking_lot v0.12.3
+   Compiling quote v0.6.10
+   Compiling synstructure v0.13.0
+error[E0308]: mismatched types
+  --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:70:19
+   |
+70 |         .div_ceil(&big_digit::BITS.into())
+   |          -------- ^^^^^^^^^^^^^^^^^^^^^^^ expected `u64`, found `&_`
+   |          |
+   |          arguments to this method are incorrect
+   |
+   = note:   expected type `u64`
+           found reference `&_`
+note: method defined here
+  --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+   = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+   |
+70 -         .div_ceil(&big_digit::BITS.into())
+70 +         .div_ceil(big_digit::BITS.into())
+   |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:585:19
+    |
+585 |         .div_ceil(&u64::from(bits))
+    |          -------- ^^^^^^^^^^^^^^^^ expected `u64`, found `&u64`
+    |          |
+    |          arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+585 -         .div_ceil(&u64::from(bits))
+585 +         .div_ceil(u64::from(bits))
+    |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint/convert.rs:613:19
+    |
+613 |         .div_ceil(&u64::from(bits))
+    |          -------- ^^^^^^^^^^^^^^^^ expected `u64`, found `&u64`
+    |          |
+    |          arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+613 -         .div_ceil(&u64::from(bits))
+613 +         .div_ceil(u64::from(bits))
+    |
+
+error[E0308]: mismatched types
+   --> /Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/num-bigint-0.4.0/src/biguint.rs:398:54
+    |
+398 |                 let root_scale = extra_bits.div_ceil(&n64);
+    |                                             -------- ^^^^ expected `u64`, found `&u64`
+    |                                             |
+    |                                             arguments to this method are incorrect
+    |
+note: method defined here
+   --> /rustc/6b00bc3880198600130e1cf62b8f8a93494488cc/library/core/src/num/mod.rs:1131:5
+    = note: this error originates in the macro `uint_impl` (in Nightly builds, run with -Z macro-backtrace for more info)
+help: consider removing the borrow
+    |
+398 -                 let root_scale = extra_bits.div_ceil(&n64);
+398 +                 let root_scale = extra_bits.div_ceil(n64);
+    |
+
+   Compiling synstructure v0.12.4
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `num-bigint` (lib) due to 4 previous errors
+warning: build failed, waiting for other jobs to finish...

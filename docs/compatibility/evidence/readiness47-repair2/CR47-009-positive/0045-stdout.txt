@@ -1,0 +1,91 @@
+Feature: Explicit preparation boundaries preserve existing native callback timing
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "regex" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "expr" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Existing macro registrations retain lazy direct invocation
+   ✔  Given an existing "expr_js" definition without preparation opt-in
+   ✔  When its registered callback is constructed and then first polled
+   ✔  Then argument conversion and the handler body first occur during polling
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "custom scalar conversion" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "JavaScript quoted string" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario Outline: Opted-in owned preparation precedes the asynchronous deadline
+   ✔  Given an opted-in "slice and borrowed step" definition with before-deadline callback construction
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then owned argument preparation precedes timer construction
+   ✔  And its handler receives the existing converted values
+   ✔  And borrowed arguments remain valid across suspension
+  Scenario: Preparation failure keeps normal cleanup without installing a body timer
+   ✔  Given an opted-in definition whose argument conversion fails
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the existing step failure identifies argument conversion
+   ✔  And no body timer or handler body starts
+   ✔  And normal cleanup still runs
+  Scenario Outline: Raw callback construction follows the explicitly selected boundary
+   ✔  Given a raw callback with "WithinDeadline" timeout construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the callback factory and timer occur in "timer factory" order
+   ✔  And expiry still cancels its pending future and runs cleanup
+  Scenario Outline: Raw callback construction follows the explicitly selected boundary
+   ✔  Given a raw callback with "BeforeDeadline" timeout construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the callback factory and timer occur in "factory timer" order
+   ✔  And expiry still cancels its pending future and runs cleanup
+  Scenario: Before-deadline factory panic remains an ordinary caught failure
+   ✔  Given a raw callback whose before-deadline factory panics
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the existing step failure identifies the factory panic
+   ✔  And no body timer or handler body starts
+   ✔  And normal cleanup still runs
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before scenario" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after scenario" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before step" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after step" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "before run" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario Outline: Hook callback factories use the same explicit boundary
+   ✔  Given a "after run" callback with before-deadline construction policy
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then the selected hook factory precedes its timer
+   ✔  And its established lifecycle completion and cleanup remain intact
+  Scenario: Disabled limits preserve invocation without a timer
+   ✔  Given an opted-in definition with a disabled timeout
+   ✔  When its application executes with a recording timeout clock
+   ✔  Then argument preparation and the handler run normally without any timer
+[Summary]
+1 feature
+17 scenarios (17 passed)
+69 steps (69 passed)

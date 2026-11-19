@@ -1,0 +1,21 @@
+schema: spec-driven
+context: |
+  Native Rust cucumber0.23 fork with vendored Gherkin0.16 fork, verified through45 against Gherkin43 and Cucumber.js13.3 behavior subsets.
+  New scope: safe extensible Rust SDK, real TypeScript/Python FFI wrappers, additive private package preparation and Docusaurus sites for both repos.
+  Canonical KBD orchestration is in .kbd-orchestrator. User mandates BDD-only and no generated code execution until the whole adopted value phase is implemented.
+  Preserve mature Cargo, Makefile, CI/release and Cucumber mdBook processes. No registry publication or docs deployment without resolved names/ownership/scope.
+rules:
+  proposal:
+    - Separate verified capabilities from proposed behavior and compatibility gaps.
+    - Record pending Python framework and package/platform/hosting decisions.
+  tasks:
+    - Keep production tasks separate from phase-end BDD evidence, audit and publication tasks.
+    - Do not introduce generic unit suites or early compile/check/probe tasks.
+operations:
+  apply:
+    guidance:
+      - Use KBD task transitions. Never run the bare OpenSpec apply workflow outside KBD.
+      - Generated-code execution waits for the adopted whole-value-phase boundary.
+  archive:
+    guidance:
+      - Archive only after canonical phase closure; implementation alone is insufficient.

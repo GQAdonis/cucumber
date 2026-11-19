@@ -1,0 +1,91 @@
+    Updating crates.io index
+     Locking 1 package to highest Rust 1.88 compatible version
+      Adding futures-timer v3.0.4
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling futures-timer v3.0.4
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: non-binding let on a type that has a destructor
+   --> src/step.rs:181:9
+    |
+181 |         _ = self.given.insert((regex.into(), loc), Registration { function: step, options });
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:148:5
+    |
+148 |     let_underscore_drop,
+    |     ^^^^^^^^^^^^^^^^^^^
+help: consider binding to an unused variable to avoid immediately dropping the value
+    |
+181 -         _ = self.given.insert((regex.into(), loc), Registration { function: step, options });
+181 +         let _unused = self.given.insert((regex.into(), loc), Registration { function: step, options });
+    |
+help: consider immediately dropping the value
+    |
+181 -         _ = self.given.insert((regex.into(), loc), Registration { function: step, options });
+181 +         drop(self.given.insert((regex.into(), loc), Registration { function: step, options }));
+    |
+
+warning: non-binding let on a type that has a destructor
+   --> src/step.rs:205:9
+    |
+205 |         _ = self.when.insert((regex.into(), loc), Registration { function: step, options });
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: consider binding to an unused variable to avoid immediately dropping the value
+    |
+205 -         _ = self.when.insert((regex.into(), loc), Registration { function: step, options });
+205 +         let _unused = self.when.insert((regex.into(), loc), Registration { function: step, options });
+    |
+help: consider immediately dropping the value
+    |
+205 -         _ = self.when.insert((regex.into(), loc), Registration { function: step, options });
+205 +         drop(self.when.insert((regex.into(), loc), Registration { function: step, options }));
+    |
+
+warning: non-binding let on a type that has a destructor
+   --> src/step.rs:229:9
+    |
+229 |         _ = self.then.insert((regex.into(), loc), Registration { function: step, options });
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+help: consider binding to an unused variable to avoid immediately dropping the value
+    |
+229 -         _ = self.then.insert((regex.into(), loc), Registration { function: step, options });
+229 +         let _unused = self.then.insert((regex.into(), loc), Registration { function: step, options });
+    |
+help: consider immediately dropping the value
+    |
+229 -         _ = self.then.insert((regex.into(), loc), Registration { function: step, options });
+229 +         drop(self.then.insert((regex.into(), loc), Registration { function: step, options }));
+    |
+
+warning: `cucumber` (lib) generated 3 warnings (run `cargo fix --lib -p cucumber` to apply 3 suggestions)
+error[E0277]: the trait bound `Application: WorldInventory` is not satisfied
+   --> tests/timeouts.rs:162:13
+    |
+162 |     let run=Application::cucumber().steps(steps).with_timeouts(timeouts)
+    |             ^^^^^^^^^^^ unsatisfied trait bound
+    |
+help: the trait `WorldInventory` is not implemented for `Application`
+   --> tests/timeouts.rs:51:1
+    |
+ 51 | struct Application {shared:Option<Arc<Shared>>,attachments:AttachmentContext,attempt:usize,id:usize,name:String}
+    | ^^^^^^^^^^^^^^^^^^
+help: the trait `WorldInventory` is implemented for `Acceptance`
+   --> tests/timeouts.rs:73:24
+    |
+ 73 | #[derive(Debug,Default,cucumber::World)]
+    |                        ^^^^^^^^^^^^^^^
+note: required by a bound in `cucumber`
+   --> src/lib.rs:283:23
+    |
+281 |     fn cucumber<I: AsRef<Path>>() -> DefaultCucumber<Self, I>
+    |        -------- required by a bound in this associated function
+282 |     where
+283 |         Self: Debug + WorldInventory,
+    |                       ^^^^^^^^^^^^^^ required by this bound in `World::cucumber`
+    = note: this error originates in the derive macro `cucumber::World` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+For more information about this error, try `rustc --explain E0277`.
+error: could not compile `cucumber` (test "timeouts") due to 1 previous error

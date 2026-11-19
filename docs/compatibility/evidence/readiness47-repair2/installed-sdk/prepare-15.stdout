@@ -1,0 +1,6 @@
+2026-11-19T23:02:35.574311Z  INFO into_build_context: maturin::build_options: close time.busy=292ns time.idle=708ns
+2026-11-19T23:02:35.785951Z  INFO resolve_cargo_metadata: maturin::project_layout: close time.busy=208ms time.idle=3.17µs
+2026-11-19T23:02:35.884112Z  INFO resolve_cargo_metadata: maturin::project_layout: close time.busy=96.9ms time.idle=1.29µs
+2026-11-19T23:02:35.961280Z  INFO check_executable: maturin::python_interpreter: close time.busy=21.6ms time.idle=1.71µs executable=/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/python/bin/python
+2026-11-19T23:02:42.458458Z  INFO build_wheels:warn_missing_py_init: maturin::compile: close time.busy=243µs time.idle=1.58µs
+2026-11-19T23:02:42.565249Z  INFO build_wheels: maturin::build_context: close time.busy=6.60s time.idle=916ns

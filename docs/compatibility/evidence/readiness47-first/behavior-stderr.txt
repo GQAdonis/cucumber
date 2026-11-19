@@ -1,0 +1,94 @@
+ Downloading crates ...
+  Downloaded pin-project-internal v1.2.0
+  Downloaded serde_with_macros v3.25.0
+  Downloaded pin-project v1.2.0
+  Downloaded pin-project-lite v0.2.18
+  Downloaded serde_with v3.25.0
+  Downloaded bstr v1.14.0
+   Compiling smallvec v1.16.6
+   Compiling syn v3.0.10
+   Compiling regex-syntax v0.8.12
+   Compiling pin-project-lite v0.2.18
+   Compiling bstr v1.14.0
+   Compiling tracing v0.1.44
+   Compiling parking_lot_core v0.9.12
+   Compiling tracing-subscriber v0.3.23
+   Compiling parking_lot v0.12.5
+   Compiling regex-automata v0.4.19
+   Compiling synstructure v0.14.0
+   Compiling darling_core v0.24.1
+   Compiling regex v1.13.2
+   Compiling globset v0.4.21
+   Compiling fancy-regex v0.16.2
+   Compiling cucumber-expressions v0.5.0
+   Compiling ignore v0.4.34
+   Compiling globwalk v0.9.1
+   Compiling cucumber-codegen v0.23.0 (/Volumes/T7/Projects/references/cucumber/codegen)
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling ref-cast-impl v1.0.27
+   Compiling futures-macro v0.3.34
+   Compiling darling_macro v0.24.1
+   Compiling thiserror-impl v2.0.21
+   Compiling pin-project-internal v1.2.0
+   Compiling darling v0.24.1
+   Compiling ref-cast v1.0.27
+   Compiling serde_with_macros v3.25.0
+   Compiling clap_derive v4.6.8
+   Compiling tokio-macros v2.7.2
+   Compiling futures-util v0.3.34
+   Compiling zerofrom v0.1.8
+   Compiling serde_with v3.25.0
+   Compiling tokio v1.54.1
+   Compiling serde v1.0.229
+   Compiling yoke v0.8.4
+   Compiling thiserror v2.0.21
+   Compiling clap v4.6.8
+   Compiling pin-project v1.2.0
+   Compiling futures-executor v0.3.34
+   Compiling futures v0.3.34
+   Compiling serial_test v3.5.0
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling fluent-uri v0.3.2
+   Compiling ahash v0.8.12
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling email_address v0.2.10
+   Compiling referencing v0.33.0
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling icu_locale_core v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling icu_provider v2.4.0
+   Compiling icu_locale_fallback v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling icu_segmenter v2.4.0
+   Compiling textwrap v0.16.4
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling jsonschema v0.33.0
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+warning: type does not implement `Debug`; consider adding `#[derive(Debug)]` or a manual implementation
+   --> src/attachment.rs:295:1
+    |
+295 | pub struct AttachmentHandle(Arc<Mutex<ScopeState>>);
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |
+note: the lint level is defined here
+   --> src/lib.rs:153:5
+    |
+153 |     missing_debug_implementations,
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `cucumber` (lib) generated 1 warning
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1m 29s
+     Running tests/contribution_readiness.rs (target/debug/deps/contribution_readiness-8a4871dffd5eade6)
+
+thread 'main' panicked at /Volumes/T7/Projects/references/cucumber/src/cucumber.rs:1637:13:
+5 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test contribution_readiness`

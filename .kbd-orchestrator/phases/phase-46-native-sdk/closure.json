@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.closure-view",
+  "generatedAt": "2026-11-18T11:23:43.311Z",
+  "authority": "derived view; the canonical disposition recorded by prometheus kbd phase close is authoritative",
+  "phaseId": "phase-46-native-sdk",
+  "contractVersion": "2",
+  "contractDigest": "a48388a624c00318a3afe449bcf7415f6f4a9a516a63b0a43742ee3c75a15dc0",
+  "evidenceDigest": "10ac7bcb79f97d6622d1600f65cad332cf83649da4d062f63116ff28a9751be8",
+  "disposition": "CLOSED",
+  "reason": "budget-exhausted",
+  "states": {
+    "implementationComplete": true,
+    "behaviorAccepted": true,
+    "releaseEligible": true,
+    "releaseAuthorized": false
+  },
+  "method": {
+    "name": "VLBV",
+    "source": "project-pin",
+    "deviation": null
+  },
+  "executedBy": {
+    "harness": "cucumber-rs0.23 harness=false language_sdk with source-aware Messages + installed native Rust/Node/Python consumers",
+    "version": "phase46 B5repair2; Rust1.88.0 Node26.5.0 CPython3.11.3 TypeScript6.0.3 Darwinarm64",
+    "model": "internal Codex exact deployment unknown"
+  },
+  "preAuthorizationArtifacts": {
+    "status": "no-globs",
+    "authorizedAt": "2026-11-18T11:02:42.201Z",
+    "globs": [],
+    "scanned": 0,
+    "artifacts": []
+  },
+  "scenarios": [
+    {
+      "id": "SDK-001",
+      "name": "Compile plaintext source to faithful AST and Pickles in all three installed SDKs",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Rules, outlines, both argument orders and Unicode retain source locations and identities",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-002",
+      "name": "Compile Markdown through the same native implementation",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Literal backticks in steps/tables/docstrings remain content; declaration tags remain tags",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-003",
+      "name": "Compile empty/comment-only input without invented scenarios",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Valid featureless input yields no Pickles",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-004",
+      "name": "Recover after malformed input in the same host",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Typed SOURCE_ERROR retains the exact original URI; a following valid request succeeds",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-005",
+      "name": "Discover the versioned implemented operations",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Capabilities identify compiler and rerun operations and do not advertise foreign execution",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-006",
+      "name": "Derive a lossless rerun plan from real Messages",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Retain every attempt and original non-PASSED scenario/Examples-row selectors; keep run_success independent, including failed runs with no selected cases",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-007",
+      "name": "Reject incomplete or inconsistent run evidence",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Missing references or missing TestRunFinished remain visible errors; a finished run may retain interrupted attempts with completed=false and UNKNOWN",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-008",
+      "name": "Represent a completed passing run as no rerun",
+      "actor": "Application or verification author",
+      "usefulOutcome": "No selected cases means None/empty plan and cannot mean run everything",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-009",
+      "name": "Extend the safe SDK from an external Rust consumer",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Namespaced extension returns its real result without overriding built-ins",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-010",
+      "name": "Consume actual native package artifacts outside the checkout",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Local npm archive and Python wheel execute native entry points from fresh directories; a real external TypeScript consumer imports the public declarations, compiles and executes inside this same phase-end BDD scenario",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    },
+    {
+      "id": "SDK-011",
+      "name": "Keep requests isolated in one host process",
+      "actor": "Application or verification author",
+      "usefulOutcome": "Different URIs, parse failures and run IDs cannot leak across requests",
+      "mandatory": true,
+      "verdict": "PASS",
+      "limitations": [
+        "Darwin arm64 Node26.5/Python3.11 initial host only",
+        "No foreign step execution or framework adapters",
+        "No registry publication",
+        "Internal review exact model unknown; no cross-model certification"
+      ],
+      "substitutedBoundaries": [],
+      "realCollaborators": [
+        "Existing SourceGraph and rerun Collector",
+        "Installed Node native addon and Python extension",
+        "External Rust/TypeScript/Python consumers",
+        "Retained official Gherkin43 and actual pinned JS13.3 formatter/collector"
+      ]
+    }
+  ]
+}

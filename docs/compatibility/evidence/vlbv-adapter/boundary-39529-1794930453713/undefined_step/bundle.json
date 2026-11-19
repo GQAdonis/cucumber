@@ -1,0 +1,96 @@
+{
+  "schema": "cucumber.vlbv-receipts/v1",
+  "contract": {
+    "path": "contract.snapshot.json",
+    "sha256": "713c7420ec5a1a62c7a2a4924963f9d0f3ee3f66d1076f961441e1e4d3ec4df1"
+  },
+  "canonicalStatus": {
+    "path": "canonical-status.json",
+    "sha256": "61f5fcb4eb00e533048510e0de492d76e68bd387926e975c02193fa3d7602573"
+  },
+  "canonicalDisposition": {
+    "path": "canonical-disposition.json",
+    "sha256": "d9e8df76223aa12804230d9d0718be9de22b9a0cee9fb6fdf88a23f9ff0ec1ac"
+  },
+  "authorization": {
+    "path": "boundary-authorization.json",
+    "sha256": "170ae7cf3a4caa0b375a0f8106e14caf19ffc5d9fc03f4befda34b9148eaa608"
+  },
+  "candidate": {
+    "path": "candidate.json",
+    "sha256": "e24867334fd38137d1615c3606024d02d97e974cba7977249fd2c0a35162fd09"
+  },
+  "executedBy": {
+    "harness": "Phase39 real-process BDD fixture",
+    "version": "0.23.0",
+    "model": "none (deterministic fixture producer)"
+  },
+  "budgetConsumption": {
+    "source": "isolated receipt producer: elapsed wall time and observed child calls; fixture repair count",
+    "values": {
+      "timeMinutes": {
+        "value": 0.008333333333333333,
+        "class": "measured"
+      },
+      "toolCalls": {
+        "value": 2,
+        "class": "measured"
+      },
+      "repairAttempts": {
+        "value": 0,
+        "class": "measured"
+      },
+      "noProgress": {
+        "value": 0,
+        "class": "measured"
+      }
+    }
+  },
+  "runs": [
+    {
+      "id": "stream-0",
+      "messages": {
+        "path": "run-0.ndjson",
+        "sha256": "c6c399ce97e3d1fef3e45a237acfb38ea00290b9870ece20a4dfc6afa28d7d22"
+      },
+      "process": {
+        "path": "run-0.process.json",
+        "sha256": "87fedd8037a3fcf1ffe83586e541ea11fe5844b0476c5a40286720210d759b43"
+      },
+      "candidate": {
+        "path": "candidate.json",
+        "sha256": "e24867334fd38137d1615c3606024d02d97e974cba7977249fd2c0a35162fd09"
+      },
+      "authorizationIndex": 0
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "VLBV-1",
+      "bindings": [
+        {
+          "runId": "stream-0",
+          "pickleId": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-ibaQzs/input-0.feature#pickle-/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-vlbv-ibaQzs/input-0.feature#node-2-3"
+        }
+      ],
+      "assertions": [
+        {
+          "path": "assertion-0-0-VLBV-1.json",
+          "sha256": "379adaf04c3a07904d6c3f15674ac323534f830f8c64eb1825c8cca3218c81df"
+        }
+      ],
+      "negativeControls": [
+        {
+          "path": "control-0.json",
+          "sha256": "5bb676772da918fc0c6be487f66dca16f4ab4ad89a15e94967d8ce9747bf1c6f"
+        }
+      ],
+      "cleanup": [
+        {
+          "path": "cleanup-0.json",
+          "sha256": "16f5570404b0c60cec6f7141a57c25ad2a10f84f48b65409629bdb7c285a9f84"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)
+File was parsed as module type 'javascript/dynamic'.
+File was processed with these loaders:
+ * ./node_modules/babel-loader/lib/index.js
+You may need an additional loader to handle the result of these loaders.
+> 1 | export default[require("/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/infima/dist/css/default/default.css"),require("/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/theme-classic/lib/prism-include-languages"),require("/Volumes/T7/Projects/references/cucumber/docs-site/node_modules/@docusaurus/theme-classic/lib/nprogress"),require("/Volumes/T7/Projects/references/cucumber/docs-site/src/css/custom.css")];
+    | ^
+
+--------------------------
+
+Module parse failed: 'import' and 'export' may appear only with 'sourceType: module' (1:0)
+File was parsed as module type 'javascript/dynamic'.
+File was processed with these loaders:
+ * ./node_modules/babel-loader/lib/index.js
+You may need an additional loader to handle the result of these loaders.
+> 1 | import React from'react';import ComponentCreator from'@docusaurus/ComponentCreator';export default[{path:'/preview/cucumber/',component:ComponentCreator('/preview/cucumber/','183'),routes:[{path:'/preview/cucumber/',component:ComponentCreator('/preview/cucumber/','39a'),routes:[{path:'/preview/cucumber/',component:ComponentCreator('/preview/cucumber/','4d9'),routes:[{path:'/preview/cucumber/compatibility/',component:ComponentCreator('/preview/cucumber/compatibility/','f39'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/contributing/',component:ComponentCreator('/preview/cucumber/contributing/','676'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/evidence/',component:ComponentCreator('/preview/cucumber/evidence/','8a7'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/getting-started/',component:ComponentCreator('/preview/cucumber/getting-started/','072'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/sdk/',component:ComponentCreator('/preview/cucumber/sdk/','95f'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/vlbv/',component:ComponentCreator('/preview/cucumber/vlbv/','6e2'),exact:true,sidebar:"docs"},{path:'/preview/cucumber/',component:ComponentCreator('/preview/cucumber/','20b'),exact:true,sidebar:"docs"}]}]}]},{path:'*',component:ComponentCreator('*')}];
+    | ^

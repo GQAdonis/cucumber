@@ -1,0 +1,73 @@
+{
+  "case": "CR47-007",
+  "mode": "control",
+  "status": "PASS",
+  "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "observations": [
+    {
+      "control": "actual incompatible dev/schema graph",
+      "versions": {
+        "jsonschema": [
+          "0.33.0"
+        ],
+        "idna": [
+          "1.0.2"
+        ],
+        "idna_adapter": [],
+        "icu_normalizer": [
+          "1.4.3"
+        ],
+        "zerovec": [
+          "0.10.4"
+        ],
+        "yoke": [
+          "0.6.0",
+          "0.7.3"
+        ]
+      },
+      "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-007-control/0002-process.json"
+    }
+  ],
+  "originalSourcesUnchanged": true,
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "+nightly-2026-11-18",
+        "update",
+        "-Z",
+        "minimal-versions"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimum-rejected",
+      "startedAt": "2026-11-19T23:05:05.539039+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T23:05:06.628298+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--all-features",
+        "--test",
+        "messages_corpus"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimum-rejected",
+      "startedAt": "2026-11-19T23:05:06.644609+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimal-target-control",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 101,
+      "finishedAt": "2026-11-19T23:06:15.830419+00:00"
+    }
+  ]
+}

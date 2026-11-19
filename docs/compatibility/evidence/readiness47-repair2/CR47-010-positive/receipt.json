@@ -1,0 +1,842 @@
+{
+  "case": "CR47-010",
+  "mode": "positive",
+  "status": "PASS",
+  "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "observations": [
+    {
+      "freshAffectedTargets": [
+        {
+          "target": "compatibility",
+          "scope": [
+            20,
+            115
+          ],
+          "counts": {
+            "scenarios": 20,
+            "steps": 115,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0002-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "portability",
+          "scope": [
+            1,
+            5
+          ],
+          "counts": {
+            "scenarios": 1,
+            "steps": 5,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0003-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "hooks",
+          "scope": [
+            9,
+            42
+          ],
+          "counts": {
+            "scenarios": 9,
+            "steps": 42,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0004-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages",
+          "scope": [
+            20,
+            97
+          ],
+          "counts": {
+            "scenarios": 20,
+            "steps": 97,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0005-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "scheduling",
+          "scope": [
+            8,
+            50
+          ],
+          "counts": {
+            "scenarios": 8,
+            "steps": 50,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0006-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "sources",
+          "scope": [
+            21,
+            81
+          ],
+          "counts": {
+            "scenarios": 21,
+            "steps": 81,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0007-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_source",
+          "scope": [
+            19,
+            80
+          ],
+          "counts": {
+            "scenarios": 19,
+            "steps": 80,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0008-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_retries",
+          "scope": [
+            6,
+            40
+          ],
+          "counts": {
+            "scenarios": 6,
+            "steps": 40,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0009-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_hooks",
+          "scope": [
+            10,
+            70
+          ],
+          "counts": {
+            "scenarios": 10,
+            "steps": 70,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0010-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_consumer",
+          "scope": [
+            2,
+            8
+          ],
+          "counts": {
+            "scenarios": 2,
+            "steps": 8,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0011-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_docstrings",
+          "scope": [
+            15,
+            86
+          ],
+          "counts": {
+            "scenarios": 15,
+            "steps": 86,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0012-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "interpolation",
+          "scope": [
+            9,
+            41
+          ],
+          "counts": {
+            "scenarios": 9,
+            "steps": 41,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0013-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_errors",
+          "scope": [
+            6,
+            30
+          ],
+          "counts": {
+            "scenarios": 6,
+            "steps": 30,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0014-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_backgrounds",
+          "scope": [
+            12,
+            64
+          ],
+          "counts": {
+            "scenarios": 12,
+            "steps": 64,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0015-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_logs",
+          "scope": [
+            7,
+            46
+          ],
+          "counts": {
+            "scenarios": 7,
+            "steps": 46,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0016-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_versions",
+          "scope": [
+            3,
+            12
+          ],
+          "counts": {
+            "scenarios": 3,
+            "steps": 12,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0017-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "step_hooks",
+          "scope": [
+            10,
+            51
+          ],
+          "counts": {
+            "scenarios": 10,
+            "steps": 51,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0018-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "expression_compat",
+          "scope": [
+            53,
+            159
+          ],
+          "counts": {
+            "scenarios": 53,
+            "steps": 159,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0019-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_corpus",
+          "scope": [
+            62,
+            236
+          ],
+          "counts": {
+            "scenarios": 62,
+            "steps": 236,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0020-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_attachments",
+          "scope": [
+            9,
+            36
+          ],
+          "counts": {
+            "scenarios": 9,
+            "steps": 36,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0021-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_documents",
+          "scope": [
+            11,
+            41
+          ],
+          "counts": {
+            "scenarios": 11,
+            "steps": 41,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0022-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "run_hooks",
+          "scope": [
+            14,
+            62
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 62,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0023-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "scenario_hook_records",
+          "scope": [
+            18,
+            76
+          ],
+          "counts": {
+            "scenarios": 18,
+            "steps": 76,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0024-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_support_code",
+          "scope": [
+            14,
+            56
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 56,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0025-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_run_hooks",
+          "scope": [
+            6,
+            34
+          ],
+          "counts": {
+            "scenarios": 6,
+            "steps": 34,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0026-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_markdown",
+          "scope": [
+            21,
+            78
+          ],
+          "counts": {
+            "scenarios": 21,
+            "steps": 78,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0027-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_markdown_runtime",
+          "scope": [
+            14,
+            54
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 54,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0028-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_scenario_hooks",
+          "scope": [
+            13,
+            64
+          ],
+          "counts": {
+            "scenarios": 13,
+            "steps": 64,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0029-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_expression_metadata",
+          "scope": [
+            19,
+            85
+          ],
+          "counts": {
+            "scenarios": 19,
+            "steps": 85,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0030-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "timeouts",
+          "scope": [
+            14,
+            50
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 50,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0031-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "execution_control_formats",
+          "scope": [
+            18,
+            54
+          ],
+          "counts": {
+            "scenarios": 18,
+            "steps": 54,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0032-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "composable_filters",
+          "scope": [
+            12,
+            56
+          ],
+          "counts": {
+            "scenarios": 12,
+            "steps": 56,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0033-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "execution_control",
+          "scope": [
+            20,
+            87
+          ],
+          "counts": {
+            "scenarios": 20,
+            "steps": 87,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0034-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "dry_run",
+          "scope": [
+            14,
+            59
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 59,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-006-positive/0001-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "line_selection",
+          "scope": [
+            38,
+            178
+          ],
+          "counts": {
+            "scenarios": 38,
+            "steps": 178,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0035-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_custom_metadata",
+          "scope": [
+            16,
+            78
+          ],
+          "counts": {
+            "scenarios": 16,
+            "steps": 78,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0036-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "dry_run_formats",
+          "scope": [
+            9,
+            30
+          ],
+          "counts": {
+            "scenarios": 9,
+            "steps": 30,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0037-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "retry_policy",
+          "scope": [
+            16,
+            56
+          ],
+          "counts": {
+            "scenarios": 16,
+            "steps": 56,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0038-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "ordered_scheduling",
+          "scope": [
+            19,
+            81
+          ],
+          "counts": {
+            "scenarios": 19,
+            "steps": 81,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0039-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "lexical_semantics",
+          "scope": [
+            25,
+            110
+          ],
+          "counts": {
+            "scenarios": 25,
+            "steps": 110,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0040-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "vlbv_adapter",
+          "scope": [
+            47,
+            175
+          ],
+          "counts": {
+            "scenarios": 47,
+            "steps": 175,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0041-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "source_paths",
+          "scope": [
+            13,
+            44
+          ],
+          "counts": {
+            "scenarios": 13,
+            "steps": 44,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0042-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "dynamic_assignment",
+          "scope": [
+            14,
+            55
+          ],
+          "counts": {
+            "scenarios": 14,
+            "steps": 55,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0043-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_table_columns",
+          "scope": [
+            11,
+            53
+          ],
+          "counts": {
+            "scenarios": 11,
+            "steps": 53,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0044-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "timeout_preparation",
+          "scope": [
+            17,
+            69
+          ],
+          "counts": {
+            "scenarios": 17,
+            "steps": 69,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0045-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "expression_names",
+          "scope": [
+            12,
+            47
+          ],
+          "counts": {
+            "scenarios": 12,
+            "steps": 47,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0046-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "generated_ordering",
+          "scope": [
+            10,
+            45
+          ],
+          "counts": {
+            "scenarios": 10,
+            "steps": 45,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0047-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_rerun",
+          "scope": [
+            19,
+            73
+          ],
+          "counts": {
+            "scenarios": 19,
+            "steps": 73,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0048-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "messages_markdown_precedence",
+          "scope": [
+            21,
+            100
+          ],
+          "counts": {
+            "scenarios": 21,
+            "steps": 100,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0049-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+        },
+        {
+          "target": "step_arguments",
+          "scope": [
+            73,
+            241
+          ],
+          "counts": {
+            "scenarios": 73,
+            "steps": 241,
+            "passed": true
+          },
+          "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-009-positive/0001-process.json",
+          "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/gherkin"
+        }
+      ],
+      "installedNativeSdk": {
+        "packet": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk",
+        "proof": {
+          "packets": [
+            {
+              "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/functional-messages.ndjson",
+              "mode": "positive",
+              "sha256": "6b7e8ac34e89a20d75cb929ffcb97cd8ca8536905590373d0d0f669e6429c22b",
+              "cases": 11,
+              "steps": 33,
+              "runSuccess": true,
+              "scenarioIds": [
+                "SDK-001",
+                "SDK-002",
+                "SDK-003",
+                "SDK-004",
+                "SDK-005",
+                "SDK-006",
+                "SDK-007",
+                "SDK-008",
+                "SDK-009",
+                "SDK-010",
+                "SDK-011"
+              ]
+            },
+            {
+              "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/controls-messages.ndjson",
+              "mode": "control",
+              "sha256": "d1378a18494d4aef5138b1ae1c3b3b9fe198daae6bf8851f9b18ee7572fcfe88",
+              "cases": 11,
+              "steps": 33,
+              "runSuccess": true,
+              "scenarioIds": [
+                "SDK-001",
+                "SDK-002",
+                "SDK-003",
+                "SDK-004",
+                "SDK-005",
+                "SDK-006",
+                "SDK-007",
+                "SDK-008",
+                "SDK-009",
+                "SDK-010",
+                "SDK-011"
+              ]
+            }
+          ],
+          "cases": 22,
+          "steps": 66,
+          "status": "PASS"
+        }
+      },
+      "rootExpected": [
+        797,
+        3399
+      ],
+      "parserExpected": [
+        73,
+        241
+      ]
+    }
+  ],
+  "originalSourcesUnchanged": true,
+  "commands": [
+    {
+      "argv": [
+        "/Users/gqadonis/.pyenv/versions/3.11.3/bin/python3",
+        "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/sdk/acceptance/prepare.py"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+      "startedAt": "2026-11-19T23:02:03.358366+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles",
+        "SDK46_EVIDENCE": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T23:02:58.307771+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/sdk/Cargo.toml",
+        "--test",
+        "language_sdk",
+        "--",
+        "--tags",
+        "@sdk46"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+      "startedAt": "2026-11-19T23:02:58.309940+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles",
+        "SDK46_EVIDENCE": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T23:03:15.757146+00:00"
+    },
+    {
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--manifest-path",
+        "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/sdk/Cargo.toml",
+        "--test",
+        "language_sdk",
+        "--",
+        "--tags",
+        "@sdk46_negative"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+      "startedAt": "2026-11-19T23:03:15.758362+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles",
+        "SDK46_EVIDENCE": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T23:03:22.181355+00:00"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "root": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles",
+  "boundaries": [
+    {
+      "relative": "interop",
+      "packageJsonSha256": "97c4a5401efaaa43f6108346ec6b3e63e617cdc8f5e57aacef5522870ec8297d",
+      "packageLockSha256": "684fee97b309eb8c3b470b99f2eeaf1fa82d941034c4625d627602fdb0bbee76",
+      "scripts": {
+        "attachments.mjs": "ef70f1bf0f2a9ff851a21367de763f6bdcf830b730f1b2ae063af1f70837c3fa",
+        "consume.mjs": "ef45443eaf24f0046408b1459528c10e434e627194b5406357f0c8b7ba854470",
+        "ordered-logs.mjs": "408eb8d26981255fdf21f9f9e289deaae04094044d0706ddf63d5895e79cf033",
+        "run-hooks.mjs": "2bcb5a599189367154411ebc01d60c59f2a5573049205d495344b9a71919a908",
+        "scenario-hooks.mjs": "98fa880b05b07d9abf96b425bd1b79ace13c8b2671fd9245b2c4aa24571fbd02",
+        "support-code.mjs": "1e959e49836a51a9ad945f016f6a5017f0b6628b76eeb152e4d6236775ffcb85"
+      },
+      "install": {
+        "argv": [
+          "npm",
+          "ci",
+          "--ignore-scripts",
+          "--no-audit",
+          "--no-fund",
+          "--prefix",
+          "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles/interop"
+        ],
+        "exitCode": 0
+      }
+    },
+    {
+      "relative": "interop/gherkin43",
+      "packageJsonSha256": "31cfb017b1f99b1f20ec323461e53a873ad0e60a6bbe9323f214a2959d3647c2",
+      "packageLockSha256": "3cda2a3f28453490c3d50e3565c7f9538db52cf0a874f253848450bb44b0f459",
+      "scripts": {
+        "markdown-oracle.mjs": "acf427d49ba7e93a6ac64a1d2f1ce218b0fc71a9fd48e19365ba83cb4c90cce6",
+        "oracle.mjs": "5463a192c19de4687f3ccc8f46fcb9e3caf5d64481af72eca5b9822ef71a4185"
+      },
+      "install": {
+        "argv": [
+          "npm",
+          "ci",
+          "--ignore-scripts",
+          "--no-audit",
+          "--no-fund",
+          "--prefix",
+          "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles/interop/gherkin43"
+        ],
+        "exitCode": 0
+      }
+    },
+    {
+      "relative": "interop/expressions",
+      "packageJsonSha256": "aa448f29e9d9c876c09373021f67c0218499812fff3249ce75dfd9c1b8b5ad7e",
+      "packageLockSha256": "d96839b9aae3bffb88d087360fde435f12cb6180817af8d62e90deb110494abc",
+      "scripts": {
+        "custom-metadata.mjs": "246c587f99c0992ac769eda41e3778a66220abfb01ae4bd43390128a259d251c",
+        "metadata.mjs": "f320dbfc98a6584eb67cd70c5574fb0662037af9b7d51af75729e4e2721d88dd",
+        "oracle.mjs": "5d8df468c5fb6ae8a99a4f5ebd96c785ce107fc341f30c7c657c98f88e420b3e",
+        "parameter-names.mjs": "bf96d81afec05ba39ba6dbd89f4c8d0a99a5554e9b7573b07f9d6212aa8a798f"
+      },
+      "install": {
+        "argv": [
+          "npm",
+          "ci",
+          "--ignore-scripts",
+          "--no-audit",
+          "--no-fund",
+          "--prefix",
+          "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles/interop/expressions"
+        ],
+        "exitCode": 0
+      }
+    },
+    {
+      "relative": "interop/rerun",
+      "packageJsonSha256": "f9a9ac8b68df68737dd8ea944249ac0bdc531010c76f6ec385fa02e73def1540",
+      "packageLockSha256": "9c534285305b13ae6fdb5daa2574fb75e3e0f085b24f64120611cabc97b21f3f",
+      "scripts": {
+        "oracle.mjs": "3b9ceb45e288a38105a9935753dac3dbf20852a7ee9fffa80f2f6c30338d4003"
+      },
+      "install": {
+        "argv": [
+          "npm",
+          "ci",
+          "--ignore-scripts",
+          "--no-audit",
+          "--no-fund",
+          "--prefix",
+          "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles/interop/rerun"
+        ],
+        "exitCode": 0
+      }
+    }
+  ]
+}

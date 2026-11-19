@@ -1,0 +1,141 @@
+Feature: Portable feature steps carry a document and table together
+  Scenario: A document precedes a table
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A table precedes a document
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: Outline values expand in both arguments
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed payment is "invoice 42" with amount "42"
+  Scenario: A second document is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+  Scenario: A table document table sequence is rejected
+   ✔  Given keyword independent matching
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then the feature is rejected before steps execute
+Feature: Reuse a step vocabulary across Gherkin keywords
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a When definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario Outline: A single definition works under every primary keyword
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+  Scenario: Legacy consumers keep keyword specific lookup by default
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+   ✔  And the observed balances are ""
+  Scenario: Legacy consumers can retain equal patterns in different keyword groups
+   ✔  Given default matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 2 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,42"
+  Scenario: Ambiguous cross keyword definitions fail without invoking either body
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 1 steps fail and 0 steps are skipped
+   ✔  And the output reports an ambiguous match
+   ✔  And the observed balances are ""
+  Scenario: Undefined phrases remain skipped
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 0 steps pass, 0 steps fail and 1 steps are skipped
+  Scenario: Inherited and wildcard keywords reuse the same definition
+   ✔  Given keyword independent matching
+   ✔  And a Then definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 4 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42,43,44,45"
+  Scenario: Localized keywords share the same matching policy
+   ✔  Given keyword independent matching
+   ✔  And a Given definition for an account balance
+   ✔  And a feature containing:
+   ✔  When the feature is executed
+   ✔  Then 1 steps pass, 0 steps fail and 0 steps are skipped
+   ✔  And the observed balances are "42"
+[Summary]
+2 features
+20 scenarios (20 passed)
+115 steps (115 passed)

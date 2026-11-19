@@ -1,0 +1,14 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0618]: expected function, found `std::string::String`
+  --> tests/messages_hooks.rs:43:4
+   |
+42 | #[given(expr = "a Messages hook run configured as {string}")]
+   | ------------------------------------------------------------- call expression requires function
+43 | fn config(report: &mut Report, config: String) { report.config = config; }
+   | ---^^^^^^-------------------------------------
+   | |                              |
+   | |                              `config` has type `std::string::String`
+   | this function of the same name is available here, but it's shadowed by the local binding
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `cucumber` (test "messages_hooks") due to 1 previous error

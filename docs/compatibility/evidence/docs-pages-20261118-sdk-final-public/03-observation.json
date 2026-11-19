@@ -1,0 +1,37 @@
+{
+  "status": "PASSED",
+  "project": "cucumber",
+  "pages": [
+    {
+      "url": "https://gqadonis.github.io/cucumber/",
+      "status": 200,
+      "heading": "Cucumber for Rust"
+    }
+  ],
+  "assets": [
+    "https://gqadonis.github.io/cucumber/assets/css/styles.f0309709.css",
+    "https://gqadonis.github.io/cucumber/assets/js/runtime~main.f3975039.js",
+    "https://gqadonis.github.io/cucumber/assets/js/main.9fe81c8b.js",
+    "https://gqadonis.github.io/cucumber/assets/js/5e95c892.57978bac.js",
+    "https://gqadonis.github.io/cucumber/assets/js/a7bd4aaa.2f77f313.js",
+    "https://gqadonis.github.io/cucumber/assets/js/01bf5e95.acb793bd.js",
+    "https://gqadonis.github.io/cucumber/assets/js/a94703ab.0728ff9f.js",
+    "https://gqadonis.github.io/cucumber/assets/js/0e384e19.bff08a53.js",
+    "https://gqadonis.github.io/cucumber/assets/js/aba21aa0.53f1d1f6.js",
+    "https://gqadonis.github.io/cucumber/assets/js/17896441.67804fba.js",
+    "https://gqadonis.github.io/cucumber/assets/js/5e95c892.57978bac.js",
+    "https://gqadonis.github.io/cucumber/assets/js/aba21aa0.53f1d1f6.js",
+    "https://gqadonis.github.io/cucumber/assets/js/a7bd4aaa.2f77f313.js",
+    "https://gqadonis.github.io/cucumber/assets/js/01bf5e95.acb793bd.js",
+    "https://gqadonis.github.io/cucumber/assets/js/a94703ab.0728ff9f.js",
+    "https://gqadonis.github.io/cucumber/assets/js/17896441.67804fba.js",
+    "https://gqadonis.github.io/cucumber/assets/js/0e384e19.bff08a53.js",
+    "https://gqadonis.github.io/cucumber/assets/js/2c70f9a5.80d38fd1.js",
+    "https://gqadonis.github.io/cucumber/assets/js/28e065ea.eae0276a.js",
+    "https://gqadonis.github.io/cucumber/assets/js/f9c2c370.c8d4f747.js",
+    "https://gqadonis.github.io/cucumber/assets/js/d589d3a7.4dbd8e63.js",
+    "https://gqadonis.github.io/cucumber/assets/js/4d54d076.cecf0ae1.js",
+    "https://gqadonis.github.io/cucumber/assets/js/e29b0ef0.0450d314.js"
+  ],
+  "errors": []
+}

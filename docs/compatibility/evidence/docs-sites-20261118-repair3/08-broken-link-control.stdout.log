@@ -1,0 +1,12 @@
+
+> gqadonis-cucumber-docs@0.0.0 build
+> docusaurus build
+
+[INFO] [en] Creating an optimized production build...
+[webpackbar] ℹ Compiling Client
+[webpackbar] ℹ Compiling Server
+[webpackbar] ✔ Server: Compiled successfully in 604.93ms
+[webpackbar] ✔ Client: Compiled successfully in 2.94s
+
+[INFO] Docusaurus version: 3.10.2
+Node version: v26.5.0

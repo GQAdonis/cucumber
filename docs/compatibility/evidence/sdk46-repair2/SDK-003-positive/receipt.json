@@ -1,0 +1,17 @@
+{
+  "case": "SDK-003",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "officialGoodFixtures": 2,
+      "format": "gherkin",
+      "hosts": [
+        "rust",
+        "node",
+        "python"
+      ]
+    }
+  ],
+  "oracleArtifactsUnchanged": true
+}

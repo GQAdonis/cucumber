@@ -1,0 +1,10 @@
+
+> gqadonis-cucumber-docs@0.0.0 acceptance
+> node acceptance/run.mjs
+
+..........................................................
+
+2 hooks (2 passed)
+9 scenarios (9 passed)
+56 steps (56 passed)
+2m 25.890s (2m 25.867s executing your code)

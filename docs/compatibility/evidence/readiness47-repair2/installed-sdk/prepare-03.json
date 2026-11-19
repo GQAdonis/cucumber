@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "node",
+    "--version"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+  "startedAt": "2026-11-19T23:02:03.502480+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T23:02:03.523626+00:00",
+  "stdout": "prepare-03.stdout",
+  "stderr": "prepare-03.stderr"
+}

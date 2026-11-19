@@ -1,0 +1,7 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.60s
+     Running tests/messages_custom_metadata.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_custom_metadata-e0e2dd614c9b57ce)
+[Summary]
+0 features
+0 scenarios
+0 steps

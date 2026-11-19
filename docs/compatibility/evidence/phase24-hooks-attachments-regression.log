@@ -1,0 +1,177 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.80s
+     Running tests/hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/hooks-dedec37f71240103)
+Feature: Reusable ordered scenario lifecycle hooks
+  Scenario: Setup follows registration order and teardown unwinds in reverse order
+   ✔  Given the lifecycle configuration "ordered"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: A setup failure stops later setup and steps but still runs teardown
+   ✔  Given the lifecycle configuration "before-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "before-one"
+  Scenario: Teardown continues after asynchronous failures and reports every failure
+   ✔  Given the lifecycle configuration "after-failures"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-two"
+   ✔  And the hook diagnostic contains "after-one"
+  Scenario: Teardown continues when a callback panics before returning its future
+   ✔  Given the lifecycle configuration "sync-after-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-sync,after-two,after-one"
+   ✔  And the run has 0 failed steps and 1 hook errors
+   ✔  And the hook diagnostic contains "after-sync"
+  Scenario: Teardown sees the failed scenario and still releases resources
+   ✔  Given the lifecycle configuration "step-failure"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one"
+   ✔  And the run has 1 failed steps and 0 hook errors
+   ✔  And teardown observes a failed step
+  Scenario: Conditional hooks use inherited feature rule and scenario tags
+   ✔  Given the lifecycle configuration "tagged"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "tagged-before,background,step,tagged-after"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Each retry gets fresh scenario state and repeats its hooks
+   ✔  Given the lifecycle configuration "retry"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-one,before-two,background,step,after-two,after-one,before-one,before-two,background,step,after-two,after-one"
+   ✔  And both attempts start with fresh world state
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: Legacy replacement hooks retain last-registration behavior
+   ✔  Given the lifecycle configuration "legacy"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "before-two,background,step,after-two"
+   ✔  And the run has 0 failed steps and 0 hook errors
+  Scenario: After-only hooks can observe a scenario with no initialized world
+   ✔  Given the lifecycle configuration "after-only"
+   ✔  When the application feature runs
+   ✔  Then the lifecycle trace is "after-without-world"
+   ✔  And the run has 0 failed steps and 0 hook errors
+[Summary]
+1 feature
+9 scenarios (9 passed)
+42 steps (42 passed)
+     Running tests/messages_attachments.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_attachments-4679cb25caa27021)
+Feature: Applications attach typed evidence to actual execution scopes
+  Scenario: Text and binary evidence preserve caller content and metadata
+   ✔  Given an attachment-aware application in "payloads" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves exact text and binary evidence with their media types and file names
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Scenario and step hooks attach within their actual execution scopes
+   ✔  Given an attachment-aware application in "hooks" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves evidence under the actual scenario hook or step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Concurrent scenarios retain independent attachment scopes
+   ✔  Given an attachment-aware application in "concurrent" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each concurrent scenario retrieves only its own evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Retried scenarios retain evidence from each distinct attempt
+   ✔  Given an attachment-aware application in "retry" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then each attempt retrieves its own evidence and the final attempt passes
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across step boundaries cannot target a later step
+   ✔  Given an attachment-aware application in "late step" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old step handle rejects the write while the current scope accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Handles retained across retries cannot target a later attempt
+   ✔  Given an attachment-aware application in "late attempt" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then the old attempt handle rejects the write while the retry accepts evidence
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Completed applications cannot append evidence through retained handles
+   ✔  Given an attachment-aware application in "completed" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then all retained scope handles reject writes after completion
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+  Scenario: Existing World implementations run without an attachment override
+   ✔  Given an existing application with no attachment-aware constructor
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then its original World constructor and steps still run successfully
+   ✔  And the report contains no invented attachments
+  Scenario: Lazy World construction can attach within its first actual step
+   ✔  Given an attachment-aware application in "lazy" mode
+   ✔  When its real execution is reported with the shared attachment store
+   ✔  Then official Query retrieves constructor and body evidence under the first step
+   ✔  And all typed attachments satisfy the pinned schema and execution reference graph
+[Summary]
+1 feature
+9 scenarios (9 passed)
+36 steps (36 passed)
+     Running tests/step_hooks.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/step_hooks-87938d1387382216)
+Feature: Ordered native step lifecycle callbacks
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "passing"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "passed"
+   ✔  And the final native failed step count is 0
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "before fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,after-two,after-one"
+   ✔  And the after-step callbacks observe "not run"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "body fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "failed"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "after fails"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the after-step callbacks observe "passed"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario Outline: Preserve ordered setup and reverse cleanup on every outcome
+   ✔  Given a step lifecycle configured for "all fail"
+   ✔  When the native scenario executes
+   ✔  Then the callback and body trace is "before-one,before-two,after-two,after-one"
+   ✔  And the after-step callbacks observe "not run"
+   ✔  And the final native failed step count is 1
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Undefined steps do not invoke step hooks
+   ✔  Given a step lifecycle configured for "undefined"
+   ✔  When the native scenario executes
+   ✔  Then no step hook or body invocation occurs
+   ✔  And the native scenario reports one skipped step
+  Scenario: Ambiguous steps do not invoke step hooks
+   ✔  Given a step lifecycle configured for "ambiguous"
+   ✔  When the native scenario executes
+   ✔  Then no step hook or body invocation occurs
+   ✔  And the final native failed step count is 1
+  Scenario: Background and scenario steps receive inherited tag-selected callbacks
+   ✔  Given a tagged feature and Rule with a background and scenario step
+   ✔  When the native scenario executes
+   ✔  Then selected hooks surround both steps and excluded hooks never run
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Retried steps have separate attempt identities and fresh worlds
+   ✔  Given a step lifecycle configured for "retry"
+   ✔  When the native scenario executes
+   ✔  Then both attempts have complete hook traces and distinct execution identities
+   ✔  And only the first attempt has a failed hook record
+   ✔  And each actual hook invocation has its own identity, scope and outcome
+  Scenario: Later steps skipped after a failure have no hook invocations
+   ✔  Given a step lifecycle configured for "later skipped"
+   ✔  When the native scenario executes
+   ✔  Then hook records refer only to the first executed step
+   ✔  And the final native failed step count is 1
+[Summary]
+1 feature
+10 scenarios (10 passed)
+51 steps (51 passed)

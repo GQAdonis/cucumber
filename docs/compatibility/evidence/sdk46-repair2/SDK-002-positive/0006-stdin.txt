@@ -1,0 +1,7 @@
+# Feature: Literal
+## Scenario: Both
+* Given payload
+```text
+body
+```
+  | `@table` |

@@ -1,0 +1,118 @@
+    Updating crates.io index
+     Locking 43 packages to highest Rust 1.88 compatible versions
+      Adding ahash v0.8.12
+      Adding autocfg v1.5.1
+      Adding bit-set v0.8.0
+      Adding bit-vec v0.8.0
+      Adding borrow-or-share v0.2.4
+      Adding bumpalo v3.20.4
+      Adding email_address v0.2.10
+      Adding fancy-regex v0.16.2
+      Adding fluent-uri v0.3.2
+      Adding fraction v0.15.4
+      Adding getrandom v0.3.4
+      Adding icu_normalizer v2.4.0
+      Adding icu_normalizer_data v2.4.0
+      Adding icu_properties v2.4.0
+      Adding icu_properties_data v2.4.0
+      Adding idna v1.1.0
+      Adding idna_adapter v1.2.2
+      Adding js-sys v0.3.107
+      Adding jsonschema v0.33.0 (available: v0.61.2)
+      Adding num v0.4.3
+      Adding num-bigint v0.4.8
+      Adding num-cmp v0.1.0
+      Adding num-complex v0.4.6
+      Adding num-integer v0.1.47
+      Adding num-iter v0.1.46
+      Adding num-rational v0.4.2
+      Adding num-traits v0.2.19
+      Adding outref v0.5.2
+      Adding percent-encoding v2.3.2
+      Adding r-efi v5.3.0
+      Adding referencing v0.33.0
+      Adding uuid v1.26.1 (available: v1.29.3, requires Rust 1.89.0)
+      Adding uuid-simd v0.8.0
+      Adding version_check v0.9.5
+      Adding vsimd v0.8.0
+      Adding wasip2 v1.0.4+wasi-0.2.12
+      Adding wasm-bindgen v0.2.130
+      Adding wasm-bindgen-macro v0.2.130
+      Adding wasm-bindgen-macro-support v0.2.130
+      Adding wasm-bindgen-shared v0.2.130
+      Adding wit-bindgen v0.57.1
+      Adding zerocopy v0.8.63
+      Adding zerocopy-derive v0.8.63
+ Downloading crates ...
+  Downloaded email_address v0.2.10
+   Compiling serde_core v1.0.229
+   Compiling smallvec v1.16.5
+   Compiling autocfg v1.5.1
+   Compiling serde v1.0.229
+   Compiling zmij v1.0.23
+   Compiling regex-automata v0.4.18
+   Compiling serde_json v1.0.154
+   Compiling icu_normalizer_data v2.4.0
+   Compiling icu_properties_data v2.4.0
+   Compiling getrandom v0.3.4
+   Compiling num-traits v0.2.19
+   Compiling zerocopy v0.8.63
+   Compiling once_cell v1.21.4
+   Compiling version_check v0.9.5
+   Compiling parking_lot_core v0.9.12
+   Compiling ahash v0.8.12
+   Compiling bytecount v0.6.9
+   Compiling parking_lot v0.12.5
+   Compiling icu_segmenter v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling itoa v1.0.19
+   Compiling borrow-or-share v0.2.4
+   Compiling bit-vec v0.8.0
+   Compiling nom_locate v5.0.0
+   Compiling num-integer v0.1.47
+   Compiling num-complex v0.4.6
+   Compiling bit-set v0.8.0
+   Compiling num-bigint v0.4.8
+   Compiling num-iter v0.1.46
+   Compiling idna_adapter v1.2.2
+   Compiling textwrap v0.16.4
+   Compiling uuid v1.26.1
+   Compiling outref v0.5.2
+   Compiling percent-encoding v2.3.2
+   Compiling fluent-uri v0.3.2
+   Compiling vsimd v0.8.0
+   Compiling lazy_static v1.5.1
+   Compiling email_address v0.2.10
+   Compiling gherkin v0.16.0 (/Volumes/T7/Projects/references/cucumber/vendor/gherkin)
+   Compiling idna v1.1.0
+   Compiling base64 v0.22.1
+   Compiling uuid-simd v0.8.0
+   Compiling num-cmp v0.1.0
+   Compiling tempfile v3.27.0
+   Compiling serial_test v3.5.0
+   Compiling num-rational v0.4.2
+   Compiling referencing v0.33.0
+   Compiling globset v0.4.21
+   Compiling regex v1.13.1
+   Compiling fancy-regex v0.16.2
+   Compiling cucumber-expressions v0.5.0
+   Compiling num v0.4.3
+   Compiling ignore v0.4.34
+   Compiling fraction v0.15.4
+   Compiling jsonschema v0.33.0
+   Compiling globwalk v0.9.1
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0618]: expected function, found `String`
+   --> tests/scheduling.rs:109:4
+    |
+108 | #[given(regex = r#"^a concurrency limit of "([^"]+)"$"#)]
+    | --------------------------------------------------------- call expression requires function
+109 | fn limit(world: &mut Scheduling, limit: String) {
+    | ---^^^^^---------------------------------------
+    | |                                |
+    | |                                `limit` has type `String`
+    | this function of the same name is available here, but it's shadowed by the local binding
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `cucumber` (test "scheduling") due to 1 previous error

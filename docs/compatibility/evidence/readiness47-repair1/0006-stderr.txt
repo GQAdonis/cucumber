@@ -1,0 +1,10 @@
+    Updating crates.io index
+     Locking 217 packages to latest Rust 1.88 compatible versions
+      Adding base64 v0.22.1 (available: v0.23.1)
+      Adding jsonschema v0.33.0 (available: v0.61.2)
+      Adding num-bigint v0.4.8 (available: v0.5.1)
+      Adding sealed v0.6.0 (available: v0.7.0)
+      Adding serial_test v3.5.0 (available: v4.0.1, requires Rust 1.93.1)
+      Adding syn v2.0.119 (available: v3.0.10)
+      Adding synthez v0.4.0 (available: v0.5.1)
+      Adding uuid v1.26.1 (available: v1.29.3, requires Rust 1.89.0)

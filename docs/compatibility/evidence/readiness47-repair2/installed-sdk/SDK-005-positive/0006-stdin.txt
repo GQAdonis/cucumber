@@ -1,0 +1,1 @@
+{"requests": ["{\"version\":{\"$serde_json::private::Number\":\"1\"},\"operation\":\"capabilities\",\"input\":{}}", "{\"version\": 1, \"operation\": \"capabilities\", \"input\": {}}"], "facade": false}

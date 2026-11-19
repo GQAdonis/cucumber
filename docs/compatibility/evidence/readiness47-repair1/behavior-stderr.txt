@@ -1,0 +1,7 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 16.86s
+     Running tests/contribution_readiness.rs (target/debug/deps/contribution_readiness-8e97922c18811fb1)
+error: test failed, to rerun pass `--test contribution_readiness`
+
+Caused by:
+  process didn't exit successfully: `/Volumes/T7/Projects/references/cucumber/target/debug/deps/contribution_readiness-8e97922c18811fb1 --tags '@readiness47'` (signal: 15, SIGTERM: termination signal)

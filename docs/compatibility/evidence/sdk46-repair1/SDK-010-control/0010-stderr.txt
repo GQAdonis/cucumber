@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/consumer.py", line 4, in <module>
+    import cucumber_native_local as sdk
+  File "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/cucumber_native_local/__init__.py", line 10, in <module>
+    from . import _native
+ImportError: cannot import name '_native' from partially initialized module 'cucumber_native_local' (most likely due to a circular import) (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-gh1c6ynx/sdk46-missing-python-k54hecfl/cucumber_native_local/__init__.py)

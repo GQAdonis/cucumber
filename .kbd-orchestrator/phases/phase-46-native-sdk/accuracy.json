@@ -1,0 +1,17 @@
+{
+  "phase": "phase-46-native-sdk",
+  "contractAmendmentsAfterAdoption": 1,
+  "changedScenarioIdentities": 0,
+  "finalNotExercised": 0,
+  "initialNotExercised": 10,
+  "initialEnvironmentAdmissionFailures": 1,
+  "repairAttemptsUsed": 2,
+  "repairAttemptsAllowed": 2,
+  "knownPostClosureBehavioralEscapes": 0,
+  "initialMaterialReviewFindings": {
+    "contractCorrectnessBlocker": 1,
+    "mediumEvidenceGap": 1
+  },
+  "finalOpenMaterialFindings": 0,
+  "source": "Retained closure, boundary packets, signature amendment and independent review reports; no invented owner calibration or exact model identity."
+}

@@ -1,0 +1,39 @@
+
+> gqadonis-cucumber-docs@0.0.0 acceptance
+> node acceptance/run.mjs
+
+F.
+
+Failed hooks:
+  1) BeforeAll # acceptance/steps/documentation.mjs:62
+       AssertionError [ERR_ASSERTION]: cucumber production build failed; retained complete build logs
+       
+       1 !== 0
+       
+           + expected - actual
+       
+           -1
+           +0
+       
+           at Object.<anonymous> (file:///Volumes/T7/Projects/references/cucumber/docs-site/acceptance/steps/documentation.mjs:68:12)
+
+2 hooks (1 passed, 1 failed)
+0 scenarios
+0 steps
+0m 18.635s (0m 18.631s executing your code)
+Documentation BDD boundary failed: {
+  argv: [
+    '/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node',
+    'node_modules/@cucumber/cucumber/bin/cucumber.js',
+    '--config',
+    'acceptance/cucumber.mjs'
+  ],
+  cwd: '/Volumes/T7/Projects/references/cucumber/docs-site',
+  code: 1,
+  expectedScenarios: 9,
+  started: 0,
+  finished: 0,
+  runSuccess: false,
+  messageError: undefined,
+  passed: false
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PROPOSED_NOT_OWNER_REVIEWED",
+  "phase": "phase-46-native-sdk",
+  "positive": [
+    {
+      "example": "TypeScript compiles through Rust and receives original AST/Pickle identities.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Python derives failed Examples-row selectors while retaining all retry attempts.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "An external Rust consumer registers a namespaced extension without replacing core behavior.",
+      "ownerVerdict": null
+    }
+  ],
+  "deferred": [
+    {
+      "example": "Foreign execution, async callbacks and selected framework adaptation remain mandatory later work.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Multi-platform certification and publication follow ownership/platform decisions.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Both Docusaurus sites are separate additive work; deployment excluded.",
+      "ownerVerdict": null
+    }
+  ],
+  "rareCritical": [
+    {
+      "example": "Missing native binary fails without semantic fallback.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Truncated Messages cannot produce a passing empty plan.",
+      "ownerVerdict": null
+    },
+    {
+      "example": "Failure or identities cannot leak into later requests.",
+      "ownerVerdict": null
+    }
+  ]
+}

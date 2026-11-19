@@ -1,0 +1,8 @@
+file:///Volumes/T7/Projects/references/cucumber/docs-site/acceptance/run.mjs:13
+  throw new Error('Refusing to overwrite existing evidence: choose a fresh directory');
+        ^
+
+Error: Refusing to overwrite existing evidence: choose a fresh directory
+    at file:///Volumes/T7/Projects/references/cucumber/docs-site/acceptance/run.mjs:13:9
+
+Node.js v26.5.0

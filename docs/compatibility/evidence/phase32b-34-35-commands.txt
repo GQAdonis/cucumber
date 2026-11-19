@@ -1,0 +1,12 @@
+Primary shared boundary (third attempt; dry_run14/59, dry_run_formats9/30, line_selection38/178 passed, messages_custom_metadata15/16 pending correction):
+cargo test --features output-messages,output-json,output-junit,libtest,tracing --test messages_custom_metadata --test line_selection --test dry_run --test dry_run_formats
+
+Corrected metadata boundary,16/78 passed, exit0:
+cargo test --features output-messages,output-json,output-junit,libtest,tracing --test messages_custom_metadata -- --tags '@phase32b_custom_metadata or @phase32b_raw_metadata'
+An earlier mistyped @phase32b selected zero scenarios; it is retained separately and excluded from evidence.
+
+Reporter-independent line selection,37/173 passed, exit0 (five reporter-only attachment dead-code warnings):
+cargo test --no-default-features --features macros --test line_selection -- --tags @phase34
+
+Affected boundary,16 named BDD targets,267/1115 passed, exit0:
+cargo test --features output-messages,output-json,output-junit,libtest,tracing --test compatibility --test expression_compat --test messages_expression_metadata --test messages_support_code --test messages_run_hooks --test messages_scenario_hooks --test messages_attachments --test messages_source --test execution_control --test execution_control_formats --test composable_filters --test run_hooks --test scenario_hook_records --test step_hooks --test timeouts --test scheduling

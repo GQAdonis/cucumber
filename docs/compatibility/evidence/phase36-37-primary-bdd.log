@@ -1,0 +1,255 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.36s
+     Running tests/messages_logs.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/messages_logs-b6a03c3ee0561943)
+Feature: Native tracing logs remain faithful in Messages reports
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retries" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retries" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 0 delays
+  Scenario Outline: Ordered retries retain their actual trace and consumer identities
+   ✔  Given a native tracing application in "ordered retry delay" mode
+   ✔  When the application reports through Messages
+   ✔  Then every observed native log has one exact case-attempt attachment
+   ✔  And log attachments have no inferred step or hook identity
+   ✔  And the "ordered retry delay" run retains its expected logs and final outcome
+   ✔  And all log report envelopes satisfy the pinned Messages schema
+   ✔  And official Query resolves every ordered attempt and its log identities
+   ✔  And the ordered retry clock records 2 delays
+[Summary]
+1 feature
+2 scenarios (2 passed)
+16 steps (16 passed)
+     Running tests/ordered_scheduling.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/ordered_scheduling-02daf76a24f7c92a)
+Feature: Schedule a complete selected application in a reproducible global order
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "defined" order with one active case
+   ✔  Then actual case starts follow the "defined" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Defined and reverse order cover features, Rules and Examples
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in "reverse" order with one active case
+   ✔  Then actual case starts follow the "reverse" global source sequence
+   ✔  And every selected case executes once with its original source identity
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "0"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "reproducible"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario Outline: Seeded random order matches the pinned JavaScript permutation
+   ✔  Given a selected application spanning two features, Rules and outline rows
+   ✔  When the complete application runs in random order with string seed "café-🦀"
+   ✔  Then actual case starts match the pinned JavaScript shuffle for that seed
+   ✔  And repeating the run produces the same permutation
+  Scenario: Filtering precedes the global permutation
+   ✔  Given an application with selected and excluded cases in several sources
+   ✔  When the selected application runs in random order with string seed "selected"
+   ✔  Then its actual starts match shuffling only the selected cases
+   ✔  And excluded cases construct no World and invoke no callbacks
+  Scenario: A delayed source producer can finish before any application callbacks
+   ✔  Given a source stream whose second feature and completion wait on controlled gates
+   ✔  When the application requests explicit reverse scheduling
+   ✔  Then the producer reaches both gates without executor starvation
+   ✔  And no World or application hook starts before source completion
+   ✔  When the remaining source and completion gates are released
+   ✔  Then actual case starts follow the complete reverse sequence
+  Scenario: Source errors survive buffered plan collection
+   ✔  Given a source stream containing valid cases and a parse error
+   ✔  When the complete application runs in defined order without fail fast
+   ✔  Then the parse error remains visible and makes the run unsuccessful
+   ✔  And all valid selected cases execute in defined order
+  Scenario: Concurrent cases overlap without exceeding configured capacity
+   ✔  Given three ordered concurrent cases coordinated by entry and release gates
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the first two cases enter before either is released
+   ✔  And the third case enters only after capacity is released
+   ✔  And observed active case count never exceeds two
+  Scenario: A serial case is an exclusive barrier in the selected global order
+   ✔  Given the ordered cases concurrent A, concurrent B, serial C and concurrent D
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then A and B may overlap but C waits until both have finished
+   ✔  And D waits until C has finished
+   ✔  And C never overlaps another case
+  Scenario: A retry retains its logical case slot and fresh attempt identity
+   ✔  Given a first case that fails once and succeeds on its second attempt
+   ✔  And a following case waiting for the only execution slot
+   ✔  When the complete application runs in defined order with one active case
+   ✔  Then both attempts of the first case finish before the following case starts
+   ✔  And retry attempts have distinct ScenarioIds and Worlds with unchanged source identity
+   ✔  And terminal counters report two passed cases and one recovered failed attempt
+  Scenario: A delayed retry retains its slot while unrelated capacity remains useful
+   ✔  Given a retrying case with a controlled retry delay and two following cases
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the retrying case retains one slot while another case can progress
+   ✔  And the delayed retry starts only after its delay gate is released
+   ✔  And no more than two logical cases are active
+  Scenario: A serial case retains exclusivity across retries and retry delay
+   ✔  Given a serial case that retries after a controlled delay before another case
+   ✔  When the complete application runs in defined order with two active cases
+   ✔  Then the following case cannot enter during either serial attempt or its delay
+   ✔  And it enters after the serial case reaches its terminal result
+  Scenario: Fail fast observes terminal failure after retry exhaustion
+   ✔  Given a first case that fails every permitted attempt and a following case
+   ✔  When the complete application runs in defined order with one active case and fail fast
+   ✔  Then all permitted attempts of the first case run
+   ✔  And the following case never constructs a World or invokes callbacks
+   ✔  And the run reports the terminal failure without duplicate feature finishes
+  Scenario: JavaScript parallel zero explicitly selects serial execution
+   ✔  Given three selected cases and explicit JavaScript parallel value zero
+   ✔  When the complete application runs in defined order
+   ✔  Then all three cases execute with an active case limit of one
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "CLI"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario Outline: Native zero concurrency fails configuration instead of stalling
+   ✔  Given native zero concurrency supplied through "builder"
+   ✔  When the application resolves its execution configuration
+   ✔  Then configuration rejects zero with a positive-concurrency diagnostic
+   ✔  And no World or application hook is invoked
+  Scenario: Empty buffered input completes without application cases
+   ✔  Given a source stream that completes without selected cases
+   ✔  When the complete application runs in defined order
+   ✔  Then the run completes without constructing a World or dispatching a case
+  Scenario: Legacy callers keep their existing scheduling policy
+   ✔  Given the existing legacy serial-priority fixture with positive concurrency
+   ✔  When the application runs without explicit scheduling options
+   ✔  Then the established legacy fixture dispatch and retry behavior is preserved
+[Summary]
+1 feature
+19 scenarios (19 passed)
+81 steps (81 passed)
+     Running tests/retry_policy.rs (/Volumes/T7/rust/cargo-build/c6/9ac299373e3d65/debug/deps/retry_policy-622094e1a956d501)
+Feature: Validate an explicit retry budget and official inherited tag gate
+  Scenario: A typed tag gate requires a positive budget before execution
+   ✔  Given retry budget 0 and an explicitly supplied official tag gate
+   ✔  When the application validates its retry policy
+   ✔  Then validation rejects the configuration before parsing or constructing a World
+  Scenario: Zero without a gate explicitly disables retry
+   ✔  Given an application with retry policy "disabled"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "feature tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "PASSED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:19:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Rule tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "PASSED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:19:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "scenario tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "PASSED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:19:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario Outline: Official matching includes every inherited tag location
+   ✔  Given an application with retry policy "Examples tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "PASSED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:19:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario: A native retry tag cannot bypass an unmatched official gate
+   ✔  Given an application with retry policy "unmatched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario: A native retry tag cannot enlarge the explicit budget
+   ✔  Given an application with retry policy "matched magic tag"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "FAILED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:37:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario: Explicit typed policy is authoritative over legacy CLI retry configuration
+   ✔  Given an application with retry policy "conflicting legacy CLI"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "FAILED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:42:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario: A later custom retry-options callback replaces the policy callback
+   ✔  Given an application with retry policy "custom override"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "FAILED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "pending"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "PENDING"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "ambiguous"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "AMBIGUOUS"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "undefined"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "UNDEFINED"
+  Scenario Outline: A configured budget does not make non-failed outcomes retryable
+   ✔  Given an application with retry policy "skipped"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✔  Then exactly 1 attempt is reported and its final status is "SKIPPED"
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "recovered"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 2 attempts are reported and its final status is "PASSED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:64:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 2
+  Scenario Outline: Protocol attempts agree with recovered and exhausted execution
+   ✔  Given an application with retry policy "exhausted"
+   ✔  When the application runs with explicit JS outcome eligibility
+   ✘  Then exactly 3 attempts are reported and its final status is "FAILED"
+      Step failed:
+      Defined: tests/features/retry_policy/policy.feature:64:5
+      Matched: tests/retry_policy.rs:252:1
+      Step panicked. Captured output: assertion `left == right` failed
+        left: 1
+       right: 3
+[Summary]
+1 feature
+16 scenarios (8 passed, 8 failed)
+48 steps (40 passed, 8 failed)
+
+thread 'main' (105667669) panicked at src/cucumber.rs:1537:13:
+8 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test retry_policy`

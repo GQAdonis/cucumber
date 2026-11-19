@@ -1,0 +1,12 @@
+# Local orchestration projections and recalled context; canonical runtime is external.
+/model-preflight.json
+/position-reminder.txt
+/current-waypoint.json
+/position.json
+/phases/*/hooks*
+/phases/*/method-context.*
+/phases/*/prior-context.md
+/phases/*/progress.json
+/phases/*/review/*
+!/phases/*/review/pending-review.md
+!/phases/*/review/internal-review.md

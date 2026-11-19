@@ -1,0 +1,12 @@
+[package]
+name = "phase42-registration"
+version = "0.0.0"
+edition = "2024"
+publish = false
+[workspace]
+[dependencies]
+cucumber = { version = "=0.23.0", path = "/Volumes/T7/Projects/references/cucumber" }
+tokio = { version = "1.40", features = ["macros", "rt"] }
+[[test]]
+name = "registration"
+harness = false

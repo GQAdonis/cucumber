@@ -1,0 +1,14 @@
+{
+  "stage": "assess",
+  "completedAt": "2026-11-18T12:31:38Z",
+  "outputs": [
+    "assessment.md",
+    "scenario-candidates.md",
+    "review/cucumber-assessment.md",
+    "review/gherkin-assessment.md"
+  ],
+  "nextStage": "analyze",
+  "summaryForNext": "Observed CI blockers assessed; two independent internal reviews PASS for spec only. Bind exact minimum-version/book/oracle/legacy-policy/vendor/feature packet and budgets before adoption; no source implementation or checks authorized yet.",
+  "skipped": false,
+  "skipReason": null
+}

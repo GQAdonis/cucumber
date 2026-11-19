@@ -1,0 +1,25 @@
+{
+  "versions": {
+    "jsonschema": [
+      "0.33.0"
+    ],
+    "idna": [
+      "1.0.3"
+    ],
+    "idna_adapter": [
+      "1.2.1"
+    ],
+    "icu_normalizer": [
+      "2.0.0"
+    ],
+    "zerovec": [
+      "0.11.1"
+    ],
+    "yoke": [
+      "0.7.5",
+      "0.8.0"
+    ]
+  },
+  "lockSha256": "d3737962646ff0f9943bba89769dc1406b19656ef964ee452680da763a0fc12a",
+  "resolver": "nightly-2026-11-18"
+}

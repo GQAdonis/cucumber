@@ -1,0 +1,30 @@
+   Compiling crossbeam-utils v0.8.23
+   Compiling log v0.4.35
+   Compiling tracing-core v0.1.36
+   Compiling sharded-slab v0.1.7
+   Compiling tracing-attributes v0.1.31
+   Compiling thread_local v1.1.10
+   Compiling nu-ansi-term v0.50.3
+   Compiling globset v0.4.21
+   Compiling serial_test v3.5.0
+   Compiling tracing-log v0.2.0
+   Compiling tracing-subscriber v0.3.23
+   Compiling crossbeam-epoch v0.9.21
+   Compiling crossbeam-deque v0.8.8
+   Compiling ignore v0.4.34
+   Compiling tracing v0.1.44
+   Compiling globwalk v0.9.1
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0618]: expected function, found `std::string::String`
+   --> tests/messages_logs.rs:116:4
+    |
+115 | #[given(expr = "a native tracing application in {string} mode")]
+    | ---------------------------------------------------------------- call expression requires function
+116 | fn mode(report: &mut Report, mode: String) { report.mode = mode; }
+    | ---^^^^-----------------------------------
+    | |                            |
+    | |                            `mode` has type `std::string::String`
+    | this function of the same name is available here, but it's shadowed by the local binding
+
+For more information about this error, try `rustc --explain E0618`.
+error: could not compile `cucumber` (test "messages_logs") due to 1 previous error

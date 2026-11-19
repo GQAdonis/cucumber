@@ -1,0 +1,62 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+error[E0283]: type annotations needed
+   --> tests/ordered_scheduling.rs:112:21
+    |
+112 |         let mut app=cucumber::Cucumber::new().with_parser(InputParser{items,gates:(mode=="stream").then(||controls.clone())})
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type of the type parameter `I` declared on the struct `Cucumber`
+    |
+    = note: multiple `impl`s satisfying `_: AsRef<Path>` found in the following crates: `clap_builder`, `rustix`, `std`:
+            - impl AsRef<Path> for OsString;
+            - impl AsRef<Path> for Path;
+            - impl AsRef<Path> for PathBuf;
+            - impl AsRef<Path> for clap::builder::OsStr;
+            - impl AsRef<Path> for clap::builder::Str;
+            - impl AsRef<Path> for rustix::path::dec_int::DecInt;
+            - impl AsRef<Path> for std::ffi::OsStr;
+            - impl AsRef<Path> for std::string::String;
+            - impl AsRef<Path> for str;
+note: required by a bound in `cucumber::Cucumber::<W, cucumber::parser::Basic, I, cucumber::runner::Basic<W>, Summarize<Normalize<W, cucumber::writer::Basic>>>::new`
+   --> src/cucumber.rs:866:8
+    |
+866 |     I: AsRef<Path>,
+    |        ^^^^^^^^^^^ required by this bound in `Cucumber::<W, Basic, I, Basic<W>, Summarize<Normalize<W, Basic>>>::new`
+...
+887 |     pub fn new() -> Self {
+    |            --- required by a bound in this associated function
+help: consider specifying the generic arguments
+    |
+112 |         let mut app=cucumber::Cucumber::<Application, cucumber::parser::Basic, I, cucumber::runner::Basic<Application>, Summarize<Normalize<Application, cucumber::writer::Basic>>>::new().with_parser(InputParser{items,gates:(mode=="stream").then(||controls.clone())})
+    |                                       +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+error[E0283]: type annotations needed
+   --> tests/ordered_scheduling.rs:112:21
+    |
+112 |         let mut app=cucumber::Cucumber::new().with_parser(InputParser{items,gates:(mode=="stream").then(||controls.clone())})
+    |                     ^^^^^^^^^^^^^^^^^^^^^^^ cannot infer type of the type parameter `I` declared on the struct `Cucumber`
+    |
+    = note: multiple `impl`s satisfying `_: AsRef<Path>` found in the following crates: `clap_builder`, `rustix`, `std`:
+            - impl AsRef<Path> for OsString;
+            - impl AsRef<Path> for Path;
+            - impl AsRef<Path> for PathBuf;
+            - impl AsRef<Path> for clap::builder::OsStr;
+            - impl AsRef<Path> for clap::builder::Str;
+            - impl AsRef<Path> for rustix::path::dec_int::DecInt;
+            - impl AsRef<Path> for std::ffi::OsStr;
+            - impl AsRef<Path> for std::string::String;
+            - impl AsRef<Path> for str;
+    = note: required for `cucumber::parser::Basic` to implement `cucumber::Parser<_>`
+note: required by a bound in `cucumber::Cucumber`
+   --> src/cucumber.rs:51:8
+    |
+ 48 | pub struct Cucumber<W, P, I, R, Wr, Cli = cli::Empty>
+    |            -------- required by a bound in this struct
+...
+ 51 |     P: Parser<I>,
+    |        ^^^^^^^^^ required by this bound in `Cucumber`
+help: consider specifying the generic arguments
+    |
+112 |         let mut app=cucumber::Cucumber::<Application, cucumber::parser::Basic, I, cucumber::runner::Basic<Application>, Summarize<Normalize<Application, cucumber::writer::Basic>>>::new().with_parser(InputParser{items,gates:(mode=="stream").then(||controls.clone())})
+    |                                       +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+For more information about this error, try `rustc --explain E0283`.
+error: could not compile `cucumber` (test "ordered_scheduling") due to 2 previous errors

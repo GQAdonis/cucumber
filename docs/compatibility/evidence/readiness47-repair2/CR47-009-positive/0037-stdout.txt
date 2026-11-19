@@ -1,0 +1,44 @@
+Feature: Report inspection classifications without inventing execution failure
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: Inspection retains classifications without failing the report
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then all classifications remain distinguishable and the report succeeds
+   ✔  And three Worlds are constructed once with no callbacks or retries
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JSON" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "JUnit" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: A real constructor failure still fails inspection
+   ✔  Given a "libtest" report whose World constructor fails
+   ✔  When the application is inspected without executing callbacks
+   ✔  Then the report preserves the initialization failure and fails
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JSON" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "JUnit" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+  Scenario Outline: Returning to execution restores classification failure semantics
+   ✔  Given a "libtest" report for recognized, undefined and ambiguous definitions
+   ✔  When inspection is turned off and the application executes
+   ✔  Then the recognized body passes while undefined and ambiguous cases fail the report
+[Summary]
+1 feature
+9 scenarios (9 passed)
+30 steps (30 passed)

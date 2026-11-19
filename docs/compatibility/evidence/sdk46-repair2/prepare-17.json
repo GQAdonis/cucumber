@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-scifgz4j/builder/bin/python",
+    "-m",
+    "pip",
+    "freeze"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:17:47.617818+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:17:47.906728+00:00",
+  "stdout": "prepare-17.stdout",
+  "stderr": "prepare-17.stderr"
+}

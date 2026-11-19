@@ -1,0 +1,20 @@
+{
+  "dispatchedAt": "2026-11-18T07:32:08.882320+00:00",
+  "phase": "phase-46-native-sdk",
+  "change": "native-source-sdk",
+  "backend": "internal Codex/OpenSpec",
+  "model": "exact deployment unknown",
+  "assignments": {
+    "T1": "/root/sdk_core",
+    "T2": "/root/sdk_node",
+    "T3": "/root/sdk_python",
+    "T4": "/root"
+  },
+  "pending": [
+    "implementation",
+    "whole-phase BDD",
+    "independent static QA and review",
+    "canonical closure"
+  ],
+  "contractDigest": "00384afc672a235f8ed70e79126ad19529868ed5ba9f31e8c53f72bba7aa1785"
+}

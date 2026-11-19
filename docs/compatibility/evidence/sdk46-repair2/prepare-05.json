@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "/Users/gqadonis/.pyenv/versions/3.11.3/bin/python3",
+    "--version"
+  ],
+  "cwd": "/Volumes/T7/Projects/references/cucumber",
+  "startedAt": "2026-11-18T11:16:35.256472+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-18T11:16:35.265551+00:00",
+  "stdout": "prepare-05.stdout",
+  "stderr": "prepare-05.stderr"
+}

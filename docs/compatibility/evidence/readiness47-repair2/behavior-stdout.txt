@@ -1,0 +1,60 @@
+Feature: Maintainers preserve supported behavior when preparing contributions
+  Scenario: All eight supported feature profiles execute real scenarios
+   ✔  Given the adopted contribution readiness case "CR47-004"
+   ✔  When the real downstream application exercises the contribution
+   ✘  Then its independent compatibility obligation is satisfied
+      Step failed:
+      Defined: tests/features/contribution_readiness/readiness.feature:26:5
+      Matched: tests/contribution_readiness.rs:65:1
+      Step panicked. Captured output: CR47-004: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 394, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 182, in cr004
+          built=consumer('profile-'+profile,ROOT/'tests/readiness/consumers/profiles.rs',WORK,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 50, in consumer
+          RUN.run(['cargo','build','--locked',*flags],directory,extra_env=env)
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0002 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-004-positive
+  Scenario: Dry-run lifecycle uses freshly installed pinned collaborators
+   ✔  Given the adopted contribution readiness case "CR47-006"
+   ✔  When the real downstream application exercises the contribution
+   ✔  Then its independent compatibility obligation is satisfied
+  Scenario: The minimum dependency graph executes the affected schema path
+   ✔  Given the adopted contribution readiness case "CR47-007"
+   ✔  When the real downstream application exercises the contribution
+   ✘  Then its independent compatibility obligation is satisfied
+      Step failed:
+      Defined: tests/features/contribution_readiness/readiness.feature:44:5
+      Matched: tests/contribution_readiness.rs:65:1
+      Step panicked. Captured output: CR47-007: stdout= stderr=Traceback (most recent call last):
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 394, in <module>
+          globals()['cr'+CASE.split('-')[1]](MODE=='control')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 300, in cr007
+          observation=target('messages_corpus',directory,cache=False,extra_env=environment)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/cases.py", line 246, in target
+          result=RUN.run(['cargo','test','--locked',*flags,'--test',name],root,extra_env=extra_env)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 109, in run
+          demand(entry['exitCode'] in allowed, f'child {label} returned {entry["exitCode"]}; original logs retained in {self.directory}')
+        File "/Volumes/T7/Projects/references/cucumber/tests/readiness/common.py", line 41, in demand
+          if not condition: raise AssertionError(message)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+      AssertionError: child 0002 returned 101; original logs retained in /Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-007-positive
+  Scenario: Dedicated acceptance paths retain exact nonzero scope
+   ✔  Given the adopted contribution readiness case "CR47-009"
+   ✔  When the real downstream application exercises the contribution
+   ✔  Then its independent compatibility obligation is satisfied
+  Scenario: The complete affected parser core and installed SDK packet passes
+   ✔  Given the adopted contribution readiness case "CR47-010"
+   ✔  When the real downstream application exercises the contribution
+   ✔  Then its independent compatibility obligation is satisfied
+[Summary]
+1 feature
+5 scenarios (3 passed, 2 failed)
+15 steps (13 passed, 2 failed)
