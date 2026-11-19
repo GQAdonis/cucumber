@@ -68,16 +68,22 @@ fn hooks() -> Hooks<Execution> {
 }
 #[given(expr = "a {string} feature with background steps")]
 fn configure(report: &mut Report, shape: String) {
-    let feature = "Feature: Empty scenarios\n  Background: feature setup\n   \
-         Given feature setup\n";
+    let feature = "\
+        Feature: Empty scenarios\n\
+        \x20 Background: feature setup\n\
+        \x20   Given feature setup\n";
     let rule = "  Rule: per-account\n    Background: rule setup\n      Given \
         rule setup\n";
     let source = match shape.as_str() {
         "feature empty" => format!("{feature}  Scenario: empty feature\n"),
         "rule empty" => format!("{feature}{rule}    Scenario: empty rule\n"),
         "feature outline" => format!(
-            "{feature}  Scenario Outline: empty <id>\n    Examples: rows\n   \
-                   | id |\n      | one |\n      | two |\n"
+            "\
+                {feature}  Scenario Outline: empty <id>\n\
+                \x20   Examples: rows\n\
+                \x20     | id |\n\
+                \x20     | one |\n\
+                \x20     | two |\n"
         ),
         "rule outline" => format!(
             "{feature}{rule}    Scenario Outline: empty <id>\n      \
@@ -85,9 +91,13 @@ fn configure(report: &mut Report, shape: String) {
                 two |\n"
         ),
         "mixed" => format!(
-            "{feature}  Scenario: empty feature\n  Scenario: filled \
-                feature\n    Given work\n{rule}    Scenario: empty rule\n   \
-                 Scenario: filled rule\n      Given work\n"
+            "\
+                {feature}  Scenario: empty feature\n\
+                \x20 Scenario: filled feature\n\
+                \x20   Given work\n\
+                {rule}    Scenario: empty rule\n\
+                \x20   Scenario: filled rule\n\
+                \x20     Given work\n"
         ),
         "no background" => "Feature: No background\n  Scenario: empty\n".into(),
         "official fixture" => std::fs::read_to_string(

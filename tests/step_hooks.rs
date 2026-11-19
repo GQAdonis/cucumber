@@ -178,9 +178,16 @@ async fn execute(world: &mut Acceptance) {
                 "@absent".parse().unwrap(),
                 after("excluded-after", seen.clone(), config.clone()),
             );
-        source = "@feature\nFeature: Step lifecycle\n  Background: shared \
-            setup\n    Given work\n  @rule\n  Rule: Policy\n    @scenario\n \
-               Scenario: Request\n      Given work\n"
+        source = "\
+            @feature\n\
+            Feature: Step lifecycle\n\
+            \x20 Background: shared setup\n\
+            \x20   Given work\n\
+            \x20 @rule\n\
+            \x20 Rule: Policy\n\
+            \x20   @scenario\n\
+            \x20   Scenario: Request\n\
+            \x20     Given work\n"
             .into();
     }
     let mut steps = Collection::new().given(

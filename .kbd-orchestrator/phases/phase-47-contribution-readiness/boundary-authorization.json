@@ -9,6 +9,13 @@
       "authorizer": "Travis",
       "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
       "reason": "Owner adopted exact 20-case boundary and authorized registered-key signatures for implementation completion and budget amendment; both signed amendments adopted. Prior usage retained."
+    },
+    {
+      "boundary": "B5",
+      "authorizedAt": "2026-11-19T22:46:56.611Z",
+      "authorizer": "Travis",
+      "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+      "reason": "First original B4 FAIL retained. Existing adopted two-repair allowance and standing instruction to fix scoped failures authorize repair1. All diagnosed repairs complete; rerun only CR47-004/006/007/009/010 plus controls, retaining unchanged case evidence at original identities."
     }
   ]
 }

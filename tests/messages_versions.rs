@@ -48,11 +48,20 @@ async fn run(world: &mut Report) {
     let path = directory.path().join("version.feature");
     std::fs::write(
         &path,
-        "@invoice\nFeature: Protocol\n  Rule: Shared\n    Scenario Outline: \
-            invoice <amount>\n      Given payment <amount>\n        | \
-            amount |\n        | <amount> |\n        \"\"\"text/plain\n      \
-              paid <amount>\n        \"\"\"\n      Examples:\n        | \
-            amount |\n        | 42 |\n",
+        "\
+            @invoice\n\
+            Feature: Protocol\n\
+            \x20 Rule: Shared\n\
+            \x20   Scenario Outline: invoice <amount>\n\
+            \x20     Given payment <amount>\n\
+            \x20       | amount |\n\
+            \x20       | <amount> |\n\
+            \x20       \"\"\"text/plain\n\
+            \x20       paid <amount>\n\
+            \x20       \"\"\"\n\
+            \x20     Examples:\n\
+            \x20       | amount |\n\
+            \x20       | 42 |\n",
     )
     .unwrap();
     let mut output = Vec::new();

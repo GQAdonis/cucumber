@@ -75,6 +75,17 @@ fn main() {
     let runtime_path = root.join("tests/readiness/runtime.json");
     let runtime: serde_json::Value =
         serde_json::from_slice(&std::fs::read(&runtime_path).unwrap()).unwrap();
+    let repair_ids =
+        ["CR47-004", "CR47-006", "CR47-007", "CR47-009", "CR47-010"];
+    let repair = !runtime["repair"].is_null();
+    if repair {
+        assert_eq!(
+            runtime["repair"]["affectedIds"],
+            serde_json::json!(repair_ids),
+            "only the authorized repair subset is supported"
+        );
+    }
+    let expected_count = if repair { repair_ids.len() } else { 10 };
     let args: Vec<_> = std::env::args().collect();
     let positive = args.iter().any(|arg| arg == "@readiness47");
     let control = args.iter().any(|arg| arg == "@readiness47_negative");
@@ -106,11 +117,19 @@ fn main() {
             .with_source_store(sources)
             .with_writer(writer)
             .fail_on_skipped()
-            .run_and_exit(root.join("tests/features/contribution_readiness")),
+            .filter_run_and_exit(
+                root.join("tests/features/contribution_readiness"),
+                move |_, _, scenario| {
+                    !repair
+                        || scenario.tags.iter().any(|tag| {
+                            repair_ids.contains(&tag.trim_start_matches('@'))
+                        })
+                },
+            ),
     );
     assert_eq!(
         PASSED.load(Ordering::SeqCst),
-        10,
+        expected_count,
         "zero/partial/unfiltered readiness scope is not accepted"
     );
     if control {

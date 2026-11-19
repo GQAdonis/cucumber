@@ -45,23 +45,38 @@ fn execute(w: &mut Acceptance, mode: &str) {
     w.evidence = evidence.clone();
     let expression = format!("value {{{}}}", w.name);
     let source = format!(
-        "use cucumber::{{given, then, World as _}};\nuse \
-            std::{{convert::Infallible, str::FromStr}};\n#[derive(Debug, \
-            Default, cucumber::World)]\nstruct Registration {{ seen: bool \
-            }}\n#[derive(Debug, cucumber::Parameter)]\n#[param(name = \
-            {name:?}, regex = \"value\")]\nstruct Native(String);\nimpl \
-            FromStr for Native {{\n    type Err = Infallible;\n    fn \
-            from_str(value: &str) -> Result<Self, Self::Err> {{ \
-            Ok(Self(value.to_owned())) }}\n}}\n#[given({mode} = \
-            {expression:?})]\nfn accept_value(world: &mut Registration, \
-            value: Native) {{\n    assert_eq!(value.0, \"value\", \"actual \
-            custom handler value\");\n    world.seen = true;\n    \
-            println!(\"PHASE42_ACTUAL_HANDLER_VALUE=value\");\n}}\n#[then(\"\
-            the actual handler executed\")]\nfn observed(world: &mut \
-            Registration) {{ assert!(world.seen); }}\n#[tokio::main(flavor \
-            = \"current_thread\")]\nasync fn main() {{\n    \
-            Registration::cucumber().with_default_cli().fail_on_skipped()\n \
-                   .run_and_exit(\"registration.feature\").await;\n}}\n",
+        "\
+            use cucumber::{{given, then, World as _}};\n\
+            use std::{{convert::Infallible, str::FromStr}};\n\
+            #[derive(Debug, Default, cucumber::World)]\n\
+            struct Registration {{ seen: bool }}\n\
+            #[derive(Debug, cucumber::Parameter)]\n\
+            #[param(name = {name:?}, regex = \"value\")]\n\
+            struct Native(String);\n\
+            impl FromStr for Native {{\n\
+            \x20   type Err = Infallible;\n\
+            \x20   fn from_str(value: &str) -> Result<Self, \
+            Self::Err> {{ Ok(Self(value.to_owned())) }}\n\
+            }}\n\
+            #[given({mode} = {expression:?})]\n\
+            fn accept_value(world: &mut Registration, value: \
+            Native) {{\n\
+            \x20   assert_eq!(value.0, \"value\", \"actual \
+            custom handler value\");\n\
+            \x20   world.seen = true;\n\
+            \x20   println!(\"PHASE42_ACTUAL_HANDLER_VALUE=value\
+            \");\n\
+            }}\n\
+            #[then(\"the actual handler executed\")]\n\
+            fn observed(world: &mut Registration) {{ \
+            assert!(world.seen); }}\n\
+            #[tokio::main(flavor = \"current_thread\")]\n\
+            async fn main() {{\n\
+            \x20   Registration::cucumber().with_default_cli().fa\
+            il_on_skipped()\n\
+            \x20       .run_and_exit(\"registration.feature\").aw\
+            ait;\n\
+            }}\n",
         name = w.name
     );
     fs::write(workspace.consumer.join("tests/registration.rs"), &source)

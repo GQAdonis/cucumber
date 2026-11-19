@@ -73,9 +73,13 @@ fn source(world: &mut ReportWorld, kind: String) {
                 Then accepted\n"
         }
         "parallel" => {
-            "  Scenario: first invoice\n    Given accepted\n    Then \
-                accepted\n  Scenario: second invoice\n    Given accepted\n  \
-                  Then accepted\n"
+            "\
+                \x20 Scenario: first invoice\n\
+                \x20   Given accepted\n\
+                \x20   Then accepted\n\
+                \x20 Scenario: second invoice\n\
+                \x20   Given accepted\n\
+                \x20   Then accepted\n"
         }
         "initial conjunction" => {
             "  Scenario: invoice\n    And accepted\n    But accepted\n"
@@ -85,20 +89,30 @@ fn source(world: &mut ReportWorld, kind: String) {
                 And accepted\n"
         }
         "inherited background" => {
-            "  Background: account\n    When accepted\n  Scenario: invoice\n \
-                   And accepted\n"
+            "\
+                \x20 Background: account\n\
+                \x20   When accepted\n\
+                \x20 Scenario: invoice\n\
+                \x20   And accepted\n"
         }
         "empty with background" => {
             "  Background: account\n    Given accepted\n  Scenario: invoice\n"
         }
         "empty" => "  Scenario: nothing to execute\n",
         "outline" => {
-            "  Scenario Outline: invoice\n    Given <value>\n    Examples:\n \
-                     | value |\n      | accepted |\n"
+            "\
+                \x20 Scenario Outline: invoice\n\
+                \x20   Given <value>\n\
+                \x20   Examples:\n\
+                \x20     | value |\n\
+                \x20     | accepted |\n"
         }
         "table" => {
-            "  Scenario: invoice\n    Given accepted\n      | amount |\n     \
-                 | 42 |\n"
+            "\
+                \x20 Scenario: invoice\n\
+                \x20   Given accepted\n\
+                \x20     | amount |\n\
+                \x20     | 42 |\n"
         }
         "docstring" => {
             "  Scenario: invoice\n    Given accepted\n      \"\"\"\n      \
@@ -114,8 +128,11 @@ fn source(world: &mut ReportWorld, kind: String) {
         }
         "parse error" => "This is not a valid feature source\n",
         "language" => {
-            "# language: fr\nFonctionnalité: Factures\n  Scénario: facture\n \
-                   Soit accepted\n"
+            "\
+                # language: fr\n\
+                Fonctionnalité: Factures\n\
+                \x20 Scénario: facture\n\
+                \x20   Soit accepted\n"
         }
         _ => panic!("Unknown acceptance run: {kind}"),
     };

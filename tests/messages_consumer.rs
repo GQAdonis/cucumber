@@ -74,12 +74,24 @@ async fn produce(report: &mut Report, source: &str, retries: usize) {
 async fn rich(report: &mut Report) {
     produce(
         report,
-        "@invoice\nFeature: Billing\n  @policy\n  Rule: Tax\n    Background: \
-            account\n      Given ready\n    Scenario Outline: invoice \
-            <amount>\n      Given amount <amount>\n        | amount |\n     \
-               | <amount> |\n        \"\"\"text/plain\n        paid \
-            <amount>\n        \"\"\"\n      Examples: charges\n        | \
-            amount |\n        | 42 |\n        | 43 |\n",
+        "\
+            @invoice\n\
+            Feature: Billing\n\
+            \x20 @policy\n\
+            \x20 Rule: Tax\n\
+            \x20   Background: account\n\
+            \x20     Given ready\n\
+            \x20   Scenario Outline: invoice <amount>\n\
+            \x20     Given amount <amount>\n\
+            \x20       | amount |\n\
+            \x20       | <amount> |\n\
+            \x20       \"\"\"text/plain\n\
+            \x20       paid <amount>\n\
+            \x20       \"\"\"\n\
+            \x20     Examples: charges\n\
+            \x20       | amount |\n\
+            \x20       | 42 |\n\
+            \x20       | 43 |\n",
         0,
     )
     .await;

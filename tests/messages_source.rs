@@ -97,6 +97,7 @@ async fn capture(world: &mut GraphWorld) {
     let mut parser = parser::Basic::new()
         .with_dialect_catalog(world.catalogue)
         .unwrap()
+        .with_table_semantics(gherkin::TableSemantics::Gherkin43)
         .with_source_store(world.store.clone());
     if let Some(language) = &world.language {
         parser = parser.language(language.clone()).unwrap();
@@ -251,8 +252,12 @@ fn french_fallback(world: &mut GraphWorld) {
     world.language = Some("fr".to_owned());
     temporary_source(
         world,
-        "Fonctionnalité: Facture\n  Scénario: traitement\n    Soit accepté\n \
-               Quand envoyé\n    Alors terminé\n",
+        "\
+            Fonctionnalité: Facture\n\
+            \x20 Scénario: traitement\n\
+            \x20   Soit accepté\n\
+            \x20   Quand envoyé\n\
+            \x20   Alors terminé\n",
     );
 }
 
@@ -278,8 +283,13 @@ fn chinese_rule(world: &mut GraphWorld) {
     world.catalogue = DialectCatalog::Gherkin43;
     temporary_source(
         world,
-        "# language: zh-CN\n功能: Unicode\n  规则: 最新\n    场景: 表格\n      假如有效\n  \
-                | 名称 | 值 |\n",
+        "\
+            # language: zh-CN\n\
+            功能: Unicode\n\
+            \x20 规则: 最新\n\
+            \x20   场景: 表格\n\
+            \x20     假如有效\n\
+            \x20     | 名称 | 值 |\n",
     );
 }
 
@@ -303,8 +313,13 @@ fn localized_wildcard(world: &mut GraphWorld) {
     world.catalogue = DialectCatalog::Gherkin43;
     temporary_source(
         world,
-        "# language: fr\nFonctionnalité: Types\n  Scénario: continuation\n   \
-             Soit prêt\n    * ensuite\n    Et suite\n",
+        "\
+            # language: fr\n\
+            Fonctionnalité: Types\n\
+            \x20 Scénario: continuation\n\
+            \x20   Soit prêt\n\
+            \x20   * ensuite\n\
+            \x20   Et suite\n",
     );
 }
 

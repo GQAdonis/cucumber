@@ -11,12 +11,26 @@ use futures::future::LocalBoxFuture;
 use regex::Regex;
 use serde_json::Value;
 
-const SOURCE: &str = "@feature\nFeature: Selection\n  @scenario\n  Scenario: \
-    health\n    Given execute health\n  @rule\n  Rule: Invoices\n    \
-    @scenario\n    Scenario Outline: invoice <color>\n      Given execute \
-    invoice <color>\n      @eligible\n      Examples:\n        | color |\n  \
-          | green |\n        | blue |\n      @excluded\n      Examples:\n   \
-         | color |\n        | red |\n";
+const SOURCE: &str = "\
+    @feature\n\
+    Feature: Selection\n\
+    \x20 @scenario\n\
+    \x20 Scenario: health\n\
+    \x20   Given execute health\n\
+    \x20 @rule\n\
+    \x20 Rule: Invoices\n\
+    \x20   @scenario\n\
+    \x20   Scenario Outline: invoice <color>\n\
+    \x20     Given execute invoice <color>\n\
+    \x20     @eligible\n\
+    \x20     Examples:\n\
+    \x20       | color |\n\
+    \x20       | green |\n\
+    \x20       | blue |\n\
+    \x20     @excluded\n\
+    \x20     Examples:\n\
+    \x20       | color |\n\
+    \x20       | red |\n";
 static EXECUTED: Mutex<Vec<String>> = Mutex::new(Vec::new());
 
 #[derive(Debug, Default, cucumber::World)]

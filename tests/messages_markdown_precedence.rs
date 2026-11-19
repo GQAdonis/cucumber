@@ -97,18 +97,29 @@ fn fixture(world: &mut Acceptance, case: String) {
                 ```application/`@literal`\n    body\n  ```\n"
         }
         "table then fence inline tag" => {
-            "# Feature: Literal\n## Scenario: Both\n* Given payload\n  | \
-                `@table` |\n  ````application/`@media`\n  literal `@body`\n \
-                 ````\n"
+            "\
+                # Feature: Literal\n\
+                ## Scenario: Both\n\
+                * Given payload\n\
+                \x20 | `@table` |\n\
+                \x20 ````application/`@media`\n\
+                \x20 literal `@body`\n\
+                \x20 ````\n"
         }
         "fence then table inline tag" => {
             "# Feature: Literal\n## Scenario: Both\n* Given \
                 payload\n```text\nbody\n```\n  | `@table` |\n"
         }
         "docstring content inline tag" => {
-            "# Feature: Literal\n## Scenario: Content\n* Given \
-                payload\n```text\n`@literal`\n* Given prose `@not-a-step`\n \
-                 | `@not-a-table` |\n```"
+            "\
+                # Feature: Literal\n\
+                ## Scenario: Content\n\
+                * Given payload\n\
+                ```text\n\
+                `@literal`\n\
+                * Given prose `@not-a-step`\n\
+                \x20 | `@not-a-table` |\n\
+                ```"
         }
         "standalone inherited tags" => {
             "`@feature`\n# Feature: Tagged\n`@rule`\n## Rule: \

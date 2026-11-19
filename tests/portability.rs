@@ -66,22 +66,36 @@ cucumber = { path = "../foundation" }
     .unwrap();
     fs::write(
         app.join("src/main.rs"),
-        "fn main() {\n    let source = \
-        r#\"Feature: Imported transactions\n  Scenario: Preserve imported \
-        values\n    Given a payment\n      | amount | 42 |\n      \"\"\"\n  \
-            invoice 42\n      \"\"\"\n    Then a separate step\n\"#;\n    \
-        let feature = cucumber::gherkin::Feature::parse(source, \
-        Default::default())\n        .expect(\"table-before-docstring must \
-        parse through cucumber's public API\");\n    let steps = \
-        &feature.scenarios[0].steps;\n    assert_eq!(steps.len(), 2);\n    \
-        assert_eq!(steps[0].table.as_ref().unwrap().rows, \
-        vec![vec![\"amount\", \"42\"]]);\n    \
-        assert_eq!(steps[0].docstring.as_deref(), Some(\"\\ninvoice \
-        42\\n\"));\n    assert_eq!(steps[1].value, \"a separate step\");\n  \
-          assert!(steps[1].table.is_none());\n    \
-        assert!(steps[1].docstring.is_none());\n    println!(\"portable \
-        consumer observed exact table, doc string and following \
-        step\");\n}\n",
+        "\
+            fn main() {\n\
+            \x20   let source = r#\"Feature: Imported \
+            transactions\n\
+            \x20 Scenario: Preserve imported values\n\
+            \x20   Given a payment\n\
+            \x20     | amount | 42 |\n\
+            \x20     \"\"\"\n\
+            \x20     invoice 42\n\
+            \x20     \"\"\"\n\
+            \x20   Then a separate step\n\
+            \"#;\n\
+            \x20   let feature = \
+            cucumber::gherkin::Feature::parse(source, \
+            Default::default())\n\
+            \x20       .expect(\"table-before-docstring must \
+            parse through cucumber's public API\");\n\
+            \x20   let steps = &feature.scenarios[0].steps;\n\
+            \x20   assert_eq!(steps.len(), 2);\n\
+            \x20   assert_eq!(steps[0].table.as_ref().unwrap().ro\
+            ws, vec![vec![\"amount\", \"42\"]]);\n\
+            \x20   assert_eq!(steps[0].docstring.as_deref(), \
+            Some(\"\\ninvoice 42\\n\"));\n\
+            \x20   assert_eq!(steps[1].value, \"a separate \
+            step\");\n\
+            \x20   assert!(steps[1].table.is_none());\n\
+            \x20   assert!(steps[1].docstring.is_none());\n\
+            \x20   println!(\"portable consumer observed exact \
+            table, doc string and following step\");\n\
+            }\n",
     )
     .unwrap();
 }

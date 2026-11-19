@@ -45,11 +45,13 @@ fn input(world: &mut Report, kind: String) {
     let directory = tempfile::tempdir().unwrap();
     world.path = directory.path().join("broken.feature");
     world.source = match kind.as_str() {
-        "syntax" => {
-            "Feature: Broken\n  Scenario: Input\n    Given accepted\n  \
-                | a | b |\n      | one |\n"
-                .into()
-        }
+        "syntax" => "\
+                Feature: Broken\n\
+                \x20 Scenario: Input\n\
+                \x20   Given accepted\n\
+                \x20     | a | b |\n\
+                \x20     | one |\n"
+            .into(),
 
         "expansion" => "Feature: Broken\n  Scenario Outline: <missing>\n    \
             Given accepted\n    Examples:\n      | present |\n      | value \

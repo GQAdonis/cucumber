@@ -18,3 +18,5 @@ registry publication, external review or automatic extra repair cycles.
 User's latest review-now direction is handled separately by parent worker.
 
 Static dependency evidence: num-bigint upstream PR219 fixes compiler ambiguity in0.4.2; tagged0.4.3 RELEASES.md also fixes multiplication panic. Choose0.4.3, dev-only/default-features=false. Internal helper minimal_graph_repair,7toolcalls; literal_preservation_repair diagnostic8calls. No external reviewer transmission.
+
+Implementation complete. Internal literal helper4calls and targeted support6calls. Root static integration read completed; no repair code executed. Root production change Debug trait and bigint bound; four acceptance-support files select exactly affected5permode and preserve original failed run truth. Dedicated parser target runs first inCR47-009. Current source map is frozen by authorized fresh preparation. No SDK identity-map change needed.

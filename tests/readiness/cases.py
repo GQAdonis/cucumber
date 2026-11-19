@@ -268,6 +268,20 @@ def cr006(control):
 def cr007(control):
     directory=OWNED/('minimum-rejected' if control else 'minimum-fixed')
     copy_source(Path(RUNTIME['failedRoot']) if control else WORK,directory)
+    if control:
+        # Isolate the retained ICU/Yoke failure from an unrelated historical
+        # bigint compiler error; never alter the immutable archive or source.
+        manifest = directory/'Cargo.toml'
+        before = sha(manifest)
+        text = manifest.read_text()
+        demand(text.count('[dev-dependencies]') == 1, 'control manifest boundary missing')
+        text = text.replace('[dev-dependencies]', '[dev-dependencies]\nnum-bigint = { version = "0.4.3", default-features = false }', 1)
+        manifest.write_text(text)
+        record(CASE_DIR/'control-prerequisite-adjustment.json', {
+            'sourceRevision':RUNTIME['failedRoot'],'ownedManifest':str(manifest),
+            'beforeSha256':before,'afterSha256':sha(manifest),
+            'adjustment':'num-bigint >=0.4.3 only, matching the fixed graph prerequisite',
+            'preservedOracle':'Exact idna1.0.2/zerovec0.10.4/yoke0.6.0+0.7.3 identities and actual Yoke compile rejection remain mandatory.'})
     lock=directory/'Cargo.lock'
     if lock.exists(): lock.unlink()
     resolver=RUNTIME['resolverToolchain']
@@ -325,9 +339,8 @@ def cr008(control):
 
 
 def cr009(control):
-    observations=[]
+    observations=[target('step_arguments',Path(RUNTIME['gherkinRoot']),[73,241])]
     for name in TARGETS: observations.append(target(name))
-    observations.append(target('step_arguments',Path(RUNTIME['gherkinRoot']),[73,241]))
     OBS.append({'exactDedicatedEntryPoints':observations,'legacyEmptyStepHarnessUnchanged':True})
     if control:
         for label,args in [('wrong-tag',['--tags','@readiness47_absent']),('empty-path',['--input',str(OWNED/'empty-features'/'*.feature')])]:

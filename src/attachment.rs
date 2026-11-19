@@ -291,7 +291,7 @@ impl AttachmentContext {
 /// Clones share the same lifetime boundary. Attaching and closing use
 /// the same lock, so a write cannot be accepted after closure, even from a task
 /// that retained a handle while another step or retry begins.
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct AttachmentHandle(Arc<Mutex<ScopeState>>);
 impl AttachmentHandle {
     /// Appends evidence to this handle's original scope while it is open.

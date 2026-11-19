@@ -336,12 +336,22 @@ fn legacy_tags(world: &mut Acceptance) {
 }
 #[given("tagged feature rule and example rows")]
 fn tagged(world: &mut Acceptance) {
-    world.source =
-        "@feature\nFeature: Selected\n  @rule\n  Rule: Inherited\n  \
-          Scenario Outline: Row <value>\n      Given selected <value>\n     \
-         @selected\n      Examples:\n        | value |\n        | 42 |\n    \
-          @excluded\n      Examples:\n        | value |\n        | 43 |\n"
-            .into();
+    world.source = "\
+            @feature\n\
+            Feature: Selected\n\
+            \x20 @rule\n\
+            \x20 Rule: Inherited\n\
+            \x20   Scenario Outline: Row <value>\n\
+            \x20     Given selected <value>\n\
+            \x20     @selected\n\
+            \x20     Examples:\n\
+            \x20       | value |\n\
+            \x20       | 42 |\n\
+            \x20     @excluded\n\
+            \x20     Examples:\n\
+            \x20       | value |\n\
+            \x20       | 43 |\n"
+        .into();
 }
 #[when("an explicit official expression filters the real run")]
 async fn filter_run(world: &mut Acceptance) {

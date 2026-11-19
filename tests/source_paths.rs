@@ -103,8 +103,12 @@ fn fixture(w: &mut Acceptance, mode: String) {
             let path = root.join("invalid.feature");
             std::fs::write(
                 &path,
-                "Feature: bad\n Scenario: one\n  Given record X\n  | one |\n \
-                     | too | many |\n",
+                "\
+                    Feature: bad\n\
+                    \x20Scenario: one\n\
+                    \x20 Given record X\n\
+                    \x20 | one |\n\
+                    \x20 | too | many |\n",
             )
             .unwrap();
             p.path(path).path(&a)

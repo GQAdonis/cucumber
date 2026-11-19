@@ -49,9 +49,18 @@ impl cucumber::Parser<()> for InputParser {
 }
 fn fixtures() -> Vec<gherkin::Feature> {
     [
-        "Feature: First\n Scenario: first\n  Given work\n Rule: Accounts\n  \
-            Scenario Outline: row <number>\n   Given work\n   Examples:\n   \
-             | number |\n    | one |\n    | two |\n    | three |\n",
+        "\
+            Feature: First\n\
+            \x20Scenario: first\n\
+            \x20 Given work\n\
+            \x20Rule: Accounts\n\
+            \x20 Scenario Outline: row <number>\n\
+            \x20  Given work\n\
+            \x20  Examples:\n\
+            \x20   | number |\n\
+            \x20   | one |\n\
+            \x20   | two |\n\
+            \x20   | three |\n",
         "Feature: Second\n Scenario: last\n  Given work\n Rule: Final\n  \
             Scenario: final\n   Given work\n",
     ]

@@ -262,11 +262,18 @@ fn typed_payload(world: &mut Sources) {
 fn outline_payload(world: &mut Sources) {
     write_source(
         world,
-        "Feature: Payload delivery\n  Scenario Outline: invoice <amount>\n   \
-             Given record the payload\n      \"\"\"application/json\n      \
-            {\"amount\": <amount>}\n        invoice <amount>\n      \
-            \"\"\"\n    Examples:\n      | amount |\n      | 42 |\n      | \
-            43 |\n",
+        "\
+            Feature: Payload delivery\n\
+            \x20 Scenario Outline: invoice <amount>\n\
+            \x20   Given record the payload\n\
+            \x20     \"\"\"application/json\n\
+            \x20     {\"amount\": <amount>}\n\
+            \x20       invoice <amount>\n\
+            \x20     \"\"\"\n\
+            \x20   Examples:\n\
+            \x20     | amount |\n\
+            \x20     | 42 |\n\
+            \x20     | 43 |\n",
     );
 }
 
