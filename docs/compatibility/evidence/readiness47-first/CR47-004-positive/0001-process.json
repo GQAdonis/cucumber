@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "cargo",
+    "generate-lockfile"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/profile-none",
+  "startedAt": "2026-11-19T22:20:38.042316+00:00",
+  "environment": {
+    "RUSTUP_TOOLCHAIN": "1.88.0",
+    "RUSTFLAGS": "-Dwarnings",
+    "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0",
+    "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+  },
+  "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T22:20:38.803355+00:00"
+}

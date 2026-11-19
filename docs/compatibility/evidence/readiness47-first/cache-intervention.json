@@ -1,0 +1,13 @@
+{
+  "recordedAt": "2026-11-19T22:17:08.828772+00:00",
+  "observation": "Cargo stack was waiting in load_global_rustc/cached_output on owned sccache rustc -vV child, not registry transfer.",
+  "ownedChildrenTerminated": [
+    27066,
+    87086
+  ],
+  "command": "SIGTERM only to each owned stalled version-query child",
+  "result": "First cargo generate-lockfile completed exit 0 after its optional cached rustc metadata query was terminated. Second outcome pending. No compile or scenario ran.",
+  "globalSettingsChanged": false,
+  "otherProcessesStopped": false,
+  "nextPacketEnvironment": "RUSTC_WRAPPER= and RUSTC_WORKSPACE_WRAPPER= for future boundary commands only; no global cache configuration/workflow edit or claim that terminated version queries passed."
+}

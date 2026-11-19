@@ -1,0 +1,11 @@
+Feature: A portable Rust BDD foundation includes its compatible parser
+  Scenario: An unrelated application consumes a relocated checkout
+   ✔  Given a relocated Cucumber source checkout with its vendored parser
+   ✔  And an application depending only on that relocated Cucumber checkout
+   ✔  When the application parses a step with a table followed by a doc string
+   ✔  Then the application observes both step arguments unchanged
+   ✔  And the application uses no sibling parser checkout or Cargo patch
+[Summary]
+1 feature
+1 scenario (1 passed)
+5 steps (5 passed)

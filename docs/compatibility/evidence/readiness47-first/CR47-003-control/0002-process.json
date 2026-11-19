@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0/debug/parser-vendor"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n",
+  "startedAt": "2026-11-19T22:35:39.322424+00:00",
+  "environment": {
+    "RUSTUP_TOOLCHAIN": "1.88.0",
+    "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target",
+    "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/oracles"
+  },
+  "stdinSha256": "e023eda18b1797b6afa660fdb9f7d3503d69896e21b86a1bac15cfbc3a80ca67",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T22:35:39.328880+00:00"
+}

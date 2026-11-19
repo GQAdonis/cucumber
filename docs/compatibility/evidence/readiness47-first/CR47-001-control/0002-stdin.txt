@@ -1,0 +1,6 @@
+
+Feature: Foo
+  Scenario: Bar
+    Examples:
+      | value |
+      | \     |

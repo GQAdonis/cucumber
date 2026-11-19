@@ -1,0 +1,308 @@
+{
+  "binary": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/target-1.88.0/debug/parser-fork",
+  "binarySha256": "e0b054c689063b4de51b0e94192a4077cad25b843d8c0a9e1c372434a37a11e9",
+  "sourceSha256": "5b270c7efc49768a8010c33980609977108a1a1ddf1f25362d4557887b5201f7",
+  "manifest": "[package]\nname = \"parser-fork\"\nversion = \"0.0.0\"\nedition = \"2024\"\nrust-version = \"1.88\"\n[workspace]\n[dependencies]\ngherkin = { path = \"/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/gherkin\" }\nserde_json = \"1\"\n[features]\nmodern = []\n",
+  "manifestDir": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/parser-fork",
+  "lockSha256": "1cb8a00b9fb99c569a3428d431693a6e8ac7ff8c27db184648371081e0d20adc",
+  "packages": [
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/displaydoc-0.2.7/Cargo.toml"
+    },
+    {
+      "name": "gherkin",
+      "version": "0.16.0",
+      "source": null,
+      "manifestPath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/gherkin/Cargo.toml"
+    },
+    {
+      "name": "heck",
+      "version": "0.5.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/heck-0.5.0/Cargo.toml"
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_collections-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_locale_core-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_locale_fallback",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_locale_fallback-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_locale_fallback_data",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_locale_fallback_data-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_provider-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_segmenter",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_segmenter-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "icu_segmenter_data",
+      "version": "2.4.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/icu_segmenter_data-2.4.0/Cargo.toml"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.19",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/itoa-1.0.19/Cargo.toml"
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/litemap-0.8.3/Cargo.toml"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memchr-2.8.3/Cargo.toml"
+    },
+    {
+      "name": "parser-fork",
+      "version": "0.0.0",
+      "source": null,
+      "manifestPath": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-jamniu9n/applications/parser-fork/Cargo.toml"
+    },
+    {
+      "name": "peg",
+      "version": "0.6.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/peg-0.6.3/Cargo.toml"
+    },
+    {
+      "name": "peg-macros",
+      "version": "0.6.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/peg-macros-0.6.3/Cargo.toml"
+    },
+    {
+      "name": "peg-runtime",
+      "version": "0.6.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/peg-runtime-0.6.3/Cargo.toml"
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.6",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/potential_utf-0.1.6/Cargo.toml"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro2-1.0.107/Cargo.toml"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/quote-1.0.47/Cargo.toml"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/Cargo.toml"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/Cargo.toml"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_derive-1.0.229/Cargo.toml"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.154",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/Cargo.toml"
+    },
+    {
+      "name": "smallvec",
+      "version": "1.16.6",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/smallvec-1.16.6/Cargo.toml"
+    },
+    {
+      "name": "smawk",
+      "version": "0.3.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/smawk-0.3.3/Cargo.toml"
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stable_deref_trait-1.2.1/Cargo.toml"
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/syn-2.0.119/Cargo.toml"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.10",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/syn-3.0.10/Cargo.toml"
+    },
+    {
+      "name": "synstructure",
+      "version": "0.14.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/synstructure-0.14.0/Cargo.toml"
+    },
+    {
+      "name": "textwrap",
+      "version": "0.16.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/textwrap-0.16.4/Cargo.toml"
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.21",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-2.0.21/Cargo.toml"
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.21",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/thiserror-impl-2.0.21/Cargo.toml"
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tinystr-0.8.5/Cargo.toml"
+    },
+    {
+      "name": "typed-builder",
+      "version": "0.23.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/typed-builder-0.23.2/Cargo.toml"
+    },
+    {
+      "name": "typed-builder-macro",
+      "version": "0.23.2",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/typed-builder-macro-0.23.2/Cargo.toml"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.27/Cargo.toml"
+    },
+    {
+      "name": "unicode-width",
+      "version": "0.2.3",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-width-0.2.3/Cargo.toml"
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.1.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf8_iter-1.1.0/Cargo.toml"
+    },
+    {
+      "name": "utf_types",
+      "version": "1.0.0",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/utf_types-1.0.0/Cargo.toml"
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/writeable-0.6.4/Cargo.toml"
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/yoke-0.8.4/Cargo.toml"
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.4",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/yoke-derive-0.8.4/Cargo.toml"
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-0.1.8/Cargo.toml"
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.8",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerofrom-derive-0.1.8/Cargo.toml"
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.5",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerotrie-0.2.5/Cargo.toml"
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.9",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerovec-0.11.9/Cargo.toml"
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.7",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zerovec-derive-0.11.7/Cargo.toml"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "source": "registry+https://github.com/rust-lang/crates.io-index",
+      "manifestPath": "/Users/gqadonis/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zmij-1.0.23/Cargo.toml"
+    }
+  ],
+  "features": [
+    "modern"
+  ],
+  "toolchain": "1.88.0"
+}

@@ -1,0 +1,5 @@
+Feature: Tables
+ Scenario: Preserve
+  Given payload
+   | \     |
+  Then following step

@@ -1,0 +1,1364 @@
+{
+  "base": "ee22c6aa024cc010e499241e3cdcd01009fbf9bb",
+  "kind": "static-source-analysis-not-runtime-proof",
+  "continuationChanges": [
+    {
+      "file": "tests/composable_filters.rs",
+      "before": [
+        {
+          "value": "@feature\nFeature: Selection\n  @scenario\n  Scenario: health\n    Given execute health\n  @rule\n  Rule: Invoices\n    @scenario\n    Scenario Outline: invoice <color>\n      Given execute invoice <color>\n      @eligible\n      Examples:\n        | color |\n        | green |\n        | blue |\n      @excluded\n      Examples:\n        | color |\n        | red |\n",
+          "line": 8,
+          "raw": "\"@feature\\nFeature: Selection\\n  @scenario\\n  Scenario: health\\n    Given execute health\\n  @rule\\n  Rule: Invoices\\n    @scenario\\n    Scenario Outline: invoice <color>\\n      Given execute invoice <color>\\n      @eligible\\n      Examples:\\n        | color |\\n        | green |\\n        | blue |\\n      @excluded\\n      Examples:\\n        | color |\\n        | red |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "@feature\nFeature: Selection\n  @scenario\n  Scenario: health\n    Given execute health\n  @rule\n  Rule: Invoices\n    @scenario\n    Scenario Outline: invoice <color>\n      Given execute invoice <color>\n      @eligible\n      Examples:\n        | color |\n  | green |\n        | blue |\n      @excluded\n      Examples:\n   | color |\n        | red |\n",
+          "line": 14,
+          "raw": "\"@feature\\nFeature: Selection\\n  @scenario\\n  Scenario: \\\n    health\\n    Given execute health\\n  @rule\\n  Rule: Invoices\\n    \\\n    @scenario\\n    Scenario Outline: invoice <color>\\n      Given execute \\\n    invoice <color>\\n      @eligible\\n      Examples:\\n        | color |\\n  \\\n          | green |\\n        | blue |\\n      @excluded\\n      Examples:\\n   \\\n         | color |\\n        | red |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/expression_compat.rs",
+      "before": [
+        {
+          "value": "@feature\nFeature: Selected\n  @rule\n  Rule: Inherited\n    Scenario Outline: Row <value>\n      Given selected <value>\n      @selected\n      Examples:\n        | value |\n        | 42 |\n      @excluded\n      Examples:\n        | value |\n        | 43 |\n",
+          "line": 151,
+          "raw": "\"@feature\\nFeature: Selected\\n  @rule\\n  Rule: Inherited\\n    Scenario Outline: Row <value>\\n      Given selected <value>\\n      @selected\\n      Examples:\\n        | value |\\n        | 42 |\\n      @excluded\\n      Examples:\\n        | value |\\n        | 43 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "@feature\nFeature: Selected\n  @rule\n  Rule: Inherited\n  Scenario Outline: Row <value>\n      Given selected <value>\n     @selected\n      Examples:\n        | value |\n        | 42 |\n    @excluded\n      Examples:\n        | value |\n        | 43 |\n",
+          "line": 340,
+          "raw": "\"@feature\\nFeature: Selected\\n  @rule\\n  Rule: Inherited\\n  \\\n          Scenario Outline: Row <value>\\n      Given selected <value>\\n     \\\n         @selected\\n      Examples:\\n        | value |\\n        | 42 |\\n    \\\n          @excluded\\n      Examples:\\n        | value |\\n        | 43 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/expression_names.rs",
+      "before": [
+        {
+          "value": "use cucumber::{{given, then, World as _}};\nuse std::{{convert::Infallible, str::FromStr}};\n#[derive(Debug, Default, cucumber::World)]\nstruct Registration {{ seen: bool }}\n#[derive(Debug, cucumber::Parameter)]\n#[param(name = {name:?}, regex = \"value\")]\nstruct Native(String);\nimpl FromStr for Native {{\n    type Err = Infallible;\n    fn from_str(value: &str) -> Result<Self, Self::Err> {{ Ok(Self(value.to_owned())) }}\n}}\n#[given({mode} = {expression:?})]\nfn accept_value(world: &mut Registration, value: Native) {{\n    assert_eq!(value.0, \"value\", \"actual custom handler value\");\n    world.seen = true;\n    println!(\"PHASE42_ACTUAL_HANDLER_VALUE=value\");\n}}\n#[then(\"the actual handler executed\")]\nfn observed(world: &mut Registration) {{ assert!(world.seen); }}\n#[tokio::main(flavor = \"current_thread\")]\nasync fn main() {{\n    Registration::cucumber().with_default_cli().fail_on_skipped()\n        .run_and_exit(\"registration.feature\").await;\n}}\n",
+          "line": 20,
+          "raw": "r#\"use cucumber::{{given, then, World as _}};\nuse std::{{convert::Infallible, str::FromStr}};\n#[derive(Debug, Default, cucumber::World)]\nstruct Registration {{ seen: bool }}\n#[derive(Debug, cucumber::Parameter)]\n#[param(name = {name:?}, regex = \"value\")]\nstruct Native(String);\nimpl FromStr for Native {{\n    type Err = Infallible;\n    fn from_str(value: &str) -> Result<Self, Self::Err> {{ Ok(Self(value.to_owned())) }}\n}}\n#[given({mode} = {expression:?})]\nfn accept_value(world: &mut Registration, value: Native) {{\n    assert_eq!(value.0, \"value\", \"actual custom handler value\");\n    world.seen = true;\n    println!(\"PHASE42_ACTUAL_HANDLER_VALUE=value\");\n}}\n#[then(\"the actual handler executed\")]\nfn observed(world: &mut Registration) {{ assert!(world.seen); }}\n#[tokio::main(flavor = \"current_thread\")]\nasync fn main() {{\n    Registration::cucumber().with_default_cli().fail_on_skipped()\n        .run_and_exit(\"registration.feature\").await;\n}}\n\"#"
+        }
+      ],
+      "after": [
+        {
+          "value": "use cucumber::{{given, then, World as _}};\nuse std::{{convert::Infallible, str::FromStr}};\n#[derive(Debug, Default, cucumber::World)]\nstruct Registration {{ seen: bool }}\n#[derive(Debug, cucumber::Parameter)]\n#[param(name = {name:?}, regex = \"value\")]\nstruct Native(String);\nimpl FromStr for Native {{\n    type Err = Infallible;\n    fn from_str(value: &str) -> Result<Self, Self::Err> {{ Ok(Self(value.to_owned())) }}\n}}\n#[given({mode} = {expression:?})]\nfn accept_value(world: &mut Registration, value: Native) {{\n    assert_eq!(value.0, \"value\", \"actual custom handler value\");\n    world.seen = true;\n    println!(\"PHASE42_ACTUAL_HANDLER_VALUE=value\");\n}}\n#[then(\"the actual handler executed\")]\nfn observed(world: &mut Registration) {{ assert!(world.seen); }}\n#[tokio::main(flavor = \"current_thread\")]\nasync fn main() {{\n    Registration::cucumber().with_default_cli().fail_on_skipped()\n .run_and_exit(\"registration.feature\").await;\n}}\n",
+          "line": 48,
+          "raw": "\"use cucumber::{{given, then, World as _}};\\nuse \\\n            std::{{convert::Infallible, str::FromStr}};\\n#[derive(Debug, \\\n            Default, cucumber::World)]\\nstruct Registration {{ seen: bool \\\n            }}\\n#[derive(Debug, cucumber::Parameter)]\\n#[param(name = \\\n            {name:?}, regex = \\\"value\\\")]\\nstruct Native(String);\\nimpl \\\n            FromStr for Native {{\\n    type Err = Infallible;\\n    fn \\\n            from_str(value: &str) -> Result<Self, Self::Err> {{ \\\n            Ok(Self(value.to_owned())) }}\\n}}\\n#[given({mode} = \\\n            {expression:?})]\\nfn accept_value(world: &mut Registration, \\\n            value: Native) {{\\n    assert_eq!(value.0, \\\"value\\\", \\\"actual \\\n            custom handler value\\\");\\n    world.seen = true;\\n    \\\n            println!(\\\"PHASE42_ACTUAL_HANDLER_VALUE=value\\\");\\n}}\\n#[then(\\\"\\\n            the actual handler executed\\\")]\\nfn observed(world: &mut \\\n            Registration) {{ assert!(world.seen); }}\\n#[tokio::main(flavor \\\n            = \\\"current_thread\\\")]\\nasync fn main() {{\\n    \\\n            Registration::cucumber().with_default_cli().fail_on_skipped()\\n \\\n                   .run_and_exit(\\\"registration.feature\\\").await;\\n}}\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/generated_ordering.rs",
+      "before": [
+        {
+          "value": "Feature: First\n Scenario: first\n  Given work\n Rule: Accounts\n  Scenario Outline: row <number>\n   Given work\n   Examples:\n    | number |\n    | one |\n    | two |\n    | three |\n",
+          "line": 51,
+          "raw": "\"Feature: First\\n Scenario: first\\n  Given work\\n Rule: Accounts\\n  Scenario Outline: row <number>\\n   Given work\\n   Examples:\\n    | number |\\n    | one |\\n    | two |\\n    | three |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Feature: First\n Scenario: first\n  Given work\n Rule: Accounts\n  Scenario Outline: row <number>\n   Given work\n   Examples:\n   | number |\n    | one |\n    | two |\n    | three |\n",
+          "line": 52,
+          "raw": "\"Feature: First\\n Scenario: first\\n  Given work\\n Rule: Accounts\\n  \\\n            Scenario Outline: row <number>\\n   Given work\\n   Examples:\\n   \\\n             | number |\\n    | one |\\n    | two |\\n    | three |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages.rs",
+      "before": [
+        {
+          "value": "  Scenario: first invoice\n    Given accepted\n    Then accepted\n  Scenario: second invoice\n    Given accepted\n    Then accepted\n",
+          "line": 49,
+          "raw": "\"  Scenario: first invoice\\n    Given accepted\\n    Then accepted\\n  Scenario: second invoice\\n    Given accepted\\n    Then accepted\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "  Scenario: first invoice\n    Given accepted\n    Then accepted\n  Scenario: second invoice\n    Given accepted\n  Then accepted\n",
+          "line": 76,
+          "raw": "\"  Scenario: first invoice\\n    Given accepted\\n    Then \\\n                accepted\\n  Scenario: second invoice\\n    Given accepted\\n  \\\n                  Then accepted\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages.rs",
+      "before": [
+        {
+          "value": "  Background: account\n    When accepted\n  Scenario: invoice\n    And accepted\n",
+          "line": 52,
+          "raw": "\"  Background: account\\n    When accepted\\n  Scenario: invoice\\n    And accepted\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "  Background: account\n    When accepted\n  Scenario: invoice\n And accepted\n",
+          "line": 88,
+          "raw": "\"  Background: account\\n    When accepted\\n  Scenario: invoice\\n \\\n                   And accepted\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages.rs",
+      "before": [
+        {
+          "value": "  Scenario Outline: invoice\n    Given <value>\n    Examples:\n      | value |\n      | accepted |\n",
+          "line": 55,
+          "raw": "\"  Scenario Outline: invoice\\n    Given <value>\\n    Examples:\\n      | value |\\n      | accepted |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "  Scenario Outline: invoice\n    Given <value>\n    Examples:\n | value |\n      | accepted |\n",
+          "line": 96,
+          "raw": "\"  Scenario Outline: invoice\\n    Given <value>\\n    Examples:\\n \\\n                     | value |\\n      | accepted |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages.rs",
+      "before": [
+        {
+          "value": "  Scenario: invoice\n    Given accepted\n      | amount |\n      | 42 |\n",
+          "line": 56,
+          "raw": "\"  Scenario: invoice\\n    Given accepted\\n      | amount |\\n      | 42 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "  Scenario: invoice\n    Given accepted\n      | amount |\n     | 42 |\n",
+          "line": 100,
+          "raw": "\"  Scenario: invoice\\n    Given accepted\\n      | amount |\\n     \\\n                 | 42 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages.rs",
+      "before": [
+        {
+          "value": "# language: fr\nFonctionnalité: Factures\n  Scénario: facture\n    Soit accepted\n",
+          "line": 62,
+          "raw": "\"# language: fr\\nFonctionnalité: Factures\\n  Scénario: facture\\n    Soit accepted\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "# language: fr\nFonctionnalité: Factures\n  Scénario: facture\n Soit accepted\n",
+          "line": 117,
+          "raw": "\"# language: fr\\nFonctionnalité: Factures\\n  Scénario: facture\\n \\\n                   Soit accepted\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_backgrounds.rs",
+      "before": [
+        {
+          "value": "Feature: Empty scenarios\n  Background: feature setup\n    Given feature setup\n",
+          "line": 25,
+          "raw": "\"Feature: Empty scenarios\\n  Background: feature setup\\n    Given feature setup\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Feature: Empty scenarios\n  Background: feature setup\n   Given feature setup\n",
+          "line": 71,
+          "raw": "\"Feature: Empty scenarios\\n  Background: feature setup\\n   \\\n         Given feature setup\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_backgrounds.rs",
+      "before": [
+        {
+          "value": "{feature}  Scenario Outline: empty <id>\n    Examples: rows\n      | id |\n      | one |\n      | two |\n",
+          "line": 30,
+          "raw": "\"{feature}  Scenario Outline: empty <id>\\n    Examples: rows\\n      | id |\\n      | one |\\n      | two |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "{feature}  Scenario Outline: empty <id>\n    Examples: rows\n   | id |\n      | one |\n      | two |\n",
+          "line": 79,
+          "raw": "\"{feature}  Scenario Outline: empty <id>\\n    Examples: rows\\n   \\\n                   | id |\\n      | one |\\n      | two |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_backgrounds.rs",
+      "before": [
+        {
+          "value": "{feature}  Scenario: empty feature\n  Scenario: filled feature\n    Given work\n{rule}    Scenario: empty rule\n    Scenario: filled rule\n      Given work\n",
+          "line": 32,
+          "raw": "\"{feature}  Scenario: empty feature\\n  Scenario: filled feature\\n    Given work\\n{rule}    Scenario: empty rule\\n    Scenario: filled rule\\n      Given work\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "{feature}  Scenario: empty feature\n  Scenario: filled feature\n    Given work\n{rule}    Scenario: empty rule\n   Scenario: filled rule\n      Given work\n",
+          "line": 88,
+          "raw": "\"{feature}  Scenario: empty feature\\n  Scenario: filled \\\n                feature\\n    Given work\\n{rule}    Scenario: empty rule\\n   \\\n                 Scenario: filled rule\\n      Given work\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_consumer.rs",
+      "before": [
+        {
+          "value": "@invoice\nFeature: Billing\n  @policy\n  Rule: Tax\n    Background: account\n      Given ready\n    Scenario Outline: invoice <amount>\n      Given amount <amount>\n        | amount |\n        | <amount> |\n        \"\"\"text/plain\n        paid <amount>\n        \"\"\"\n      Examples: charges\n        | amount |\n        | 42 |\n        | 43 |\n",
+          "line": 35,
+          "raw": "\"@invoice\\nFeature: Billing\\n  @policy\\n  Rule: Tax\\n    Background: account\\n      Given ready\\n    Scenario Outline: invoice <amount>\\n      Given amount <amount>\\n        | amount |\\n        | <amount> |\\n        \\\"\\\"\\\"text/plain\\n        paid <amount>\\n        \\\"\\\"\\\"\\n      Examples: charges\\n        | amount |\\n        | 42 |\\n        | 43 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "@invoice\nFeature: Billing\n  @policy\n  Rule: Tax\n    Background: account\n      Given ready\n    Scenario Outline: invoice <amount>\n      Given amount <amount>\n        | amount |\n     | <amount> |\n        \"\"\"text/plain\n        paid <amount>\n        \"\"\"\n      Examples: charges\n        | amount |\n        | 42 |\n        | 43 |\n",
+          "line": 77,
+          "raw": "\"@invoice\\nFeature: Billing\\n  @policy\\n  Rule: Tax\\n    Background: \\\n            account\\n      Given ready\\n    Scenario Outline: invoice \\\n            <amount>\\n      Given amount <amount>\\n        | amount |\\n     \\\n               | <amount> |\\n        \\\"\\\"\\\"text/plain\\n        paid \\\n            <amount>\\n        \\\"\\\"\\\"\\n      Examples: charges\\n        | \\\n            amount |\\n        | 42 |\\n        | 43 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_errors.rs",
+      "before": [
+        {
+          "value": "Feature: Broken\n  Scenario: Input\n    Given accepted\n      | a | b |\n      | one |\n",
+          "line": 22,
+          "raw": "\"Feature: Broken\\n  Scenario: Input\\n    Given accepted\\n      | a | b |\\n      | one |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Feature: Broken\n  Scenario: Input\n    Given accepted\n  | a | b |\n      | one |\n",
+          "line": 49,
+          "raw": "\"Feature: Broken\\n  Scenario: Input\\n    Given accepted\\n  \\\n                | a | b |\\n      | one |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_markdown_precedence.rs",
+      "before": [
+        {
+          "value": "# Feature: Literal\n## Scenario: Both\n* Given payload\n  | `@table` |\n  ````application/`@media`\n  literal `@body`\n  ````\n",
+          "line": 43,
+          "raw": "\"# Feature: Literal\\n## Scenario: Both\\n* Given payload\\n  | `@table` |\\n  ````application/`@media`\\n  literal `@body`\\n  ````\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "# Feature: Literal\n## Scenario: Both\n* Given payload\n  | `@table` |\n  ````application/`@media`\n  literal `@body`\n ````\n",
+          "line": 100,
+          "raw": "\"# Feature: Literal\\n## Scenario: Both\\n* Given payload\\n  | \\\n                `@table` |\\n  ````application/`@media`\\n  literal `@body`\\n \\\n                 ````\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_markdown_precedence.rs",
+      "before": [
+        {
+          "value": "# Feature: Literal\n## Scenario: Content\n* Given payload\n```text\n`@literal`\n* Given prose `@not-a-step`\n  | `@not-a-table` |\n```",
+          "line": 45,
+          "raw": "\"# Feature: Literal\\n## Scenario: Content\\n* Given payload\\n```text\\n`@literal`\\n* Given prose `@not-a-step`\\n  | `@not-a-table` |\\n```\""
+        }
+      ],
+      "after": [
+        {
+          "value": "# Feature: Literal\n## Scenario: Content\n* Given payload\n```text\n`@literal`\n* Given prose `@not-a-step`\n | `@not-a-table` |\n```",
+          "line": 109,
+          "raw": "\"# Feature: Literal\\n## Scenario: Content\\n* Given \\\n                payload\\n```text\\n`@literal`\\n* Given prose `@not-a-step`\\n \\\n                 | `@not-a-table` |\\n```\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_source.rs",
+      "before": [
+        {
+          "value": "Fonctionnalité: Facture\n  Scénario: traitement\n    Soit accepté\n    Quand envoyé\n    Alors terminé\n",
+          "line": 154,
+          "raw": "\"Fonctionnalité: Facture\\n  Scénario: traitement\\n    Soit accepté\\n    Quand envoyé\\n    Alors terminé\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Fonctionnalité: Facture\n  Scénario: traitement\n    Soit accepté\n Quand envoyé\n    Alors terminé\n",
+          "line": 254,
+          "raw": "\"Fonctionnalité: Facture\\n  Scénario: traitement\\n    Soit accepté\\n \\\n               Quand envoyé\\n    Alors terminé\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_source.rs",
+      "before": [
+        {
+          "value": "# language: zh-CN\n功能: Unicode\n  规则: 最新\n    场景: 表格\n      假如有效\n      | 名称 | 值 |\n",
+          "line": 167,
+          "raw": "\"# language: zh-CN\\n功能: Unicode\\n  规则: 最新\\n    场景: 表格\\n      假如有效\\n      | 名称 | 值 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "# language: zh-CN\n功能: Unicode\n  规则: 最新\n    场景: 表格\n      假如有效\n  | 名称 | 值 |\n",
+          "line": 281,
+          "raw": "\"# language: zh-CN\\n功能: Unicode\\n  规则: 最新\\n    场景: 表格\\n      假如有效\\n  \\\n                | 名称 | 值 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_source.rs",
+      "before": [
+        {
+          "value": "# language: fr\nFonctionnalité: Types\n  Scénario: continuation\n    Soit prêt\n    * ensuite\n    Et suite\n",
+          "line": 188,
+          "raw": "\"# language: fr\\nFonctionnalité: Types\\n  Scénario: continuation\\n    Soit prêt\\n    * ensuite\\n    Et suite\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "# language: fr\nFonctionnalité: Types\n  Scénario: continuation\n   Soit prêt\n    * ensuite\n    Et suite\n",
+          "line": 306,
+          "raw": "\"# language: fr\\nFonctionnalité: Types\\n  Scénario: continuation\\n   \\\n             Soit prêt\\n    * ensuite\\n    Et suite\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_versions.rs",
+      "before": [
+        {
+          "value": "@invoice\nFeature: Protocol\n  Rule: Shared\n    Scenario Outline: invoice <amount>\n      Given payment <amount>\n        | amount |\n        | <amount> |\n        \"\"\"text/plain\n        paid <amount>\n        \"\"\"\n      Examples:\n        | amount |\n        | 42 |\n",
+          "line": 24,
+          "raw": "\"@invoice\\nFeature: Protocol\\n  Rule: Shared\\n    Scenario Outline: invoice <amount>\\n      Given payment <amount>\\n        | amount |\\n        | <amount> |\\n        \\\"\\\"\\\"text/plain\\n        paid <amount>\\n        \\\"\\\"\\\"\\n      Examples:\\n        | amount |\\n        | 42 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "@invoice\nFeature: Protocol\n  Rule: Shared\n    Scenario Outline: invoice <amount>\n      Given payment <amount>\n        | amount |\n        | <amount> |\n        \"\"\"text/plain\n      paid <amount>\n        \"\"\"\n      Examples:\n        | amount |\n        | 42 |\n",
+          "line": 51,
+          "raw": "\"@invoice\\nFeature: Protocol\\n  Rule: Shared\\n    Scenario Outline: \\\n            invoice <amount>\\n      Given payment <amount>\\n        | \\\n            amount |\\n        | <amount> |\\n        \\\"\\\"\\\"text/plain\\n      \\\n              paid <amount>\\n        \\\"\\\"\\\"\\n      Examples:\\n        | \\\n            amount |\\n        | 42 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/portability.rs",
+      "before": [
+        {
+          "value": "fn main() {\n    let source = r#\"Feature: Imported transactions\n  Scenario: Preserve imported values\n    Given a payment\n      | amount | 42 |\n      \"\"\"\n      invoice 42\n      \"\"\"\n    Then a separate step\n\"#;\n    let feature = cucumber::gherkin::Feature::parse(source, Default::default())\n        .expect(\"table-before-docstring must parse through cucumber's public API\");\n    let steps = &feature.scenarios[0].steps;\n    assert_eq!(steps.len(), 2);\n    assert_eq!(steps[0].table.as_ref().unwrap().rows, vec![vec![\"amount\", \"42\"]]);\n    assert_eq!(steps[0].docstring.as_deref(), Some(\"\\ninvoice 42\\n\"));\n    assert_eq!(steps[1].value, \"a separate step\");\n    assert!(steps[1].table.is_none());\n    assert!(steps[1].docstring.is_none());\n    println!(\"portable consumer observed exact table, doc string and following step\");\n}\n",
+          "line": 59,
+          "raw": "r####\"fn main() {\n    let source = r#\"Feature: Imported transactions\n  Scenario: Preserve imported values\n    Given a payment\n      | amount | 42 |\n      \"\"\"\n      invoice 42\n      \"\"\"\n    Then a separate step\n\"#;\n    let feature = cucumber::gherkin::Feature::parse(source, Default::default())\n        .expect(\"table-before-docstring must parse through cucumber's public API\");\n    let steps = &feature.scenarios[0].steps;\n    assert_eq!(steps.len(), 2);\n    assert_eq!(steps[0].table.as_ref().unwrap().rows, vec![vec![\"amount\", \"42\"]]);\n    assert_eq!(steps[0].docstring.as_deref(), Some(\"\\ninvoice 42\\n\"));\n    assert_eq!(steps[1].value, \"a separate step\");\n    assert!(steps[1].table.is_none());\n    assert!(steps[1].docstring.is_none());\n    println!(\"portable consumer observed exact table, doc string and following step\");\n}\n\"####"
+        }
+      ],
+      "after": [
+        {
+          "value": "fn main() {\n    let source = r#\"Feature: Imported transactions\n  Scenario: Preserve imported values\n    Given a payment\n      | amount | 42 |\n      \"\"\"\n  invoice 42\n      \"\"\"\n    Then a separate step\n\"#;\n    let feature = cucumber::gherkin::Feature::parse(source, Default::default())\n        .expect(\"table-before-docstring must parse through cucumber's public API\");\n    let steps = &feature.scenarios[0].steps;\n    assert_eq!(steps.len(), 2);\n    assert_eq!(steps[0].table.as_ref().unwrap().rows, vec![vec![\"amount\", \"42\"]]);\n    assert_eq!(steps[0].docstring.as_deref(), Some(\"\\ninvoice 42\\n\"));\n    assert_eq!(steps[1].value, \"a separate step\");\n  assert!(steps[1].table.is_none());\n    assert!(steps[1].docstring.is_none());\n    println!(\"portable consumer observed exact table, doc string and following step\");\n}\n",
+          "line": 69,
+          "raw": "\"fn main() {\\n    let source = \\\n        r#\\\"Feature: Imported transactions\\n  Scenario: Preserve imported \\\n        values\\n    Given a payment\\n      | amount | 42 |\\n      \\\"\\\"\\\"\\n  \\\n            invoice 42\\n      \\\"\\\"\\\"\\n    Then a separate step\\n\\\"#;\\n    \\\n        let feature = cucumber::gherkin::Feature::parse(source, \\\n        Default::default())\\n        .expect(\\\"table-before-docstring must \\\n        parse through cucumber's public API\\\");\\n    let steps = \\\n        &feature.scenarios[0].steps;\\n    assert_eq!(steps.len(), 2);\\n    \\\n        assert_eq!(steps[0].table.as_ref().unwrap().rows, \\\n        vec![vec![\\\"amount\\\", \\\"42\\\"]]);\\n    \\\n        assert_eq!(steps[0].docstring.as_deref(), Some(\\\"\\\\ninvoice \\\n        42\\\\n\\\"));\\n    assert_eq!(steps[1].value, \\\"a separate step\\\");\\n  \\\n          assert!(steps[1].table.is_none());\\n    \\\n        assert!(steps[1].docstring.is_none());\\n    println!(\\\"portable \\\n        consumer observed exact table, doc string and following \\\n        step\\\");\\n}\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/source_paths.rs",
+      "before": [
+        {
+          "value": "Feature: bad\n Scenario: one\n  Given record X\n  | one |\n  | too | many |\n",
+          "line": 41,
+          "raw": "\"Feature: bad\\n Scenario: one\\n  Given record X\\n  | one |\\n  | too | many |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Feature: bad\n Scenario: one\n  Given record X\n  | one |\n | too | many |\n",
+          "line": 106,
+          "raw": "\"Feature: bad\\n Scenario: one\\n  Given record X\\n  | one |\\n \\\n                     | too | many |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/sources.rs",
+      "before": [
+        {
+          "value": "Feature: Payload delivery\n  Scenario Outline: invoice <amount>\n    Given record the payload\n      \"\"\"application/json\n      {\"amount\": <amount>}\n        invoice <amount>\n      \"\"\"\n    Examples:\n      | amount |\n      | 42 |\n      | 43 |\n",
+          "line": 199,
+          "raw": "\"Feature: Payload delivery\\n  Scenario Outline: invoice <amount>\\n    Given record the payload\\n      \\\"\\\"\\\"application/json\\n      {\\\"amount\\\": <amount>}\\n        invoice <amount>\\n      \\\"\\\"\\\"\\n    Examples:\\n      | amount |\\n      | 42 |\\n      | 43 |\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Feature: Payload delivery\n  Scenario Outline: invoice <amount>\n   Given record the payload\n      \"\"\"application/json\n      {\"amount\": <amount>}\n        invoice <amount>\n      \"\"\"\n    Examples:\n      | amount |\n      | 42 |\n      | 43 |\n",
+          "line": 265,
+          "raw": "\"Feature: Payload delivery\\n  Scenario Outline: invoice <amount>\\n   \\\n             Given record the payload\\n      \\\"\\\"\\\"application/json\\n      \\\n            {\\\"amount\\\": <amount>}\\n        invoice <amount>\\n      \\\n            \\\"\\\"\\\"\\n    Examples:\\n      | amount |\\n      | 42 |\\n      | \\\n            43 |\\n\""
+        }
+      ]
+    },
+    {
+      "file": "tests/step_hooks.rs",
+      "before": [
+        {
+          "value": "@feature\nFeature: Step lifecycle\n  Background: shared setup\n    Given work\n  @rule\n  Rule: Policy\n    @scenario\n    Scenario: Request\n      Given work\n",
+          "line": 51,
+          "raw": "\"@feature\\nFeature: Step lifecycle\\n  Background: shared setup\\n    Given work\\n  @rule\\n  Rule: Policy\\n    @scenario\\n    Scenario: Request\\n      Given work\\n\""
+        }
+      ],
+      "after": [
+        {
+          "value": "@feature\nFeature: Step lifecycle\n  Background: shared setup\n    Given work\n  @rule\n  Rule: Policy\n    @scenario\n Scenario: Request\n      Given work\n",
+          "line": 181,
+          "raw": "\"@feature\\nFeature: Step lifecycle\\n  Background: shared \\\n            setup\\n    Given work\\n  @rule\\n  Rule: Policy\\n    @scenario\\n \\\n               Scenario: Request\\n      Given work\\n\""
+        }
+      ]
+    }
+  ],
+  "otherLiteralChanges": [
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "-?[0-9]+",
+          "line": 41,
+          "raw": "\"-?[0-9]+\""
+        },
+        {
+          "value": "[-+]?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)",
+          "line": 44,
+          "raw": "r\"[-+]?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)\""
+        },
+        {
+          "value": "(?:E[+-]?[0-9]+)?",
+          "line": 44,
+          "raw": "r\"(?:E[+-]?[0-9]+)?\""
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "float",
+          "line": 49,
+          "raw": "\"float\""
+        },
+        {
+          "value": "word",
+          "line": 51,
+          "raw": "\"word\""
+        },
+        {
+          "value": "[^\\t\\n\\x0b\\x0c\\r \\u{00a0}\\u{1680}\\u{2000}-\\u{200a}",
+          "line": 53,
+          "raw": "r\"[^\\t\\n\\x0b\\x0c\\r \\u{00a0}\\u{1680}\\u{2000}-\\u{200a}\""
+        },
+        {
+          "value": "\\u{2028}\\u{2029}\\u{202f}\\u{205f}\\u{3000}\\u{feff}]+",
+          "line": 54,
+          "raw": "r\"\\u{2028}\\u{2029}\\u{202f}\\u{205f}\\u{3000}\\u{feff}]+\""
+        },
+        {
+          "value": "string",
+          "line": 58,
+          "raw": "\"string\""
+        },
+        {
+          "value": "\"([^\"\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"",
+          "line": 60,
+          "raw": "r#\"\"([^\"\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"\"#"
+        },
+        {
+          "value": "|'([^'\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 61,
+          "raw": "r#\"|'([^'\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        },
+        {
+          "value": "",
+          "line": 64,
+          "raw": "\"\""
+        },
+        {
+          "value": "[^\\n\\r\\u{2028}\\u{2029}]*",
+          "line": 64,
+          "raw": "r\"[^\\n\\r\\u{2028}\\u{2029}]*\""
+        },
+        {
+          "value": "double",
+          "line": 65,
+          "raw": "\"double\""
+        },
+        {
+          "value": "bigdecimal",
+          "line": 66,
+          "raw": "\"bigdecimal\""
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [
+        {
+          "value": "-?[0-9]+",
+          "line": 39,
+          "raw": "r\"-?[0-9]+\""
+        },
+        {
+          "value": "float",
+          "line": 40,
+          "raw": "\"float\""
+        },
+        {
+          "value": "double",
+          "line": 40,
+          "raw": "\"double\""
+        },
+        {
+          "value": "bigdecimal",
+          "line": 40,
+          "raw": "\"bigdecimal\""
+        },
+        {
+          "value": "[-+]?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)(?:E[+-]?[0-9]+)?",
+          "line": 40,
+          "raw": "r\"[-+]?(?:[0-9]+(?:\\.[0-9]+)?|\\.[0-9]+)(?:E[+-]?[0-9]+)?\""
+        },
+        {
+          "value": "word",
+          "line": 41,
+          "raw": "\"word\""
+        },
+        {
+          "value": "[^\\t\\n\\x0b\\x0c\\r \\u{00a0}\\u{1680}\\u{2000}-\\u{200a}\\u{2028}\\u{2029}\\u{202f}\\u{205f}\\u{3000}\\u{feff}]+",
+          "line": 41,
+          "raw": "r\"[^\\t\\n\\x0b\\x0c\\r \\u{00a0}\\u{1680}\\u{2000}-\\u{200a}\\u{2028}\\u{2029}\\u{202f}\\u{205f}\\u{3000}\\u{feff}]+\""
+        },
+        {
+          "value": "string",
+          "line": 42,
+          "raw": "\"string\""
+        },
+        {
+          "value": "\"([^\"\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 42,
+          "raw": "r#\"\"([^\"\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(?:\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        },
+        {
+          "value": "",
+          "line": 43,
+          "raw": "\"\""
+        },
+        {
+          "value": "[^\\n\\r\\u{2028}\\u{2029}]*",
+          "line": 43,
+          "raw": "r\"[^\\n\\r\\u{2028}\\u{2029}]*\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [
+        {
+          "value": "[]()$.|?*+",
+          "line": 160,
+          "raw": "\"[]()$.|?*+\""
+        },
+        {
+          "value": "invalid JavaScript parameter name `{name}`: cucumber-expressions 20.1.0 forbids [ ] ( ) $ . | ? * +",
+          "line": 162,
+          "raw": "\"invalid JavaScript parameter name `{name}`: cucumber-expressions 20.1.0 forbids [ ] ( ) $ . | ? * +\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "[]()$.|?*+",
+          "line": 285,
+          "raw": "\"[]()$.|?*+\""
+        },
+        {
+          "value": "invalid JavaScript parameter name `{}`: ",
+          "line": 291,
+          "raw": "\"invalid JavaScript parameter name `{}`: \""
+        },
+        {
+          "value": "cucumber-expressions 20.1.0 forbids ",
+          "line": 292,
+          "raw": "\"cucumber-expressions 20.1.0 forbids \""
+        },
+        {
+          "value": "[ ] ( ) $ . | ? * +",
+          "line": 293,
+          "raw": "\"[ ] ( ) $ . | ? * +\""
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [
+        {
+          "value": "known JavaScript parameter",
+          "line": 810,
+          "raw": "\"known JavaScript parameter\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "codegen/src/attribute.rs",
+      "before": [
+        {
+          "value": "expected string literal, `regex`, `expr` or `expr_js` argument",
+          "line": 887,
+          "raw": "\"expected string literal, `regex`, `expr` or `expr_js` argument\""
+        }
+      ],
+      "after": [
+        {
+          "value": "expected string literal, `regex`, `expr` or ",
+          "line": 1019,
+          "raw": "\"expected string literal, `regex`, `expr` or \""
+        },
+        {
+          "value": "`expr_js` argument",
+          "line": 1020,
+          "raw": "\"`expr_js` argument\""
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/expression_metadata.rs",
+      "before": [
+        {
+          "value": "\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 25,
+          "raw": "r#\"\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        }
+      ],
+      "after": [
+        {
+          "value": "\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"",
+          "line": 37,
+          "raw": "r#\"\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"\"#"
+        },
+        {
+          "value": "|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 38,
+          "raw": "r#\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/expression_metadata.rs",
+      "before": [
+        {
+          "value": "custom parameter metadata regex differs from actual type",
+          "line": 50,
+          "raw": "\"custom parameter metadata regex differs from actual type\""
+        }
+      ],
+      "after": [
+        {
+          "value": "custom parameter metadata regex differs ",
+          "line": 99,
+          "raw": "\"custom parameter metadata regex differs \""
+        },
+        {
+          "value": "from actual type",
+          "line": 100,
+          "raw": "\"from actual type\""
+        }
+      ]
+    },
+    {
+      "file": "codegen/src/expression_metadata.rs",
+      "before": [
+        {
+          "value": "\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 104,
+          "raw": "r#\"\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        }
+      ],
+      "after": [
+        {
+          "value": "\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"",
+          "line": 181,
+          "raw": "r#\"\"([^\"\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^\"\\\\]*)*)\"\"#"
+        },
+        {
+          "value": "|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'",
+          "line": 182,
+          "raw": "r#\"|'([^'\\\\]*(\\\\[^\\n\\r\\u{2028}\\u{2029}][^'\\\\]*)*)'\"#"
+        }
+      ]
+    },
+    {
+      "file": "src/attachment.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "Attachment",
+          "line": 36,
+          "raw": "\"Attachment\""
+        },
+        {
+          "value": "body",
+          "line": 37,
+          "raw": "\"body\""
+        },
+        {
+          "value": "media_type",
+          "line": 38,
+          "raw": "\"media_type\""
+        },
+        {
+          "value": "file_name",
+          "line": 39,
+          "raw": "\"file_name\""
+        },
+        {
+          "value": "Text",
+          "line": 46,
+          "raw": "\"Text\""
+        },
+        {
+          "value": "Bytes",
+          "line": 47,
+          "raw": "\"Bytes\""
+        }
+      ]
+    },
+    {
+      "file": "src/attachment.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "Record",
+          "line": 143,
+          "raw": "\"Record\""
+        },
+        {
+          "value": "target",
+          "line": 144,
+          "raw": "\"target\""
+        },
+        {
+          "value": "attachment",
+          "line": 145,
+          "raw": "\"attachment\""
+        },
+        {
+          "value": "at",
+          "line": 146,
+          "raw": "\"at\""
+        },
+        {
+          "value": "output-messages",
+          "line": 165,
+          "raw": "\"output-messages\""
+        }
+      ]
+    },
+    {
+      "file": "src/attachment.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "output-messages",
+          "line": 190,
+          "raw": "\"output-messages\""
+        }
+      ]
+    },
+    {
+      "file": "tests/dry_run.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/dry_run.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 138,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/execution_control_formats.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/execution_control_formats.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 69,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/expression_compat.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/expression_compat.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 54,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/expression_names.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/expression_names.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 63,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/interpolation.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/interpolation.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 33,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/lexical_semantics.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/lexical_semantics.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 50,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_attachments.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_attachments.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 121,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_backgrounds.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_backgrounds.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 40,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_consumer.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_consumer.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 43,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_custom_metadata.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_custom_metadata.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 151,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_docstrings.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_docstrings.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 46,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_documents.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_documents.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 48,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_expression_metadata.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_expression_metadata.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 121,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_logs.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_logs.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 232,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_markdown.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_markdown.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 42,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_markdown_precedence.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_markdown_precedence.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 64,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_rerun.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_rerun.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 283,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_run_hooks.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_run_hooks.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 73,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_scenario_hooks.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_scenario_hooks.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 162,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_support_code.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_support_code.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 94,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/messages_table_columns.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 2,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/messages_table_columns.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 38,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/ordered_scheduling.rs",
+      "before": [
+        {
+          "value": "actual case starts match the pinned JavaScript shuffle for that seed",
+          "line": 193,
+          "raw": "\"actual case starts match the pinned JavaScript shuffle for that seed\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/ordered_scheduling.rs",
+      "before": [
+        {
+          "value": "the retrying case retains one slot while another case can progress",
+          "line": 210,
+          "raw": "\"the retrying case retains one slot while another case can progress\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/ordered_scheduling.rs",
+      "before": [
+        {
+          "value": "the run completes without constructing a World or dispatching a case",
+          "line": 220,
+          "raw": "\"the run completes without constructing a World or dispatching a case\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "tests/ordered_scheduling.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "actual case starts match the pinned JavaScript shuffle for that seed",
+          "line": 809,
+          "raw": "\"actual case starts match the pinned JavaScript shuffle for that seed\""
+        },
+        {
+          "value": "the retrying case retains one slot while another case can progress",
+          "line": 812,
+          "raw": "\"the retrying case retains one slot while another case can progress\""
+        },
+        {
+          "value": "the run completes without constructing a World or dispatching a case",
+          "line": 815,
+          "raw": "\"the run completes without constructing a World or dispatching a case\""
+        }
+      ]
+    },
+    {
+      "file": "tests/retry_policy.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "support/oracle.rs",
+          "line": 3,
+          "raw": "\"support/oracle.rs\""
+        }
+      ]
+    },
+    {
+      "file": "tests/retry_policy.rs",
+      "before": [
+        {
+          "value": "node",
+          "line": 138,
+          "raw": "\"node\""
+        }
+      ],
+      "after": []
+    },
+    {
+      "file": "vendor/gherkin/src/lib.rs",
+      "before": [
+        {
+          "value": "Error at {}:{}: {expected:?}{detail}",
+          "line": 468,
+          "raw": "\"Error at {}:{}: {expected:?}{detail}\""
+        }
+      ],
+      "after": [
+        {
+          "value": "Error at {}:{}: {:?}{}",
+          "line": 509,
+          "raw": "\"Error at {}:{}: {:?}{}\""
+        },
+        {
+          "value": "ParseError",
+          "line": 522,
+          "raw": "\"ParseError\""
+        },
+        {
+          "value": "position",
+          "line": 523,
+          "raw": "\"position\""
+        },
+        {
+          "value": "expected",
+          "line": 524,
+          "raw": "\"expected\""
+        },
+        {
+          "value": "detail",
+          "line": 525,
+          "raw": "\"detail\""
+        }
+      ]
+    },
+    {
+      "file": "vendor/gherkin/src/parser.rs",
+      "before": [],
+      "after": [
+        {
+          "value": "\\",
+          "line": 448,
+          "raw": "\"\\\\\""
+        }
+      ]
+    }
+  ]
+}
