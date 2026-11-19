@@ -1,0 +1,81 @@
+{
+  "recordedAt": "2026-11-19T23:14:15.827417+00:00",
+  "prs": [
+    {
+      "baseRefName": "main",
+      "headRefName": "foundation/rust-bdd-sdk",
+      "headRefOid": "be1b779d0c6bfcbb79bff5085633d07d4490a8e8",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "state": "OPEN",
+      "url": "https://github.com/GQAdonis/cucumber/pull/1",
+      "repository": "GQAdonis/cucumber",
+      "checkStates": {
+        "FAILURE": 5,
+        "IN_PROGRESS": 20,
+        "QUEUED": 3,
+        "SUCCESS": 11
+      },
+      "failedChecks": [
+        "clippy",
+        "rustfmt",
+        "MSRV (1.88.0, cucumber, ubuntu)",
+        "MSRV (1.88.0, cucumber, macOS)",
+        "MSRV (1.88.0, cucumber, windows)"
+      ]
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "foundation/rust-bdd-sdk",
+      "headRefOid": "9fe5d19fbf652660f50bea20d8813e35e8f6b2fe",
+      "isDraft": false,
+      "mergeStateStatus": "CLEAN",
+      "state": "OPEN",
+      "url": "https://github.com/GQAdonis/gherkin/pull/1",
+      "repository": "GQAdonis/gherkin",
+      "checkStates": {
+        "SUCCESS": 19,
+        "SKIPPED": 2
+      },
+      "failedChecks": []
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "contribution/native-bdd-foundation",
+      "headRefOid": "40482f26d28b602761f5f8fe7eebb81d881fab76",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "state": "OPEN",
+      "url": "https://github.com/cucumber-rs/cucumber/pull/410",
+      "repository": "cucumber-rs/cucumber",
+      "checkStates": {},
+      "failedChecks": []
+    },
+    {
+      "baseRefName": "main",
+      "headRefName": "contribution/gherkin43-profile",
+      "headRefOid": "becbd137b4c4663c7503a1b37cd4d26ad529d984",
+      "isDraft": false,
+      "mergeStateStatus": "UNSTABLE",
+      "state": "OPEN",
+      "url": "https://github.com/cucumber-rs/gherkin/pull/68",
+      "repository": "cucumber-rs/gherkin",
+      "checkStates": {},
+      "failedChecks": []
+    }
+  ],
+  "mergeAttempt": {
+    "target": "GQAdonis/gherkin#1 -> GQAdonis/gherkin:main",
+    "head": "9fe5d19fbf652660f50bea20d8813e35e8f6b2fe",
+    "outcome": "DENIED_BEFORE_EXECUTION",
+    "reason": "Automatic approval review found authorization for review preparation but not explicit authorization for this fork-main merge.",
+    "retry": "No retry or workaround. Trusted history checked: Sentinel_6beabbeeab808191807f2de3c5486432 requests review; no materially new explicit merge permission found."
+  },
+  "sourcePushes": {
+    "cucumberFork": "be1b779d0c6bfcbb79bff5085633d07d4490a8e8",
+    "cucumberUpstream": "40482f26d28b602761f5f8fe7eebb81d881fab76",
+    "gherkinFork": "9fe5d19fbf652660f50bea20d8813e35e8f6b2fe",
+    "gherkinUpstream": "becbd137b4c4663c7503a1b37cd4d26ad529d984"
+  },
+  "phase": "OPEN/FAIL17of20; no final whole-program audit or canonical Reflect completion claimed; all four existing PRs ready for review; no merges/publication."
+}

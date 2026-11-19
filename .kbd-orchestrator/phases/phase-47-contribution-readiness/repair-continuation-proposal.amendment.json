@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "1",
+  "kind": "kbd.scope-authority",
+  "action": "amend-contract",
+  "approver": "travis@tribehealthsolutions.com",
+  "namespace": "prometheus-kbd-scope-amendment",
+  "projectId": "39208255-8a57-4101-8014-7952fe9993e7",
+  "runId": "project-20261118T062840Z",
+  "phaseId": "phase-47-contribution-readiness",
+  "contractPath": ".kbd-orchestrator/phases/phase-47-contribution-readiness/adopted-contract.json",
+  "previousContractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "newContractDigest": "7fbc8a2d25feb9798c74377ffe4a71eed8846d7c2ffee8ce7c006891b93a2928",
+  "scenarioChanges": {
+    "added": [],
+    "modified": [],
+    "removed": []
+  },
+  "reason": "Propose600 total tool calls and4 total repair attempts without resetting consumed399 calls/two repairs. Retain300 active minutes, documented approval-wait exclusion, exact20 cases and unchanged CI workflows. Remaining repairs address observed profile fixture, minimum graph and boundary integration/actual CI findings; no additional parity/publication scope.",
+  "nonce": "6951e6fce7a24d2cb8918d04491194dd",
+  "timestamp": "2026-11-19T23:14:15Z"
+}

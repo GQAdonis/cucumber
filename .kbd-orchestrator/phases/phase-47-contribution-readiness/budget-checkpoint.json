@@ -1,7 +1,7 @@
 {
-  "recordedAt": "2026-11-19T23:09:11.987491+00:00",
+  "recordedAt": "2026-11-19T23:14:15.827417+00:00",
   "elapsedMinutes": 2056.07,
-  "toolCallsCharged": 385,
+  "toolCallsCharged": 399,
   "toolCallLimit": 400,
   "repairAttempts": 2,
   "repairLimit": 2,
@@ -12,9 +12,9 @@
     "dependency": 14,
     "acceptanceIncludingHelper": 32
   },
-  "remaining": "Two repair cycles consumed; further repair execution needs supported owner amendment. Remaining calls reserved for preservation and explicitly requested review-state closeout, not more tests.",
+  "remaining": "Conservative manual upper bound includes closeout/preparation/preservation overhead. No further repair execution; new proposal is unsigned/unadopted. No reset.",
   "previousSourceCompletionCharge": 160,
   "implementationElapsedMinutesAtFirstCheckpoint": 31.1,
-  "status": "REPAIR_ALLOWANCE_EXHAUSTED; REVIEW_SUBMISSION_ALLOWED_SEPARATELY",
+  "status": "REPAIR_ALLOWANCE_EXHAUSTED; FOUR_PRS_READY; MERGE_DENIED",
   "activeMinutes": 114.74
 }

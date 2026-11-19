@@ -40,3 +40,7 @@ Gherkin's existing fork/upstream PRs are ready with verified equivalent parser s
 its independent review found no material component blocker. No PR was merged.
 
 Continue only through a supported additional-repair amendment; do not reset calls/time/attempts. Current bounddigest ef636087 remains unchanged. Exact current B5 source/output is preserved; normal CI still applies separately.
+
+## Review closeout
+
+All four existing PRs are ready and source heads pushed; see review-closeout.json. Gherkin fork-main merge was denied before execution by automatic approval review; no retry. Exact remaining approval acts and unsigned budget proposal are in REMAINING-GATES.md. No registry publication or merge occurred.
