@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/cargo-target/release/sdk46-external-consumer",
+    "--messages",
+    "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/SDK-008-positive/actual-runner"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2",
+  "exit": 0,
+  "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

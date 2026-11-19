@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/Users/gqadonis/.local/share/fnm/node-versions/v26.5.0/installation/bin/node",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/node/node-consumer.cjs"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/node",
+  "exit": 0,
+  "stdinSha256": "1fa41c1136fb950fdb8932d2aae14fa72facc0be80605fd56e2f0f2555afc054"
+}

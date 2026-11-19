@@ -1,0 +1,51 @@
+{
+  "case": "CR47-006",
+  "mode": "positive",
+  "status": "PASS",
+  "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "observations": [
+    {
+      "actualDryRun": {
+        "target": "dry_run",
+        "scope": [
+          14,
+          59
+        ],
+        "counts": {
+          "scenarios": 14,
+          "steps": 59,
+          "passed": true
+        },
+        "process": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/CR47-006-positive/0001-process.json",
+        "sourceRoot": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber"
+      }
+    },
+    {
+      "oracleExecutions": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles/executions",
+      "lockSha256": "684fee97b309eb8c3b470b99f2eeaf1fa82d941034c4625d627602fdb0bbee76"
+    }
+  ],
+  "originalSourcesUnchanged": true,
+  "commands": [
+    {
+      "argv": [
+        "cargo",
+        "test",
+        "--locked",
+        "--all-features",
+        "--test",
+        "dry_run"
+      ],
+      "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+      "startedAt": "2026-11-19T22:54:03.425281+00:00",
+      "environment": {
+        "RUSTUP_TOOLCHAIN": "1.88.0",
+        "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target",
+        "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/oracles"
+      },
+      "stdinSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "exitCode": 0,
+      "finishedAt": "2026-11-19T22:55:16.144077+00:00"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "sourceRevision": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/failed-minimum",
+  "ownedManifest": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/minimum-rejected/Cargo.toml",
+  "beforeSha256": "6404ca82d47034392bb151dab10571d7388c273d299c487d71a39e648468540d",
+  "afterSha256": "21ee5cbe9c7e59a0e4a5316bc447a023ec70ae9e454ebaefaaa84fb3e4f0930c",
+  "adjustment": "num-bigint >=0.4.3 only, matching the fixed graph prerequisite",
+  "preservedOracle": "Exact idna1.0.2/zerovec0.10.4/yoke0.6.0+0.7.3 identities and actual Yoke compile rejection remain mandatory."
+}

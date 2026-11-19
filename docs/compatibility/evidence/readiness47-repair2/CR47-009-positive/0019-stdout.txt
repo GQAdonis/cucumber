@@ -1,0 +1,218 @@
+Feature: Select Cucumber.js expression parameter behavior explicitly
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "negative integer"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "unsigned integer"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "plus integer rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "unicode integer rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "decimal float"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "uppercase exponent"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "lowercase exponent rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "trailing dot rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "infinity rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "NaN rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "word"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "NEL word"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "NBSP word rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "quoted string"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "escaped double quote"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "escaped single quote"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "empty quoted string"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "unescaped line separator"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "escaped line separator rejected"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "optional singular"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "optional plural"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "alternative first"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "alternative second"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "escaped literal"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "anonymous"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "double alias"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "decimal alias"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "long alias"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "large integer alias"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "custom parameter"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "shadowed function name"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario Outline: Match and transform an expression through a real handler
+   ✔  Given the expression compatibility case "legacy shadowed function name"
+   ✔  When the step runs through an explicit JavaScript-compatible expression
+   ✔  Then its matched outcome and handler value equal the pinned official expression implementation
+  Scenario: Legacy float expressions retain their broader native grammar
+   ✔  Given the expression compatibility case "legacy infinity"
+   ✔  When the step runs through a legacy expression
+   ✔  Then the legacy handler receives infinity
+  Scenario: Legacy strings retain escaped quote characters
+   ✔  Given the expression compatibility case "legacy escaped string"
+   ✔  When the step runs through a legacy expression
+   ✔  Then the legacy handler retains the quote escape
+Feature: Use pinned official tag expressions without changing legacy CLI parsing
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "empty"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "whitespace"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "literal without at"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "leading trailing whitespace"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "precedence"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "parentheses"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "repeated not"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "escaped parentheses"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "escaped space"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "escaped tab"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "unicode whitespace"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "not prefix literal"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "trailing escape"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "invalid escape"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "missing operand"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "missing operator"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario Outline: Evaluate official tag syntax
+   ✔  Given the tag compatibility case "unmatched parentheses"
+   ✔  When the explicit tag expression is parsed and evaluated
+   ✔  Then validity and selection equal the pinned official tag implementation
+  Scenario: Select an expanded example using inherited feature and rule tags
+   ✔  Given tagged feature rule and example rows
+   ✔  When an explicit official expression filters the real run
+   ✔  Then only the selected example runs and matching scenario hooks execute
+  Scenario: Legacy tag parsing remains available
+   ✔  Given an empty official tag expression
+   ✔  Then explicit official evaluation selects all tags
+   ✔  And legacy TagOperation parsing still rejects the empty expression
+[Summary]
+2 features
+53 scenarios (53 passed)
+159 steps (159 passed)

@@ -1,0 +1,9 @@
+{
+  "argv": [
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/cargo-target/release/sdk46-external-consumer",
+    "--selection"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2",
+  "exit": 0,
+  "stdinSha256": "7a1f23d862e708f7fe97d4008d109bf812b0ba915fa8540cb9fa06fc360fd70e"
+}

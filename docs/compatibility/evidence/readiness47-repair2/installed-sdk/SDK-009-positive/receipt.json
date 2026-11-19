@@ -1,0 +1,57 @@
+{
+  "case": "SDK-009",
+  "mode": "positive",
+  "status": "PASS",
+  "observations": [
+    {
+      "externalRustExtension": {
+        "capabilities": {
+          "ok": true,
+          "result": {
+            "baselines": {
+              "cucumberJs": "13.3.0",
+              "gherkin": "43.0.0",
+              "messages": [
+                "34.2.1",
+                "35.0.0"
+              ]
+            },
+            "foreignStepExecution": false,
+            "formats": [
+              "gherkin",
+              "markdown"
+            ],
+            "kind": "capabilities",
+            "operations": [
+              "capabilities",
+              "compile",
+              "rerun"
+            ],
+            "protocolVersions": [
+              1
+            ]
+          },
+          "version": 1
+        },
+        "duplicateRejected": true,
+        "reservedRejected": [
+          true,
+          true,
+          true
+        ],
+        "result": {
+          "input": {
+            "value": 7
+          },
+          "owner": "external-consumer",
+          "transformed": 21
+        }
+      }
+    }
+  ],
+  "oracleArtifactsUnchanged": true,
+  "successorSourceIdentities": {
+    "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/successor-source-identities.json",
+    "sha256": "42f3e0cefb16c695737c85d1db5572995f0dd4800e6a95aefa83ac4dc2005e79"
+  }
+}

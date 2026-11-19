@@ -1,0 +1,49 @@
+Feature: Applications share the native Rust source and evidence SDK
+  Scenario: Compile plaintext source to faithful AST and Pickles in all three installed SDKs
+   ✔  Given the installed native SDK contract "SDK-001"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Compile Markdown through the same native implementation
+   ✔  Given the installed native SDK contract "SDK-002"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Compile empty/comment-only input without invented scenarios
+   ✔  Given the installed native SDK contract "SDK-003"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Recover after malformed input in the same host
+   ✔  Given the installed native SDK contract "SDK-004"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Discover the versioned implemented operations
+   ✔  Given the installed native SDK contract "SDK-005"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Derive a lossless rerun plan from real Messages
+   ✔  Given the installed native SDK contract "SDK-006"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Reject incomplete or inconsistent run evidence
+   ✔  Given the installed native SDK contract "SDK-007"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Represent a completed passing run as no rerun
+   ✔  Given the installed native SDK contract "SDK-008"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Extend the safe SDK from an external Rust consumer
+   ✔  Given the installed native SDK contract "SDK-009"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Consume actual native package artifacts outside the checkout
+   ✔  Given the installed native SDK contract "SDK-010"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+  Scenario: Keep requests isolated in one host process
+   ✔  Given the installed native SDK contract "SDK-011"
+   ✔  When the application exercises its real package boundary
+   ✔  Then the result satisfies its independent source contract
+[Summary]
+1 feature
+11 scenarios (11 passed)
+33 steps (33 passed)

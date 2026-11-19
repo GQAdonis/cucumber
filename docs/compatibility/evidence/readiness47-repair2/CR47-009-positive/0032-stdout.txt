@@ -1,0 +1,77 @@
+Feature: Built-in consumers preserve explicit execution outcomes
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Basic"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Summarize"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "FailOnSkipped"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Repeat"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Normalize Tee"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "Messages Query"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "JSON"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "JUnit"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: Built-in consumers agree on controlled outcomes
+   ✔  Given an application reporting pending and skipped through "libtest"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer preserves non-passing status and correct final failure semantics
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Basic"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Summarize"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "FailOnSkipped"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Repeat"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Normalize Tee"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "Messages Query"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "JSON"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "JUnit"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+  Scenario Outline: A recovered retry does not leave a false final failure
+   ✔  Given an application whose pending attempt retries after cleanup failure through "libtest"
+   ✔  When its real execution finishes under strict and non-strict policies
+   ✔  Then the consumer reports the successful final attempt without stale pending failure counts
+[Summary]
+1 feature
+18 scenarios (18 passed)
+54 steps (54 passed)

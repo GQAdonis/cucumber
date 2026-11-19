@@ -1,0 +1,8 @@
+   Compiling cucumber v0.23.0 (/Volumes/T7/Projects/references/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 26.60s
+     Running tests/contribution_readiness.rs (target/debug/deps/contribution_readiness-8e97922c18811fb1)
+
+thread 'main' panicked at /Volumes/T7/Projects/references/cucumber/src/cucumber.rs:1637:13:
+2 steps failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: test failed, to rerun pass `--test contribution_readiness`

@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "cargo",
+    "generate-lockfile",
+    "--manifest-path",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/rust/Cargo.toml"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber",
+  "startedAt": "2026-11-19T23:02:43.364423+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T23:02:43.729890+00:00",
+  "stdout": "prepare-19.stdout",
+  "stderr": "prepare-19.stderr"
+}

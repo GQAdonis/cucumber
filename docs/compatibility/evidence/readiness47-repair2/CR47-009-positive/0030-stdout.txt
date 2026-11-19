@@ -1,0 +1,109 @@
+Feature: Built-in expression provenance and argument groups survive Messages reporting
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "integer" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "float" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "word" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "anonymous" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-double" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-single" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "string-empty" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "unicode-prefix" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "optional-alternative" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Consumers receive actual original expressions and faithful built-in groups
+   ✔  Given a metadata run using the "numeric-alias" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then its original expression and full raw argument groups agree with the official library
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Repeated string captures retain accurate spans despite the pinned index polyfill defect
+   ✔  Given a metadata run using the "string-escaped" built-in expression
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then native JavaScript indices verify the truthful range and isolate the pinned nested-start discrepancy
+   ✔  And only the actual used built-in parameter descriptors are emitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Ambiguous matches retain argument-list alignment with definition identities
+   ✔  Given a metadata run with two matching built-in expressions
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then each reported argument list belongs to the definition at the same index
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Replacing a registration clears its obsolete expression metadata
+   ✔  Given an expression registration replaced through the existing raw insertion API
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "legacy expression" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "unannotated nested regex" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "external regex flags" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario Outline: Unsupported metadata remains absent without changing existing execution
+   ✔  Given a metadata run using "undescribed custom type" registration
+   ✔  When the run completes and the pinned JavaScript expression library reads its matches
+   ✔  Then only the raw regex remains and unavailable capture metadata is omitted
+   ✔  And the argument envelopes satisfy both supported Messages schemas
+  Scenario: Inconsistent explicit metadata fails visibly
+   ✔  Given a raw registration carrying metadata that describes a different expression
+   ✔  When that inconsistent registration executes
+   ✔  Then reporting identifies the metadata mismatch without a successful run-finished envelope
+  Scenario: Existing manual StepConstructor implementations remain source-compatible
+   ✔  Given a manual StepConstructor implementing only the original required method
+   ✔  When its collection executes with Messages reporting
+   ✔  Then its step still passes with raw definition metadata
+[Summary]
+1 feature
+19 scenarios (19 passed)
+85 steps (85 passed)

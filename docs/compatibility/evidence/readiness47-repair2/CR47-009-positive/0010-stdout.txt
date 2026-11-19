@@ -1,0 +1,85 @@
+Feature: Report observed native scenario hook stages through Messages
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "passing"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "before-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "FAILED,SKIPPED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "after-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "body-failure"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,FAILED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,body,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "undefined"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,UNDEFINED,SKIPPED,PASSED"
+   ✔  And hook run success is "false"
+   ✔  And the callback trace is "before-one,before-two,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "filtered"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "body"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Composite setup and cleanup preserve the real outcome
+   ✔  Given a Messages hook run configured as "empty"
+   ✔  When the hooked feature executes with retry budget 0
+   ✔  Then hook attempt statuses are "PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the callback trace is "before-one,before-two,after-two,after-one"
+   ✔  And the report describes only the two native composite stages
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "before-retry"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "FAILED,SKIPPED,SKIPPED,PASSED;PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "after-retry"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED;PASSED,PASSED,PASSED,PASSED"
+   ✔  And hook run success is "true"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+  Scenario Outline: Retry attempts reuse stage identities and rerun cleanup
+   ✔  Given a Messages hook run configured as "after-failure"
+   ✔  When the hooked feature executes with retry budget 1
+   ✔  Then hook attempt statuses are "PASSED,PASSED,PASSED,FAILED;PASSED,PASSED,PASSED,FAILED"
+   ✔  And hook run success is "false"
+   ✔  And the report describes only the two native composite stages
+   ✔  And retries retain one test case and stage identities with flags "true,false"
+   ✔  And hook envelopes satisfy the pinned schema and ordered reference graph
+[Summary]
+1 feature
+10 scenarios (10 passed)
+70 steps (70 passed)

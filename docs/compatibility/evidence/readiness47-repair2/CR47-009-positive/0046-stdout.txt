@@ -1,0 +1,64 @@
+Feature: Explicit JavaScript expression definitions reject names the pinned registry forbids
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "closing)"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "square[name]"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "dotted.name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "dollar$name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "pipe|name"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "maybe?"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "many*"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Invalid custom names fail while registering an explicit JavaScript expression
+   ✔  Given a Rust custom parameter named "plus+"
+   ✔  When an actual expr_js step definition is compiled at the completed BDD boundary
+   ✔  Then registration fails with a parameter-name diagnostic
+   ✔  And the pinned JavaScript parameter registry rejects the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "customer-id"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "account name"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario Outline: Valid custom names remain portable
+   ✔  Given a Rust custom parameter named "項目"
+   ✔  When an actual expr_js step definition is compiled and executed at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+   ✔  And the pinned JavaScript parameter registry accepts the same name
+  Scenario: Legacy custom names retain their existing behavior
+   ✔  Given a Rust custom parameter named "dotted.name"
+   ✔  When its existing derive and legacy expr step definition compile and execute at the completed BDD boundary
+   ✔  Then the native handler receives the expected custom value
+[Summary]
+1 feature
+12 scenarios (12 passed)
+47 steps (47 passed)

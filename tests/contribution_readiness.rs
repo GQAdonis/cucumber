@@ -113,6 +113,7 @@ fn main() {
         );
     futures::executor::block_on(
         Readiness::cucumber()
+            .with_filter_options(cucumber::FilterOptions::new())
             .max_concurrent_scenarios(1)
             .with_source_store(sources)
             .with_writer(writer)

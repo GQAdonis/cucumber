@@ -1,0 +1,4 @@
+# Feature: Tagged
+## Scenario: ignored `@scenario`
+## Scenario: actual
+* Given action

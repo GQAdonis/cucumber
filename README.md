@@ -18,8 +18,11 @@ An implementation of the [Cucumber] testing framework for Rust. Fully native, no
 ## Fork interoperability work
 
 The current [contribution-readiness repair](docs/compatibility/readiness/IMPLEMENTATION.md)
-is implemented and awaits its complete phase-end BDD boundary. The existing
-workflows remain unchanged; this checkpoint is not new passing evidence.
+has fresh affected proof:49 core BDD targets (797 scenarios/3399 steps), parser
+73/241 and installed native SDK22/66 passed. The shared phase remains open with
+profile-fixture, minimum-graph and boundary-CI integration findings. See the
+[review checkpoint and exact limits](docs/compatibility/readiness/REVIEW-CHECKPOINT.md).
+Existing workflows remain unchanged; review readiness does not imply merge readiness.
 
 This is the GQAdonis fork. The verified foundation is preserved on
 foundation/rust-bdd-sdk; see [delivery and retained BDD evidence](docs/compatibility/DELIVERY.md).

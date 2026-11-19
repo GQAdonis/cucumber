@@ -1,0 +1,31 @@
+{
+  "case": "SDK-011",
+  "mode": "control",
+  "status": "PASS",
+  "observations": [
+    {
+      "sameHostRequests": 6,
+      "uriIsolation": [
+        "memory://one.feature",
+        "memory://two.feature"
+      ],
+      "runIsolation": [
+        "owner-A",
+        "owner-B"
+      ]
+    },
+    {
+      "control": "cross-associated run identity",
+      "rejected": "run identity changed"
+    },
+    {
+      "control": "cross-associated source URI",
+      "rejected": "full source graph differs from independent oracle"
+    }
+  ],
+  "oracleArtifactsUnchanged": true,
+  "successorSourceIdentities": {
+    "path": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair2/installed-sdk/successor-source-identities.json",
+    "sha256": "42f3e0cefb16c695737c85d1db5572995f0dd4800e6a95aefa83ac4dc2005e79"
+  }
+}

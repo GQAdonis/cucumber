@@ -1,0 +1,69 @@
+Feature: Applications opt into bounded callback execution
+  Scenario: Existing applications retain unlimited execution by default
+   ✔  Given an application using the legacy timeout defaults
+   ✔  When its gated step is released after an injected deadline would have elapsed
+   ✔  Then the step passes without a timeout
+  Scenario: The explicit JavaScript preset chooses five seconds
+   ✔  Given an application using the JavaScript timeout preset
+   ✔  When it invokes a step with no definition override
+   ✔  Then the callback receives a five-second deadline
+  Scenario: A timed-out body is cancelled before cleanup
+   ✔  Given an application whose body remains pending with scoped attachments
+   ✔  When its callback deadline expires
+   ✔  Then its body is dropped and reports a timeout failure
+   ✔  And its retained attachment handle rejects a later write
+   ✔  And cleanup still executes
+  Scenario: A timed-out attempt retries with fresh state
+   ✔  Given an application whose first body attempt exceeds its deadline
+   ✔  When it runs with one retry and a completing second attempt
+   ✔  Then both attempts retain distinct failure and success evidence
+  Scenario Outline: Definition overrides remain local
+   ✔  Given two application steps with the first override "longer"
+   ✔  When their inherited and overridden deadlines are exercised
+   ✔  Then only the first step uses "longer" and the second keeps the default
+  Scenario Outline: Definition overrides remain local
+   ✔  Given two application steps with the first override "disabled"
+   ✔  When their inherited and overridden deadlines are exercised
+   ✔  Then only the first step uses "disabled" and the second keeps the default
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before scenario" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after scenario" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before step" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after step" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "before run" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario Outline: Hooks use their own deadlines
+   ✔  Given an application whose "after run" callback remains pending
+   ✔  When that callback deadline expires
+   ✔  Then its timeout is reported at the actual hook or containing step
+   ✔  And the remaining cleanup follows the established lifecycle policy
+  Scenario: Concurrent executions do not share deadline state
+   ✔  Given two overlapping scenarios with independent callback deadlines
+   ✔  When only one deadline expires and the other body completes
+   ✔  Then one scenario fails and the other passes without crossed attribution
+  Scenario: Timeouts run without a Tokio runtime
+   ✔  Given an application on a plain futures executor
+   ✔  When a real timer expires while its body remains pending
+   ✔  Then the timeout is reported without requiring a runtime-specific reactor
+[Summary]
+1 feature
+14 scenarios (14 passed)
+50 steps (50 passed)

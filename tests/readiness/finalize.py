@@ -33,7 +33,7 @@ prior = None
 if repair:
     current_ids = ['CR47-004','CR47-006','CR47-007','CR47-009','CR47-010']
     retained_ids = ['CR47-001','CR47-002','CR47-003','CR47-005','CR47-008']
-    require(repair['kind'] == 'readiness47-b5-repair1' and repair['affectedIds'] == current_ids and repair['retainedIds'] == retained_ids, 'wrong repair boundary')
+    require(repair['kind'] == 'readiness47-b5-repair' and repair['attempt'] in (1, 2) and repair['affectedIds'] == current_ids and repair['retainedIds'] == retained_ids, 'wrong repair boundary')
     prior = Path(repair['priorEvidence']).resolve()
     require(prior != evidence, 'repair overwrote original evidence')
     for name, expected in repair['priorArtifactHashes'].items():

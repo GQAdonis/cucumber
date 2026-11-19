@@ -1,0 +1,55 @@
+Feature: Select official outline interpolation without changing legacy consumers
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "unknown token" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "forward cascade" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "reverse cascade" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "dollar values" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "spaced header" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "duplicate headers" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario Outline: Execute and report the official substituted values
+   ✔  Given an outline exercising "literal regexp" interpolation
+   ✔  When it runs with Gherkin 43 example semantics
+   ✔  Then handler names, steps, tables and docstrings match the official compiler
+   ✔  And the emitted Pickle payloads match the official compiler
+   ✔  And the snapshot keeps raw templates and the selected example policy
+  Scenario: Default consumers retain errors for unknown placeholders
+   ✔  Given an outline exercising "unknown token" interpolation
+   ✔  When the default parser expands it
+   ✔  Then the unknown placeholder remains a legacy expansion error
+  Scenario: Default consumers retain single-pass substitution
+   ✔  Given an outline exercising "forward cascade" interpolation
+   ✔  When the default parser expands it
+   ✔  Then its substituted values retain the inserted later placeholder
+[Summary]
+1 feature
+9 scenarios (9 passed)
+41 steps (41 passed)

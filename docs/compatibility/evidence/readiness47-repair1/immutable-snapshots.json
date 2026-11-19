@@ -1,0 +1,17 @@
+[
+  {
+    "revision": "4c30e3a48a0226bf907053a0a9e738e91cf06727",
+    "archive": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair1/legacy-parser.tar",
+    "sha256": "ee4727409b40737a8ddd8b56a38705114f36090e9fc8af4c767a7d5f974472a5"
+  },
+  {
+    "revision": "d95872541ee2a43d71089c64bd3fa8848e24c922",
+    "archive": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair1/book-base.tar",
+    "sha256": "293a0f26c019cad4d019f1b4c1411cd72034e8392ec64bb4dd60d371390c88da"
+  },
+  {
+    "revision": "ee22c6aa024cc010e499241e3cdcd01009fbf9bb",
+    "archive": "/Volumes/T7/Projects/references/cucumber/docs/compatibility/evidence/readiness47-repair1/failed-minimum.tar",
+    "sha256": "9ecb3ace01f75bcf348d0ae45bd193f0aeacf20b233b585a6faf4f58527d50a1"
+  }
+]

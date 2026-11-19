@@ -70,7 +70,9 @@ try:
                 receipt = json.loads((prior/name).read_text())
                 demand(receipt['case'] == case and receipt['mode'] == mode and receipt['status'] == 'PASS' and receipt['contractDigest'] == CONTRACT_DIGEST and receipt['originalSourcesUnchanged'] and receipt['observations'], 'prior retained case is not accepted')
                 prior_files.append(name)
-        RUNTIME['repair'] = {'kind':'readiness47-b5-repair1','priorEvidence':str(prior),
+        attempt = int(os.environ.get('READINESS47_REPAIR_ATTEMPT', '1'))
+        demand(attempt in (1, 2), 'repair allowance exceeded')
+        RUNTIME['repair'] = {'kind':'readiness47-b5-repair','attempt':attempt,'priorEvidence':str(prior),
             'affectedIds':affected,'retainedIds':retained,
             'priorArtifactHashes':{name:sha(prior/name) for name in prior_files},
             'priorSourceHashes':previous['sourceHashes'],'changedSources':changed,

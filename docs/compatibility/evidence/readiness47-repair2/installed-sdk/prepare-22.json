@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-sdk46-consumers-i9dzc9b2/jsOracleRoot",
+  "startedAt": "2026-11-19T23:02:57.413029+00:00",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T23:02:57.971233+00:00",
+  "stdout": "prepare-22.stdout",
+  "stderr": "prepare-22.stderr"
+}

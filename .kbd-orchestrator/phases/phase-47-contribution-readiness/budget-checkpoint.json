@@ -1,9 +1,9 @@
 {
-  "recordedAt": "2026-11-19T22:46:55.561121+00:00",
-  "elapsedMinutes": 2033.8,
-  "toolCallsCharged": 340,
+  "recordedAt": "2026-11-19T23:09:11.987491+00:00",
+  "elapsedMinutes": 2056.07,
+  "toolCallsCharged": 385,
   "toolCallLimit": 400,
-  "repairAttempts": 1,
+  "repairAttempts": 2,
   "repairLimit": 2,
   "method": "Conservative manual upper-bound accounting through source integration, not machine telemetry. Reconstructed root calls plus worker reported counts are rounded upward; acceptance worker count was reconstructed, not machine-measured. Future calls must be added; no reset on handoff.",
   "workers": {
@@ -12,9 +12,9 @@
     "dependency": 14,
     "acceptanceIncludingHelper": 32
   },
-  "remaining": "60 calls at this conservative checkpoint; no reset; includes original320 boundary charge plus6 targeted support+4 literal repair+root integration. Active preparation/execution/review counts.",
+  "remaining": "Two repair cycles consumed; further repair execution needs supported owner amendment. Remaining calls reserved for preservation and explicitly requested review-state closeout, not more tests.",
   "previousSourceCompletionCharge": 160,
   "implementationElapsedMinutesAtFirstCheckpoint": 31.1,
-  "status": "B5_REPAIR1_IMPLEMENTATION_COMPLETE",
-  "activeMinutes": 92.47
+  "status": "REPAIR_ALLOWANCE_EXHAUSTED; REVIEW_SUBMISSION_ALLOWED_SEPARATELY",
+  "activeMinutes": 114.74
 }

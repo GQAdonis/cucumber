@@ -1,0 +1,3 @@
+   Compiling cucumber v0.23.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.13s
+     Running tests/messages_table_columns.rs (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target/debug/deps/messages_table_columns-4a6a3d0a5a3ee1ab)

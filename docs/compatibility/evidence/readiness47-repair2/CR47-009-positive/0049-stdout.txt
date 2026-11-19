@@ -1,0 +1,126 @@
+Feature: Markdown literal content wins over tag syntax in executable tokens
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "first step inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "following step inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "feature background inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "rule background inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "data table inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "following data row inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "Examples header inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "Examples body inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "opening fence media inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "table then fence inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "fence then table inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "docstring content inline tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "standalone inherited tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "tag-looking declaration stays tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "consumed fence slot remains tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Tag-looking text remains literal in its executable context
+   ✔  Given the Markdown precedence case "consumed table slot remains tags"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then its complete AST and Pickles match official Gherkin43
+   ✔  And actual handlers receive the official literal text and arguments
+   ✔  And its original source bytes and typed locations are retained
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "pending tag before literal step"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "duplicate literal docstrings"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "literal table docstring table"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "literal inconsistent rows"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+  Scenario Outline: Literal tag handling cannot legalize misplaced or repeated arguments
+   ✔  Given the Markdown precedence case "dangling standalone tag"
+   ✔  When its captured Markdown document executes against the pinned compiler
+   ✔  Then native and official parsing both reject the document
+   ✔  And no application handler runs or successful completion is reported
+[Summary]
+1 feature
+21 scenarios (21 passed)
+100 steps (100 passed)

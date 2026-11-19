@@ -16,6 +16,13 @@
       "authorizer": "Travis",
       "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
       "reason": "First original B4 FAIL retained. Existing adopted two-repair allowance and standing instruction to fix scoped failures authorize repair1. All diagnosed repairs complete; rerun only CR47-004/006/007/009/010 plus controls, retaining unchanged case evidence at original identities."
+    },
+    {
+      "boundary": "B5",
+      "authorizedAt": "2026-11-19T22:51:05.195Z",
+      "authorizer": "Travis",
+      "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+      "reason": "Second and final existing authorized repair: correct acceptance filter composition after observed scope mismatch; same five affected cases and controls, original evidence retained. Source complete; no production behavior or oracle changes."
     }
   ]
 }

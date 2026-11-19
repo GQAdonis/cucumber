@@ -1,0 +1,73 @@
+Feature: Explicit composable selection preserves legacy CLI precedence
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "names OR tags AND predicate"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty tag expression"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "missing repeated tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Typed repeated filters compose with application selection
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+   ✔  And the captured source retains every original scenario and example row
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  And CLI filter configuration "name alternative"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "name and tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green" execute through real handlers
+  Scenario Outline: Existing CLI filters join the explicit selection policy
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "empty options"
+   ✔  And CLI filter configuration "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded name"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "excluded tag"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice red" execute through real handlers
+  Scenario Outline: Legacy CLI selection still overrides the caller predicate
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And legacy selection with CLI "none"
+   ✔  When the application selects scenarios with its caller predicate
+   ✔  Then exactly "invoice green, health" execute through real handlers
+  Scenario: Explicit policy survives clone and type-changing builders
+   ✔  Given the selection fixture with inherited tags and expanded names
+   ✔  And explicit filter configuration "expanded name"
+   ✔  When the executor is cloned and its parser runner writer CLI and hook adapters are replaced
+   ✔  Then exactly "invoice green" execute through real handlers
+[Summary]
+1 feature
+12 scenarios (12 passed)
+56 steps (56 passed)

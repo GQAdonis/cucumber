@@ -1,0 +1,175 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling stable_deref_trait v1.2.1
+   Compiling memchr v2.8.3
+   Compiling writeable v0.6.4
+   Compiling zmij v1.0.23
+   Compiling libc v0.2.191
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling icu_locale_fallback_data v2.4.0
+   Compiling litemap v0.8.3
+   Compiling crossbeam-utils v0.8.23
+   Compiling heck v0.5.0
+   Compiling aho-corasick v1.1.5
+   Compiling icu_segmenter_data v2.4.0
+   Compiling serde v1.0.229
+   Compiling utf_types v1.0.0
+   Compiling bitflags v2.13.2
+   Compiling regex-syntax v0.8.12
+   Compiling rustix v1.1.6
+   Compiling crossbeam-epoch v0.9.21
+   Compiling utf8_iter v1.1.0
+   Compiling crossbeam-deque v0.8.8
+   Compiling futures-core v0.3.34
+   Compiling syn v3.0.10
+   Compiling syn v2.0.119
+   Compiling utf8parse v0.2.2
+   Compiling futures-sink v0.3.34
+   Compiling itoa v1.0.19
+   Compiling errno v0.3.15
+   Compiling futures-channel v0.3.34
+   Compiling anstyle-parse v1.0.0
+   Compiling bstr v1.14.0
+   Compiling anstyle v1.0.14
+   Compiling slab v0.4.12
+   Compiling peg-runtime v0.6.3
+   Compiling smallvec v1.16.6
+   Compiling regex-automata v0.4.19
+   Compiling pin-project-lite v0.2.18
+   Compiling log v0.4.35
+   Compiling unicode-width v0.2.3
+   Compiling colorchoice v1.0.5
+   Compiling futures-task v0.3.34
+   Compiling is_terminal_polyfill v1.70.2
+   Compiling thiserror v2.0.21
+   Compiling anstyle-query v1.1.5
+   Compiling futures-io v0.3.34
+   Compiling unicode-segmentation v1.13.3
+   Compiling same-file v1.0.6
+   Compiling walkdir v2.5.0
+   Compiling convert_case v0.10.0
+   Compiling anstream v1.0.0
+   Compiling peg-macros v0.6.3
+   Compiling synstructure v0.14.0
+   Compiling terminal_size v0.4.4
+   Compiling strsim v0.11.1
+   Compiling ref-cast v1.0.27
+   Compiling globset v0.4.21
+   Compiling clap_lex v1.1.2
+   Compiling smawk v0.3.3
+   Compiling unicode-xid v0.2.6
+   Compiling ignore v0.4.34
+   Compiling clap_builder v4.6.7
+   Compiling either v1.19.0
+   Compiling itertools v0.15.0
+   Compiling peg v0.6.3
+   Compiling globwalk v0.9.1
+   Compiling regex v1.13.2
+   Compiling console v0.16.6
+   Compiling linked-hash-map v0.5.6
+   Compiling humantime v2.4.0
+   Compiling futures-timer v3.0.4
+   Compiling typed-builder-macro v0.23.2
+   Compiling derive_more-impl v2.1.1
+   Compiling sealed v0.6.0
+   Compiling smart-default v0.7.1
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling serde_derive v1.0.229
+   Compiling futures-macro v0.3.34
+   Compiling thiserror-impl v2.0.21
+   Compiling clap_derive v4.6.8
+   Compiling ref-cast-impl v1.0.27
+   Compiling pin-project-internal v1.2.0
+   Compiling futures-util v0.3.34
+   Compiling typed-builder v0.23.2
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.4
+   Compiling zerovec v0.11.9
+   Compiling zerotrie v0.2.5
+   Compiling futures-executor v0.3.34
+   Compiling clap v4.6.8
+   Compiling futures v0.3.34
+   Compiling tinystr v0.8.5
+   Compiling icu_locale_core v2.4.0
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.4.0
+   Compiling icu_provider v2.4.0
+   Compiling gherkin v0.16.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/vendor/gherkin)
+   Compiling icu_locale_fallback v2.4.0
+   Compiling derive_more v2.1.1
+   Compiling icu_segmenter v2.4.0
+   Compiling pin-project v1.2.0
+   Compiling textwrap v0.16.4
+   Compiling cucumber v0.23.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber)
+   Compiling profile-none v0.0.0 (/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/applications/profile-none)
+error[E0277]: the trait bound `Events: NonTransforming` is not satisfied
+   --> src/main.rs:142:22
+    |
+142 |         .with_writer(writer)
+    |          ----------- ^^^^^^ the trait `NonTransforming` is not implemented for `Events`
+    |          |
+    |          required by a bound introduced by this call
+    |
+    = help: the following other types implement trait `NonTransforming`:
+              AssertNormalized<Wr>
+              Normalize<W, Wr>
+              Summarize<Wr>
+              Tee<L, R>
+              cucumber::writer::Basic<O>
+              cucumber::writer::Or<L, R, F>
+              cucumber::writer::RunHooks<Wr>
+              cucumber::writer::discard::Arbitrary<Wr>
+              cucumber::writer::discard::Stats<Wr>
+    = note: required for `cucumber::writer::discard::Stats<Events>` to implement `NonTransforming`
+    = note: 3 redundant requirements hidden
+    = note: required for `Normalize<Application, Tee<Basic<&mut Vec<u8>>, Arbitrary<...>>>` to implement `NonTransforming`
+    = note: required for `Normalize<Application, Tee<Basic<&mut Vec<u8>>, Arbitrary<...>>>` to implement `Summarizable`
+    = note: required for `Summarize<Normalize<Application, Tee<Basic<&mut Vec<u8>>, ...>>>` to implement `Writer<Application>`
+note: required by a bound in `cucumber::Cucumber::<W, P, I, R, Wr, Cli>::with_writer`
+   --> /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/cucumber.rs:174:16
+    |
+169 |     pub fn with_writer<NewWr>(
+    |            ----------- required by a bound in this associated function
+...
+174 |         NewWr: Writer<W>,
+    |                ^^^^^^^^^ required by this bound in `Cucumber::<W, P, I, R, Wr, Cli>::with_writer`
+    = note: the full name for the type has been written to '/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/target-1.88.0/debug/deps/profile_none-b91b727352b0579c.long-type-7062647754684682979.txt'
+    = note: consider using `--verbose` to print the full type name to the console
+
+error[E0599]: the method `max_concurrent_scenarios` exists for struct `Cucumber<Application, Basic, _, Basic<Application>, Summarize<...>>`, but its trait bounds were not satisfied
+   --> src/main.rs:143:10
+    |
+44  |   struct Events(Arc<Mutex<Vec<Value>>>);
+    |   ------------- doesn't satisfy `Events: NonTransforming`
+...
+140 |       let application = cucumber::Cucumber::new()
+    |  _______________________-
+141 | |         .steps(steps)
+142 | |         .with_writer(writer)
+143 | |         .max_concurrent_scenarios(1)
+    | |         -^^^^^^^^^^^^^^^^^^^^^^^^ method cannot be called due to unsatisfied trait bounds
+    | |_________|
+    |
+    |
+   ::: /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/writer/summarize.rs:134:1
+    |
+134 |   pub struct Summarize<Writer> {
+    |   ---------------------------- doesn't satisfy `_: Writer<Application>`
+    |
+    = note: the following trait bounds were not satisfied:
+            `Events: NonTransforming`
+            which is required by `Summarize<Normalize<Application, Tee<cucumber::writer::Basic<&mut Vec<u8>>, cucumber::writer::discard::Arbitrary<cucumber::writer::discard::Stats<Events>>>>>: Writer<Application>`
+note: the trait `NonTransforming` must be implemented
+   --> /private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-f92n2691/cucumber/src/writer/mod.rs:439:1
+    |
+439 | pub trait NonTransforming {}
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Some errors have detailed explanations: E0277, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `profile-none` (bin "profile-none") due to 2 previous errors

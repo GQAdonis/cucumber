@@ -1,0 +1,228 @@
+Feature: Project real Cucumber evidence into the existing VLBV boundary result contract
+  Scenario: Complete real-path receipts support scoped acceptance
+   ✔  Given a real Cucumber run with frozen v2 contract and complete assertion control and cleanup receipts
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And the canonical result fields and all original evidence references are retained
+  Scenario: A green runner is insufficient without an exercised oracle
+   ✔  Given boundary evidence for "green without assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: An exercised product mismatch remains a failure
+   ✔  Given boundary evidence for "product mismatch"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And the actual failed observation remains in the attempt ledger
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong candidate"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "stale production source"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong contract binding"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Wrong or stale identities cannot support acceptance
+   ✔  Given boundary evidence for "wrong canonical run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "skipped step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "dry run"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Unexercised application paths never become acceptance
+   ✔  Given boundary evidence for "undefined step"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: The adopted denominator includes scenarios absent from the runner
+   ✔  Given boundary evidence for "missing adopted scenario"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the exercised scenario passes and the absent adopted scenario is NOT_EXERCISED
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "missing control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario Outline: Every material oracle family needs an effective negative control
+   ✔  Given boundary evidence for "non-sensitive control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "NOT_EXERCISED"
+  Scenario: Unknown restoration blocks acceptance
+   ✔  Given boundary evidence for "unknown cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "process exit two"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario Outline: Unusable execution evidence is not a product acceptance claim
+   ✔  Given boundary evidence for "truncated stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: A successful retry retains the earlier failed oracle
+   ✔  Given boundary evidence for "failed then successful retry"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "FAIL"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "unauthorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And every failed and successful attempt is retained
+  Scenario Outline: Repair authority comes from existing bound authorization records
+   ✔  Given boundary evidence for "bound authorized repair"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every failed and successful attempt is retained
+  Scenario: An unsupported acceptance profile fails closed
+   ✔  Given boundary evidence for "stochastic profile"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+  Scenario: Projection never writes canonical state or launches the boundary packet
+   ✔  Given boundary evidence for "read-only projection"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And every canonical input and sentinel remains unchanged
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "nonzero green process"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "nonzero product process"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "failed global completion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unsuccessful run"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unknown step status"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unknown step status"
+  Scenario Outline: Passing bound steps cannot hide incomplete or unclassified run evidence
+   ✔  Given boundary evidence for "unmapped failing attempt"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "unmapped failing attempt"
+Feature: Receipt consistency prevents malformed evidence from becoming acceptance
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "orphan step start"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan step start"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "orphan global hook finish"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "unfinished global hook"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook"
+  Scenario Outline: Every lifecycle invocation has a causally complete record
+   ✔  Given boundary evidence for "reversed step lifecycle"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "lifecycle order"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "nonzero first attempt"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "duplicate attempt number"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "missing promised retry"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario Outline: Retry history cannot omit or invent an invocation
+   ✔  Given boundary evidence for "unpromised successor"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "retry chain"
+  Scenario: Repair history must have a distinct previously admitted predecessor
+   ✔  Given boundary evidence for "self repair predecessor"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "repair predecessor"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed parse error"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "parse error"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed global failure"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "global hook failed"
+  Scenario Outline: A green summary cannot conceal a recorded global failure
+   ✔  Given boundary evidence for "concealed run exception"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "run exception"
+  Scenario Outline: Process receipts bind the exact product and control streams
+   ✔  Given boundary evidence for "substituted product stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+   ✔  And a legacy receipt without the stream binding is also blocked with migration guidance
+  Scenario Outline: Process receipts bind the exact product and control streams
+   ✔  Given boundary evidence for "substituted control stream"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+   ✔  And a legacy receipt without the stream binding is also blocked with migration guidance
+  Scenario: Valid interleaved scenarios keep their independent receipt histories
+   ✔  Given boundary evidence for "valid interleaved lifecycle"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "PASS"
+   ✔  And all interleaved adopted scenarios pass with separate attempt identities
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "nonboolean exercised claim"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "exercised boolean"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "orphan failed assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan assertion"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "conflicting cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "duplicate cleanup"
+  Scenario Outline: Explicit receipts cannot be ambiguous or silently ignored
+   ✔  Given boundary evidence for "conflicting control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "duplicate control"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "orphan control assertion"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "orphan control assertion"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "repair after unexercised cleanup"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "cleanup unknown"
+  Scenario Outline: A supplied receipt cannot disappear behind an unexercised or failed earlier attempt
+   ✔  Given boundary evidence for "repair after inconsistent control"
+   ✔  When the read-only Messages converter projects the boundary
+   ✔  Then the adopted scenario verdict is "BLOCKED"
+   ✔  And the refusal identifies "Messages artifact binding"
+[Summary]
+2 features
+47 scenarios (47 passed)
+175 steps (175 passed)

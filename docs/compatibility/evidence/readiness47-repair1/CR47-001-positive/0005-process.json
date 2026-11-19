@@ -1,0 +1,17 @@
+{
+  "argv": [
+    "node",
+    "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-onbf0seg/oracles/interop/gherkin43/oracle.mjs",
+    "readiness.feature"
+  ],
+  "cwd": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-onbf0seg",
+  "startedAt": "2026-11-19T22:49:13.917305+00:00",
+  "environment": {
+    "RUSTUP_TOOLCHAIN": "1.88.0",
+    "CARGO_TARGET_DIR": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-onbf0seg/target",
+    "CUCUMBER_ORACLE_ROOT": "/private/var/folders/ln/0wnpd96j26z2qhvx9m6hwt2r0000gn/T/cucumber-readiness47-consumers-onbf0seg/oracles"
+  },
+  "stdinSha256": "3c41344828923c41376047dd1956a14d167fad31e202f612e7e6348f5d8cbbb5",
+  "exitCode": 0,
+  "finishedAt": "2026-11-19T22:49:13.997075+00:00"
+}
