@@ -6,7 +6,7 @@
     "runId": "project-20261118T062840Z",
     "phaseId": "phase-47-contribution-readiness",
     "planRevision": 1,
-    "contractDigest": "fa551ce8c02a1c070452f2a6ee4bf402cab85434057829fd27bf03cb13f343c6"
+    "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7"
   },
   "digestNormalization": {
     "algorithm": "sha256",
@@ -600,7 +600,7 @@
   ],
   "budgets": {
     "timeMinutes": 300,
-    "toolCalls": 200,
+    "toolCalls": 400,
     "repairAttempts": 2,
     "noProgressLimit": 3,
     "tokenBudget": "UNKNOWN",
@@ -609,7 +609,19 @@
       "scope": "Owner-adopted implementation starts with root canonical dispatch; preparation has not executed production or verification. Earlier planning remains separate."
     },
     "accounting": "Track actual elapsed dispatch time and tool calls honestly, including waits; automatic remote jobs are a separate post-local-BDD gate, not additional local unit commands or a silent budget reset. Preserve estimated versus measured telemetry.",
-    "exhaustion": "Checkpoint and report BLOCKED/unmet; do not broaden scope, weaken checks or claim merge readiness."
+    "exhaustion": "Checkpoint and report BLOCKED/unmet; do not broaden scope, weaken checks or claim merge readiness.",
+    "timeAccounting": {
+      "mode": "elapsed-minus-documented-required-owner-approval-waits",
+      "rule": "Keep the original execution start and 300-minute active allowance. Subtract only recorded periods during which required owner approval blocks dependent work. Count all active preparation, implementation, execution, review, repair and remote CI waiting. Increase the total tool-call ceiling to 400 without resetting consumed calls; retain two repair cycles.",
+      "recordedOwnerApprovalWaits": [
+        {
+          "from": "2026-11-18T13:30:00+00:00",
+          "until": "2026-11-19T21:51:19.889832+00:00",
+          "reason": "Conservative interval after the preserved source handoff, awaiting the exact implementation-complete signing permission. Ends at the trusted affirmative message Sentinel_80352fbb69fc8191a6e6133df0898c13."
+        }
+      ],
+      "subsequentOwnerApprovalWaits": "Record actual stop and trusted owner-approval instants in retained evidence; subtract only those documented intervals. No active work or remote CI waiting may be excluded."
+    }
   },
   "evidenceInvalidation": "Bind source, contract, oracle, runtime and package digests. Invalidate only affected behavior after material changes; retain old evidence and consumed repair budget.",
   "workerRoutes": {

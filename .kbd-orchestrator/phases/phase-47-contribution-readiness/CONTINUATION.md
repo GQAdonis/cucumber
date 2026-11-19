@@ -1,44 +1,33 @@
-> Current2026-11-19: completion signing/adoption is DONE. Budget gate and exact
-> unsigned proposal are in docs/compatibility/readiness/BUDGET-GATE.md.
-> Original budget remains active and exhausted; do not execute BDD yet.
+# Phase 47 current continuation — 2026-11-19
 
-# Exact continuation after source preservation
+The exact completion and budget-only amendments are signed, verified and adopted.
+Current binding revision 3 has digest
+`ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7`.
+B4 was authorized at 2026-11-19T22:06:38.229Z after READY admission.
+The first boundary preparation is running, with fresh evidence at
+`docs/compatibility/evidence/readiness47-first`. Do not rerun it or assume success.
+Read its terminal outcome and retained original process receipts before continuing.
 
-Local foundation/rust-bdd-sdk branches contain completed implementation; origin
-PR branches still point to their earlier heads. Source is pushed to
-preserve/readiness47-implementation in both forks to avoid pre-boundary CI.
-No force push, workflow edit, PR-ready action or merge occurred.
+Limits are 300 active minutes, 400 total tool calls, two repairs, unchanged
+10 behaviors plus 10 controls. Prior consumption is retained in budget-checkpoint.json;
+only the documented required-owner-approval wait is subtracted. No clock/call reset.
+The current signed contract and canonical binding supersede stale derived indexes.
 
-Canonical phase47 tasks T1–T5 and change are COMPLETE at revision77; Execute
-remains active. Initial contract044ed16e is bound; authored implementation-complete
-contractfa551ce8 is prepared for signed amendment, not yet bound. Exact manifest
-SHA25642c6a1c84e1ccc9d8d7d40a2b64d7785e95309f105759189108e6b2e47874d07.
-No scenarios, commands or budgets change. Prior successor key permission is not
-reused. Obtain permission for this exact signing act, sign/verify then adopt with
---supersedes contract-adoption-phase-47-contribution-readiness-044ed16e.
+After successful preparation run the remaining two exact bound BDD commands once
+in order. Use the pinned Python3.11.3/Node26.5 PATH, Rust1.88, current contract digest
+and identical evidence path. Preserve all failures and use supported bounded B5
+only; no generic/unit suites or changed CI workflows. After successful whole BDD,
+perform independent full-delivered-scope static QA/audit. Register Reflect before
+immutable closure, then use supported closure/verify/archive/reflect commands.
 
-After supported admission: set PATH to CPython3.11.3 andNode26.5.0,
-RUSTUP_TOOLCHAIN=1.88.0, READINESS47_EVIDENCE to an exclusive fresh path and
-READINESS47_CONTRACT_DIGEST to the newly bound digest. Record B4 authority and
-freeze source identities, then run only the three bound commands once. Preserve
-every failure, stop at a real budget/authority limit, and use only authorized B5
-repairs. Current conservative charge160/200calls and0/2repairs is in the budget
-checkpoint; no reset on turn handoff. Dispatch began2026-11-18T12:53:07.493077Z.
+Source remains preserved on each origin preserve/readiness47-implementation branch.
+PR branches have not received the unverified repairs. After proof/audit, transfer
+scoped fixes to both foundation and contribution branches, preserve parser-first
+ordering, retain original workflows and evaluate exact-head remote checks. Update
+all four existing PRs and mark ready when their actual gates pass; complete safe
+fork-main merges only as authorized. Upstream acceptance belongs to maintainers.
+No package publication, full-parity claim or external reviewer transmission.
 
-After successful BDD: independent full-delivered-scope review and static QA, then
-register Reflect before closing the immutable phase; complete existing stages
-through supported operations. No external reviewer transmission. Push verified
-heads to the existing foundation/contribution PR branches, preserve parser-first
-ordering and original workflows, then assess actual exact-head remote checks.
-Book CI causality is still UNKNOWN; realconsumer proof does not waive mdBook.
-No ready/merge based on absent/failing checks. Upstream acceptance is maintainers'.
-
-Source formatting was applied with writes, without --check. Root, SDK, both
-bindings and consumer formatting finished; literal values were preserved through
-source escaping/continuations and equivalent aliases. This is not semantic
-proof. Original phase46 oracle map is unchanged; frozen phase47 map updates
-exactly three local harness hashes. Core changes include bounded default-generic
-derive support; arbitrary generic/lifetime inventory remains unsupported.
-
-Mutable local progress/hook/memory projections and the preexisting phase46
-tasks.md projection remain uncommitted; authored assessment reviews are preserved.
+Book CI causality remains UNKNOWN; consumer proof does not waive mdBook checks.
+Mutable local progress/hook/memory projections and preexisting phase46 tasks.md
+remain unrelated and uncommitted. Review source and status before staging.

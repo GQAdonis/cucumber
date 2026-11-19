@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "kind": "kbd.boundary-authorization",
+  "phaseId": "phase-47-contribution-readiness",
+  "events": [
+    {
+      "boundary": "B4",
+      "authorizedAt": "2026-11-19T22:06:38.229Z",
+      "authorizer": "Travis",
+      "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+      "reason": "Owner adopted exact 20-case boundary and authorized registered-key signatures for implementation completion and budget amendment; both signed amendments adopted. Prior usage retained."
+    }
+  ]
+}

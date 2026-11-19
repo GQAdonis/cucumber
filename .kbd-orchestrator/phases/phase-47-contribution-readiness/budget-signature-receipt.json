@@ -1,0 +1,17 @@
+{
+  "ownerMessage": "Sentinel_4f5884f9f27c8191a5ee1de6cc0aba19",
+  "ownerAnswer": "Yes",
+  "ownerAnsweredAt": "2026-11-19T22:01:36.218843+00:00",
+  "manifestFileSha256": "7b979bfa196e87c6406dc5bf377494f92d1164914181d6e4f8b9c2c7330530f8",
+  "contractDigest": "ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7",
+  "signature": "budget-accounting-proposal.amendment.json.sig",
+  "verification": "Registered signer verified; canonical binding revision 3 adopted by supported command.",
+  "adoptionLog": "/tmp/readiness47-budget-adopt.log",
+  "limits": {
+    "activeMinutes": 300,
+    "totalCalls": 400,
+    "repairs": 2,
+    "cases": 20
+  },
+  "usageReset": false
+}

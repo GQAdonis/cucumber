@@ -1,8 +1,8 @@
 {
-  "recordedAt": "2026-11-19T22:00:14.923594+00:00",
-  "elapsedMinutes": 1987.12,
-  "toolCallsCharged": 190,
-  "toolCallLimit": 200,
+  "recordedAt": "2026-11-19T22:07:47.498384+00:00",
+  "elapsedMinutes": 1994.67,
+  "toolCallsCharged": 215,
+  "toolCallLimit": 400,
   "repairAttempts": 0,
   "repairLimit": 2,
   "method": "Conservative manual upper-bound accounting through source integration, not machine telemetry. Reconstructed root calls plus worker reported counts are rounded upward; acceptance worker count was reconstructed, not machine-measured. Future calls must be added; no reset on handoff.",
@@ -12,8 +12,9 @@
     "dependency": 14,
     "acceptanceIncludingHelper": 32
   },
-  "remaining": "At most10 calls under the existing200 cap; conservative manual charge includes current signing, failed PATH-dependent invocations, metadata and preservation overhead. No reset; no BDD executed.",
+  "remaining": "400 total calls without reset; only documented owner-approval wait subtracted; all subsequent active work and CI waiting count.",
   "previousSourceCompletionCharge": 160,
   "implementationElapsedMinutesAtFirstCheckpoint": 31.1,
-  "status": "BLOCKED: original300-minute elapsed clock exhausted; proposed accounting/400-call ceiling NOT_ADOPTED"
+  "status": "B4_PREPARATION_RUNNING",
+  "activeMinutes": 53.34
 }

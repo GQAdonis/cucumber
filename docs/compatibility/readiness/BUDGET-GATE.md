@@ -1,3 +1,11 @@
+> Resolved 2026-11-19: Travis approved this exact budget-only amendment in
+> Sentinel_4f5884f9f27c8191a5ee1de6cc0aba19. The registered signature verified;
+> supported adoption bound revision 3, digest
+> `ef6360878ae5a168725f5ec56a9e86b251d1ba8f40b307397b3acaf3973f49d7`.
+> READY admission and B4 authorization completed at 22:06:38.229Z. The first
+> preparation attempt is running in `../evidence/readiness47-first`; no scenario
+> acceptance is claimed. The historical proposal below is retained for provenance.
+
 # Phase47 completion signature and budget gate
 
 The exact implementation-complete amendment was signed and verified against
