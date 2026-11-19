@@ -1,3 +1,6 @@
+> Resolved2026-11-19: the exact completion signature verified and KBD adopted it.
+> The current remaining gate is [budget/accounting](BUDGET-GATE.md).
+
 # Exact remaining boundary gate
 
 Phase47 canonical source tasks T1–T5 are complete at revision77. The contract

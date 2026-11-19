@@ -1,7 +1,7 @@
 {
-  "recordedAt": "2026-11-18T13:26:19.642838+00:00",
-  "elapsedMinutes": 31.1,
-  "toolCallsCharged": 160,
+  "recordedAt": "2026-11-19T22:00:14.923594+00:00",
+  "elapsedMinutes": 1987.12,
+  "toolCallsCharged": 190,
   "toolCallLimit": 200,
   "repairAttempts": 0,
   "repairLimit": 2,
@@ -12,6 +12,8 @@
     "dependency": 14,
     "acceptanceIncludingHelper": 32
   },
-  "remaining": "At most40 tool calls before further accounting; total300min elapsed budget continues through authority wait. Conservative charge includes preservation/handoff overhead, not exact machine telemetry.",
-  "previousSourceCompletionCharge": 150
+  "remaining": "At most10 calls under the existing200 cap; conservative manual charge includes current signing, failed PATH-dependent invocations, metadata and preservation overhead. No reset; no BDD executed.",
+  "previousSourceCompletionCharge": 160,
+  "implementationElapsedMinutesAtFirstCheckpoint": 31.1,
+  "status": "BLOCKED: original300-minute elapsed clock exhausted; proposed accounting/400-call ceiling NOT_ADOPTED"
 }

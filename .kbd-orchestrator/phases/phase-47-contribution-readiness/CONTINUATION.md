@@ -1,3 +1,7 @@
+> Current2026-11-19: completion signing/adoption is DONE. Budget gate and exact
+> unsigned proposal are in docs/compatibility/readiness/BUDGET-GATE.md.
+> Original budget remains active and exhausted; do not execute BDD yet.
+
 # Exact continuation after source preservation
 
 Local foundation/rust-bdd-sdk branches contain completed implementation; origin

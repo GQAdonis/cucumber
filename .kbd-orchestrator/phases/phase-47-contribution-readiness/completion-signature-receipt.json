@@ -1,0 +1,12 @@
+{
+  "recordedAt": "2026-11-19T21:58:00.223509+00:00",
+  "status": "SIGNATURE_VERIFIED_AND_COMPLETION_ADOPTED; B4_BLOCKED_ELAPSED_BUDGET",
+  "ownerMessageId": "Sentinel_80352fbb69fc8191a6e6133df0898c13",
+  "ownerReply": "Yes",
+  "ownerReplyAt": "2026-11-19T21:51:19.889832+00:00",
+  "manifestSha256": "42c6a1c84e1ccc9d8d7d40a2b64d7785e95309f105759189108e6b2e47874d07",
+  "verifiedFingerprint": "SHA256:oE4PH+kELOLXvNGZVaBX48u3h3HiXwrQoonsGBh0DhM",
+  "boundContractDigest": "fa551ce8c02a1c070452f2a6ee4bf402cab85434057829fd27bf03cb13f343c6",
+  "boundaryExecuted": false,
+  "budgetProposalAdopted": false
+}

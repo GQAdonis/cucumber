@@ -6,14 +6,14 @@
     "runId": "project-20261118T062840Z",
     "phaseId": "phase-47-contribution-readiness",
     "planRevision": 1,
-    "contractDigest": "044ed16edabd5ab24a9750bf6f7e797ff1497d5a6bc79de0300d2322cf7c87ab"
+    "contractDigest": "fa551ce8c02a1c070452f2a6ee4bf402cab85434057829fd27bf03cb13f343c6"
   },
   "digestNormalization": {
     "algorithm": "sha256",
     "command": "jq -S -c 'del(.identity.contractDigest) | del(.identity.planRevision)' adopted-contract.json",
     "stalenessRule": "Only the latest canonical bound digest applies; mismatch rejects stale acceptance, preserving history."
   },
-  "adoptionSource": "Direct trusted approval verified by root through user_message_read: question Sentinel_2a5ba49c6a3081919040dcdc439e4882 offered these ten behaviors/ten controls and300min/200calls/two repairs with no workflow changes; Travis answered \"Yes adopt the boundary\" in Sentinel_657e589d934c81918a36a783879d7aa5 at2026-11-18T12:46:30.408117+00:00. Supported retry succeeded with readiness47-owner-adoption plus Plan/change/T1\u2013T5 registration. Exact prior delegated claim/denial retained in owner-adoption.json. Individual calibration remains null.",
+  "adoptionSource": "Direct trusted approval verified by root through user_message_read: question Sentinel_2a5ba49c6a3081919040dcdc439e4882 offered these ten behaviors/ten controls and300min/200calls/two repairs with no workflow changes; Travis answered \"Yes adopt the boundary\" in Sentinel_657e589d934c81918a36a783879d7aa5 at2026-11-18T12:46:30.408117+00:00. Supported retry succeeded with readiness47-owner-adoption plus Plan/change/T1–T5 registration. Exact prior delegated claim/denial retained in owner-adoption.json. Individual calibration remains null.",
   "decisionOwner": "Travis",
   "amendmentPolicy": "Material acceptance changes require the established owner/canonical signed amendment route. Routine minimum dependency selection, resolver pinning and book fixture/cause investigation are agent-owned implementation/diagnostic work within this accepted scope; no redundant owner version-choice gate.",
   "releaseClaim": {
@@ -798,7 +798,7 @@
       "answeredAt": "2026-11-18T12:46:30.408117+00:00",
       "answer": "Yes adopt the boundary",
       "canonicalDecision": "readiness47-owner-adoption",
-      "retryOutcome": "Parent reports supported retry succeeded; Plan/change/T1\u2013T5 registered. Contract digest binding remains a subsequent root action."
+      "retryOutcome": "Parent reports supported retry succeeded; Plan/change/T1–T5 registered. Contract digest binding remains a subsequent root action."
     },
     "directOwnerAdoption": true,
     "canonicalOwnerDecision": "readiness47-owner-adoption",

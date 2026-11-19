@@ -15,3 +15,10 @@ complete contract amendment is prepared but remains unsigned/unbound; B4 is
 not admitted. The initial bound snapshot and all earlier evidence remain intact.
 
 Budget accounting is retained in budget-checkpoint.json; no reset is permitted.
+
+## Completion authority,2026-11-19
+
+Exact approved manifest signed/verified and adopted as revision2 fa551ce8.
+No behavior packet executed because original elapsed budget is exhausted.
+The prepared accounting/call-budget amendment is unsigned/unadopted; see
+completion-signature-receipt.json and docs/compatibility/readiness/BUDGET-GATE.md.
